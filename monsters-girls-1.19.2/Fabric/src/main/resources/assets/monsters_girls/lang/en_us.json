@@ -1,0 +1,18 @@
+{
+  "item.monsters_girls.powder_genesis": "Powder of Genesis",
+
+  "block.monsters_girls.soul_shroomlight": "Soul Shroomlight",
+  "block.monsters_girls.soul_wanderer_fungus": "Soul Wanderer Fungus",
+  "block.monsters_girls.soul_wanderer_stem": "Soul Wanderer Stem",
+  "block.monsters_girls.soul_wanderer_planks": "Soul Wanderer Planks",
+  "block.monsters_girls.soul_wanderer_stairs": "Soul Wanderer Stairs",
+  "block.monsters_girls.soul_wanderer_slab": "Soul Wanderer Slab",
+  "block.monsters_girls.soul_wanderer_fence": "Soul Wanderer Fence",
+  "block.monsters_girls.soul_wanderer_fence_gate": "Soul Wanderer Fence Gate",
+  "block.monsters_girls.soul_wanderer_pressure_plate": "Soul Wanderer Pressure Plate",
+  "block.monsters_girls.soul_wanderer_button": "Soul Wanderer Button",
+  "block.monsters_girls.soul_wanderer_door": "Soul Wanderer Door",
+  "block.monsters_girls.soul_wanderer_trapdoor": "Soul Wanderer Trapdoor",
+
+  "itemGroup.monsters_girls.mod_group": "Monsters & Girls"
+}

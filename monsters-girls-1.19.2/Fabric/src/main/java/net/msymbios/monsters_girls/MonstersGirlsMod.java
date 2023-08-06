@@ -1,0 +1,27 @@
+package net.msymbios.monsters_girls;
+
+import net.fabricmc.api.ModInitializer;
+import net.msymbios.monsters_girls.block.ModBlocks;
+import net.msymbios.monsters_girls.item.ModItems;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import software.bernie.geckolib3.GeckoLib;
+
+public class MonstersGirlsMod implements ModInitializer {
+
+	// -- Variables --
+	public static final String MODID = "monsters_girls";
+	public static final Logger LOGGER = LoggerFactory.getLogger(MODID);
+
+	// -- Methods --
+	@Override
+	public void onInitialize() {
+		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
+
+		GeckoLib.initialize();
+
+		//ModEntities.registerEntityAttribute();
+	} // onInitialize ()
+
+} // Class MonstersGirls

@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "monsters_girls",
+  "version": "${version}",
+
+  "name": "Monsters & Girls",
+  "description": "Monsters & Girls is a pretty simple mod that adds some cute mobs.",
+  "authors": [
+    "MSymbios, b_art_ek"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+
+  "license": "MIT Licence",
+  "icon": "",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.msymbios.monsters_girls.MonstersGirlsMod"
+    ],
+    "client": [
+      "net.msymbios.monsters_girls.MonstersGirlsModClient"
+    ]
+  },
+  "mixins": [
+    "monsters_girls.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.21",
+    "minecraft": "~1.19.2",
+    "java": ">=17"
+  }
+}

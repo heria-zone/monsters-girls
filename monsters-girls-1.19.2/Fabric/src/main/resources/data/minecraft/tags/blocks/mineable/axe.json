@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "monsters_girls:soul_wanderer_stem",
+    "monsters_girls:soul_wanderer_planks",
+    "monsters_girls:soul_wanderer_stairs",
+    "monsters_girls:soul_wanderer_slabs",
+    "monsters_girls:soul_wanderer_fence",
+    "monsters_girls:soul_wanderer_fence_gate",
+    "monsters_girls:soul_wanderer_pressure_plate",
+    "monsters_girls:soul_wanderer_button",
+    "monsters_girls:soul_wanderer_doors",
+    "monsters_girls:soul_wanderer_trapdoor"
+  ]
+}
