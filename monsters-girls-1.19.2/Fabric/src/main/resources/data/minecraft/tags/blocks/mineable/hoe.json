@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
+    "monsters_girls:ender_shroomlight",
+    "monsters_girls:molten_shroomlight",
     "monsters_girls:soul_shroomlight"
   ]
 }

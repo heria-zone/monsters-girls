@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "$#$",
+    "$#$"
+  ],
+  "key": {
+    "$": {
+      "item": "monsters_girls:ender_puffball_planks"
+    },
+    "#": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "monsters_girls:ender_puffball_fence",
+    "count": 3
+  }
+}

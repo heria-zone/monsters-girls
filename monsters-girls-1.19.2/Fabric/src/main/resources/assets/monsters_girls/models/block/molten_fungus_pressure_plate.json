@@ -1,0 +1,6 @@
+{
+  "parent": "block/pressure_plate_up",
+  "textures": {
+    "texture": "monsters_girls:block/molten_fungus_planks"
+  }
+}

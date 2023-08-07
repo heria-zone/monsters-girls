@@ -1,0 +1,6 @@
+{
+  "parent": "block/button",
+  "textures": {
+    "texture": "monsters_girls:block/molten_fungus_planks"
+  }
+}

@@ -1,7 +1,11 @@
 {
   "replace": false,
   "values": [
+    "monsters_girls:ender_shroomlight",
+    "monsters_girls:molten_shroomlight",
     "monsters_girls:soul_shroomlight",
+    "monsters_girls:ender_puffball_fungus",
+    "monsters_girls:molten_fungus_block",
     "monsters_girls:soul_wanderer_fungus",
     "#minecraft:logs",
     "#minecraft:buttons",

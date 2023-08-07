@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
+    "monsters_girls:ender_puffball_stem",
+    "monsters_girls:molten_fungus_stem",
     "monsters_girls:soul_wanderer_stem"
   ]
 }
