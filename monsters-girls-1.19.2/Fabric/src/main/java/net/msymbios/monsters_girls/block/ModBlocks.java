@@ -26,9 +26,9 @@ public class ModBlocks {
     public static final Block SOUL_WANDERER_FENCE = registerBlock("soul_wanderer_fence", new FenceBlock(FabricBlockSettings.of(Material.NETHER_WOOD).strength(2.0F).sounds(BlockSoundGroup.NETHER_STEM)), ModItemsGroup.MONSTERS_GIRLS);
     public static final Block SOUL_WANDERER_FENCE_GATE = registerBlock("soul_wanderer_fence_gate", new FenceGateBlock(FabricBlockSettings.of(Material.NETHER_WOOD).strength(2.0F).sounds(BlockSoundGroup.NETHER_STEM)), ModItemsGroup.MONSTERS_GIRLS);
     public static final Block SOUL_WANDERER_PRESSURE_PLATE = registerBlock("soul_wanderer_pressure_plate", new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.of(Material.NETHER_WOOD).strength(2.0F).sounds(BlockSoundGroup.NETHER_STEM)), ModItemsGroup.MONSTERS_GIRLS);
-    public static final Block SOUL_WANDERER_BUTTON = registerBlock("soul_wanderer_button", new StoneButtonBlock(FabricBlockSettings.of(Material.NETHER_WOOD).strength(2.0F).sounds(BlockSoundGroup.NETHER_STEM).noCollision()), ModItemsGroup.MONSTERS_GIRLS);
-    public static final Block SOUL_WANDERER_DOOR = registerBlock("soul_wanderer_door", new DoorBlock(FabricBlockSettings.of(Material.NETHER_WOOD).strength(1.0F)), ModItemsGroup.MONSTERS_GIRLS);
-    public static final Block SOUL_WANDERER_TRAPDOOR = registerBlock("soul_wanderer_trapdoor", new TrapdoorBlock(FabricBlockSettings.of(Material.NETHER_WOOD).strength(1.0F)), ModItemsGroup.MONSTERS_GIRLS);
+    public static final Block SOUL_WANDERER_BUTTON = registerBlock("soul_wanderer_button", new StoneButtonBlock(FabricBlockSettings.of(Material.NETHER_WOOD).strength(1.0F).sounds(BlockSoundGroup.NETHER_STEM).noCollision()), ModItemsGroup.MONSTERS_GIRLS);
+    public static final Block SOUL_WANDERER_DOOR = registerBlock("soul_wanderer_door", new DoorBlock(FabricBlockSettings.of(Material.NETHER_WOOD).strength(2.0F)), ModItemsGroup.MONSTERS_GIRLS);
+    public static final Block SOUL_WANDERER_TRAPDOOR = registerBlock("soul_wanderer_trapdoor", new TrapdoorBlock(FabricBlockSettings.of(Material.NETHER_WOOD).strength(2.0F)), ModItemsGroup.MONSTERS_GIRLS);
 
 
     // -- Methods --

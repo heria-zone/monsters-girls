@@ -1,15 +1,17 @@
 {
   "replace": false,
   "values": [
-    "monsters_girls:soul_wanderer_stem",
-    "monsters_girls:soul_wanderer_planks",
-    "monsters_girls:soul_wanderer_stairs",
-    "monsters_girls:soul_wanderer_slabs",
-    "monsters_girls:soul_wanderer_fence",
-    "monsters_girls:soul_wanderer_fence_gate",
-    "monsters_girls:soul_wanderer_pressure_plate",
-    "monsters_girls:soul_wanderer_button",
-    "monsters_girls:soul_wanderer_doors",
-    "monsters_girls:soul_wanderer_trapdoor"
+    "monsters_girls:soul_shroomlight",
+    "monsters_girls:soul_wanderer_fungus",
+    "#minecraft:logs",
+    "#minecraft:buttons",
+    "#minecraft:doors",
+    "#minecraft:fence_gates",
+    "#minecraft:fences",
+    "#minecraft:planks",
+    "#minecraft:pressure_plates",
+    "#minecraft:slabs",
+    "#minecraft:stairs",
+    "#minecraft:trapdoors"
   ]
 }
