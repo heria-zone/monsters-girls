@@ -14,7 +14,7 @@
   },
 
   "license": "MIT Licence",
-  "icon": "",
+  "icon": "assets/monsters_girls/icon.png",
 
   "environment": "*",
   "entrypoints": {
