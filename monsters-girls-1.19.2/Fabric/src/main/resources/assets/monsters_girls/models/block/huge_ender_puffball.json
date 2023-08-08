@@ -1,0 +1,9 @@
+{
+  "parent": "monsters_girls:custom/huge_mushroom",
+  "textures": {
+    "all": "monsters_girls:block/huge_ender_puffball",
+    "particle": "monsters_girls:block/huge_ender_puffball",
+    "0": "monsters_girls:block/huge_ender_puffball"
+  },
+  "render_type": "cutout_mipped"
+}

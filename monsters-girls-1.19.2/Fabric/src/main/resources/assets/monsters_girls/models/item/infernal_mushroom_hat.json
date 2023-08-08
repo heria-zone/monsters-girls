@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "monsters_girls:item/infernal_mushroom_hat"
+  }
+}

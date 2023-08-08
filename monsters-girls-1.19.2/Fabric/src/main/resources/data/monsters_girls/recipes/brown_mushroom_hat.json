@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "monsters_girls:huge_brown_mushroom"
+    }
+  },
+  "result": {
+    "item": "monsters_girls:brown_mushroom_hat",
+    "count": 1
+  }
+}

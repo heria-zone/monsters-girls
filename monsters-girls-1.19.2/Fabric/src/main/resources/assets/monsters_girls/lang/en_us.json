@@ -1,6 +1,19 @@
 {
   "item.monsters_girls.powder_genesis": "Powder of Genesis",
 
+  "item.monsters_girls.brown_mushroom_hat": "Brown Mushroom Hat",
+  "item.monsters_girls.crimson_fungus_hat": "Crimson Fungus Hat",
+  "item.monsters_girls.crimson_rare_fungus_hat": "Crimson Rare Fungus Hat",
+  "item.monsters_girls.ender_puffball_hat": "Ender Puffball Hat",
+  "item.monsters_girls.infernal_mushroom_hat": "Infernal Mushroom Hat",
+  "item.monsters_girls.ink_cap_mushroom_hat": "Ink Cap Mushroom Hat",
+  "item.monsters_girls.molten_fungus_hat": "Molten Fungus Hat",
+  "item.monsters_girls.red_mushroom_hat": "Red Mushroom Hat",
+  "item.monsters_girls.soul_wanderer_fungus_hat": "Soul Wanderer Fungus Hat",
+  "item.monsters_girls.warped_fungus_hat": "Warped Fungus Hat",
+  "item.monsters_girls.warped_rare_fungus_hat": "Warped Rare Fungus Hat",
+  "item.monsters_girls.yellow_fly_agaric_hat": "Yellow Fly Agaric",
+
   "block.monsters_girls.ender_shroomlight": "Ender Shroomlight",
   "block.monsters_girls.ender_puffball_fungus": "Ender Puffball Fungus",
   "block.monsters_girls.ender_puffball_stem": "Ender Puffball Stem",
@@ -45,6 +58,19 @@
   "block.monsters_girls.ink_cap_black_mushroom_fungus": "Ink Cap Black Mushroom Fungus",
   "block.monsters_girls.ink_cap_grey_mushroom_fungus": "Ink Cap Grey Mushroom Fungus",
   "block.monsters_girls.ink_cap_light_grey_mushroom_fungus": "Ink Cap Light Grey Mushroom Fungus",
+
+  "block.monsters_girls.huge_brown_mushroom": "Huge Brown Mushroom",
+  "block.monsters_girls.huge_crimson_fungus": "Huge Crimson Fungus",
+  "block.monsters_girls.huge_crimson_rare_fungus": "Huge Crimson Rare Fungus",
+  "block.monsters_girls.huge_ender_puffball": "Huge Ender Puffball",
+  "block.monsters_girls.huge_fly_agaric": "Huge Fly Agaric",
+  "block.monsters_girls.huge_infernal_mushroom": "Huge Infernal Mushroom",
+  "block.monsters_girls.huge_ink_cap_mushroom": "Huge Ink Cap Mushroom",
+  "block.monsters_girls.huge_molten_fungus": "Huge Molten Fungus",
+  "block.monsters_girls.huge_soul_wanderer": "Huge Soul Wanderer",
+  "block.monsters_girls.huge_warped_fungus": "Huge Warped Fungus",
+  "block.monsters_girls.huge_warped_rare_fungus": "Huge Warped Rare Fungus",
+  "block.monsters_girls.huge_yellow_fly_agaric": "Huge Yellow Fly Agaric",
 
   "itemGroup.monsters_girls.mod_group": "Monsters & Girls"
 }

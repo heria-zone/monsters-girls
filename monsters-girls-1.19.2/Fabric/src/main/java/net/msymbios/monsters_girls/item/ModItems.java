@@ -12,6 +12,20 @@ public class ModItems {
     // -- Variables --
     public static final Item POWDER_GENESIS = registerItem("powder_genesis", new EnchantedItem(new FabricItemSettings().group(ModItemsGroup.MONSTERS_GIRLS)));
 
+    public static final Item BROWN_MUSHROOM_HAT = registerItem("brown_mushroom_hat", new Item(new FabricItemSettings().group(ModItemsGroup.MONSTERS_GIRLS)));
+    public static final Item CRIMSON_FUNGUS_HAT = registerItem("crimson_fungus_hat", new Item(new FabricItemSettings().group(ModItemsGroup.MONSTERS_GIRLS)));
+    public static final Item CRIMSON_RARE_FUNGUS_HAT = registerItem("crimson_rare_fungus_hat", new Item(new FabricItemSettings().group(ModItemsGroup.MONSTERS_GIRLS)));
+    public static final Item ENDER_PUFFBALL_HAT = registerItem("ender_puffball_hat", new Item(new FabricItemSettings().group(ModItemsGroup.MONSTERS_GIRLS)));
+    public static final Item INFERNAL_MUSHROOM_HAT = registerItem("infernal_mushroom_hat", new Item(new FabricItemSettings().group(ModItemsGroup.MONSTERS_GIRLS)));
+    public static final Item INK_CAP_MUSHROOM_HAT = registerItem("ink_cap_mushroom_hat", new Item(new FabricItemSettings().group(ModItemsGroup.MONSTERS_GIRLS)));
+    public static final Item MOLTEN_FUNGUS_HAT = registerItem("molten_fungus_hat", new Item(new FabricItemSettings().group(ModItemsGroup.MONSTERS_GIRLS)));
+    public static final Item RED_MUSHROOM_HAT = registerItem("red_mushroom_hat", new Item(new FabricItemSettings().group(ModItemsGroup.MONSTERS_GIRLS)));
+    public static final Item SOUL_WANDERER_FUNGUS_HAT = registerItem("soul_wanderer_fungus_hat", new Item(new FabricItemSettings().group(ModItemsGroup.MONSTERS_GIRLS)));
+    public static final Item WARPED_FUNGUS_HAT = registerItem("warped_fungus_hat", new Item(new FabricItemSettings().group(ModItemsGroup.MONSTERS_GIRLS)));
+    public static final Item WARPED_RARE_FUNGUS_HAT = registerItem("warped_rare_fungus_hat", new Item(new FabricItemSettings().group(ModItemsGroup.MONSTERS_GIRLS)));
+    public static final Item YELLOW_FLY_AGARIC_HAT = registerItem("yellow_fly_agaric_hat", new Item(new FabricItemSettings().group(ModItemsGroup.MONSTERS_GIRLS)));
+
+
     //Block of Soul Wanderer Fungus
 
     // -- Methods --

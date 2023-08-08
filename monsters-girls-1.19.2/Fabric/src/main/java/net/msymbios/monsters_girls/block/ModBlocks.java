@@ -12,6 +12,8 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.msymbios.monsters_girls.MonstersGirlsMod;
+import net.msymbios.monsters_girls.block.custom.DirectionalBlock;
+import net.msymbios.monsters_girls.block.internal.VoxelCollision;
 import net.msymbios.monsters_girls.item.ModItemsGroup;
 
 public class ModBlocks {
@@ -31,8 +33,8 @@ public class ModBlocks {
     public static final Block ENDER_PUFFBALL_FENCE_GATE = registerBlock("ender_puffball_fence_gate", new FenceGateBlock(FabricBlockSettings.of(Material.NETHER_WOOD, ENDER_COLOR).strength(STRENGTH).sounds(BlockSoundGroup.NETHER_STEM).luminance(LUMINANCE)), ModItemsGroup.MONSTERS_GIRLS);
     public static final Block ENDER_PUFFBALL_PRESSURE_PLATE = registerBlock("ender_puffball_pressure_plate", new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.of(Material.NETHER_WOOD, ENDER_COLOR).strength(STRENGTH).sounds(BlockSoundGroup.NETHER_STEM).luminance(LUMINANCE)), ModItemsGroup.MONSTERS_GIRLS);
     public static final Block ENDER_PUFFBALL_BUTTON = registerBlock("ender_puffball_button", new StoneButtonBlock(FabricBlockSettings.of(Material.NETHER_WOOD, ENDER_COLOR).strength(STRENGTH).sounds(BlockSoundGroup.NETHER_STEM).luminance(LUMINANCE).noCollision()), ModItemsGroup.MONSTERS_GIRLS);
-    public static final Block ENDER_PUFFBALL_DOOR = registerBlock("ender_puffball_door", new DoorBlock(FabricBlockSettings.of(Material.NETHER_WOOD, ENDER_COLOR).strength(STRENGTH).luminance(LUMINANCE)), ModItemsGroup.MONSTERS_GIRLS);
-    public static final Block ENDER_PUFFBALL_TRAPDOOR = registerBlock("ender_puffball_trapdoor", new TrapdoorBlock(FabricBlockSettings.of(Material.NETHER_WOOD, ENDER_COLOR).strength(STRENGTH).luminance(LUMINANCE)), ModItemsGroup.MONSTERS_GIRLS);
+    public static final Block ENDER_PUFFBALL_DOOR = registerBlock("ender_puffball_door", new DoorBlock(FabricBlockSettings.of(Material.NETHER_WOOD, ENDER_COLOR).strength(STRENGTH).nonOpaque().luminance(LUMINANCE)), ModItemsGroup.MONSTERS_GIRLS);
+    public static final Block ENDER_PUFFBALL_TRAPDOOR = registerBlock("ender_puffball_trapdoor", new TrapdoorBlock(FabricBlockSettings.of(Material.NETHER_WOOD, ENDER_COLOR).strength(STRENGTH).nonOpaque().luminance(LUMINANCE)), ModItemsGroup.MONSTERS_GIRLS);
 
     public static final Block ENDER_MOSS = registerBlock("ender_moss", new GrassBlock(FabricBlockSettings.of(Material.SOLID_ORGANIC).strength(0.6F).ticksRandomly().sounds(BlockSoundGroup.GRASS)), ModItemsGroup.MONSTERS_GIRLS);
 
@@ -46,8 +48,8 @@ public class ModBlocks {
     public static final Block MOLTEN_FUNGUS_FENCE_GATE = registerBlock("molten_fungus_fence_gate", new FenceGateBlock(FabricBlockSettings.of(Material.NETHER_WOOD, MOLTEN_COLOR).strength(STRENGTH).sounds(BlockSoundGroup.NETHER_STEM).luminance(LUMINANCE)), ModItemsGroup.MONSTERS_GIRLS);
     public static final Block MOLTEN_FUNGUS_PRESSURE_PLATE = registerBlock("molten_fungus_pressure_plate", new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.of(Material.NETHER_WOOD, MOLTEN_COLOR).strength(STRENGTH).sounds(BlockSoundGroup.NETHER_STEM).luminance(LUMINANCE)), ModItemsGroup.MONSTERS_GIRLS);
     public static final Block MOLTEN_FUNGUS_BUTTON = registerBlock("molten_fungus_button", new StoneButtonBlock(FabricBlockSettings.of(Material.NETHER_WOOD, MOLTEN_COLOR).strength(STRENGTH).sounds(BlockSoundGroup.NETHER_STEM).luminance(LUMINANCE).noCollision()), ModItemsGroup.MONSTERS_GIRLS);
-    public static final Block MOLTEN_FUNGUS_DOOR = registerBlock("molten_fungus_door", new DoorBlock(FabricBlockSettings.of(Material.NETHER_WOOD, MOLTEN_COLOR).strength(STRENGTH).luminance(LUMINANCE)), ModItemsGroup.MONSTERS_GIRLS);
-    public static final Block MOLTEN_FUNGUS_TRAPDOOR = registerBlock("molten_fungus_trapdoor", new TrapdoorBlock(FabricBlockSettings.of(Material.NETHER_WOOD, MOLTEN_COLOR).strength(STRENGTH).luminance(LUMINANCE)), ModItemsGroup.MONSTERS_GIRLS);
+    public static final Block MOLTEN_FUNGUS_DOOR = registerBlock("molten_fungus_door", new DoorBlock(FabricBlockSettings.of(Material.NETHER_WOOD, MOLTEN_COLOR).strength(STRENGTH).nonOpaque().luminance(LUMINANCE)), ModItemsGroup.MONSTERS_GIRLS);
+    public static final Block MOLTEN_FUNGUS_TRAPDOOR = registerBlock("molten_fungus_trapdoor", new TrapdoorBlock(FabricBlockSettings.of(Material.NETHER_WOOD, MOLTEN_COLOR).strength(STRENGTH).nonOpaque().luminance(LUMINANCE)), ModItemsGroup.MONSTERS_GIRLS);
 
     public static final Block SOUL_SHROOMLIGHT = registerBlock("soul_shroomlight", new Block(FabricBlockSettings.of(Material.SOLID_ORGANIC, SOUL_COLOR).strength(STRENGTH).sounds(BlockSoundGroup.SHROOMLIGHT).luminance(15)), ModItemsGroup.MONSTERS_GIRLS);
     public static final Block SOUL_WANDERER_FUNGUS = registerBlock("soul_wanderer_fungus", new Block(FabricBlockSettings.of(Material.SOLID_ORGANIC).strength(STRENGTH)), ModItemsGroup.MONSTERS_GIRLS);
@@ -59,12 +61,25 @@ public class ModBlocks {
     public static final Block SOUL_WANDERER_FENCE_GATE = registerBlock("soul_wanderer_fence_gate", new FenceGateBlock(FabricBlockSettings.of(Material.NETHER_WOOD, SOUL_COLOR).strength(STRENGTH).sounds(BlockSoundGroup.NETHER_STEM).luminance(LUMINANCE)), ModItemsGroup.MONSTERS_GIRLS);
     public static final Block SOUL_WANDERER_PRESSURE_PLATE = registerBlock("soul_wanderer_pressure_plate", new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.of(Material.NETHER_WOOD, SOUL_COLOR).strength(STRENGTH).sounds(BlockSoundGroup.NETHER_STEM).luminance(LUMINANCE)), ModItemsGroup.MONSTERS_GIRLS);
     public static final Block SOUL_WANDERER_BUTTON = registerBlock("soul_wanderer_button", new StoneButtonBlock(FabricBlockSettings.of(Material.NETHER_WOOD, SOUL_COLOR).strength(STRENGTH).sounds(BlockSoundGroup.NETHER_STEM).luminance(LUMINANCE).noCollision()), ModItemsGroup.MONSTERS_GIRLS);
-    public static final Block SOUL_WANDERER_DOOR = registerBlock("soul_wanderer_door", new DoorBlock(FabricBlockSettings.of(Material.NETHER_WOOD, SOUL_COLOR).strength(STRENGTH).luminance(LUMINANCE)), ModItemsGroup.MONSTERS_GIRLS);
-    public static final Block SOUL_WANDERER_TRAPDOOR = registerBlock("soul_wanderer_trapdoor", new TrapdoorBlock(FabricBlockSettings.of(Material.NETHER_WOOD, SOUL_COLOR).strength(STRENGTH).luminance(LUMINANCE)), ModItemsGroup.MONSTERS_GIRLS);
+    public static final Block SOUL_WANDERER_DOOR = registerBlock("soul_wanderer_door", new DoorBlock(FabricBlockSettings.of(Material.NETHER_WOOD, SOUL_COLOR).strength(STRENGTH).nonOpaque().luminance(LUMINANCE)), ModItemsGroup.MONSTERS_GIRLS);
+    public static final Block SOUL_WANDERER_TRAPDOOR = registerBlock("soul_wanderer_trapdoor", new TrapdoorBlock(FabricBlockSettings.of(Material.NETHER_WOOD, SOUL_COLOR).strength(STRENGTH).nonOpaque().luminance(LUMINANCE)), ModItemsGroup.MONSTERS_GIRLS);
 
     public static final Block INK_CAP_BLACK_MUSHROOM_FUNGUS = registerBlock("ink_cap_black_mushroom_fungus", new Block(FabricBlockSettings.of(Material.SOLID_ORGANIC).strength(STRENGTH)), ModItemsGroup.MONSTERS_GIRLS);
     public static final Block INK_CAP_GREY_MUSHROOM_FUNGUS = registerBlock("ink_cap_grey_mushroom_fungus", new Block(FabricBlockSettings.of(Material.SOLID_ORGANIC).strength(STRENGTH)), ModItemsGroup.MONSTERS_GIRLS);
     public static final Block INK_CAP_LIGHT_GREY_MUSHROOM_FUNGUS = registerBlock("ink_cap_light_grey_mushroom_fungus", new Block(FabricBlockSettings.of(Material.SOLID_ORGANIC).strength(STRENGTH)), ModItemsGroup.MONSTERS_GIRLS);
+
+    public static final Block HUGE_BROWN_MUSHROOM = registerBlock("huge_brown_mushroom", new DirectionalBlock(FabricBlockSettings.of(Material.SOLID_ORGANIC, SOUL_COLOR).strength(STRENGTH, RESISTANCE).sounds(BlockSoundGroup.FUNGUS).nonOpaque(), VoxelCollision.HUGE_MUSHROOM), ModItemsGroup.MONSTERS_GIRLS);
+    public static final Block HUGE_CRIMSON_FUNGUS = registerBlock("huge_crimson_fungus", new DirectionalBlock(FabricBlockSettings.of(Material.SOLID_ORGANIC, SOUL_COLOR).strength(STRENGTH, RESISTANCE).sounds(BlockSoundGroup.FUNGUS).nonOpaque(), VoxelCollision.HUGE_FUNGUS), ModItemsGroup.MONSTERS_GIRLS);
+    public static final Block HUGE_CRIMSON_RARE_FUNGUS = registerBlock("huge_crimson_rare_fungus", new DirectionalBlock(FabricBlockSettings.of(Material.SOLID_ORGANIC, SOUL_COLOR).strength(STRENGTH, RESISTANCE).sounds(BlockSoundGroup.FUNGUS).nonOpaque(), VoxelCollision.HUGE_FUNGUS), ModItemsGroup.MONSTERS_GIRLS);
+    public static final Block HUGE_ENDER_PUFFBALL = registerBlock("huge_ender_puffball", new DirectionalBlock(FabricBlockSettings.of(Material.SOLID_ORGANIC, SOUL_COLOR).strength(STRENGTH, RESISTANCE).sounds(BlockSoundGroup.FUNGUS).nonOpaque(), VoxelCollision.HUGE_MUSHROOM), ModItemsGroup.MONSTERS_GIRLS);
+    public static final Block HUGE_FLY_AGARIC = registerBlock("huge_fly_agaric", new DirectionalBlock(FabricBlockSettings.of(Material.SOLID_ORGANIC, SOUL_COLOR).strength(STRENGTH, RESISTANCE).sounds(BlockSoundGroup.FUNGUS).nonOpaque(), VoxelCollision.MEDIUM_MUSHROOM), ModItemsGroup.MONSTERS_GIRLS);
+    public static final Block HUGE_INFERNAL_MUSHROOM = registerBlock("huge_infernal_mushroom", new DirectionalBlock(FabricBlockSettings.of(Material.SOLID_ORGANIC, SOUL_COLOR).strength(STRENGTH, RESISTANCE).sounds(BlockSoundGroup.FUNGUS).nonOpaque(), VoxelCollision.HUGE_MUSHROOM), ModItemsGroup.MONSTERS_GIRLS);
+    public static final Block HUGE_INK_CAP_MUSHROOM = registerBlock("huge_ink_cap_mushroom", new DirectionalBlock(FabricBlockSettings.of(Material.SOLID_ORGANIC, SOUL_COLOR).strength(STRENGTH, RESISTANCE).sounds(BlockSoundGroup.FUNGUS).nonOpaque(), VoxelCollision.HUGE_FUNGUS_VARIANT), ModItemsGroup.MONSTERS_GIRLS);
+    public static final Block HUGE_MOLTEN_FUNGUS = registerBlock("huge_molten_fungus", new DirectionalBlock(FabricBlockSettings.of(Material.SOLID_ORGANIC, SOUL_COLOR).strength(STRENGTH, RESISTANCE).sounds(BlockSoundGroup.FUNGUS).nonOpaque(), VoxelCollision.HUGE_MUSHROOM), ModItemsGroup.MONSTERS_GIRLS);
+    public static final Block HUGE_SOUL_WANDERER = registerBlock("huge_soul_wanderer", new DirectionalBlock(FabricBlockSettings.of(Material.SOLID_ORGANIC, SOUL_COLOR).strength(STRENGTH, RESISTANCE).sounds(BlockSoundGroup.FUNGUS).nonOpaque(), VoxelCollision.HUGE_FUNGUS), ModItemsGroup.MONSTERS_GIRLS);
+    public static final Block HUGE_WARPED_FUNGUS = registerBlock("huge_warped_fungus", new DirectionalBlock(FabricBlockSettings.of(Material.SOLID_ORGANIC, SOUL_COLOR).strength(STRENGTH, RESISTANCE).sounds(BlockSoundGroup.FUNGUS).nonOpaque(), VoxelCollision.SMALL_MUSHROOM), ModItemsGroup.MONSTERS_GIRLS);
+    public static final Block HUGE_WARPED_RARE_FUNGUS = registerBlock("huge_warped_rare_fungus", new DirectionalBlock(FabricBlockSettings.of(Material.SOLID_ORGANIC, SOUL_COLOR).strength(STRENGTH, RESISTANCE).sounds(BlockSoundGroup.FUNGUS).nonOpaque(), VoxelCollision.SMALL_MUSHROOM), ModItemsGroup.MONSTERS_GIRLS);
+    public static final Block HUGE_YELLOW_FLY_AGARIC = registerBlock("huge_yellow_fly_agaric", new DirectionalBlock(FabricBlockSettings.of(Material.SOLID_ORGANIC, SOUL_COLOR).strength(STRENGTH, RESISTANCE).sounds(BlockSoundGroup.FUNGUS).nonOpaque(), VoxelCollision.MEDIUM_MUSHROOM), ModItemsGroup.MONSTERS_GIRLS);
 
     // -- Methods --
     private static Block registerBlock(String name, Block block, ItemGroup group) {

@@ -1,0 +1,9 @@
+{
+  "parent": "monsters_girls:custom/huge_fungus",
+  "textures": {
+    "all": "monsters_girls:block/huge_soul_wanderer",
+    "particle": "monsters_girls:block/huge_soul_wanderer",
+    "0": "monsters_girls:block/huge_soul_wanderer"
+  },
+  "render_type": "cutout_mipped"
+}
