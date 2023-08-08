@@ -9,6 +9,6 @@ import net.msymbios.monsters_girls.MonstersGirlsMod;
 public class ModItemsGroup {
 
     // -- Variables --
-    public static final ItemGroup MONSTERS_GIRLS = FabricItemGroupBuilder.build(new Identifier(MonstersGirlsMod.MODID, "mod_group"), () -> new ItemStack(ModItems.POWDER_GENESIS));
+    public static final ItemGroup MONSTERS_GIRLS = FabricItemGroupBuilder.build(new Identifier(MonstersGirlsMod.MODID, "mod_group"), () -> new ItemStack(ModItems.ITEM_GROUP_ICON));
 
 } // Class ModItemsGroup

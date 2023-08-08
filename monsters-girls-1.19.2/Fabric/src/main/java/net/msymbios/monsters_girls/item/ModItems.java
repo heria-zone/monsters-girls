@@ -10,6 +10,8 @@ import net.msymbios.monsters_girls.item.custom.EnchantedItem;
 public class ModItems {
 
     // -- Variables --
+    public static final Item ITEM_GROUP_ICON = registerItem("item_group_icon", new Item(new FabricItemSettings()));
+
     public static final Item POWDER_GENESIS = registerItem("powder_genesis", new EnchantedItem(new FabricItemSettings().group(ModItemsGroup.MONSTERS_GIRLS)));
 
     public static final Item BROWN_MUSHROOM_HAT = registerItem("brown_mushroom_hat", new Item(new FabricItemSettings().group(ModItemsGroup.MONSTERS_GIRLS)));
