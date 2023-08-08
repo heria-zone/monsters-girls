@@ -18,7 +18,7 @@ public class ModBlocks {
 
     // -- Variables --
     public static final MapColor ENDER_COLOR = MapColor.PALE_PURPLE, MOLTEN_COLOR = MapColor.DARK_CRIMSON, SOUL_COLOR = MapColor.DARK_AQUA;
-    public static final float STRENGTH = 1.0F;
+    public static final float STRENGTH = 1.0F, RESISTANCE = 10.0F;
     public static final int LUMINANCE = 5;
 
     public static final Block ENDER_SHROOMLIGHT = registerBlock("ender_shroomlight", new Block(FabricBlockSettings.of(Material.SOLID_ORGANIC, ENDER_COLOR).strength(STRENGTH).sounds(BlockSoundGroup.SHROOMLIGHT).luminance(15)), ModItemsGroup.MONSTERS_GIRLS);
@@ -33,6 +33,8 @@ public class ModBlocks {
     public static final Block ENDER_PUFFBALL_BUTTON = registerBlock("ender_puffball_button", new StoneButtonBlock(FabricBlockSettings.of(Material.NETHER_WOOD, ENDER_COLOR).strength(STRENGTH).sounds(BlockSoundGroup.NETHER_STEM).luminance(LUMINANCE).noCollision()), ModItemsGroup.MONSTERS_GIRLS);
     public static final Block ENDER_PUFFBALL_DOOR = registerBlock("ender_puffball_door", new DoorBlock(FabricBlockSettings.of(Material.NETHER_WOOD, ENDER_COLOR).strength(STRENGTH).luminance(LUMINANCE)), ModItemsGroup.MONSTERS_GIRLS);
     public static final Block ENDER_PUFFBALL_TRAPDOOR = registerBlock("ender_puffball_trapdoor", new TrapdoorBlock(FabricBlockSettings.of(Material.NETHER_WOOD, ENDER_COLOR).strength(STRENGTH).luminance(LUMINANCE)), ModItemsGroup.MONSTERS_GIRLS);
+
+    public static final Block ENDER_MOSS = registerBlock("ender_moss", new GrassBlock(FabricBlockSettings.of(Material.SOLID_ORGANIC).strength(0.6F).ticksRandomly().sounds(BlockSoundGroup.GRASS)), ModItemsGroup.MONSTERS_GIRLS);
 
     public static final Block MOLTEN_SHROOMLIGHT = registerBlock("molten_shroomlight", new Block(FabricBlockSettings.of(Material.SOLID_ORGANIC, MOLTEN_COLOR).strength(STRENGTH).sounds(BlockSoundGroup.SHROOMLIGHT).luminance(15)), ModItemsGroup.MONSTERS_GIRLS);
     public static final Block MOLTEN_FUNGUS_BLOCK = registerBlock("molten_fungus_block", new Block(FabricBlockSettings.of(Material.SOLID_ORGANIC).strength(STRENGTH)), ModItemsGroup.MONSTERS_GIRLS);
@@ -59,6 +61,10 @@ public class ModBlocks {
     public static final Block SOUL_WANDERER_BUTTON = registerBlock("soul_wanderer_button", new StoneButtonBlock(FabricBlockSettings.of(Material.NETHER_WOOD, SOUL_COLOR).strength(STRENGTH).sounds(BlockSoundGroup.NETHER_STEM).luminance(LUMINANCE).noCollision()), ModItemsGroup.MONSTERS_GIRLS);
     public static final Block SOUL_WANDERER_DOOR = registerBlock("soul_wanderer_door", new DoorBlock(FabricBlockSettings.of(Material.NETHER_WOOD, SOUL_COLOR).strength(STRENGTH).luminance(LUMINANCE)), ModItemsGroup.MONSTERS_GIRLS);
     public static final Block SOUL_WANDERER_TRAPDOOR = registerBlock("soul_wanderer_trapdoor", new TrapdoorBlock(FabricBlockSettings.of(Material.NETHER_WOOD, SOUL_COLOR).strength(STRENGTH).luminance(LUMINANCE)), ModItemsGroup.MONSTERS_GIRLS);
+
+    public static final Block INK_CAP_BLACK_MUSHROOM_FUNGUS = registerBlock("ink_cap_black_mushroom_fungus", new Block(FabricBlockSettings.of(Material.SOLID_ORGANIC).strength(STRENGTH)), ModItemsGroup.MONSTERS_GIRLS);
+    public static final Block INK_CAP_GREY_MUSHROOM_FUNGUS = registerBlock("ink_cap_grey_mushroom_fungus", new Block(FabricBlockSettings.of(Material.SOLID_ORGANIC).strength(STRENGTH)), ModItemsGroup.MONSTERS_GIRLS);
+    public static final Block INK_CAP_LIGHT_GREY_MUSHROOM_FUNGUS = registerBlock("ink_cap_light_grey_mushroom_fungus", new Block(FabricBlockSettings.of(Material.SOLID_ORGANIC).strength(STRENGTH)), ModItemsGroup.MONSTERS_GIRLS);
 
     // -- Methods --
     private static Block registerBlock(String name, Block block, ItemGroup group) {

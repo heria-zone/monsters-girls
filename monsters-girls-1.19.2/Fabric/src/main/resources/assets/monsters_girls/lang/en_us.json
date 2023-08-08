@@ -13,6 +13,9 @@
   "block.monsters_girls.ender_puffball_button": "Ender Puffball Button",
   "block.monsters_girls.ender_puffball_door": "Ender Puffball Door",
   "block.monsters_girls.ender_puffball_trapdoor": "Ender Puffball Trapdoor",
+
+  "block.monsters_girls.ender_moss": "Ender Moss",
+
   "block.monsters_girls.molten_shroomlight": "Molten Shroomlight",
   "block.monsters_girls.molten_fungus_block": "Molten Fungus Block",
   "block.monsters_girls.molten_fungus_stem": "Molten Fungus Stem",
@@ -25,6 +28,7 @@
   "block.monsters_girls.molten_fungus_button": "Molten Fungus Button",
   "block.monsters_girls.molten_fungus_door": "Molten Fungus Door",
   "block.monsters_girls.molten_fungus_trapdoor": "Molten Fungus Trapdoor",
+
   "block.monsters_girls.soul_shroomlight": "Soul Shroomlight",
   "block.monsters_girls.soul_wanderer_fungus": "Soul Wanderer Fungus",
   "block.monsters_girls.soul_wanderer_stem": "Soul Wanderer Stem",
@@ -37,6 +41,10 @@
   "block.monsters_girls.soul_wanderer_button": "Soul Wanderer Button",
   "block.monsters_girls.soul_wanderer_door": "Soul Wanderer Door",
   "block.monsters_girls.soul_wanderer_trapdoor": "Soul Wanderer Trapdoor",
+
+  "block.monsters_girls.ink_cap_black_mushroom_fungus": "Ink Cap Black Mushroom Fungus",
+  "block.monsters_girls.ink_cap_grey_mushroom_fungus": "Ink Cap Grey Mushroom Fungus",
+  "block.monsters_girls.ink_cap_light_grey_mushroom_fungus": "Ink Cap Light Grey Mushroom Fungus",
 
   "itemGroup.monsters_girls.mod_group": "Monsters & Girls"
 }
