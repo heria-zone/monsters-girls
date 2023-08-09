@@ -93,6 +93,10 @@ public class ModBlocks {
     public static final Block SOUL_WANDERER_FUNGUS = registerBlock("soul_wanderer_fungus", new FlowerBlock(StatusEffects.SLOWNESS, 5, FabricBlockSettings.of(Material.PLANT, MapColor.DARK_AQUA).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.GRASS).luminance(2)), ModItemsGroup.MONSTERS_GIRLS);
     public static final Block POTTED_SOUL_WANDERER_FUNGUS = registerBlockWithoutGroup("potted_soul_wanderer_fungus", new FlowerPotBlock(ModBlocks.SOUL_WANDERER_FUNGUS, FabricBlockSettings.of(Material.DECORATION).breakInstantly().nonOpaque().luminance(2)));
 
+    public static final Block JAR = registerBlock("jar", new DirectionalBlock(FabricBlockSettings.of(Material.SOLID_ORGANIC).strength(STRENGTH, RESISTANCE).sounds(BlockSoundGroup.GLASS).nonOpaque(), VoxelCollision.JAR), ModItemsGroup.MONSTERS_GIRLS);
+    public static final Block URN_MOLTEN = registerBlock("urn_molten", new DirectionalBlock(FabricBlockSettings.of(Material.SOLID_ORGANIC).strength(STRENGTH, RESISTANCE).sounds(BlockSoundGroup.GLASS).nonOpaque(), VoxelCollision.BIG_URN), ModItemsGroup.MONSTERS_GIRLS);
+    public static final Block URN_CRIMSON = registerBlock("urn_crimson", new DirectionalBlock(FabricBlockSettings.of(Material.SOLID_ORGANIC).strength(STRENGTH, RESISTANCE).sounds(BlockSoundGroup.GLASS).nonOpaque(), VoxelCollision.SMALL_URN), ModItemsGroup.MONSTERS_GIRLS);
+
     // -- Methods --
     private static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);
@@ -135,6 +139,10 @@ public class ModBlocks {
         registerRender(POTTED_INK_CAP_MUSHROOM);
         registerRender(POTTED_MOLTEN_FUNGUS);
         registerRender(POTTED_SOUL_WANDERER_FUNGUS);
+
+        registerRender(JAR);
+        registerRender(URN_MOLTEN);
+        registerRender(URN_CRIMSON);
     } // registerBlockRender ()
 
     // Utility

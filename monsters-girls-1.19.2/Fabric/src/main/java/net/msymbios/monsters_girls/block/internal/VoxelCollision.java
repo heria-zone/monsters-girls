@@ -52,4 +52,24 @@ public class VoxelCollision {
             Block.createCuboidShape(2, 13, 2, 14, 15, 14)
     ).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();
 
+    public static VoxelShape JAR = Stream.of(
+            Block.createCuboidShape(2, 0, 2, 14, 15, 14),
+            Block.createCuboidShape(4, 15, 4, 12, 16, 12),
+            Block.createCuboidShape(2, 0, 2, 14, 1, 14)
+    ).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();;
+
+    public static VoxelShape BIG_URN = Stream.of(
+            Block.createCuboidShape(2, 2, 2, 14, 13, 14),
+            Block.createCuboidShape(5, 13, 5, 11, 14, 11),
+            Block.createCuboidShape(4, 14, 4, 12, 16, 12),
+            Block.createCuboidShape(4, 0, 4, 12, 2, 12)
+    ).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();;
+
+    public static VoxelShape SMALL_URN = Stream.of(
+            Block.createCuboidShape(4, 2, 4, 12, 11, 12),
+            Block.createCuboidShape(6, 11, 6, 10, 14, 10),
+            Block.createCuboidShape(5, 14, 5, 11, 16, 11),
+            Block.createCuboidShape(5, 0, 5, 11, 2, 11)
+    ).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, BooleanBiFunction.OR)).get();;
+
 } // Class VoxelCollision

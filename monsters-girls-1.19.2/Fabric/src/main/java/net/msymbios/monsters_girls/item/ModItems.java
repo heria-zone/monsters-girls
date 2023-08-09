@@ -2,6 +2,7 @@ package net.msymbios.monsters_girls.item;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.msymbios.monsters_girls.MonstersGirlsMod;
@@ -26,6 +27,8 @@ public class ModItems {
     public static final Item SOUL_WANDERER_FUNGUS_HAT = registerItem("soul_wanderer_fungus_hat", new Item(new FabricItemSettings().group(ModItemsGroup.MONSTERS_GIRLS)));
     public static final Item WARPED_FUNGUS_HAT = registerItem("warped_fungus_hat", new Item(new FabricItemSettings().group(ModItemsGroup.MONSTERS_GIRLS)));
     public static final Item WARPED_RARE_FUNGUS_HAT = registerItem("warped_rare_fungus_hat", new Item(new FabricItemSettings().group(ModItemsGroup.MONSTERS_GIRLS)));
+
+    public static final Item SPECTRAL_CAKE = registerItem("spectral_cake", new Item(new FabricItemSettings().group(ModItemsGroup.MONSTERS_GIRLS)));
 
     // -- Methods --
     private static Item registerItem(String name, Item item) {
