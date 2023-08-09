@@ -85,16 +85,11 @@ public class ModBlocks {
 
     public static final Block ENDER_PUFFBALL = registerBlock("ender_puffball", new FlowerBlock(StatusEffects.LEVITATION, 5, FabricBlockSettings.of(Material.PLANT, MapColor.PALE_PURPLE).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.GRASS).luminance(2)), ModItemsGroup.MONSTERS_GIRLS);
     public static final Block POTTED_ENDER_PUFFBALL = registerBlockWithoutGroup("potted_ender_puffball", new FlowerPotBlock(ModBlocks.ENDER_PUFFBALL, FabricBlockSettings.of(Material.DECORATION).breakInstantly().nonOpaque().luminance(2)));
-
     public static final Block INK_CAP_MUSHROOM = registerBlock("ink_cap_mushroom", new FlowerBlock(StatusEffects.ABSORPTION, 5, FabricBlockSettings.of(Material.PLANT, MapColor.OFF_WHITE).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.GRASS).luminance(2)), ModItemsGroup.MONSTERS_GIRLS);
     public static final Block POTTED_INK_CAP_MUSHROOM = registerBlockWithoutGroup("potted_ink_cap_mushroom", new FlowerPotBlock(ModBlocks.INK_CAP_MUSHROOM, FabricBlockSettings.of(Material.DECORATION).breakInstantly().nonOpaque().luminance(2)));
-
     public static final Block MOLTEN_FUNGUS = registerBlock("molten_fungus", new FlowerBlock(StatusEffects.FIRE_RESISTANCE, 5, FabricBlockSettings.of(Material.PLANT, MapColor.GOLD).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.GRASS).luminance(2)), ModItemsGroup.MONSTERS_GIRLS);
     public static final Block POTTED_MOLTEN_FUNGUS = registerBlockWithoutGroup("potted_molten_fungus", new FlowerPotBlock(ModBlocks.MOLTEN_FUNGUS, FabricBlockSettings.of(Material.DECORATION).breakInstantly().nonOpaque().luminance(2)));
-
     public static final Block MANDRAKE = registerBlock("mandrake", new FlowerBlock(StatusEffects.REGENERATION, 5, FabricBlockSettings.of(Material.PLANT, MapColor.PALE_GREEN).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.GRASS)), ModItemsGroup.MONSTERS_GIRLS);
-    public static final Block POTTED_MANDRAKE = registerBlockWithoutGroup("potted_mandrake", new FlowerPotBlock(ModBlocks.MANDRAKE, FabricBlockSettings.of(Material.DECORATION).breakInstantly().nonOpaque()));
-
     public static final Block SOUL_WANDERER_FUNGUS = registerBlock("soul_wanderer_fungus", new FlowerBlock(StatusEffects.SLOWNESS, 5, FabricBlockSettings.of(Material.PLANT, MapColor.DARK_AQUA).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.GRASS).luminance(2)), ModItemsGroup.MONSTERS_GIRLS);
     public static final Block POTTED_SOUL_WANDERER_FUNGUS = registerBlockWithoutGroup("potted_soul_wanderer_fungus", new FlowerPotBlock(ModBlocks.SOUL_WANDERER_FUNGUS, FabricBlockSettings.of(Material.DECORATION).breakInstantly().nonOpaque().luminance(2)));
 
@@ -135,8 +130,12 @@ public class ModBlocks {
         registerRender(MOLTEN_FUNGUS);
         registerRender(MANDRAKE);
         registerRender(SOUL_WANDERER_FUNGUS);
-    } // registerBlockRender ()
 
+        registerRender(POTTED_ENDER_PUFFBALL);
+        registerRender(POTTED_INK_CAP_MUSHROOM);
+        registerRender(POTTED_MOLTEN_FUNGUS);
+        registerRender(POTTED_SOUL_WANDERER_FUNGUS);
+    } // registerBlockRender ()
 
     // Utility
     public static void registerRender(Block block) {

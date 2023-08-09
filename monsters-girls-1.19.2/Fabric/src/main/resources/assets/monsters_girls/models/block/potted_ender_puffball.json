@@ -2,5 +2,6 @@
   "parent": "minecraft:block/flower_pot_cross",
   "textures": {
     "plant": "monsters_girls:block/ender_puffball"
-  }
+  },
+  "render_type": "cutout_mipped"
 }
