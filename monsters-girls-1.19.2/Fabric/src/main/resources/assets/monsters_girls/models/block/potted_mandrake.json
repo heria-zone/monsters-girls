@@ -1,0 +1,6 @@
+{
+  "parent": "monsters_girls:custom/mandrake",
+  "textures": {
+    "plant": "monsters_girls:block/mandrake"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "monsters_girls:block/ender_puffball"
+  }
+}

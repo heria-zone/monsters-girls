@@ -1,0 +1,9 @@
+{
+  "parent": "monsters_girls:custom/mandrake",
+  "textures": {
+    "all": "monsters_girls:block/mandrake",
+    "particle": "monsters_girls:particle/leaf",
+    "1": "monsters_girls:block/mandrake"
+  },
+  "render_type": "cutout"
+}

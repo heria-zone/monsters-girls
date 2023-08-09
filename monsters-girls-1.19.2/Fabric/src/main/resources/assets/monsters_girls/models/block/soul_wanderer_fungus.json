@@ -1,6 +1,6 @@
 {
-  "parent": "block/cube_all",
+  "parent": "block/cross",
   "textures": {
-    "all": "monsters_girls:block/soul_wanderer_fungus"
+    "cross": "monsters_girls:block/soul_wanderer_fungus"
   }
 }
