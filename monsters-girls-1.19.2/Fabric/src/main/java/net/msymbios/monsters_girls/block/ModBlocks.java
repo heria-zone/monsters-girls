@@ -5,14 +5,15 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.registry.Registry;
+import net.minecraft.world.BlockView;
 import net.msymbios.monsters_girls.MonstersGirlsMod;
 import net.msymbios.monsters_girls.block.custom.DirectionalBlock;
 import net.msymbios.monsters_girls.block.internal.VoxelCollision;
@@ -83,15 +84,17 @@ public class ModBlocks {
     public static final Block HUGE_WARPED_FUNGUS = registerBlock("huge_warped_fungus", new DirectionalBlock(FabricBlockSettings.of(Material.SOLID_ORGANIC, SOUL_COLOR).strength(STRENGTH, RESISTANCE).sounds(BlockSoundGroup.FUNGUS).nonOpaque(), VoxelCollision.SMALL_MUSHROOM), ModItemsGroup.MONSTERS_GIRLS);
     public static final Block HUGE_WARPED_RARE_FUNGUS = registerBlock("huge_warped_rare_fungus", new DirectionalBlock(FabricBlockSettings.of(Material.SOLID_ORGANIC, SOUL_COLOR).strength(STRENGTH, RESISTANCE).sounds(BlockSoundGroup.FUNGUS).nonOpaque(), VoxelCollision.SMALL_MUSHROOM), ModItemsGroup.MONSTERS_GIRLS);
 
-    public static final Block ENDER_PUFFBALL = registerBlock("ender_puffball", new FlowerBlock(StatusEffects.LEVITATION, 5, FabricBlockSettings.of(Material.PLANT, MapColor.PALE_PURPLE).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.GRASS).luminance(2)), ModItemsGroup.MONSTERS_GIRLS);
-    public static final Block POTTED_ENDER_PUFFBALL = registerBlockWithoutGroup("potted_ender_puffball", new FlowerPotBlock(ModBlocks.ENDER_PUFFBALL, FabricBlockSettings.of(Material.DECORATION).breakInstantly().nonOpaque().luminance(2)));
-    public static final Block INK_CAP_MUSHROOM = registerBlock("ink_cap_mushroom", new FlowerBlock(StatusEffects.ABSORPTION, 5, FabricBlockSettings.of(Material.PLANT, MapColor.OFF_WHITE).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.GRASS).luminance(2)), ModItemsGroup.MONSTERS_GIRLS);
-    public static final Block POTTED_INK_CAP_MUSHROOM = registerBlockWithoutGroup("potted_ink_cap_mushroom", new FlowerPotBlock(ModBlocks.INK_CAP_MUSHROOM, FabricBlockSettings.of(Material.DECORATION).breakInstantly().nonOpaque().luminance(2)));
-    public static final Block MOLTEN_FUNGUS = registerBlock("molten_fungus", new FlowerBlock(StatusEffects.FIRE_RESISTANCE, 5, FabricBlockSettings.of(Material.PLANT, MapColor.GOLD).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.GRASS).luminance(2)), ModItemsGroup.MONSTERS_GIRLS);
-    public static final Block POTTED_MOLTEN_FUNGUS = registerBlockWithoutGroup("potted_molten_fungus", new FlowerPotBlock(ModBlocks.MOLTEN_FUNGUS, FabricBlockSettings.of(Material.DECORATION).breakInstantly().nonOpaque().luminance(2)));
     public static final Block MANDRAKE = registerBlock("mandrake", new FlowerBlock(StatusEffects.REGENERATION, 5, FabricBlockSettings.of(Material.PLANT, MapColor.PALE_GREEN).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.GRASS)), ModItemsGroup.MONSTERS_GIRLS);
-    public static final Block SOUL_WANDERER_FUNGUS = registerBlock("soul_wanderer_fungus", new FlowerBlock(StatusEffects.SLOWNESS, 5, FabricBlockSettings.of(Material.PLANT, MapColor.DARK_AQUA).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.GRASS).luminance(2)), ModItemsGroup.MONSTERS_GIRLS);
-    public static final Block POTTED_SOUL_WANDERER_FUNGUS = registerBlockWithoutGroup("potted_soul_wanderer_fungus", new FlowerPotBlock(ModBlocks.SOUL_WANDERER_FUNGUS, FabricBlockSettings.of(Material.DECORATION).breakInstantly().nonOpaque().luminance(2)));
+
+    public static final Block ENDER_PUFFBALL = registerBlock("ender_puffball", new FlowerBlock(StatusEffects.REGENERATION, 5, FabricBlockSettings.of(Material.PLANT, MapColor.PALE_PURPLE).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.GRASS).luminance((state) -> 2).postProcess(ModBlocks::always)), ModItemsGroup.MONSTERS_GIRLS);
+    public static final Block INK_CAP_MUSHROOM = registerBlock("ink_cap_mushroom", new FlowerBlock(StatusEffects.REGENERATION, 5, FabricBlockSettings.of(Material.PLANT, MapColor.OFF_WHITE).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.GRASS).luminance((state) -> 2).postProcess(ModBlocks::always)), ModItemsGroup.MONSTERS_GIRLS);
+    public static final Block MOLTEN_FUNGUS = registerBlock("molten_fungus", new FlowerBlock(StatusEffects.REGENERATION, 5, FabricBlockSettings.of(Material.PLANT, MapColor.GOLD).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.GRASS).luminance((state) -> 2).postProcess(ModBlocks::always)), ModItemsGroup.MONSTERS_GIRLS);
+    public static final Block SOUL_WANDERER_FUNGUS = registerBlock("soul_wanderer_fungus", new FlowerBlock(StatusEffects.REGENERATION, 5, FabricBlockSettings.of(Material.PLANT, MapColor.DARK_AQUA).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.GRASS).luminance((state) -> 2).postProcess(ModBlocks::always)), ModItemsGroup.MONSTERS_GIRLS);
+
+    public static final Block POTTED_ENDER_PUFFBALL = registerBlock("potted_ender_puffball", new FlowerPotBlock(ModBlocks.ENDER_PUFFBALL, FabricBlockSettings.of(Material.DECORATION).breakInstantly().nonOpaque().luminance(2)));
+    public static final Block POTTED_INK_CAP_MUSHROOM = registerBlock("potted_ink_cap_mushroom", new FlowerPotBlock(ModBlocks.INK_CAP_MUSHROOM, FabricBlockSettings.of(Material.DECORATION).breakInstantly().nonOpaque().luminance(2)));
+    public static final Block POTTED_MOLTEN_FUNGUS = registerBlock("potted_molten_fungus", new FlowerPotBlock(ModBlocks.MOLTEN_FUNGUS, FabricBlockSettings.of(Material.DECORATION).breakInstantly().nonOpaque().luminance(2)));
+    public static final Block POTTED_SOUL_WANDERER_FUNGUS = registerBlock("potted_soul_wanderer_fungus", new FlowerPotBlock(ModBlocks.SOUL_WANDERER_FUNGUS, FabricBlockSettings.of(Material.DECORATION).breakInstantly().nonOpaque().luminance(2)));
 
     public static final Block JAR = registerBlock("jar", new DirectionalBlock(FabricBlockSettings.of(Material.SOLID_ORGANIC).strength(STRENGTH, RESISTANCE).sounds(BlockSoundGroup.GLASS).nonOpaque(), VoxelCollision.JAR), ModItemsGroup.MONSTERS_GIRLS);
     public static final Block URN_MOLTEN = registerBlock("urn_molten", new DirectionalBlock(FabricBlockSettings.of(Material.SOLID_ORGANIC).strength(STRENGTH, RESISTANCE).sounds(BlockSoundGroup.GLASS).nonOpaque(), VoxelCollision.BIG_URN), ModItemsGroup.MONSTERS_GIRLS);
@@ -103,16 +106,16 @@ public class ModBlocks {
         return Registry.register(Registry.BLOCK, new Identifier(MonstersGirlsMod.MODID, name), block);
     } // registerBlock ()
 
-    private static Block registerBlockWithoutGroup(String name, Block block) {
-        registerBlockItemWithoutGroup(name, block);
+    private static Block registerBlock(String name, Block block) {
+        registerBlockItem(name, block);
         return Registry.register(Registry.BLOCK, new Identifier(MonstersGirlsMod.MODID, name), block);
-    } // registerBlockWithoutGroup ()
+    } // registerBlock ()
 
     private static Item registerBlockItem(String name, Block block, ItemGroup group) {
         return Registry.register(Registry.ITEM, new Identifier(MonstersGirlsMod.MODID, name), new BlockItem(block, new FabricItemSettings().group(group)));
     } // registerBlockItem ()
 
-    private static Item registerBlockItemWithoutGroup(String name, Block block) {
+    private static Item registerBlockItem(String name, Block block) {
         return Registry.register(Registry.ITEM, new Identifier(MonstersGirlsMod.MODID, name), new BlockItem(block, new FabricItemSettings()));
     } // registerBlockItem ()
 
@@ -149,5 +152,9 @@ public class ModBlocks {
     public static void registerRender(Block block) {
         BlockRenderLayerMap.INSTANCE.putBlock(block, RenderLayer.getCutout());
     } // registerRender ()
+
+    private static boolean always(BlockState state, BlockView world, BlockPos pos) {
+        return true;
+    } // always ()
 
 } // Class ModBlocks
