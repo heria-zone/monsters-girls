@@ -26,7 +26,7 @@ import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 import software.bernie.geckolib3.core.manager.SingletonAnimationFactory;
 
-public class MandrakeGreenEntity extends InternalEntity implements IAnimatable {
+public class FlyAgaricEntity extends InternalEntity implements IAnimatable {
 
     // -- Variables --
     private final AnimationFactory cache = new SingletonAnimationFactory(this);
@@ -34,41 +34,41 @@ public class MandrakeGreenEntity extends InternalEntity implements IAnimatable {
     // -- Properties --
     public static DefaultAttributeContainer.Builder setAttributes() {
         return MobEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_MAX_HEALTH, InternalMetric.getAttribute(EntityVariant.MandrakeGreen, EntityAttribute.MAX_HEALTH))
-                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, InternalMetric.getAttribute(EntityVariant.MandrakeGreen, EntityAttribute.ATTACK_DAMAGE))
-                .add(EntityAttributes.GENERIC_ATTACK_SPEED, InternalMetric.getAttribute(EntityVariant.MandrakeGreen, EntityAttribute.ATTACK_SPEED))
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, InternalMetric.getAttribute(EntityVariant.MandrakeGreen, EntityAttribute.MOVEMENT_SPEED))
-                .add(EntityAttributes.GENERIC_ARMOR, InternalMetric.getAttribute(EntityVariant.MandrakeGreen, EntityAttribute.ARMOR))
-                .add(EntityAttributes.GENERIC_ARMOR_TOUGHNESS, InternalMetric.getAttribute(EntityVariant.MandrakeGreen, EntityAttribute.ARMOR_TOUGHNESS));
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, InternalMetric.getAttribute(EntityVariant.FlyAgaric, EntityAttribute.MAX_HEALTH))
+                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, InternalMetric.getAttribute(EntityVariant.FlyAgaric, EntityAttribute.ATTACK_DAMAGE))
+                .add(EntityAttributes.GENERIC_ATTACK_SPEED, InternalMetric.getAttribute(EntityVariant.FlyAgaric, EntityAttribute.ATTACK_SPEED))
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, InternalMetric.getAttribute(EntityVariant.FlyAgaric, EntityAttribute.MOVEMENT_SPEED))
+                .add(EntityAttributes.GENERIC_ARMOR, InternalMetric.getAttribute(EntityVariant.FlyAgaric, EntityAttribute.ARMOR))
+                .add(EntityAttributes.GENERIC_ARMOR_TOUGHNESS, InternalMetric.getAttribute(EntityVariant.FlyAgaric, EntityAttribute.ARMOR_TOUGHNESS));
     } // setAttributes ()
 
     // -- MODEL --
     @Override
-    public Identifier getCurrentModelByID(int value) { return InternalMetric.getModel(EntityVariant.MandrakeGreen, EntityModel.byId(value)); } // getCurrentModelByID ()
+    public Identifier getCurrentModelByID(int value) { return InternalMetric.getModel(EntityVariant.FlyAgaric, EntityModel.byId(value)); } // getCurrentModelByID ()
 
     // ANIMATOR
     @Override
-    public Identifier getAnimatorByID(int value) { return InternalMetric.getAnimator(EntityVariant.MandrakeGreen, EntityModel.byId(value)); } // getAnimatorByID ()
+    public Identifier getAnimatorByID(int value) { return InternalMetric.getAnimator(EntityVariant.FlyAgaric, EntityModel.byId(value)); } // getAnimatorByID ()
 
     // TEXTURE
     @Override
-    public Identifier getTextureByID(int value) { return InternalMetric.getTexture(EntityVariant.MandrakeGreen, EntityTexture.byId(value)); } // getTextureByID ()
+    public Identifier getTextureByID(int value) { return InternalMetric.getTexture(EntityVariant.FlyAgaric, EntityTexture.byId(value)); } // getTextureByID ()
 
     // VARIANT
     @Override
     public String getVariant() {
-        return this.getVariant(EntityVariant.MandrakeGreen.getName());
+        return this.getVariant(EntityVariant.FlyAgaric.getName());
     } // getVariant ()
 
     // STATS
     public float getAttributeRaw(EntityAttribute attribute) {
-        return InternalMetric.getAttribute(EntityVariant.MandrakeGreen, attribute);
+        return InternalMetric.getAttribute(EntityVariant.FlyAgaric, attribute);
     } // getAttributeRaw ()
 
     // -- Constructor --
-    public MandrakeGreenEntity(EntityType<? extends TameableEntity> entityType, World world) {
+    public FlyAgaricEntity(EntityType<? extends TameableEntity> entityType, World world) {
         super(entityType, world);
-    } // Constructor MandrakeGreenEntity ()
+    } // Constructor FlyAgaricEntity ()
 
     // -- Inherited Methods --
     @Override
@@ -82,8 +82,8 @@ public class MandrakeGreenEntity extends InternalEntity implements IAnimatable {
 
     // -- Built-In Methods --
     public EntityData initialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, EntityData entityData, NbtCompound entityNbt) {
-        this.setVariant(EntityVariant.MandrakeGreen.getName());
-        this.setVariant(EntityModel.Mandrake.getName());
+        this.setVariant(EntityVariant.FlyAgaric.getName());
+        this.setVariant(EntityModel.Mushroom.getName());
         return super.initialize(world, difficulty, spawnReason, entityData, entityNbt);
     } // initialize ()
 
@@ -108,9 +108,9 @@ public class MandrakeGreenEntity extends InternalEntity implements IAnimatable {
     @Override
     protected void initDataTracker() {
         super.initDataTracker();
-        this.dataTracker.startTracking(VARIANT, EntityVariant.MandrakeGreen.getName());
-        this.dataTracker.startTracking(MODEL_ID, EntityModel.Mandrake.getId());
-        this.dataTracker.startTracking(BELLY, false);
+        this.dataTracker.startTracking(VARIANT, EntityVariant.FlyAgaric.getName());
+        this.dataTracker.startTracking(MODEL_ID, EntityModel.Mushroom.getId());
+        this.dataTracker.startTracking(BELLY, true);
     } // initDataTracker ()
 
-} // Class MandrakeGreenEntity
+} // Class FlyAgaricEntity

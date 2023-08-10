@@ -11,7 +11,7 @@ public class WarpedRenderer extends GeoEntityRenderer<WarpedEntity> {
     public WarpedRenderer(EntityRendererFactory.Context renderManager) {
         super(renderManager, new WarpedModel());
         this.shadowRadius = 0.3F;
-    } // Constructor VanillaRenderer ()
+    } // Constructor WarpedRenderer ()
 
     // -- Method --
     @Override

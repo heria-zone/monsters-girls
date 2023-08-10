@@ -28,6 +28,31 @@ public class InternalMetric {
     public static Predicate<LivingEntity> AvoidAttackingEntities = entity -> entity instanceof Monster && !(entity instanceof CreeperEntity);
 
     // -- Variables --
+    public static final HashMap<EntityVariant, HashMap<EntityTexture, Identifier>> TEXTURES = new HashMap<>(){{
+        put(EntityVariant.MandrakeBrown, setTexture("mandrake/mandrake_girl_brown", false));
+        put(EntityVariant.MandrakeGreen, setTexture("mandrake/mandrake_girl_green", false));
+        put(EntityVariant.Crimson, setTexture("mushroom/mushroom_girl_crimson", true));
+        put(EntityVariant.CrimsonRare, setTexture("mushroom/mushroom_girl_crimson_rare", true));
+        put(EntityVariant.FlyAgaric, setTexture("mushroom/mushroom_girl_red", true));
+        put(EntityVariant.AmanitaYellow, setTexture("mushroom/mushroom_girl_yellow", true));
+        put(EntityVariant.InkCap, setTexture("mushroom/mushroom_girl_ink_cap", true));
+        put(EntityVariant.Warped, setTexture("mushroom/mushroom_girl_warped", true));
+        put(EntityVariant.WarpedRare, setTexture("mushroom/mushroom_girl_warped_rare", true));
+    }};
+
+    public static final HashMap<EntityVariant, HashMap<EntityAttribute, InternalAttribute>> ATTRIBUTES = new HashMap<>(){{
+        put(EntityVariant.MandrakeBrown, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
+        put(EntityVariant.MandrakeGreen, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
+        put(EntityVariant.Crimson, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
+        put(EntityVariant.CrimsonRare, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
+        put(EntityVariant.FlyAgaric, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
+        put(EntityVariant.AmanitaYellow, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
+        put(EntityVariant.InkCap, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
+        put(EntityVariant.Warped, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
+        put(EntityVariant.WarpedRare, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
+    }};
+
+    // Todo: correct the models, its not working
     public static final HashMap<EntityVariant, HashMap<EntityModel, Identifier>> ANIMATORS = new HashMap<>() {{
         put(EntityVariant.MandrakeBrown, setAnimator(EntityModel.Mandrake,"mushroom_girl"));
         put(EntityVariant.MandrakeGreen, setAnimator(EntityModel.Mandrake,"mushroom_girl"));
@@ -36,28 +61,12 @@ public class InternalMetric {
         put(EntityVariant.WarpedRare, setAnimator(EntityModel.Mushroom,"mushroom_girl"));
     }};
 
-    public static final HashMap<EntityVariant, HashMap<EntityTexture, Identifier>> TEXTURES = new HashMap<>(){{
-        put(EntityVariant.MandrakeBrown, setTexture("mandrake/mandrake_girl_brown", false));
-        put(EntityVariant.MandrakeGreen, setTexture("mandrake/mandrake_girl_green", false));
-        put(EntityVariant.InkCap, setTexture("mushroom/mushroom_girl_ink_cap", true));
-        put(EntityVariant.Warped, setTexture("mushroom/mushroom_girl_warped", true));
-        put(EntityVariant.WarpedRare, setTexture("mushroom/mushroom_girl_warped_rare", true));
-    }};
-
     public static final HashMap<EntityVariant, HashMap<EntityModel, Identifier>> MODELS = new HashMap<>(){{
         put(EntityVariant.MandrakeBrown, setModel(EntityModel.Mandrake,"geo/mandrake_girl.geo.json"));
         put(EntityVariant.MandrakeGreen, setModel(EntityModel.Mandrake,"geo/mandrake_girl.geo.json"));
         put(EntityVariant.InkCap, setModel(EntityModel.Fungus,"geo/mushroom_girl_ink_cap.geo.json"));
         put(EntityVariant.Warped, setModel(EntityModel.Mushroom,"geo/mushroom_girl.geo.json"));
         put(EntityVariant.WarpedRare, setModel(EntityModel.Mushroom,"geo/mushroom_girl.geo.json"));
-    }};
-
-    public static final HashMap<EntityVariant, HashMap<EntityAttribute, InternalAttribute>> ATTRIBUTES = new HashMap<>(){{
-        put(EntityVariant.MandrakeBrown, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
-        put(EntityVariant.MandrakeGreen, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
-        put(EntityVariant.InkCap, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
-        put(EntityVariant.Warped, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
-        put(EntityVariant.WarpedRare, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
     }};
 
     // -- Methods --

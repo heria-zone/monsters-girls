@@ -11,7 +11,7 @@ public class InkCapRenderer extends GeoEntityRenderer<InkCapEntity> {
     public InkCapRenderer(EntityRendererFactory.Context renderManager) {
         super(renderManager, new InkCapModel());
         this.shadowRadius = 0.3F;
-    } // Constructor VanillaRenderer ()
+    } // Constructor InkCapRenderer ()
 
     // -- Method --
     @Override

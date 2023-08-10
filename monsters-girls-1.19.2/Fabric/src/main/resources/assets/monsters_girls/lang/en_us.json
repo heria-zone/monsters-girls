@@ -18,6 +18,10 @@
 
   "item.monsters_girls.spawn_egg_mandrake_brown": "Spawn Egg Mandrake Brown",
   "item.monsters_girls.spawn_egg_mandrake_green": "Spawn Egg Mandrake Green",
+  "item.monsters_girls.spawn_egg_mushroom_girl_crimson": "Spawn Egg Mushroom Girl Crimson",
+  "item.monsters_girls.spawn_egg_mushroom_girl_crimson_rare": "Spawn Egg Mushroom Girl Crimson Rare",
+  "item.monsters_girls.spawn_egg_mushroom_girl_red": "Spawn Egg Mushroom Girl Red",
+  "item.monsters_girls.spawn_egg_mushroom_girl_yellow": "Spawn Egg Mushroom Girl Yellow",
   "item.monsters_girls.spawn_egg_ink_cap": "Spawn Egg Ink Cap",
   "item.monsters_girls.spawn_egg_warped": "Spawn Egg Warped",
   "item.monsters_girls.spawn_egg_warped_rare": "Spawn Egg Warped Rare",
@@ -97,6 +101,10 @@
 
   "entity.monsters_girls.mandrake_girl_brown": "Mandrake Girl Brown",
   "entity.monsters_girls.mandrake_girl_green": "Mandrake Girl Green",
+  "entity.monsters_girls.mushroom_girl_crimson": "Mushroom Girl Crimson",
+  "entity.monsters_girls.mushroom_girl_crimson_rare": "Mushroom Girl Crimson Rare",
+  "entity.monsters_girls.mushroom_girl_red": "Mushroom Girl Red",
+  "entity.monsters_girls.mushroom_girl_yellow": "Mushroom Girl Yellow",
   "entity.monsters_girls.mushroom_girl_ink_cap": "Mushroom Girl Ink Cap",
   "entity.monsters_girls.mushroom_girl_warped": "Mushroom Girl Warped",
   "entity.monsters_girls.mushroom_girl_warped_rare": "Mushroom Girl Warped Rare",

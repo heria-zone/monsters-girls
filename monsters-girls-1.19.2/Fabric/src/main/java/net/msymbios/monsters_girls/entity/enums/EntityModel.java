@@ -7,11 +7,11 @@ public enum EntityModel {
 
     // -- Enum --
     Mandrake(0, "geo/mandrake_girl.geo.json"),
-    Mushroom(1, "geo/mushroom_girl.geo.json"),
-    Fungus(2, "geo/mushroom_girl_ink_cap.geo.json"),
-    Spook(3, "spook"),
-    Wisp(4, "wisp");
-
+    MandrakeFruit(1, "geo/mandrake_fruit_girl.geo.json"),
+    Mushroom(2, "geo/mushroom_girl.geo.json"),
+    Fungus(3, "geo/mushroom_girl_ink_cap.geo.json"),
+    Spook(4, "spook"),
+    Wisp(5, "wisp");
 
     // -- Variables --
     private static final EntityModel[] CODEC = Arrays.stream(values()).sorted(Comparator.comparingInt(EntityModel::getId)).toArray(EntityModel[]::new);
