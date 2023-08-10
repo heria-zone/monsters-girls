@@ -3,7 +3,9 @@
   "ingredients": [{
       "item": "monsters_girls:powder_genesis"
       }, {
-      "item": "minecraft:warped_rare_fungus"
+      "item": "minecraft:warped_fungus"
+    }, {
+      "item": "minecraft:warped_fungus"
     }
   ],
   "result": {
