@@ -2,11 +2,12 @@ package net.msymbios.monsters_girls.item;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;
-import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.msymbios.monsters_girls.MonstersGirlsMod;
+import net.msymbios.monsters_girls.entity.ModEntities;
 import net.msymbios.monsters_girls.item.custom.EnchantedItem;
+import net.msymbios.monsters_girls.item.custom.SpawnItem;
 
 public class ModItems {
 
@@ -29,6 +30,12 @@ public class ModItems {
     public static final Item WARPED_RARE_FUNGUS_HAT = registerItem("warped_rare_fungus_hat", new Item(new FabricItemSettings().group(ModItemsGroup.MONSTERS_GIRLS)));
 
     public static final Item SPECTRAL_CAKE = registerItem("spectral_cake", new Item(new FabricItemSettings().group(ModItemsGroup.MONSTERS_GIRLS)));
+
+    public static final Item MANDRAKE_GIRL_BROWN_SPAWN_EGG = registerItem("spawn_egg_mandrake_brown", new SpawnItem(ModEntities.MANDRAKE_GIRL_BROWN, new FabricItemSettings().group(ModItemsGroup.MONSTERS_GIRLS)));
+    public static final Item MANDRAKE_GIRL_GREEN_SPAWN_EGG = registerItem("spawn_egg_mandrake_green", new SpawnItem(ModEntities.MANDRAKE_GIRL_GREEN, new FabricItemSettings().group(ModItemsGroup.MONSTERS_GIRLS)));
+    public static final Item INK_CAP_SPAWN_EGG = registerItem("spawn_egg_ink_cap", new SpawnItem(ModEntities.MUSHROOM_GIRL_INK_CAP, new FabricItemSettings().group(ModItemsGroup.MONSTERS_GIRLS)));
+    public static final Item WARPED_SPAWN_EGG = registerItem("spawn_egg_warped", new SpawnItem(ModEntities.MUSHROOM_GIRL_WARPED, new FabricItemSettings().group(ModItemsGroup.MONSTERS_GIRLS)));
+    public static final Item WARPED_RARE_SPAWN_EGG = registerItem("spawn_egg_warped_rare", new SpawnItem(ModEntities.MUSHROOM_GIRL_WARPED_RARE, new FabricItemSettings().group(ModItemsGroup.MONSTERS_GIRLS)));
 
     // -- Methods --
     private static Item registerItem(String name, Item item) {

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [{
+      "item": "monsters_girls:powder_genesis"
+      }, {
+      "item": "minecraft:warped_rare_fungus"
+    }
+  ],
+  "result": {
+    "item": "monsters_girls:spawn_egg_warped_rare",
+    "count": 1
+  }
+}

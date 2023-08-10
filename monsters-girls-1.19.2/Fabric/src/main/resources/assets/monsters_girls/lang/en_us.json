@@ -16,6 +16,12 @@
 
   "item.monsters_girls.spectral_cake": "Spectral Cake (WIP)",
 
+  "item.monsters_girls.spawn_egg_mandrake_brown": "Spawn Egg Mandrake Brown",
+  "item.monsters_girls.spawn_egg_mandrake_green": "Spawn Egg Mandrake Green",
+  "item.monsters_girls.spawn_egg_ink_cap": "Spawn Egg Ink Cap",
+  "item.monsters_girls.spawn_egg_warped": "Spawn Egg Warped",
+  "item.monsters_girls.spawn_egg_warped_rare": "Spawn Egg Warped Rare",
+
   "block.monsters_girls.ender_shroomlight": "Ender Shroomlight",
   "block.monsters_girls.ender_puffball_block": "Ender Puffball Block",
   "block.monsters_girls.ender_puffball_stem": "Ender Puffball Stem",
@@ -88,6 +94,12 @@
   "block.monsters_girls.jar": "Jar",
   "block.monsters_girls.urn_molten": "Molten Urn",
   "block.monsters_girls.urn_crimson": "Crimson Urn",
+
+  "entity.monsters_girls.mandrake_girl_brown": "Mandrake Girl Brown",
+  "entity.monsters_girls.mandrake_girl_green": "Mandrake Girl Green",
+  "entity.monsters_girls.mushroom_girl_ink_cap": "Mushroom Girl Ink Cap",
+  "entity.monsters_girls.mushroom_girl_warped": "Mushroom Girl Warped",
+  "entity.monsters_girls.mushroom_girl_warped_rare": "Mushroom Girl Warped Rare",
 
   "itemGroup.monsters_girls.mod_group": "Monsters & Girls"
 }

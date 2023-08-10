@@ -1,15 +1,15 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [{
-      "item": "minecraft:golden_apple"
+      "item": "minecraft:apple"
     }, {
       "item": "minecraft:bone_meal"
     }, {
-      "item": "minecraft:warped_fungus"
+      "tag": "monsters_girls:fungus"
     }
   ],
   "result": {
     "item": "monsters_girls:powder_genesis",
-    "count": 4
+    "count": 1
   }
 }
