@@ -1,0 +1,20 @@
+package net.msymbios.monsters_girls.entity.client;
+
+import net.minecraft.client.render.entity.EntityRendererFactory;
+import net.minecraft.util.Identifier;
+import net.msymbios.monsters_girls.entity.custom.MushroomWarpedRareEntity;
+import software.bernie.geckolib3.renderers.geo.GeoEntityRenderer;
+
+public class MushroomWarpedRareRenderer extends GeoEntityRenderer<MushroomWarpedRareEntity> {
+
+    // -- Constructor --
+    public MushroomWarpedRareRenderer(EntityRendererFactory.Context renderManager) {
+        super(renderManager, new MushroomWarpedRareModel());
+        this.shadowRadius = 0.3F;
+    } // Constructor MushroomWarpedRareRenderer ()
+
+    // -- Method --
+    @Override
+    public Identifier getTextureResource(MushroomWarpedRareEntity instance) { return instance.getTexture(); } // getTextureResource ()
+
+} // Class MushroomWarpedRareRenderer

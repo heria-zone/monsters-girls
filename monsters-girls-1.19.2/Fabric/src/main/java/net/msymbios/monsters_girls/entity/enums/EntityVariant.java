@@ -6,28 +6,28 @@ import java.util.Comparator;
 public enum EntityVariant {
 
     // -- Enum --
-    AmanitaYellow(0, "amanita_yellow"),
-    EnderPuffball(1, "ender_puffball"),
+    MushroomAmanitaYellow(0, "mushroom_amanita_yellow"),
+    MushroomEnderPuffball(1, "mushroom_ender_puffball"),
     EnderCaris(2, "ender_caris"),
-    Boletus(3, "boletus"),
-    Crimson(4, "crimson"),
-    CrimsonRare(5, "crimson_rare"),
-    FlyAgaric(6, "fly_agaric"),
-    Infernal(7, "infernal"),
-    InkCap(8, "ink_cap"),
+    MushroomBrown(3, "mushroom_brown"),
+    MushroomCrimson(4, "mushroom_crimson"),
+    MushroomCrimsonRare(5, "mushroom_crimson_rare"),
+    MushroomFlyAgaric(6, "mushroom_fly_agaric"),
+    MushroomInfernal(7, "mushroom_infernal"),
+    FungusInkCap(8, "fungus_ink_cap"),
     MandrakeBrown(9, "mandrake_brown"),
-    MandrakeFruity(10, "mandrake_fruity"),
+    MandrakeGlowBerry(10, "mandrake_glow_berry"),
     MandrakeGreen(11, "mandrake_green"),
-    Molten(12, "molten"),
+    MandrakeChorus(10, "mandrake_chorus"),
+    MushroomMolten(12, "mushroom_molten"),
     SpookTeal(13, "spook_teal"),
     SpookPeach(14, "spook_peach"),
-    Warped(15, "warped"),
-    WarpedRare(16, "warped_rare"),
+    MushroomWarped(15, "mushroom_warped"),
+    MushroomWarpedRare(16, "mushroom_warped_rare"),
     WispBlue(17, "wisp_blue"),
     WispGreen(18, "wisp_green"),
     WispYellow(19, "wisp_yellow"),
-    SoulWanderer(20, "soul_wanderer");
-
+    MushroomSoulWanderer(20, "mushroom_soul_wanderer");
 
     // -- Variables --
     private static final EntityVariant[] CODEC = Arrays.stream(values()).sorted(Comparator.comparingInt(EntityVariant::getId)).toArray(EntityVariant[]::new);

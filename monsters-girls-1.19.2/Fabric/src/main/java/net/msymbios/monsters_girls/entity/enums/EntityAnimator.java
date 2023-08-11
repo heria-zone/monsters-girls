@@ -6,8 +6,12 @@ import java.util.Comparator;
 public enum EntityAnimator {
 
     // -- Enum --
-    Locomotion(0, "locomotion"),
-    Variant(1, "animations/mushroom_girl.animation.json");
+    Endercaris(0, "endercaris"),
+    Mandrake(1, "mandrake"),
+    Mushroom(2, "mushroom"),
+    Slime(3, "slime"),
+    Spook(4, "spook"),
+    Wisp(5, "wisp");
 
     // -- Variables --
     private static final EntityAnimator[] CODEC = Arrays.stream(values()).sorted(Comparator.comparingInt(EntityAnimator::getId)).toArray(EntityAnimator[]::new);

@@ -3,19 +3,18 @@ package net.msymbios.monsters_girls.entity.enums;
 import java.util.Arrays;
 import java.util.Comparator;
 
-public enum EntityModel {
+public enum EntityCategory {
 
     // -- Enum --
-    Mandrake(0, "mandrake"),
-    MandrakeFruit(1, "mandrake_fruit"),
+    Endercaris(0, "endercaris"),
+    Mandrake(1, "mandrake"),
     Mushroom(2, "mushroom"),
-    MushroomFat(3, "mushroom_fat"),
-    MushroomFungus(4, "mushroom_fungus"),
-    Spook(5, "spook"),
-    Wisp(6, "wisp");
+    Slime(3, "slime"),
+    Spook(4, "spook"),
+    Wisp(5, "wisp");
 
     // -- Variables --
-    private static final EntityModel[] CODEC = Arrays.stream(values()).sorted(Comparator.comparingInt(EntityModel::getId)).toArray(EntityModel[]::new);
+    private static final EntityCategory[] CODEC = Arrays.stream(values()).sorted(Comparator.comparingInt(EntityCategory::getId)).toArray(EntityCategory[]::new);
 
     private final int m_id;
 
@@ -23,14 +22,14 @@ public enum EntityModel {
 
 
     // -- Constructor --
-    EntityModel(int id, String name) {
+    EntityCategory(int id, String name) {
         this.m_id = id;
         this.m_name = name;
-    } // Constructor RobotModel
+    } // Constructor EntityCategory
 
 
     // -- Methods --
-    public static EntityModel byId(int id) {
+    public static EntityCategory byId(int id) {
         if (id < 0 || id >= CODEC.length) id = 0;
         return CODEC[id];
     } // byId ()
@@ -39,8 +38,8 @@ public enum EntityModel {
         return this.m_id;
     } // getId ()
 
-    public static EntityModel byName(String name) {
-        for (EntityModel item : CODEC) {
+    public static EntityCategory byName(String name) {
+        for (EntityCategory item : CODEC) {
             if (item.getName().equals(name))
                 return item;
         }
@@ -51,4 +50,4 @@ public enum EntityModel {
         return this.m_name;
     } // getName ()
 
-} // Enum EntityModel
+} // Enum EntityCategory

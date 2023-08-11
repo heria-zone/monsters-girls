@@ -37,13 +37,14 @@ public abstract class InternalEntity extends TameableEntity {
 
     protected int waryTimer = 0, autoHealTimer = 0;
     protected boolean combatMode = false, autoHeal = false;
+    protected EntityCategory category;
+    protected EntityVariant variant;
 
     // -- Properties --
 
     // VARIANT
-    public abstract String getVariant();
-
-    public String getVariant(String value) {
+    public String getVariant() {
+        String value = variant.getName();
         try {value = this.dataTracker.get(VARIANT);}
         catch (Exception ignored) {}
         return value;
@@ -53,28 +54,15 @@ public abstract class InternalEntity extends TameableEntity {
         this.dataTracker.set(VARIANT, value);
     } // setVariant ()
 
-    // TEXTURE
-    public abstract Identifier getTextureByID(int value);
+    // ANIMATOR
+    public Identifier getAnimatorByID(int value) { return InternalMetric.getAnimator(category, variant, EntityAnimator.byId(value)); } // getAnimatorByID ()
 
-    public Identifier getTexture() { return getTextureByID(getTextureID()); } // getTexture ()
-
-    public int getTextureID() {
-        int value = 0;
-        try {value = this.dataTracker.get(TEXTURE_ID);}
-        catch (Exception ignored) {}
-        return value;
-    } // getTextureID ()
-
-    public void setTexture(EntityTexture value) {
-        setTexture(value.getId());
-    } // setTexture ()
-
-    public void setTexture(int value) { this.dataTracker.set(TEXTURE_ID, value); } // setTexture ()
+    public Identifier getAnimator() { return InternalMetric.getAnimator(category, variant); } // getAnimator ()
 
     // MODEL
-    public abstract Identifier getCurrentModelByID(int value);
+    public Identifier getCurrentModelByID(int value) { return InternalMetric.getModel(category, variant, EntityModel.byId(value)); } // getCurrentModelByID ()
 
-    public Identifier getCurrentModel() { return getCurrentModelByID(getModelID()); } // getCurrentModel ()
+    public Identifier getCurrentModel() { return InternalMetric.getModel(category, variant); } // getCurrentModel ()
 
     public int getModelID() {
         int value = 0;
@@ -94,17 +82,23 @@ public abstract class InternalEntity extends TameableEntity {
 
     public void setModel(int value) { this.dataTracker.set(MODEL_ID, value); } // setModel ()
 
-    // ANIMATOR
-    public abstract Identifier getAnimatorByID(int value);
+    // TEXTURE
+    public Identifier getTextureByID(int value) { return InternalMetric.getTexture(variant, EntityTexture.byId(value)); } // getTextureByID ()
 
-    public Identifier getAnimator() { return getAnimatorByID(getAnimatorID()); } // getAnimator ()
+    public Identifier getTexture() { return InternalMetric.getTexture(variant, EntityTexture.byId(getTextureID())); } // getTexture ()
 
-    public int getAnimatorID() {
+    public int getTextureID() {
         int value = 0;
-        try {value = this.dataTracker.get(MODEL_ID);}
+        try {value = this.dataTracker.get(TEXTURE_ID);}
         catch (Exception ignored) {}
         return value;
-    } // getAnimatorID ()
+    } // getTextureID ()
+
+    public void setTexture(EntityTexture value) {
+        setTexture(value.getId());
+    } // setTexture ()
+
+    public void setTexture(int value) { this.dataTracker.set(TEXTURE_ID, value); } // setTexture ()
 
     // STATE
     public int getCurrentStateID() {
@@ -126,7 +120,7 @@ public abstract class InternalEntity extends TameableEntity {
     public void setCurrentState(int value){ this.dataTracker.set(STATE, value); } // setCurrentState ()
 
     // STATS
-    public abstract float getAttributeRaw(EntityAttribute attribute);
+    public float getAttributeRaw(EntityAttribute attribute) { return InternalMetric.getAttribute(variant, attribute); } // getAttributeRaw ()
 
     public int getAttribute(EntityAttribute attribute) { return (int) getAttributeRaw(attribute); } // getAttribute ()
 
@@ -354,9 +348,7 @@ public abstract class InternalEntity extends TameableEntity {
     public void handleTexture(ItemStack items, PlayerEntity player) {
         var oldTexture = getTextureID();
         if(items.isOf(Items.FEATHER)) setTexture(EntityTexture.DEFAULT);
-        if(items.isOf(Items.APPLE)) {
-            if(getBelly()) setTexture(EntityTexture.BELLY);
-        }
+        if(items.isOf(Items.APPLE)) setTexture(EntityTexture.BELLY);
 
         if(oldTexture != getTextureID()) {
             if (!player.getAbilities().creativeMode)
