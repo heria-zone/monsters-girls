@@ -139,15 +139,18 @@ public class InternalMetric {
     }};
 
     public static HashMap<EntityModel, Identifier> MODEL = new HashMap<>() {{
-        put(EntityModel.Mandrake,       new Identifier(MonstersGirlsMod.MODID, "geo/mandrake_girl.geo.json"));
-        put(EntityModel.MandrakeFruit,  new Identifier(MonstersGirlsMod.MODID, "geo/mandrake_girl_fruit.geo.json"));
-        put(EntityModel.Mushroom,       new Identifier(MonstersGirlsMod.MODID, "geo/mushroom_girl.geo.json"));
-        put(EntityModel.MushroomFat,    new Identifier(MonstersGirlsMod.MODID, "geo/mushroom_girl_fat.geo.json"));
-        put(EntityModel.MushroomFungus,         new Identifier(MonstersGirlsMod.MODID, "geo/mushroom_girl_ink_cap.geo.json"));
+        put(EntityModel.Mandrake,           new Identifier(MonstersGirlsMod.MODID, "geo/mandrake_girl.geo.json"));
+        put(EntityModel.MandrakeFruit,      new Identifier(MonstersGirlsMod.MODID, "geo/mandrake_girl_fruit.geo.json"));
+        put(EntityModel.Mushroom,           new Identifier(MonstersGirlsMod.MODID, "geo/mushroom_girl.geo.json"));
+        put(EntityModel.MushroomFat,        new Identifier(MonstersGirlsMod.MODID, "geo/mushroom_girl_fat.geo.json"));
+        put(EntityModel.MushroomInflated,   new Identifier(MonstersGirlsMod.MODID, "geo/mushroom_girl_inflated.geo.json"));
+        put(EntityModel.MushroomFungus,     new Identifier(MonstersGirlsMod.MODID, "geo/mushroom_girl_ink_cap.geo.json"));
     }};
 
     public static HashMap<EntityVariant, HashMap<EntityTexture, Identifier>> TEXTURE = new HashMap<>(){{
         put(EntityVariant.MandrakeBrown,    setTexture("mandrake/mandrake_girl_brown", false));
+        put(EntityVariant.MandrakeChorus,    setTexture("mandrake/mandrake_girl_chorus", false));
+        put(EntityVariant.MandrakeGlowBerry,    setTexture("mandrake/mandrake_girl_glow_berry", false));
         put(EntityVariant.MandrakeGreen,    setTexture("mandrake/mandrake_girl_green", false));
 
         put(EntityVariant.MushroomAmanitaYellow,    setTexture("mushroom/mushroom_girl_yellow", true));
@@ -166,6 +169,8 @@ public class InternalMetric {
 
     public static HashMap<EntityVariant, HashMap<EntityAttribute, InternalAttribute>> ATTRIBUTES = new HashMap<>(){{
         put(EntityVariant.MandrakeBrown, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
+        put(EntityVariant.MandrakeChorus, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
+        put(EntityVariant.MandrakeGlowBerry, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
         put(EntityVariant.MandrakeGreen, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
 
         put(EntityVariant.MushroomAmanitaYellow, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));

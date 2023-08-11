@@ -32,6 +32,8 @@ public class ModItems {
     public static final Item SPECTRAL_CAKE = registerItem("spectral_cake", new Item(new FabricItemSettings().group(ModItemsGroup.MONSTERS_GIRLS)));
 
     public static final Item MANDRAKE_GIRL_BROWN_SPAWN_EGG = registerItem("spawn_egg_mandrake_brown", new SpawnItem(ModEntities.MANDRAKE_GIRL_BROWN, new FabricItemSettings().group(ModItemsGroup.MONSTERS_GIRLS)));
+    public static final Item MANDRAKE_GIRL_CHORUS_SPAWN_EGG = registerItem("spawn_egg_mandrake_girl_chorus", new SpawnItem(ModEntities.MANDRAKE_GIRL_CHORUS, new FabricItemSettings().group(ModItemsGroup.MONSTERS_GIRLS)));
+    public static final Item MANDRAKE_GIRL_GLOW_BERRY_SPAWN_EGG = registerItem("spawn_egg_mandrake_girl_glow_berry", new SpawnItem(ModEntities.MANDRAKE_GIRL_GLOW_BERRY, new FabricItemSettings().group(ModItemsGroup.MONSTERS_GIRLS)));
     public static final Item MANDRAKE_GIRL_GREEN_SPAWN_EGG = registerItem("spawn_egg_mandrake_green", new SpawnItem(ModEntities.MANDRAKE_GIRL_GREEN, new FabricItemSettings().group(ModItemsGroup.MONSTERS_GIRLS)));
     public static final Item MUSHROOM_GIRL_CRIMSON_SPAWN_EGG = registerItem("spawn_egg_mushroom_girl_crimson", new SpawnItem(ModEntities.MUSHROOM_GIRL_CRIMSON, new FabricItemSettings().group(ModItemsGroup.MONSTERS_GIRLS)));
     public static final Item MUSHROOM_GIRL_CRIMSON_RARE_SPAWN_EGG = registerItem("spawn_egg_mushroom_girl_crimson_rare", new SpawnItem(ModEntities.MUSHROOM_GIRL_CRIMSON_RARE, new FabricItemSettings().group(ModItemsGroup.MONSTERS_GIRLS)));

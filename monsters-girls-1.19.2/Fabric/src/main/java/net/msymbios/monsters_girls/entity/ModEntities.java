@@ -18,6 +18,12 @@ public class ModEntities {
     public static final EntityType<MandrakeBrownEntity> MANDRAKE_GIRL_BROWN = Registry.register(Registry.ENTITY_TYPE, new Identifier(MonstersGirlsMod.MODID, "mandrake_girl_brown"),
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, MandrakeBrownEntity::new).dimensions(EntityDimensions.fixed(0.4F, 0.7F)).build());
 
+    public static final EntityType<MandrakeChorusEntity> MANDRAKE_GIRL_CHORUS = Registry.register(Registry.ENTITY_TYPE, new Identifier(MonstersGirlsMod.MODID, "mandrake_girl_chorus"),
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, MandrakeChorusEntity::new).dimensions(EntityDimensions.fixed(0.4F, 0.7F)).build());
+
+    public static final EntityType<MandrakeGlowBerryEntity> MANDRAKE_GIRL_GLOW_BERRY = Registry.register(Registry.ENTITY_TYPE, new Identifier(MonstersGirlsMod.MODID, "mandrake_girl_glow_berry"),
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, MandrakeGlowBerryEntity::new).dimensions(EntityDimensions.fixed(0.4F, 0.7F)).build());
+
     public static final EntityType<MandrakeGreenEntity> MANDRAKE_GIRL_GREEN = Registry.register(Registry.ENTITY_TYPE, new Identifier(MonstersGirlsMod.MODID, "mandrake_girl_green"),
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, MandrakeGreenEntity::new).dimensions(EntityDimensions.fixed(0.4F, 0.7F)).build());
 
@@ -60,6 +66,8 @@ public class ModEntities {
     // -- Methods --
     public static void registerEntityAttribute () {
         FabricDefaultAttributeRegistry.register(MANDRAKE_GIRL_BROWN, MandrakeBrownEntity.setAttributes());
+        FabricDefaultAttributeRegistry.register(MANDRAKE_GIRL_CHORUS, MandrakeBrownEntity.setAttributes());
+        FabricDefaultAttributeRegistry.register(MANDRAKE_GIRL_GLOW_BERRY, MandrakeBrownEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(MANDRAKE_GIRL_GREEN, MandrakeGreenEntity.setAttributes());
 
         FabricDefaultAttributeRegistry.register(MUSHROOM_GIRL_AMANITA_YELLOW, MushroomAmanitaYellowEntity.setAttributes());
@@ -78,6 +86,8 @@ public class ModEntities {
 
     public static void registerEntityRenderer () {
         EntityRendererRegistry.register(MANDRAKE_GIRL_BROWN, MandrakeBrownRenderer::new);
+        EntityRendererRegistry.register(MANDRAKE_GIRL_CHORUS, MandrakeChorusRenderer::new);
+        EntityRendererRegistry.register(MANDRAKE_GIRL_GLOW_BERRY, MandrakeGlowBerryRenderer::new);
         EntityRendererRegistry.register(MANDRAKE_GIRL_GREEN, MandrakeGreenRenderer::new);
 
         EntityRendererRegistry.register(MUSHROOM_GIRL_AMANITA_YELLOW, MushroomAmanitaYellowRenderer::new);

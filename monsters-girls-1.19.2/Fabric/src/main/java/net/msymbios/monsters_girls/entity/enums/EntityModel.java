@@ -11,8 +11,9 @@ public enum EntityModel {
     Mushroom(2, "mushroom"),
     MushroomFat(3, "mushroom_fat"),
     MushroomFungus(4, "mushroom_fungus"),
-    Spook(5, "spook"),
-    Wisp(6, "wisp");
+    MushroomInflated(5, "mushroom_fungus_inflated"),
+    Spook(6, "spook"),
+    Wisp(7, "wisp");
 
     // -- Variables --
     private static final EntityModel[] CODEC = Arrays.stream(values()).sorted(Comparator.comparingInt(EntityModel::getId)).toArray(EntityModel[]::new);

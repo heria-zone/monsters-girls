@@ -17,6 +17,8 @@
   "item.monsters_girls.spectral_cake": "Spectral Cake (WIP)",
 
   "item.monsters_girls.spawn_egg_mandrake_brown": "Spawn Egg Mandrake Brown",
+  "item.monsters_girls.spawn_egg_mandrake_girl_chorus": "Spawn Egg Mandrake Chorus",
+  "item.monsters_girls.spawn_egg_mandrake_girl_glow_berry": "Spawn Egg Mandrake Glow Berry",
   "item.monsters_girls.spawn_egg_mandrake_green": "Spawn Egg Mandrake Green",
   "item.monsters_girls.spawn_egg_mushroom_girl_brown": "Spawn Egg Mushroom Girl Brown",
   "item.monsters_girls.spawn_egg_mushroom_girl_crimson": "Spawn Egg Mushroom Girl Crimson",
@@ -105,6 +107,8 @@
   "block.monsters_girls.urn_crimson": "Crimson Urn",
 
   "entity.monsters_girls.mandrake_girl_brown": "Mandrake Girl Brown",
+  "entity.monsters_girls.mandrake_girl_chorus": "Mandrake Girl Chorus",
+  "entity.monsters_girls.mandrake_girl_glow_berry": "Mandrake Girl Glow Berry",
   "entity.monsters_girls.mandrake_girl_green": "Mandrake Girl Green",
   "entity.monsters_girls.mushroom_girl_brown": "Mushroom Girl Brown",
   "entity.monsters_girls.mushroom_girl_crimson": "Mushroom Girl Crimson",
