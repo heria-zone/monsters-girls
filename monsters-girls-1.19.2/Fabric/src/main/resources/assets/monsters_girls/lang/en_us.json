@@ -32,6 +32,11 @@
   "item.monsters_girls.spawn_egg_warped": "Spawn Egg Warped",
   "item.monsters_girls.spawn_egg_warped_rare": "Spawn Egg Warped Rare",
   "item.monsters_girls.spawn_egg_mushroom_girl_yellow": "Spawn Egg Mushroom Girl Yellow",
+  "item.monsters_girls.spawn_egg_spook_peach": "Spawn Egg Spook Girl Peach",
+  "item.monsters_girls.spawn_egg_spook_teal": "Spawn Egg Spook Girl Teal",
+  "item.monsters_girls.spawn_egg_wisp_green": "Spawn Egg Wisp Girl Green",
+  "item.monsters_girls.spawn_egg_wisp_blue": "Spawn Egg Wisp Girl Blue",
+  "item.monsters_girls.spawn_egg_wisp_yellow": "Spawn Egg Wisp Girl Yellow",
 
   "block.monsters_girls.ender_shroomlight": "Ender Shroomlight",
   "block.monsters_girls.ender_puffball_block": "Ender Puffball Block",
@@ -122,6 +127,11 @@
   "entity.monsters_girls.mushroom_girl_warped": "Mushroom Girl Warped",
   "entity.monsters_girls.mushroom_girl_warped_rare": "Mushroom Girl Warped Rare",
   "entity.monsters_girls.mushroom_girl_yellow": "Mushroom Girl Yellow",
+  "entity.monsters_girls.spook_girl_peach": "Spook Girl Peach",
+  "entity.monsters_girls.spook_girl_teal": "Spook Girl  Teal",
+  "entity.monsters_girls.wisp_girl_green": "Wisp Girl Green",
+  "entity.monsters_girls.wisp_girl_blue": "Wisp Girl Blue",
+  "entity.monsters_girls.wisp_girl_yellow": "Wisp Girl Yellow",
 
   "itemGroup.monsters_girls.mod_group": "Monsters & Girls"
 }

@@ -30,24 +30,6 @@ public class InternalMetric {
     public static Predicate<LivingEntity> AvoidAttackingEntities = entity -> entity instanceof Monster && !(entity instanceof CreeperEntity);
 
     // -- Variables --
-    /*public static final HashMap<EntityVariant, HashMap<EntityTexture, Identifier>> TEXTURES = new HashMap<>(){{
-        put(EntityVariant.MandrakeBrown, setTexture("mandrake/mandrake_girl_brown", false));
-        put(EntityVariant.MandrakeGreen, setTexture("mandrake/mandrake_girl_green", false));
-
-        put(EntityVariant.AmanitaYellow, setTexture("mushroom/mushroom_girl_yellow", true));
-        put(EntityVariant.Boletus, setTexture("mushroom/mushroom_girl_brown", true));
-        put(EntityVariant.Crimson, setTexture("mushroom/mushroom_girl_crimson", true));
-        put(EntityVariant.CrimsonRare, setTexture("mushroom/mushroom_girl_crimson_rare", true));
-        put(EntityVariant.EnderPuffball, setTexture("mushroom/mushroom_girl_ender_puffball", true));
-        put(EntityVariant.Infernal, setTexture("mushroom/mushroom_girl_infernal", true));
-        put(EntityVariant.InkCap, setTexture("mushroom/mushroom_girl_ink_cap", true));
-        put(EntityVariant.Molten, setTexture("mushroom/mushroom_girl_molten", true));
-        put(EntityVariant.FlyAgaric, setTexture("mushroom/mushroom_girl_red", true));
-        put(EntityVariant.SoulWanderer, setTexture("mushroom/mushroom_girl_soul_wanderer", true));
-        put(EntityVariant.Warped, setTexture("mushroom/mushroom_girl_warped", true));
-        put(EntityVariant.WarpedRare, setTexture("mushroom/mushroom_girl_warped_rare", true));
-    }};*/
-
     public static HashMap<EntityCategory, HashMap<EntityVariant, EntityAnimator>> ENTITY_ANIMATOR = new HashMap<>(){{
         put(EntityCategory.Mandrake, new HashMap<>() {{
             put(EntityVariant.MandrakeBrown,        EntityAnimator.Mandrake);
@@ -69,6 +51,17 @@ public class InternalMetric {
             put(EntityVariant.MushroomSoulWanderer,         EntityAnimator.Mushroom);
             put(EntityVariant.MushroomWarped,               EntityAnimator.Mushroom);
             put(EntityVariant.MushroomWarpedRare,           EntityAnimator.Mushroom);
+        }});
+
+        put(EntityCategory.Spook, new HashMap<>() {{
+            put(EntityVariant.SpookPeach,           EntityAnimator.Spook);
+            put(EntityVariant.SpookTeal,            EntityAnimator.Spook);
+        }});
+
+        put(EntityCategory.Wisp, new HashMap<>() {{
+            put(EntityVariant.WispBlue,             EntityAnimator.Wisp);
+            put(EntityVariant.WispGreen,            EntityAnimator.Wisp);
+            put(EntityVariant.WispYellow,           EntityAnimator.Wisp);
         }});
     }};
 
@@ -94,6 +87,17 @@ public class InternalMetric {
             put(EntityVariant.MushroomWarped,           EntityModel.Mushroom);
             put(EntityVariant.MushroomWarpedRare,       EntityModel.Mushroom);
         }});
+
+        put(EntityCategory.Spook, new HashMap<>() {{
+            put(EntityVariant.SpookPeach,           EntityModel.Spook);
+            put(EntityVariant.SpookTeal,            EntityModel.Spook);
+        }});
+
+        put(EntityCategory.Wisp, new HashMap<>() {{
+            put(EntityVariant.WispBlue,             EntityModel.Wisp);
+            put(EntityVariant.WispGreen,            EntityModel.Wisp);
+            put(EntityVariant.WispYellow,           EntityModel.Wisp);
+        }});
     }};
 
     public static HashMap<EntityTexture, List<EntityVariant>> ENTITY_TEXTURE = new HashMap<>(){{
@@ -114,7 +118,14 @@ public class InternalMetric {
                 EntityVariant.MushroomFlyAgaric,
                 EntityVariant.MushroomSoulWanderer,
                 EntityVariant.MushroomWarped,
-                EntityVariant.MushroomWarpedRare
+                EntityVariant.MushroomWarpedRare,
+
+                EntityVariant.SpookPeach,
+                EntityVariant.SpookTeal,
+
+                EntityVariant.WispBlue,
+                EntityVariant.WispGreen,
+                EntityVariant.WispYellow
         )));
 
         put(EntityTexture.BELLY, new ArrayList<>(List.of(
@@ -129,13 +140,20 @@ public class InternalMetric {
                 EntityVariant.MushroomFlyAgaric,
                 EntityVariant.MushroomSoulWanderer,
                 EntityVariant.MushroomWarped,
-                EntityVariant.MushroomWarpedRare
+                EntityVariant.MushroomWarpedRare,
+
+                EntityVariant.SpookPeach,
+                EntityVariant.SpookTeal,
+
+                EntityVariant.WispYellow
         )));
     }};
 
     public static HashMap<EntityAnimator, Identifier> ANIMATOR = new HashMap<>() {{
         put(EntityAnimator.Mandrake,    new Identifier(MonstersGirlsMod.MODID, "animations/mushroom_girl.animation.json")); /*"animations/mandrake.animation.json"*/
         put(EntityAnimator.Mushroom,    new Identifier(MonstersGirlsMod.MODID, "animations/mushroom_girl.animation.json"));
+        put(EntityAnimator.Spook,    new Identifier(MonstersGirlsMod.MODID, "animations/spook_girl.animation.json"));
+        put(EntityAnimator.Wisp,    new Identifier(MonstersGirlsMod.MODID, "animations/wisp_girl.animation.json"));
     }};
 
     public static HashMap<EntityModel, Identifier> MODEL = new HashMap<>() {{
@@ -145,6 +163,8 @@ public class InternalMetric {
         put(EntityModel.MushroomFat,        new Identifier(MonstersGirlsMod.MODID, "geo/mushroom_girl_fat.geo.json"));
         put(EntityModel.MushroomInflated,   new Identifier(MonstersGirlsMod.MODID, "geo/mushroom_girl_inflated.geo.json"));
         put(EntityModel.MushroomFungus,     new Identifier(MonstersGirlsMod.MODID, "geo/mushroom_girl_ink_cap.geo.json"));
+        put(EntityModel.Spook,              new Identifier(MonstersGirlsMod.MODID, "geo/spook_girl.geo.json"));
+        put(EntityModel.Wisp,               new Identifier(MonstersGirlsMod.MODID, "geo/wisp_girl.geo.json"));
     }};
 
     public static HashMap<EntityVariant, HashMap<EntityTexture, Identifier>> TEXTURE = new HashMap<>(){{
@@ -165,6 +185,13 @@ public class InternalMetric {
         put(EntityVariant.MushroomSoulWanderer,     setTexture("mushroom/mushroom_girl_soul_wanderer", true));
         put(EntityVariant.MushroomWarped,           setTexture("mushroom/mushroom_girl_warped", true));
         put(EntityVariant.MushroomWarpedRare,       setTexture("mushroom/mushroom_girl_warped_rare", true));
+
+        put(EntityVariant.SpookPeach,           setTexture("spook/spook_girl_peach", true));
+        put(EntityVariant.SpookTeal,            setTexture("spook/spook_girl_teal", true));
+
+        put(EntityVariant.WispBlue,             setTexture("wisp/wisp_girl_blue", false));
+        put(EntityVariant.WispGreen,            setTexture("wisp/wisp_girl_green", false));
+        put(EntityVariant.WispYellow,           setTexture("wisp/wisp_girl_yellow", true));
     }};
 
     public static HashMap<EntityVariant, HashMap<EntityAttribute, InternalAttribute>> ATTRIBUTES = new HashMap<>(){{
@@ -185,6 +212,13 @@ public class InternalMetric {
         put(EntityVariant.MushroomSoulWanderer, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
         put(EntityVariant.MushroomWarped, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
         put(EntityVariant.MushroomWarpedRare, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
+
+        put(EntityVariant.SpookPeach, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
+        put(EntityVariant.SpookTeal, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
+
+        put(EntityVariant.WispBlue, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
+        put(EntityVariant.WispGreen, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
+        put(EntityVariant.WispYellow, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
     }};
 
     // -- Methods --

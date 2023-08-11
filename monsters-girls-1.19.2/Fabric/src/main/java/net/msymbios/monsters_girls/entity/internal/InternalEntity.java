@@ -242,7 +242,7 @@ public abstract class InternalEntity extends TameableEntity {
         super.initDataTracker();
         this.dataTracker.startTracking(TEXTURE_ID, EntityTexture.DEFAULT.getId());
         this.dataTracker.startTracking(STATE, EntityState.Move.getId());
-        this.dataTracker.startTracking(LOG, true);
+        this.dataTracker.startTracking(LOG, false);
     } // initDataTracker ()
 
     public void writeCustomDataToNbt(NbtCompound dataNBT) {

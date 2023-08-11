@@ -22,16 +22,16 @@ public class ModEntities {
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, MandrakeChorusEntity::new).dimensions(EntityDimensions.fixed(0.4F, 0.7F)).build());
 
     public static final EntityType<MandrakeGlowBerryEntity> MANDRAKE_GIRL_GLOW_BERRY = Registry.register(Registry.ENTITY_TYPE, new Identifier(MonstersGirlsMod.MODID, "mandrake_girl_glow_berry"),
-            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, MandrakeGlowBerryEntity::new).dimensions(EntityDimensions.fixed(0.4F, 0.7F)).build());
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, MandrakeGlowBerryEntity::new).dimensions(EntityDimensions.fixed(0.4F, 0.85F)).build());
 
     public static final EntityType<MandrakeGreenEntity> MANDRAKE_GIRL_GREEN = Registry.register(Registry.ENTITY_TYPE, new Identifier(MonstersGirlsMod.MODID, "mandrake_girl_green"),
-            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, MandrakeGreenEntity::new).dimensions(EntityDimensions.fixed(0.4F, 0.7F)).build());
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, MandrakeGreenEntity::new).dimensions(EntityDimensions.fixed(0.4F, 0.85F)).build());
 
     public static final EntityType<MushroomCrimsonEntity> MUSHROOM_GIRL_CRIMSON = Registry.register(Registry.ENTITY_TYPE, new Identifier(MonstersGirlsMod.MODID, "mushroom_girl_crimson"),
-            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, MushroomCrimsonEntity::new).dimensions(EntityDimensions.fixed(0.4F, 1F)).build());
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, MushroomCrimsonEntity::new).dimensions(EntityDimensions.fixed(0.4F, 1.15F)).build());
 
     public static final EntityType<MushroomCrimsonRareEntity> MUSHROOM_GIRL_CRIMSON_RARE = Registry.register(Registry.ENTITY_TYPE, new Identifier(MonstersGirlsMod.MODID, "mushroom_girl_crimson_rare"),
-            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, MushroomCrimsonRareEntity::new).dimensions(EntityDimensions.fixed(0.4F, 1F)).build());
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, MushroomCrimsonRareEntity::new).dimensions(EntityDimensions.fixed(0.4F, 1.15F)).build());
 
     public static final EntityType<MushroomInkCapEntity> MUSHROOM_GIRL_INK_CAP = Registry.register(Registry.ENTITY_TYPE, new Identifier(MonstersGirlsMod.MODID, "mushroom_girl_ink_cap"),
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, MushroomInkCapEntity::new).dimensions(EntityDimensions.fixed(0.4F, 1.4F)).build());
@@ -63,6 +63,21 @@ public class ModEntities {
     public static final EntityType<MushroomSoulWandererEntity> MUSHROOM_GIRL_SOUL_WANDERER = Registry.register(Registry.ENTITY_TYPE, new Identifier(MonstersGirlsMod.MODID, "mushroom_girl_soul_wanderer"),
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, MushroomSoulWandererEntity::new).dimensions(EntityDimensions.fixed(0.4F, 1F)).build());
 
+    public static final EntityType<SpookPeachEntity> SPOOK_GIRL_PEACH = Registry.register(Registry.ENTITY_TYPE, new Identifier(MonstersGirlsMod.MODID, "spook_girl_peach"),
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, SpookPeachEntity::new).dimensions(EntityDimensions.fixed(0.4F, 1.3F)).build());
+
+    public static final EntityType<SpookTealEntity> SPOOK_GIRL_TEAL = Registry.register(Registry.ENTITY_TYPE, new Identifier(MonstersGirlsMod.MODID, "spook_girl_teal"),
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, SpookTealEntity::new).dimensions(EntityDimensions.fixed(0.4F, 1.3F)).build());
+
+    public static final EntityType<WispBlueEntity> WISP_GIRL_WISP_BLUE = Registry.register(Registry.ENTITY_TYPE, new Identifier(MonstersGirlsMod.MODID, "wisp_girl_blue"),
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, WispBlueEntity::new).dimensions(EntityDimensions.fixed(0.4F, 0.8F)).build());
+
+    public static final EntityType<WispGreenEntity> WISP_GIRL_WISP_GREEN = Registry.register(Registry.ENTITY_TYPE, new Identifier(MonstersGirlsMod.MODID, "wisp_girl_green"),
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, WispGreenEntity::new).dimensions(EntityDimensions.fixed(0.4F, 0.8F)).build());
+
+    public static final EntityType<WispYellowEntity> WISP_GIRL_YELLOW = Registry.register(Registry.ENTITY_TYPE, new Identifier(MonstersGirlsMod.MODID, "wisp_girl_yellow"),
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, WispYellowEntity::new).dimensions(EntityDimensions.fixed(0.4F, 0.8F)).build());
+
     // -- Methods --
     public static void registerEntityAttribute () {
         FabricDefaultAttributeRegistry.register(MANDRAKE_GIRL_BROWN, MandrakeBrownEntity.setAttributes());
@@ -82,6 +97,13 @@ public class ModEntities {
         FabricDefaultAttributeRegistry.register(MUSHROOM_GIRL_WARPED, MushroomWarpedEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(MUSHROOM_GIRL_WARPED_RARE, MushroomWarpedRareEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(MUSHROOM_GIRL_SOUL_WANDERER, MushroomSoulWandererEntity.setAttributes());
+
+        FabricDefaultAttributeRegistry.register(SPOOK_GIRL_PEACH, SpookPeachEntity.setAttributes());
+        FabricDefaultAttributeRegistry.register(SPOOK_GIRL_TEAL, SpookTealEntity.setAttributes());
+
+        FabricDefaultAttributeRegistry.register(WISP_GIRL_WISP_BLUE, WispBlueEntity.setAttributes());
+        FabricDefaultAttributeRegistry.register(WISP_GIRL_WISP_GREEN, WispGreenEntity.setAttributes());
+        FabricDefaultAttributeRegistry.register(WISP_GIRL_YELLOW, WispYellowEntity.setAttributes());
     } // registerEntityAttribute ()
 
     public static void registerEntityRenderer () {
@@ -102,6 +124,13 @@ public class ModEntities {
         EntityRendererRegistry.register(MUSHROOM_GIRL_WARPED, MushroomWarpedRenderer::new);
         EntityRendererRegistry.register(MUSHROOM_GIRL_WARPED_RARE, MushroomWarpedRareRenderer::new);
         EntityRendererRegistry.register(MUSHROOM_GIRL_SOUL_WANDERER, MushroomSoulWandererRenderer::new);
+
+        EntityRendererRegistry.register(SPOOK_GIRL_PEACH, SpookPeachRenderer::new);
+        EntityRendererRegistry.register(SPOOK_GIRL_TEAL, SpookTealRenderer::new);
+
+        EntityRendererRegistry.register(WISP_GIRL_WISP_BLUE, WispBlueRenderer::new);
+        EntityRendererRegistry.register(WISP_GIRL_WISP_GREEN, WispGreenRenderer::new);
+        EntityRendererRegistry.register(WISP_GIRL_YELLOW, WispYellowRenderer::new);
 
     } // registerEntityRenderer ()
 
