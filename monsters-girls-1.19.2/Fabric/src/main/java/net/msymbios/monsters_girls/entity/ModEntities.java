@@ -42,38 +42,57 @@ public class ModEntities {
     public static final EntityType<AmanitaYellowEntity> MUSHROOM_GIRL_AMANITA_YELLOW = Registry.register(Registry.ENTITY_TYPE, new Identifier(MonstersGirlsMod.MODID, "mushroom_girl_yellow"),
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, AmanitaYellowEntity::new).dimensions(EntityDimensions.fixed(0.4F, 1F)).build());
 
+    public static final EntityType<MushroomGirlBrownEntity> MUSHROOM_GIRL_BROWN = Registry.register(Registry.ENTITY_TYPE, new Identifier(MonstersGirlsMod.MODID, "mushroom_girl_brown"),
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, MushroomGirlBrownEntity::new).dimensions(EntityDimensions.fixed(0.4F, 1F)).build());
+
+    public static final EntityType<MushroomGirlEnderPuffballEntity> MUSHROOM_GIRL_ENDER_PUFFBALL = Registry.register(Registry.ENTITY_TYPE, new Identifier(MonstersGirlsMod.MODID, "mushroom_girl_ender_puffball"),
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, MushroomGirlEnderPuffballEntity::new).dimensions(EntityDimensions.fixed(0.4F, 1F)).build());
+
+    public static final EntityType<MushroomGirlInfernalEntity> MUSHROOM_GIRL_INFERNAL = Registry.register(Registry.ENTITY_TYPE, new Identifier(MonstersGirlsMod.MODID, "mushroom_girl_infernal"),
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, MushroomGirlInfernalEntity::new).dimensions(EntityDimensions.fixed(0.4F, 1F)).build());
+
+    public static final EntityType<MushroomGirlMoltenEntity> MUSHROOM_GIRL_MOLTEN = Registry.register(Registry.ENTITY_TYPE, new Identifier(MonstersGirlsMod.MODID, "mushroom_girl_molten_fungus"),
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, MushroomGirlMoltenEntity::new).dimensions(EntityDimensions.fixed(0.4F, 1F)).build());
+
+    public static final EntityType<MushroomGirlSoulWandererEntity> MUSHROOM_GIRL_SOUL_WANDERER = Registry.register(Registry.ENTITY_TYPE, new Identifier(MonstersGirlsMod.MODID, "mushroom_girl_soul_wanderer"),
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, MushroomGirlSoulWandererEntity::new).dimensions(EntityDimensions.fixed(0.4F, 1F)).build());
 
     // -- Methods --
     public static void registerEntityAttribute () {
         FabricDefaultAttributeRegistry.register(MANDRAKE_GIRL_BROWN, MandrakeGirlBrownEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(MANDRAKE_GIRL_GREEN, MandrakeGirlGreenEntity.setAttributes());
 
+        FabricDefaultAttributeRegistry.register(MUSHROOM_GIRL_AMANITA_YELLOW, AmanitaYellowEntity.setAttributes());
+        FabricDefaultAttributeRegistry.register(MUSHROOM_GIRL_BROWN, MushroomGirlBrownEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(MUSHROOM_GIRL_CRIMSON, CrimsonEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(MUSHROOM_GIRL_CRIMSON_RARE, CrimsonRareEntity.setAttributes());
-
+        FabricDefaultAttributeRegistry.register(MUSHROOM_GIRL_ENDER_PUFFBALL, MushroomGirlEnderPuffballEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(MUSHROOM_GIRL_FLY_AGARIC, FlyAgaricEntity.setAttributes());
-        FabricDefaultAttributeRegistry.register(MUSHROOM_GIRL_AMANITA_YELLOW, AmanitaYellowEntity.setAttributes());
-
+        FabricDefaultAttributeRegistry.register(MUSHROOM_GIRL_INFERNAL, MushroomGirlInfernalEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(MUSHROOM_GIRL_INK_CAP, InkCapEntity.setAttributes());
-
+        FabricDefaultAttributeRegistry.register(MUSHROOM_GIRL_MOLTEN, MushroomGirlMoltenEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(MUSHROOM_GIRL_WARPED, WarpedEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(MUSHROOM_GIRL_WARPED_RARE, WarpedRareEntity.setAttributes());
+        FabricDefaultAttributeRegistry.register(MUSHROOM_GIRL_SOUL_WANDERER, MushroomGirlSoulWandererEntity.setAttributes());
     } // registerEntityAttribute ()
 
     public static void registerEntityRenderer () {
         EntityRendererRegistry.register(MANDRAKE_GIRL_BROWN, MandrakeGirlBrownRenderer::new);
         EntityRendererRegistry.register(MANDRAKE_GIRL_GREEN, MandrakeGirlGreenRenderer::new);
 
+        EntityRendererRegistry.register(MUSHROOM_GIRL_AMANITA_YELLOW, AmanitaYellowRenderer::new);
+        EntityRendererRegistry.register(MUSHROOM_GIRL_BROWN, MushroomGirlBrownRenderer::new);
         EntityRendererRegistry.register(MUSHROOM_GIRL_CRIMSON, CrimsonRenderer::new);
         EntityRendererRegistry.register(MUSHROOM_GIRL_CRIMSON_RARE, CrimsonRareRenderer::new);
-
-        EntityRendererRegistry.register(MUSHROOM_GIRL_FLY_AGARIC, FlyAgaricRenderer::new);
-        EntityRendererRegistry.register(MUSHROOM_GIRL_AMANITA_YELLOW, AmanitaYellowRenderer::new);
-
+        EntityRendererRegistry.register(MUSHROOM_GIRL_ENDER_PUFFBALL, MushroomGirlEnderPuffballRenderer::new);
+        EntityRendererRegistry.register(MUSHROOM_GIRL_INFERNAL, MushroomGirlInfernalRenderer::new);
         EntityRendererRegistry.register(MUSHROOM_GIRL_INK_CAP, InkCapRenderer::new);
-
+        EntityRendererRegistry.register(MUSHROOM_GIRL_MOLTEN, MushroomGirlMoltenRenderer::new);
+        EntityRendererRegistry.register(MUSHROOM_GIRL_FLY_AGARIC, FlyAgaricRenderer::new);
         EntityRendererRegistry.register(MUSHROOM_GIRL_WARPED, WarpedRenderer::new);
         EntityRendererRegistry.register(MUSHROOM_GIRL_WARPED_RARE, WarpedRareRenderer::new);
+        EntityRendererRegistry.register(MUSHROOM_GIRL_SOUL_WANDERER,MushroomGirlSoulWandererRenderer::new);
+
     } // registerEntityRenderer ()
 
 } // Class ModEntities

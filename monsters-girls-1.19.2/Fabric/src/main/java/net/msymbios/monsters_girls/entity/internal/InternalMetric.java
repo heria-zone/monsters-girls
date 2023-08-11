@@ -31,11 +31,17 @@ public class InternalMetric {
     public static final HashMap<EntityVariant, HashMap<EntityTexture, Identifier>> TEXTURES = new HashMap<>(){{
         put(EntityVariant.MandrakeBrown, setTexture("mandrake/mandrake_girl_brown", false));
         put(EntityVariant.MandrakeGreen, setTexture("mandrake/mandrake_girl_green", false));
+
+        put(EntityVariant.AmanitaYellow, setTexture("mushroom/mushroom_girl_yellow", true));
+        put(EntityVariant.Boletus, setTexture("mushroom/mushroom_girl_brown", true));
         put(EntityVariant.Crimson, setTexture("mushroom/mushroom_girl_crimson", true));
         put(EntityVariant.CrimsonRare, setTexture("mushroom/mushroom_girl_crimson_rare", true));
-        put(EntityVariant.FlyAgaric, setTexture("mushroom/mushroom_girl_red", true));
-        put(EntityVariant.AmanitaYellow, setTexture("mushroom/mushroom_girl_yellow", true));
+        put(EntityVariant.EnderPuffball, setTexture("mushroom/mushroom_girl_ender_puffball", true));
+        put(EntityVariant.Infernal, setTexture("mushroom/mushroom_girl_infernal", true));
         put(EntityVariant.InkCap, setTexture("mushroom/mushroom_girl_ink_cap", true));
+        put(EntityVariant.Molten, setTexture("mushroom/mushroom_girl_molten", true));
+        put(EntityVariant.FlyAgaric, setTexture("mushroom/mushroom_girl_red", true));
+        put(EntityVariant.SoulWanderer, setTexture("mushroom/mushroom_girl_soul_wanderer", true));
         put(EntityVariant.Warped, setTexture("mushroom/mushroom_girl_warped", true));
         put(EntityVariant.WarpedRare, setTexture("mushroom/mushroom_girl_warped_rare", true));
     }};
@@ -43,11 +49,17 @@ public class InternalMetric {
     public static final HashMap<EntityVariant, HashMap<EntityAttribute, InternalAttribute>> ATTRIBUTES = new HashMap<>(){{
         put(EntityVariant.MandrakeBrown, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
         put(EntityVariant.MandrakeGreen, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
+
+        put(EntityVariant.AmanitaYellow, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
+        put(EntityVariant.Boletus, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
         put(EntityVariant.Crimson, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
         put(EntityVariant.CrimsonRare, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
-        put(EntityVariant.FlyAgaric, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
-        put(EntityVariant.AmanitaYellow, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
+        put(EntityVariant.EnderPuffball, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
+        put(EntityVariant.Infernal, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
         put(EntityVariant.InkCap, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
+        put(EntityVariant.Molten, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
+        put(EntityVariant.FlyAgaric, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
+        put(EntityVariant.SoulWanderer, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
         put(EntityVariant.Warped, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
         put(EntityVariant.WarpedRare, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
     }};
