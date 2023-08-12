@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+      {
+      "item": "monsters_girls:molten_fungus"
+      }, {
+      "item": "monsters_girls:molten_fungus"
+    }
+  ],
+  "result": {
+    "item": "monsters_girls:huge_molten_fungus",
+    "count": 1
+  }
+}

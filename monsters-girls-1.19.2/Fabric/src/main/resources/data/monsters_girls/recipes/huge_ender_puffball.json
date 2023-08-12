@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+      {
+      "item": "monsters_girls:ender_puffball"
+      }, {
+      "item": "monsters_girls:ender_puffball"
+    }
+  ],
+  "result": {
+    "item": "monsters_girls:huge_ender_puffball",
+    "count": 1
+  }
+}
