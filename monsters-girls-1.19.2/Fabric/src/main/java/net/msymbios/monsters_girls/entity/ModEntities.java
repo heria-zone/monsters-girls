@@ -9,7 +9,7 @@ import net.minecraft.entity.SpawnGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.msymbios.monsters_girls.MonstersGirlsMod;
-import net.msymbios.monsters_girls.entity.client.*;
+import net.msymbios.monsters_girls.client.renderer.*;
 import net.msymbios.monsters_girls.entity.custom.*;
 
 public class ModEntities {
