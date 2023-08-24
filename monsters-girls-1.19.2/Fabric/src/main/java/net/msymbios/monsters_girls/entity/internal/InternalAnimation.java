@@ -15,16 +15,16 @@ public final class InternalAnimation {
 
     // -- Variables --
     public static final AnimationBuilder IDLE = new AnimationBuilder().addAnimation("idle", ILoopType.EDefaultLoopTypes.LOOP);
-    public static final AnimationBuilder IDLE2 = new AnimationBuilder().addAnimation("idle2", ILoopType.EDefaultLoopTypes.LOOP);
+    public static final AnimationBuilder REST = new AnimationBuilder().addAnimation("rest", ILoopType.EDefaultLoopTypes.LOOP);
     public static final AnimationBuilder WALK = new AnimationBuilder().addAnimation("walk", ILoopType.EDefaultLoopTypes.LOOP);
     public static final AnimationBuilder WAVE = new AnimationBuilder().addAnimation ("wave", ILoopType.EDefaultLoopTypes.PLAY_ONCE);
-    public static final AnimationBuilder ATTACK_SWING = new AnimationBuilder().addAnimation ("attack", ILoopType.EDefaultLoopTypes.PLAY_ONCE);
+    public static final AnimationBuilder ATTACK = new AnimationBuilder().addAnimation ("attack", ILoopType.EDefaultLoopTypes.PLAY_ONCE);
 
     // -- Methods --
     public static <T extends InternalEntity & IAnimatable> AnimationController<T> attackAnimation(T animatable) {
         return new AnimationController<>(animatable, "Attack", 5, event -> {
             if (animatable.handSwinging) {
-                event.getController().setAnimation(ATTACK_SWING);
+                event.getController().setAnimation(ATTACK);
                 return PlayState.CONTINUE;
             }
             event.getController().clearAnimationCache();
@@ -35,7 +35,7 @@ public final class InternalAnimation {
     public static <T extends InternalEntity & IAnimatable> AnimationController<T> locomotionAnimation(T entity) {
         return new AnimationController<T>(entity, "Locomotion", 0, event -> {
             if (event.isMoving()) event.getController().setAnimation(WALK);
-            else if(entity.getCurrentState() == EntityState.Sit) event.getController().setAnimation(IDLE);
+            else if(entity.getCurrentState() == EntityState.Sit) event.getController().setAnimation(REST);
             else event.getController().setAnimation(IDLE);
             return PlayState.CONTINUE;
         });

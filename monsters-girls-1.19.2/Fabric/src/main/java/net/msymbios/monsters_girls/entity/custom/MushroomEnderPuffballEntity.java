@@ -7,6 +7,7 @@ import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
 import net.msymbios.monsters_girls.entity.enums.*;
 import net.msymbios.monsters_girls.entity.internal.InternalAnimation;
@@ -32,6 +33,20 @@ public class MushroomEnderPuffballEntity extends InternalEntity implements IAnim
                 .add(EntityAttributes.GENERIC_ARMOR, InternalMetric.getAttribute(EntityVariant.MushroomEnderPuffball, EntityAttribute.ARMOR))
                 .add(EntityAttributes.GENERIC_ARMOR_TOUGHNESS, InternalMetric.getAttribute(EntityVariant.MushroomEnderPuffball, EntityAttribute.ARMOR_TOUGHNESS));
     } // setAttributes ()
+
+    // ANIMATOR
+    @Override
+    public Identifier getAnimator() {
+        if(EntityTexture.byId(getTextureID()) == EntityTexture.BELLY) return InternalMetric.ANIMATOR.get(EntityAnimator.MushroomInflated);
+        return InternalMetric.ANIMATOR.get(EntityAnimator.MushroomFat);
+    } // getAnimator ()
+
+    // MODEL
+    @Override
+    public Identifier getCurrentModel() {
+        if(EntityTexture.byId(getTextureID()) == EntityTexture.BELLY) return InternalMetric.MODEL.get(EntityModel.MushroomInflated);
+        return InternalMetric.MODEL.get(EntityModel.MushroomFat);
+    } // getCurrentModel ()
 
     // -- Constructor --
     public MushroomEnderPuffballEntity(EntityType<? extends TameableEntity> entityType, World world) {

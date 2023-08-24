@@ -40,13 +40,13 @@ public class InternalMetric {
 
         put(EntityCategory.Mushroom, new HashMap<>() {{
             put(EntityVariant.MushroomAmanitaYellow,        EntityAnimator.Mushroom);
-            put(EntityVariant.MushroomBrown,              EntityAnimator.Mushroom);
+            put(EntityVariant.MushroomBrown,                EntityAnimator.MushroomFat);
             put(EntityVariant.MushroomCrimson,              EntityAnimator.Mushroom);
             put(EntityVariant.MushroomCrimsonRare,          EntityAnimator.Mushroom);
-            put(EntityVariant.MushroomEnderPuffball,        EntityAnimator.Mushroom);
-            put(EntityVariant.MushroomInfernal,             EntityAnimator.Mushroom);
-            put(EntityVariant.FungusInkCap,               EntityAnimator.Mushroom);
-            put(EntityVariant.MushroomMolten,               EntityAnimator.Mushroom);
+            put(EntityVariant.MushroomEnderPuffball,        EntityAnimator.MushroomInflated);
+            put(EntityVariant.MushroomInfernal,             EntityAnimator.MushroomFat);
+            put(EntityVariant.FungusInkCap,                 EntityAnimator.Mushroom);
+            put(EntityVariant.MushroomMolten,               EntityAnimator.MushroomFat);
             put(EntityVariant.MushroomFlyAgaric,            EntityAnimator.Mushroom);
             put(EntityVariant.MushroomSoulWanderer,         EntityAnimator.Mushroom);
             put(EntityVariant.MushroomWarped,               EntityAnimator.Mushroom);
@@ -78,7 +78,7 @@ public class InternalMetric {
             put(EntityVariant.MushroomBrown,            EntityModel.MushroomFat);
             put(EntityVariant.MushroomCrimson,          EntityModel.Mushroom);
             put(EntityVariant.MushroomCrimsonRare,      EntityModel.Mushroom);
-            put(EntityVariant.MushroomEnderPuffball,    EntityModel.MushroomFat);
+            put(EntityVariant.MushroomEnderPuffball,    EntityModel.MushroomInflated);
             put(EntityVariant.MushroomInfernal,         EntityModel.MushroomFat);
             put(EntityVariant.FungusInkCap,             EntityModel.MushroomFungus);
             put(EntityVariant.MushroomMolten,           EntityModel.MushroomFat);
@@ -152,6 +152,8 @@ public class InternalMetric {
     public static HashMap<EntityAnimator, Identifier> ANIMATOR = new HashMap<>() {{
         put(EntityAnimator.Mandrake,    new Identifier(MonstersGirlsMod.MODID, "animations/mushroom_girl.animation.json")); /*"animations/mandrake.animation.json"*/
         put(EntityAnimator.Mushroom,    new Identifier(MonstersGirlsMod.MODID, "animations/mushroom_girl.animation.json"));
+        put(EntityAnimator.MushroomFat,    new Identifier(MonstersGirlsMod.MODID, "animations/mushroom_girl_fat.animation.json"));
+        put(EntityAnimator.MushroomInflated,    new Identifier(MonstersGirlsMod.MODID, "animations/mushroom_girl_inflated.animation.json"));
         put(EntityAnimator.Spook,    new Identifier(MonstersGirlsMod.MODID, "animations/spook_girl.animation.json"));
         put(EntityAnimator.Wisp,    new Identifier(MonstersGirlsMod.MODID, "animations/wisp_girl.animation.json"));
     }};
