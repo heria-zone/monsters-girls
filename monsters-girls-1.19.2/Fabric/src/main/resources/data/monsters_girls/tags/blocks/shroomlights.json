@@ -1,4 +1,5 @@
 {
+  "replace": false,
   "values": [
     "minecraft:shroomlight",
     "monsters_girls:ender_shroomlight",

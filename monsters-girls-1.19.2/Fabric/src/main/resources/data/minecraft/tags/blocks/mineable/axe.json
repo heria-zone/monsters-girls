@@ -9,16 +9,6 @@
     "monsters_girls:soul_wanderer_block",
     "monsters_girls:ink_cap_black_mushroom_block",
     "monsters_girls:ink_cap_grey_mushroom_block",
-    "monsters_girls:ink_cap_light_grey_mushroom_block",
-    "#minecraft:logs",
-    "#minecraft:buttons",
-    "#minecraft:doors",
-    "#minecraft:fence_gates",
-    "#minecraft:fences",
-    "#minecraft:planks",
-    "#minecraft:pressure_plates",
-    "#minecraft:slabs",
-    "#minecraft:stairs",
-    "#minecraft:trapdoors"
+    "monsters_girls:ink_cap_light_grey_mushroom_block"
   ]
 }
