@@ -69,10 +69,10 @@ public class ModEntities {
     public static final EntityType<SpookTealEntity> SPOOK_GIRL_TEAL = Registry.register(Registry.ENTITY_TYPE, new Identifier(MonstersGirlsMod.MODID, "spook_girl_teal"),
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, SpookTealEntity::new).dimensions(EntityDimensions.fixed(0.4F, 1.3F)).build());
 
-    public static final EntityType<WispBlueEntity> WISP_GIRL_WISP_BLUE = Registry.register(Registry.ENTITY_TYPE, new Identifier(MonstersGirlsMod.MODID, "wisp_girl_blue"),
+    public static final EntityType<WispBlueEntity> WISP_GIRL_BLUE = Registry.register(Registry.ENTITY_TYPE, new Identifier(MonstersGirlsMod.MODID, "wisp_girl_blue"),
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, WispBlueEntity::new).dimensions(EntityDimensions.fixed(0.4F, 0.8F)).build());
 
-    public static final EntityType<WispGreenEntity> WISP_GIRL_WISP_GREEN = Registry.register(Registry.ENTITY_TYPE, new Identifier(MonstersGirlsMod.MODID, "wisp_girl_green"),
+    public static final EntityType<WispGreenEntity> WISP_GIRL_GREEN = Registry.register(Registry.ENTITY_TYPE, new Identifier(MonstersGirlsMod.MODID, "wisp_girl_green"),
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, WispGreenEntity::new).dimensions(EntityDimensions.fixed(0.4F, 0.8F)).build());
 
     public static final EntityType<WispYellowEntity> WISP_GIRL_YELLOW = Registry.register(Registry.ENTITY_TYPE, new Identifier(MonstersGirlsMod.MODID, "wisp_girl_yellow"),
@@ -101,8 +101,8 @@ public class ModEntities {
         FabricDefaultAttributeRegistry.register(SPOOK_GIRL_PEACH, SpookPeachEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(SPOOK_GIRL_TEAL, SpookTealEntity.setAttributes());
 
-        FabricDefaultAttributeRegistry.register(WISP_GIRL_WISP_BLUE, WispBlueEntity.setAttributes());
-        FabricDefaultAttributeRegistry.register(WISP_GIRL_WISP_GREEN, WispGreenEntity.setAttributes());
+        FabricDefaultAttributeRegistry.register(WISP_GIRL_BLUE, WispBlueEntity.setAttributes());
+        FabricDefaultAttributeRegistry.register(WISP_GIRL_GREEN, WispGreenEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(WISP_GIRL_YELLOW, WispYellowEntity.setAttributes());
     } // registerEntityAttribute ()
 
@@ -128,8 +128,8 @@ public class ModEntities {
         EntityRendererRegistry.register(SPOOK_GIRL_PEACH, SpookPeachRenderer::new);
         EntityRendererRegistry.register(SPOOK_GIRL_TEAL, SpookTealRenderer::new);
 
-        EntityRendererRegistry.register(WISP_GIRL_WISP_BLUE, WispBlueRenderer::new);
-        EntityRendererRegistry.register(WISP_GIRL_WISP_GREEN, WispGreenRenderer::new);
+        EntityRendererRegistry.register(WISP_GIRL_BLUE, WispBlueRenderer::new);
+        EntityRendererRegistry.register(WISP_GIRL_GREEN, WispGreenRenderer::new);
         EntityRendererRegistry.register(WISP_GIRL_YELLOW, WispYellowRenderer::new);
 
     } // registerEntityRenderer ()

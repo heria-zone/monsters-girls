@@ -49,8 +49,8 @@ public class ModItems {
     public static final Item MUSHROOM_GIRL_SOUL_WANDERER_SPAWN_EGG = registerItem("spawn_egg_mushroom_girl_soul_wanderer", new SpawnItem(ModEntities.MUSHROOM_GIRL_SOUL_WANDERER, new FabricItemSettings().group(ModItemsGroup.MONSTERS_GIRLS)));
     public static final Item SPOOK_GIRL_PEACH_SPAWN_EGG = registerItem("spawn_egg_spook_peach", new SpawnItem(ModEntities.SPOOK_GIRL_PEACH, new FabricItemSettings().group(ModItemsGroup.MONSTERS_GIRLS)));
     public static final Item SPOOK_GIRL_TEAL_SPAWN_EGG = registerItem("spawn_egg_spook_teal", new SpawnItem(ModEntities.SPOOK_GIRL_TEAL, new FabricItemSettings().group(ModItemsGroup.MONSTERS_GIRLS)));
-    public static final Item WISP_GIRL_BLUE_SPAWN_EGG = registerItem("spawn_egg_wisp_blue", new SpawnItem(ModEntities.WISP_GIRL_WISP_BLUE, new FabricItemSettings().group(ModItemsGroup.MONSTERS_GIRLS)));
-    public static final Item WISP_GIRL_GREEN_SPAWN_EGG = registerItem("spawn_egg_wisp_green", new SpawnItem(ModEntities.WISP_GIRL_WISP_GREEN, new FabricItemSettings().group(ModItemsGroup.MONSTERS_GIRLS)));
+    public static final Item WISP_GIRL_BLUE_SPAWN_EGG = registerItem("spawn_egg_wisp_blue", new SpawnItem(ModEntities.WISP_GIRL_BLUE, new FabricItemSettings().group(ModItemsGroup.MONSTERS_GIRLS)));
+    public static final Item WISP_GIRL_GREEN_SPAWN_EGG = registerItem("spawn_egg_wisp_green", new SpawnItem(ModEntities.WISP_GIRL_GREEN, new FabricItemSettings().group(ModItemsGroup.MONSTERS_GIRLS)));
     public static final Item WISP_GIRL_YELLOW_SPAWN_EGG = registerItem("spawn_egg_wisp_yellow", new SpawnItem(ModEntities.WISP_GIRL_YELLOW, new FabricItemSettings().group(ModItemsGroup.MONSTERS_GIRLS)));
 
     // -- Methods --
