@@ -3,9 +3,11 @@ package net.msymbios.monsters_girls.entity.internal;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.mob.CreeperEntity;
 import net.minecraft.entity.mob.Monster;
+import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 import net.msymbios.monsters_girls.MonstersGirlsMod;
 import net.msymbios.monsters_girls.entity.enums.*;
+import net.msymbios.monsters_girls.sounds.ModSounds;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -30,6 +32,66 @@ public class InternalMetric {
     public static Predicate<LivingEntity> AvoidAttackingEntities = entity -> entity instanceof Monster && !(entity instanceof CreeperEntity);
 
     // -- Variables --
+    public static HashMap<EntitySound, List<EntityVariant>> ENTITY_SOUND = new HashMap<>(){{
+
+        put(EntitySound.DEFAULT, new ArrayList<>(List.of(
+                EntityVariant.MandrakeBrown,
+                EntityVariant.MandrakeChorus,
+                EntityVariant.MandrakeGreen,
+                EntityVariant.MandrakeGlowBerry,
+
+                EntityVariant.MushroomAmanitaYellow,
+                EntityVariant.MushroomBrown,
+                EntityVariant.MushroomCrimson,
+                EntityVariant.MushroomCrimsonRare,
+                EntityVariant.MushroomEnderPuffball,
+                EntityVariant.MushroomInfernal,
+                EntityVariant.FungusInkCap,
+                EntityVariant.MushroomMolten,
+                EntityVariant.MushroomFlyAgaric,
+                EntityVariant.MushroomSoulWanderer,
+                EntityVariant.MushroomWarped,
+                EntityVariant.MushroomWarpedRare,
+
+                EntityVariant.SpookPeach,
+                EntityVariant.SpookTeal,
+
+                EntityVariant.WispBlue,
+                EntityVariant.WispGreen,
+                EntityVariant.WispYellow
+        )));
+
+        put(EntitySound.HURT, new ArrayList<>(List.of(
+                EntityVariant.MandrakeBrown,
+                EntityVariant.MandrakeChorus,
+                EntityVariant.MandrakeGreen,
+                EntityVariant.MandrakeGlowBerry,
+
+                EntityVariant.SpookPeach,
+                EntityVariant.SpookTeal,
+
+                EntityVariant.WispBlue,
+                EntityVariant.WispGreen,
+                EntityVariant.WispYellow
+        )));
+
+        put(EntitySound.DEATH, new ArrayList<>(List.of(
+                EntityVariant.MandrakeBrown,
+                EntityVariant.MandrakeChorus,
+                EntityVariant.MandrakeGreen,
+                EntityVariant.MandrakeGlowBerry,
+
+                EntityVariant.WispBlue,
+                EntityVariant.WispGreen,
+                EntityVariant.WispYellow
+        )));
+
+        put(EntitySound.ATTACK, new ArrayList<>(List.of(
+                EntityVariant.SpookPeach,
+                EntityVariant.SpookTeal
+        )));
+    }};
+
     public static HashMap<EntityCategory, HashMap<EntityVariant, EntityAnimator>> ENTITY_ANIMATOR = new HashMap<>(){{
         put(EntityCategory.Mandrake, new HashMap<>() {{
             put(EntityVariant.MandrakeBrown,        EntityAnimator.Mandrake);
@@ -149,6 +211,52 @@ public class InternalMetric {
         )));
     }};
 
+    public static HashMap<EntityVariant, HashMap<EntitySound, SoundEvent>> SOUND = new HashMap<>(){{
+        HashMap<EntitySound, SoundEvent> mandrakeMap = new HashMap<>() {{
+            put(EntitySound.DEFAULT, ModSounds.MANDRAKE_SOUND);
+            put(EntitySound.HURT, ModSounds.MANDRAKE_HURT);
+            put(EntitySound.DEATH, ModSounds.MANDRAKE_DEATH);
+        }};
+        HashMap<EntitySound, SoundEvent> mushroomMap = new HashMap<>() {{
+            put(EntitySound.DEFAULT, ModSounds.MUSHROOM_GIRL);
+        }};
+        HashMap<EntitySound, SoundEvent> spookMap = new HashMap<>() {{
+            put(EntitySound.ATTACK, ModSounds.SPOOK_ATTACK);
+            put(EntitySound.DEFAULT, ModSounds.SPOOK_LAUGH);
+            put(EntitySound.HURT, ModSounds.SPOOK_HURT);
+        }};
+        HashMap<EntitySound, SoundEvent> wispMap = new HashMap<>() {{
+            put(EntitySound.DEFAULT, ModSounds.WISP_LAUGH);
+            put(EntitySound.HURT, ModSounds.WISP_HURT);
+            put(EntitySound.DEATH, ModSounds.WISP_DEATH);
+        }};
+
+        put(EntityVariant.MandrakeBrown,            mandrakeMap);
+        put(EntityVariant.MandrakeChorus,           mandrakeMap);
+        put(EntityVariant.MandrakeGlowBerry,        mandrakeMap);
+        put(EntityVariant.MandrakeGreen,            mandrakeMap);
+
+        put(EntityVariant.MushroomAmanitaYellow,    mushroomMap);
+        put(EntityVariant.MushroomBrown,            mushroomMap);
+        put(EntityVariant.MushroomCrimson,          mushroomMap);
+        put(EntityVariant.MushroomCrimsonRare,      mushroomMap);
+        put(EntityVariant.MushroomEnderPuffball,    new HashMap<>() {{put(EntitySound.DEFAULT, ModSounds.MUSHROOM_GIRL_ENDER);}});
+        put(EntityVariant.MushroomInfernal,         mushroomMap);
+        put(EntityVariant.FungusInkCap,             mushroomMap);
+        put(EntityVariant.MushroomMolten,           mushroomMap);
+        put(EntityVariant.MushroomFlyAgaric,        mushroomMap);
+        put(EntityVariant.MushroomSoulWanderer,     mushroomMap);
+        put(EntityVariant.MushroomWarped,           mushroomMap);
+        put(EntityVariant.MushroomWarpedRare,       mushroomMap);
+
+        put(EntityVariant.SpookPeach,               spookMap);
+        put(EntityVariant.SpookTeal,                spookMap);
+
+        put(EntityVariant.WispBlue,                 wispMap);
+        put(EntityVariant.WispGreen,                wispMap);
+        put(EntityVariant.WispYellow,               wispMap);
+    }};
+
     public static HashMap<EntityAnimator, Identifier> ANIMATOR = new HashMap<>() {{
         put(EntityAnimator.Mandrake,    new Identifier(MonstersGirlsMod.MODID, "animations/mushroom_girl.animation.json")); /*"animations/mandrake.animation.json"*/
         put(EntityAnimator.Mushroom,    new Identifier(MonstersGirlsMod.MODID, "animations/mushroom_girl.animation.json"));
@@ -224,6 +332,32 @@ public class InternalMetric {
     }};
 
     // -- Methods --
+
+    // SOUND
+    public static SoundEvent getSound(EntityVariant variant) {
+        EntitySound defaultSound = EntitySound.DEFAULT;
+        if (ENTITY_SOUND.containsKey(defaultSound) && ENTITY_SOUND.get(defaultSound).contains(variant)) {
+            if (SOUND.containsKey(variant) && SOUND.get(variant).containsKey(defaultSound))
+                return SOUND.get(variant).get(defaultSound);
+        }
+
+        // Return a default or error identifier if the combination is not found
+        return null;
+    } // getSound ()
+
+    public static SoundEvent getSound(EntityVariant variant, EntitySound sound) {
+        if (ENTITY_SOUND.containsKey(sound) && ENTITY_SOUND.get(sound).contains(variant)) {
+            if (SOUND.containsKey(variant) && SOUND.get(variant).containsKey(sound))
+                return SOUND.get(variant).get(sound);
+        }
+
+        // If the texture doesn't exist for the specified variant, return the default texture
+        if (SOUND.containsKey(variant) && SOUND.get(variant).containsKey(EntitySound.DEFAULT))
+            return SOUND.get(variant).get(EntitySound.DEFAULT);
+
+        // Return a default or error identifier if the combination is not found
+        return null;
+    } // getSound ()
 
     // ANIMATOR
     public static Identifier getAnimator(EntityCategory entity, EntityVariant variant) {

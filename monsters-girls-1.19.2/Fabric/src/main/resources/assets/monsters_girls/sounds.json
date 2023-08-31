@@ -1,0 +1,147 @@
+{
+  "vexiskill": {
+    "subtitle": "subtitles.vexiskill",
+    "sounds": [
+      {
+        "name": "monsters_girls:vexded",
+        "stream": false
+      }
+    ]
+  },
+  "mushroomgalsound": {
+    "sounds": [
+      {
+        "name": "monsters_girls:shram2",
+        "stream": false
+      },
+      {
+        "name": "monsters_girls:shram1",
+        "stream": false
+      },
+      {
+        "name": "monsters_girls:shram3",
+        "stream": false
+      }
+    ]
+  },
+  "endermushroomgalsound": {
+    "subtitle": "subtitles.endermushroomgalsound",
+    "sounds": [
+      {
+        "name": "monsters_girls:endershram1",
+        "stream": false
+      },
+      {
+        "name": "monsters_girls:endershram2",
+        "stream": false
+      }
+    ]
+  },
+  "enderpuffballgalhuffs": {
+    "subtitle": "subtitles.enderpuffballgalhuffs",
+    "sounds": [
+      {
+        "name": "monsters_girls:puff_out1",
+        "stream": false
+      }
+    ]
+  },
+  "enderpuffballgalpuffs": {
+    "subtitle": "subtitles.enderpuffballgalpuffs",
+    "sounds": [
+      {
+        "name": "monsters_girls:puff_up1",
+        "stream": false
+      }
+    ]
+  },
+  "mandrakesounds": {
+    "subtitle": "subtitles.mandrakesounds",
+    "sounds": [
+      {
+        "name": "monsters_girls:mandrake1",
+        "stream": false
+      },
+      {
+        "name": "monsters_girls:mandrake2",
+        "stream": false
+      }
+    ]
+  },
+  "mandrakehurt": {
+    "subtitle": "subtitles.mandrakehurt",
+    "sounds": [
+      {
+        "name": "monsters_girls:mandrake_hurt",
+        "stream": false
+      }
+    ]
+  },
+  "mandrakedies": {
+    "subtitle": "subtitles.mandrakedies",
+    "sounds": [
+      {
+        "name": "monsters_girls:mandrake_death",
+        "stream": false
+      }
+    ]
+  },
+  "wispdeath": {
+    "subtitle": "subtitles.wispdeath",
+    "sounds": [
+      {
+        "name": "monsters_girls:ded",
+        "stream": false
+      }
+    ]
+  },
+  "wisplaughs": {
+    "subtitle": "subtitles.wisplaughs",
+    "sounds": [
+      {
+        "name": "monsters_girls:hahaha",
+        "stream": false
+      },
+      {
+        "name": "monsters_girls:huh",
+        "stream": false
+      }
+    ]
+  },
+  "wisphurt": {
+    "subtitle": "subtitles.wisphurt",
+    "sounds": [
+      {
+        "name": "monsters_girls:ugh",
+        "stream": false
+      }
+    ]
+  },
+  "spookattacking": {
+    "subtitle": "subtitles.spookattacking",
+    "sounds": [
+      {
+        "name": "monsters_girls:spookattack",
+        "stream": false
+      }
+    ]
+  },
+  "spookhurt": {
+    "subtitle": "subtitles.spookhurt",
+    "sounds": [
+      {
+        "name": "monsters_girls:spookhurt",
+        "stream": false
+      }
+    ]
+  },
+  "spooklaugh": {
+    "subtitle": "subtitles.spooklaugh",
+    "sounds": [
+      {
+        "name": "monsters_girls:spookalive",
+        "stream": false
+      }
+    ]
+  }
+}

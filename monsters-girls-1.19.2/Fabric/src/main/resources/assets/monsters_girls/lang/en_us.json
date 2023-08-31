@@ -133,5 +133,19 @@
   "entity.monsters_girls.wisp_girl_blue": "Wisp Girl Blue",
   "entity.monsters_girls.wisp_girl_yellow": "Wisp Girl Yellow",
 
+  "subtitles.vexiskill": "Vex Banished To The Shadow Realm",
+  "subtitles.endermushroomgalsound": "Ender Mushroom Girl Squeaks",
+  "subtitles.enderpuffballgalhuffs": "Ender Puffball Girl Huffs",
+  "subtitles.enderpuffballgalpuffs": "Ender Puffball Girl Puffs",
+  "subtitles.mandrakesounds": "Mandrake Squeak",
+  "subtitles.mandrakehurt": "Mandrake Screams",
+  "subtitles.mandrakedies": "Mandrake Death",
+  "subtitles.wispdeath": "Wisp Death",
+  "subtitles.wisplaughs": "Wisp Laugh",
+  "subtitles.wisphurt": "Wisp Hurt",
+  "subtitles.spookattacking": "Spook Attack",
+  "subtitles.spookhurt": "Spook Hurt",
+  "subtitles.spooklaugh": "Spook Laugh",
+
   "itemGroup.monsters_girls.mod_group": "Monsters & Girls"
 }

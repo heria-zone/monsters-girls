@@ -5,6 +5,9 @@ import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
+import net.minecraft.entity.effect.StatusEffect;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -14,7 +17,6 @@ import net.minecraft.nbt.NbtCompound;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
@@ -31,7 +33,6 @@ public abstract class InternalEntity extends TameableEntity {
     protected static final TrackedData<Integer> TEXTURE_ID = DataTracker.registerData(InternalEntity.class, TrackedDataHandlerRegistry.INTEGER);
     protected static final TrackedData<Integer> MODEL_ID = DataTracker.registerData(InternalEntity.class, TrackedDataHandlerRegistry.INTEGER);
     protected static final TrackedData<Integer> STATE = DataTracker.registerData(InternalEntity.class, TrackedDataHandlerRegistry.INTEGER);
-
     protected static final TrackedData<Boolean> LOG = DataTracker.registerData(InternalEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
     protected static final TrackedData<Boolean> BELLY = DataTracker.registerData(InternalEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
 
@@ -193,6 +194,7 @@ public abstract class InternalEntity extends TameableEntity {
     @Override
     public boolean damage(DamageSource source, float amount) {
         if (this.isInvulnerableTo(source)) return false;
+        handleNegativeEffect(this, source.getSource());
         handleActivateCombatMode();
         return super.damage(source, amount);
     } // damage ()
@@ -210,6 +212,7 @@ public abstract class InternalEntity extends TameableEntity {
                 if(getOwner() == null) handleTame(itemStack, player);
 
                 if(getOwner() != null) {
+                    handleEffect(this, player, itemStack);
                     handleState(itemStack, player);
                     handleTexture(itemStack, player);
 
@@ -228,13 +231,18 @@ public abstract class InternalEntity extends TameableEntity {
     // -- Sound
     @Override
     protected SoundEvent getHurtSound(DamageSource source) {
-        return SoundEvents.ENTITY_GENERIC_HURT;
+        return InternalMetric.getSound(this.variant, EntitySound.HURT);
     } // getHurtSound ()
 
     @Override
     protected SoundEvent getDeathSound() {
-        return SoundEvents.ENTITY_GENERIC_DEATH;
+        return InternalMetric.getSound(this.variant, EntitySound.DEATH);
     } // getDeathSound ()
+
+    @Override
+    protected SoundEvent getAmbientSound() {
+        return InternalMetric.getSound(this.variant, EntitySound.DEFAULT);
+    } // getAmbientSound ()
 
     // -- Save
     @Override
@@ -271,6 +279,10 @@ public abstract class InternalEntity extends TameableEntity {
         if(itemStack.isOf(Items.BOOK) || itemStack.isOf(Items.WRITABLE_BOOK) || itemStack.isOf(Items.OAK_BUTTON)) return false;
         return true;
     } // canInteract ()
+
+    protected void handleNegativeEffect(Entity entity, Entity sourceentity) {} // handleNegativeEffect ()
+
+    protected void handleEffect(Entity entity, Entity sourceentity, ItemStack itemstack) {} // handleEffect ()
 
     protected void handleAutoHeal () {
         if(this.getHealth() < this.getHpValue()) autoHeal = true;
@@ -313,31 +325,14 @@ public abstract class InternalEntity extends TameableEntity {
                 this.navigation.stop();
                 this.setTarget(null);
 
-                // Spawn hearts particles
-                for (int i = 0; i < 7; ++i) {
-                    double d0 = this.random.nextGaussian() * 0.02D;
-                    double d1 = this.random.nextGaussian() * 0.02D;
-                    double d2 = this.random.nextGaussian() * 0.02D;
-                    this.world.addParticle(ParticleTypes.HEART, this.getParticleX(1.0D), this.getRandomBodyY() + 0.5D, this.getParticleZ(1.0D), d0, d1, d2);
-                }
-
-                player.sendMessage(Text.literal("Current Owner: " + getOwner().getEntityName()), true);
+                InternalParticles.Heart(this);
                 this.world.sendEntityStatus(this, (byte) 7);
             } else {
-                // Spawn ash particles
-                for (int i = 0; i < 7; ++i) {
-                    double d0 = this.random.nextGaussian() * 0.02D;
-                    double d1 = this.random.nextGaussian() * 0.02D;
-                    double d2 = this.random.nextGaussian() * 0.02D;
-                    this.world.addParticle(ParticleTypes.ASH, this.getParticleX(1.0D), this.getRandomBodyY() + 0.5D, this.getParticleZ(1.0D), d0, d1, d2);
-                }
-
+                InternalParticles.Ash(this);
                 this.world.sendEntityStatus(this, (byte) 6);
             }
-
             if (!player.getAbilities().creativeMode) item.decrement(1);
         }
-
     } // handleTame ()
 
     public void handleSit(ItemStack itemStack) {
