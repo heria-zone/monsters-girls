@@ -22,6 +22,7 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldAccess;
 import net.msymbios.monsters_girls.entity.enums.*;
 
 import static net.msymbios.monsters_girls.entity.internal.Utility.invertBoolean;
@@ -179,6 +180,7 @@ public abstract class InternalEntity extends TameableEntity {
     @Override
     public void tick() {
         super.tick();
+        handlePlanting(world, this.getX(), this.getY(), this.getZ(), this);
         handleCombatMode();
         handleAutoHeal();
         commandDebugExtra();
@@ -279,6 +281,8 @@ public abstract class InternalEntity extends TameableEntity {
         if(itemStack.isOf(Items.BOOK) || itemStack.isOf(Items.WRITABLE_BOOK) || itemStack.isOf(Items.OAK_BUTTON)) return false;
         return true;
     } // canInteract ()
+
+    protected void handlePlanting (WorldAccess world, double x, double y, double z, Entity entity) {} // handlePlanting ()
 
     protected void handleNegativeEffect(Entity entity, Entity sourceentity) {} // handleNegativeEffect ()
 

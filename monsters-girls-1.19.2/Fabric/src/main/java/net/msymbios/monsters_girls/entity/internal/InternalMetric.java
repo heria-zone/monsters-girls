@@ -22,12 +22,13 @@ public class InternalMetric {
     public static int WaryTime = 50;                        // Time while being in combat mode
 
     // -- Attribute --
-    public static float MeleeAttackMovement = 1.0F;                   // Movement speed when it is melee attacking
-    public static float FollowOwnerMovement = 1.0F;                   // Movement speed when following player
-    public static float WanderAroundMovement = 0.6F;                  // Movement speed while it is wandering around
-    public static float FollowBehindDistance = 10.0F;
+    public static float MeleeAttackMovement = 1.0F;                     // Movement speed when it is melee attacking
+    public static float MovementSpeed = 1.0F;                           // Movement speed when it is melee attacking
+    public static float FollowOwnerMovement = 1.0F;                     // Movement speed when following player
+    public static float WanderAroundMovement = 0.6F;                    // Movement speed while it is wandering around
+    public static float FollowBehindDistance = 7.0F;
     public static float FollowCloseDistance= 2.0F;
-    public static float LookAtRange = 8.0F;
+    public static float LookAtRange = 6.0F;
     public static int AttackChance = 5;
     public static Predicate<LivingEntity> AvoidAttackingEntities = entity -> entity instanceof Monster && !(entity instanceof CreeperEntity);
 
@@ -305,10 +306,10 @@ public class InternalMetric {
     }};
 
     public static HashMap<EntityVariant, HashMap<EntityAttribute, InternalAttribute>> ATTRIBUTES = new HashMap<>(){{
-        put(EntityVariant.MandrakeBrown, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
+        put(EntityVariant.MandrakeGreen, setAttribute(15F, 2F, 1.2F, 0.3F, 0.2F));
+        put(EntityVariant.MandrakeBrown, setAttribute(15F, 2F, 1.2F, 0.3F, 0.2F));
         put(EntityVariant.MandrakeChorus, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
         put(EntityVariant.MandrakeGlowBerry, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
-        put(EntityVariant.MandrakeGreen, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
 
         put(EntityVariant.MushroomAmanitaYellow, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
         put(EntityVariant.MushroomBrown, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));

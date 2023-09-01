@@ -1,8 +1,11 @@
 package net.msymbios.monsters_girls.entity.custom;
 
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
+import net.minecraft.block.Blocks;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.ai.brain.task.PanicTask;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
@@ -11,9 +14,16 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.BoneMealItem;
+import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.recipe.Ingredient;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Box;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldAccess;
+import net.msymbios.monsters_girls.block.ModBlocks;
 import net.msymbios.monsters_girls.entity.enums.*;
 import net.msymbios.monsters_girls.entity.internal.InternalAnimation;
 import net.msymbios.monsters_girls.entity.internal.InternalEntity;
@@ -61,6 +71,20 @@ public class MandrakeGreenEntity extends InternalEntity implements IAnimatable {
         if(itemStack.isOf(Items.BONE_MEAL) || itemStack.isOf(Items.CLAY_BALL) || itemStack.isOf(Items.COOKIE) || itemStack.isOf(Items.WATER_BUCKET)) return false;
         return super.canInteract(itemStack);
     } // canInteract ()
+
+    @Override
+    protected void handlePlanting (WorldAccess world, double x, double y, double z, Entity entity) {
+        if (entity == null) return;
+
+        if (entity.isOnGround()) {
+            BlockPos blockPos = new BlockPos(x, y, z);
+            if (world.isSpaceEmpty(new Box(blockPos))) {
+                if ((world.getBlockState(new BlockPos(x, y - 1, z))).getBlock() == Blocks.GRASS_BLOCK) {
+                    if (Math.random() < 1e-7) world.setBlockState(blockPos, ModBlocks.MANDRAKE.getDefaultState(), 3);
+                }
+            }
+        }
+    } // handlePlanting ()
 
     @Override
     protected void handleNegativeEffect(Entity entity, Entity sourceentity) {
@@ -118,6 +142,7 @@ public class MandrakeGreenEntity extends InternalEntity implements IAnimatable {
         this.goalSelector.add(2, new SitGoal(this));
         this.goalSelector.add(3, new MeleeAttackGoal(this, InternalMetric.MeleeAttackMovement, false));
         this.goalSelector.add(4, new FollowOwnerGoal(this, InternalMetric.FollowOwnerMovement, InternalMetric.FollowBehindDistance, InternalMetric.FollowCloseDistance, false));
+        this.goalSelector.add(4, new TemptGoal(this, InternalMetric.MovementSpeed, Ingredient.ofItems(new ItemConvertible[]{Items.COOKIE}), false));
         this.goalSelector.add(5, new WanderAroundFarGoal(this, InternalMetric.WanderAroundMovement));
         this.goalSelector.add(6, new LookAtEntityGoal(this, PlayerEntity.class, InternalMetric.LookAtRange));
         this.goalSelector.add(6, new LookAtEntityGoal(this, InternalEntity.class, InternalMetric.LookAtRange));
