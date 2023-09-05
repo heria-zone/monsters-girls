@@ -1,5 +1,7 @@
 package net.msymbios.monsters_girls.entity.internal;
 
+import net.msymbios.monsters_girls.entity.custom.MandrakeBrownEntity;
+import net.msymbios.monsters_girls.entity.custom.MandrakeGreenEntity;
 import net.msymbios.monsters_girls.entity.enums.EntityState;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.PlayState;
@@ -19,6 +21,7 @@ public final class InternalAnimation {
     public static final AnimationBuilder WALK = new AnimationBuilder().addAnimation("walk", ILoopType.EDefaultLoopTypes.LOOP);
     public static final AnimationBuilder WAVE = new AnimationBuilder().addAnimation ("wave", ILoopType.EDefaultLoopTypes.PLAY_ONCE);
     public static final AnimationBuilder ATTACK = new AnimationBuilder().addAnimation ("attack", ILoopType.EDefaultLoopTypes.PLAY_ONCE);
+    public static final AnimationBuilder HURT = new AnimationBuilder().addAnimation ("hurt", ILoopType.EDefaultLoopTypes.PLAY_ONCE);
 
     // -- Methods --
     public static <T extends InternalEntity & IAnimatable> AnimationController<T> attackAnimation(T animatable) {
@@ -34,9 +37,15 @@ public final class InternalAnimation {
 
     public static <T extends InternalEntity & IAnimatable> AnimationController<T> locomotionAnimation(T entity) {
         return new AnimationController<T>(entity, "Locomotion", 0, event -> {
-            if (event.isMoving()) event.getController().setAnimation(WALK);
-            else if(entity.getCurrentState() == EntityState.Sit) event.getController().setAnimation(REST);
-            else event.getController().setAnimation(IDLE);
+            if((entity instanceof MandrakeGreenEntity || entity instanceof MandrakeBrownEntity) && entity.IsHurt()) {
+                event.getController().setAnimation(HURT);
+                entity.SetIsHurt(false);
+            } else {
+                if (event.isMoving()) event.getController().setAnimation(WALK);
+                else if(entity.getCurrentState() == EntityState.Sit) event.getController().setAnimation(REST);
+                else event.getController().setAnimation(IDLE);
+            }
+
             return PlayState.CONTINUE;
         });
     } // locomotionAnimation ()

@@ -16,7 +16,7 @@ public class ModEntities {
 
     // -- Variables --
     public static final EntityType<MandrakeBrownEntity> MANDRAKE_GIRL_BROWN = Registry.register(Registry.ENTITY_TYPE, new Identifier(MonstersGirlsMod.MODID, "mandrake_girl_brown"),
-            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, MandrakeBrownEntity::new).dimensions(EntityDimensions.fixed(0.4F, 0.7F)).build());
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, MandrakeBrownEntity::new).dimensions(EntityDimensions.fixed(0.4F, 1F)).build());
 
     public static final EntityType<MandrakeChorusEntity> MANDRAKE_GIRL_CHORUS = Registry.register(Registry.ENTITY_TYPE, new Identifier(MonstersGirlsMod.MODID, "mandrake_girl_chorus"),
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, MandrakeChorusEntity::new).dimensions(EntityDimensions.fixed(0.4F, 0.7F)).build());
@@ -25,7 +25,7 @@ public class ModEntities {
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, MandrakeGlowBerryEntity::new).dimensions(EntityDimensions.fixed(0.4F, 0.85F)).build());
 
     public static final EntityType<MandrakeGreenEntity> MANDRAKE_GIRL_GREEN = Registry.register(Registry.ENTITY_TYPE, new Identifier(MonstersGirlsMod.MODID, "mandrake_girl_green"),
-            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, MandrakeGreenEntity::new).dimensions(EntityDimensions.fixed(0.4F, 0.85F)).build());
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, MandrakeGreenEntity::new).dimensions(EntityDimensions.fixed(0.4F, 1F)).build());
 
     public static final EntityType<MushroomCrimsonEntity> MUSHROOM_GIRL_CRIMSON = Registry.register(Registry.ENTITY_TYPE, new Identifier(MonstersGirlsMod.MODID, "mushroom_girl_crimson"),
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, MushroomCrimsonEntity::new).dimensions(EntityDimensions.fixed(0.4F, 1.15F)).build());

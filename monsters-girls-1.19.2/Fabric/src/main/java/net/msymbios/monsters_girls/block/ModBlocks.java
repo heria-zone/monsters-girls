@@ -17,6 +17,7 @@ import net.minecraft.util.registry.Registry;
 import net.minecraft.world.BlockView;
 import net.msymbios.monsters_girls.MonstersGirlsMod;
 import net.msymbios.monsters_girls.block.custom.DirectionalBlock;
+import net.msymbios.monsters_girls.block.custom.GlowBerryBush;
 import net.msymbios.monsters_girls.block.internal.VoxelCollision;
 import net.msymbios.monsters_girls.item.ModItemsGroup;
 
@@ -94,7 +95,7 @@ public class ModBlocks {
     public static final Block HUGE_WARPED_FUNGUS = registerBlock("huge_warped_fungus", new DirectionalBlock(FabricBlockSettings.of(Material.SOLID_ORGANIC, SOUL_COLOR).strength(STRENGTH, RESISTANCE).sounds(BlockSoundGroup.FUNGUS).nonOpaque(), VoxelCollision.SMALL_MUSHROOM), ModItemsGroup.MONSTERS_GIRLS);
     public static final Block HUGE_WARPED_RARE_FUNGUS = registerBlock("huge_warped_rare_fungus", new DirectionalBlock(FabricBlockSettings.of(Material.SOLID_ORGANIC, SOUL_COLOR).strength(STRENGTH, RESISTANCE).sounds(BlockSoundGroup.FUNGUS).nonOpaque(), VoxelCollision.SMALL_MUSHROOM), ModItemsGroup.MONSTERS_GIRLS);
 
-    public static final Block MANDRAKE = registerBlock("mandrake", new FlowerBlock(StatusEffects.REGENERATION, 5, FabricBlockSettings.of(Material.PLANT, MapColor.PALE_GREEN).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.GRASS)), ModItemsGroup.MONSTERS_GIRLS);
+    public static final Block MANDRAKE_FLOWER = registerBlock("mandrake", new FlowerBlock(StatusEffects.REGENERATION, 5, FabricBlockSettings.of(Material.PLANT, MapColor.PALE_GREEN).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.GRASS)), ModItemsGroup.MONSTERS_GIRLS);
 
     public static final Block ENDER_PUFFBALL = registerBlock("ender_puffball", new FlowerBlock(StatusEffects.REGENERATION, 5, FabricBlockSettings.of(Material.PLANT, MapColor.PALE_PURPLE).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.GRASS).luminance((state) -> 2).postProcess(ModBlocks::always)), ModItemsGroup.MONSTERS_GIRLS);
     public static final Block INK_CAP_MUSHROOM = registerBlock("ink_cap_mushroom", new FlowerBlock(StatusEffects.REGENERATION, 5, FabricBlockSettings.of(Material.PLANT, MapColor.OFF_WHITE).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.GRASS).luminance((state) -> 2).postProcess(ModBlocks::always)), ModItemsGroup.MONSTERS_GIRLS);
@@ -109,6 +110,8 @@ public class ModBlocks {
     public static final Block JAR = registerBlock("jar", new DirectionalBlock(FabricBlockSettings.of(Material.SOLID_ORGANIC).strength(STRENGTH, RESISTANCE).sounds(BlockSoundGroup.GLASS).nonOpaque(), VoxelCollision.JAR), ModItemsGroup.MONSTERS_GIRLS);
     public static final Block URN_MOLTEN = registerBlock("urn_molten", new DirectionalBlock(FabricBlockSettings.of(Material.SOLID_ORGANIC).strength(STRENGTH, RESISTANCE).sounds(BlockSoundGroup.GLASS).nonOpaque(), VoxelCollision.BIG_URN), ModItemsGroup.MONSTERS_GIRLS);
     public static final Block URN_CRIMSON = registerBlock("urn_crimson", new DirectionalBlock(FabricBlockSettings.of(Material.SOLID_ORGANIC).strength(STRENGTH, RESISTANCE).sounds(BlockSoundGroup.GLASS).nonOpaque(), VoxelCollision.SMALL_URN), ModItemsGroup.MONSTERS_GIRLS);
+
+    public static final Block GLOW_BERRY_BUSH = registerBlock("glow_berry_bush", new GlowBerryBush(FabricBlockSettings.of(Material.PLANT).ticksRandomly().sounds(BlockSoundGroup.SWEET_BERRY_BUSH).nonOpaque().noCollision()), ModItemsGroup.MONSTERS_GIRLS);
 
     // -- Methods --
     private static Block registerBlock(String name, Block block, ItemGroup group) {
@@ -145,8 +148,9 @@ public class ModBlocks {
         registerRender(ENDER_PUFFBALL);
         registerRender(INK_CAP_MUSHROOM);
         registerRender(MOLTEN_FUNGUS);
-        registerRender(MANDRAKE);
+        registerRender(MANDRAKE_FLOWER);
         registerRender(SOUL_WANDERER_FUNGUS);
+        registerRender(GLOW_BERRY_BUSH);
 
         registerRender(POTTED_ENDER_PUFFBALL);
         registerRender(POTTED_INK_CAP_MUSHROOM);

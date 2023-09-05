@@ -1,11 +1,9 @@
 package net.msymbios.monsters_girls.entity.custom;
 
-import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.ai.brain.task.PanicTask;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
@@ -14,7 +12,6 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.BoneMealItem;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -80,7 +77,7 @@ public class MandrakeGreenEntity extends InternalEntity implements IAnimatable {
             BlockPos blockPos = new BlockPos(x, y, z);
             if (world.isSpaceEmpty(new Box(blockPos))) {
                 if ((world.getBlockState(new BlockPos(x, y - 1, z))).getBlock() == Blocks.GRASS_BLOCK) {
-                    if (Math.random() < 1e-7) world.setBlockState(blockPos, ModBlocks.MANDRAKE.getDefaultState(), 3);
+                    if (Math.random() < 1e-7) world.setBlockState(blockPos, ModBlocks.MANDRAKE_FLOWER.getDefaultState(), 3);
                 }
             }
         }

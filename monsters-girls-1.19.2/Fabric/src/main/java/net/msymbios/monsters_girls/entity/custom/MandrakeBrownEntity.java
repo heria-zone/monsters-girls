@@ -71,7 +71,7 @@ public class MandrakeBrownEntity extends InternalEntity implements IAnimatable {
             BlockPos blockPos = new BlockPos(x, y, z);
             if (world.isSpaceEmpty(new Box(blockPos))) {
                 if ((world.getBlockState(new BlockPos(x, y - 1, z))).getBlock() == Blocks.GRASS_BLOCK) {
-                    if (Math.random() < 1e-7) world.setBlockState(blockPos, ModBlocks.MANDRAKE.getDefaultState(), 3);
+                    if (Math.random() < 1e-7) world.setBlockState(blockPos, ModBlocks.MANDRAKE_FLOWER.getDefaultState(), 3);
                 }
             }
         }

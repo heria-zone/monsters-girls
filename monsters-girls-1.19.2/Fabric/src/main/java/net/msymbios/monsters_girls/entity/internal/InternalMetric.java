@@ -259,7 +259,7 @@ public class InternalMetric {
     }};
 
     public static HashMap<EntityAnimator, Identifier> ANIMATOR = new HashMap<>() {{
-        put(EntityAnimator.Mandrake,    new Identifier(MonstersGirlsMod.MODID, "animations/mushroom_girl.animation.json")); /*"animations/mandrake.animation.json"*/
+        put(EntityAnimator.Mandrake,    new Identifier(MonstersGirlsMod.MODID, "animations/mandrake_girl.animation.json"));
         put(EntityAnimator.Mushroom,    new Identifier(MonstersGirlsMod.MODID, "animations/mushroom_girl.animation.json"));
         put(EntityAnimator.MushroomFat,    new Identifier(MonstersGirlsMod.MODID, "animations/mushroom_girl_fat.animation.json"));
         put(EntityAnimator.MushroomInflated,    new Identifier(MonstersGirlsMod.MODID, "animations/mushroom_girl_inflated.animation.json"));
@@ -306,10 +306,34 @@ public class InternalMetric {
     }};
 
     public static HashMap<EntityVariant, HashMap<EntityAttribute, InternalAttribute>> ATTRIBUTES = new HashMap<>(){{
+        var mandrakeFruityAttribute = new HashMap<EntityAttribute, InternalAttribute>(){{
+            put(EntityAttribute.MAX_HEALTH, new InternalAttribute(EntityAttribute.MAX_HEALTH, 10F));                 // Max Health
+            put(EntityAttribute.ATTACK_DAMAGE, new InternalAttribute(EntityAttribute.ATTACK_DAMAGE, 0F));           // Attack Damage
+            put(EntityAttribute.ATTACK_SPEED, new InternalAttribute(EntityAttribute.ATTACK_SPEED, 0F));        // Attack Speed
+            put(EntityAttribute.MOVEMENT_SPEED, new InternalAttribute(EntityAttribute.MOVEMENT_SPEED, 0.3F));  // Movement Speed
+            put(EntityAttribute.DEFENSE, new InternalAttribute(EntityAttribute.DEFENSE, 0.1F));                      // Defense
+            put(EntityAttribute.ARMOR, new InternalAttribute(EntityAttribute.ARMOR, 0F));
+            put(EntityAttribute.ARMOR_TOUGHNESS, new InternalAttribute(EntityAttribute.ARMOR_TOUGHNESS, 0F));
+            put(EntityAttribute.KNOCKBACK_RESISTANCE, new InternalAttribute(EntityAttribute.KNOCKBACK_RESISTANCE, 0.2F));
+        }};
+
+        var wispAttribute = new HashMap<EntityAttribute, InternalAttribute>(){{
+            put(EntityAttribute.MAX_HEALTH, new InternalAttribute(EntityAttribute.MAX_HEALTH, 18F));                 // Max Health
+            put(EntityAttribute.ATTACK_DAMAGE, new InternalAttribute(EntityAttribute.ATTACK_DAMAGE, 3F));           // Attack Damage
+            put(EntityAttribute.ATTACK_SPEED, new InternalAttribute(EntityAttribute.ATTACK_SPEED, 1.2F));        // Attack Speed
+            put(EntityAttribute.MOVEMENT_SPEED, new InternalAttribute(EntityAttribute.MOVEMENT_SPEED, 0.3F));  // Movement Speed
+            put(EntityAttribute.DEFENSE, new InternalAttribute(EntityAttribute.DEFENSE, 0.5F));                      // Defense
+            put(EntityAttribute.ARMOR, new InternalAttribute(EntityAttribute.ARMOR, 0F));
+            put(EntityAttribute.ARMOR_TOUGHNESS, new InternalAttribute(EntityAttribute.ARMOR_TOUGHNESS, 0F));
+            put(EntityAttribute.KNOCKBACK_ATTACK, new InternalAttribute(EntityAttribute.KNOCKBACK_ATTACK, 0.3F));
+            put(EntityAttribute.FLYING_SPEED, new InternalAttribute(EntityAttribute.FLYING_SPEED, 0.3F));
+            put(EntityAttribute.FOLLOW_RANGE, new InternalAttribute(EntityAttribute.FOLLOW_RANGE, 16F));
+        }};
+        
         put(EntityVariant.MandrakeGreen, setAttribute(15F, 2F, 1.2F, 0.3F, 0.2F));
         put(EntityVariant.MandrakeBrown, setAttribute(15F, 2F, 1.2F, 0.3F, 0.2F));
-        put(EntityVariant.MandrakeChorus, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
-        put(EntityVariant.MandrakeGlowBerry, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
+        put(EntityVariant.MandrakeChorus, mandrakeFruityAttribute);
+        put(EntityVariant.MandrakeGlowBerry, mandrakeFruityAttribute);
 
         put(EntityVariant.MushroomAmanitaYellow, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
         put(EntityVariant.MushroomBrown, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
@@ -327,9 +351,9 @@ public class InternalMetric {
         put(EntityVariant.SpookPeach, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
         put(EntityVariant.SpookTeal, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
 
-        put(EntityVariant.WispBlue, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
-        put(EntityVariant.WispGreen, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
-        put(EntityVariant.WispYellow, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
+        put(EntityVariant.WispBlue, wispAttribute);
+        put(EntityVariant.WispGreen, wispAttribute);
+        put(EntityVariant.WispYellow, wispAttribute);
     }};
 
     // -- Methods --

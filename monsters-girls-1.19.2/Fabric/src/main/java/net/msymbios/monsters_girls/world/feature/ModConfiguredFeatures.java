@@ -21,7 +21,7 @@ public class ModConfiguredFeatures {
             register("mushroom_molten_fungus", Feature.FLOWER, 1, Feature.SIMPLE_BLOCK, ModBlocks.MOLTEN_FUNGUS);
 
     public static final RegistryEntry<ConfiguredFeature<RandomPatchFeatureConfig, ?>> MANDRAKE =
-            register("flower_mandrake", Feature.FLOWER, 2, Feature.SIMPLE_BLOCK, ModBlocks.MANDRAKE);
+            register("flower_mandrake", Feature.FLOWER, 2, Feature.SIMPLE_BLOCK, ModBlocks.MANDRAKE_FLOWER);
 
     public static final RegistryEntry<ConfiguredFeature<RandomPatchFeatureConfig, ?>> SOUL_WANDERER_FUNGUS =
             register("mushroom_soul_wanderer_fungus", Feature.FLOWER, 1, Feature.SIMPLE_BLOCK, ModBlocks.SOUL_WANDERER_FUNGUS);

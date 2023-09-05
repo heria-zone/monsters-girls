@@ -38,7 +38,7 @@ public abstract class InternalEntity extends TameableEntity {
     protected static final TrackedData<Boolean> BELLY = DataTracker.registerData(InternalEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
 
     protected int waryTimer = 0, autoHealTimer = 0;
-    protected boolean combatMode = false, autoHeal = false;
+    protected boolean combatMode = false, autoHeal = false, isHurt = false;
     protected EntityCategory category;
     protected EntityVariant variant;
 
@@ -165,6 +165,14 @@ public abstract class InternalEntity extends TameableEntity {
 
     public void setBelly(boolean value) { this.dataTracker.set(BELLY, value); } // setBelly ()
 
+    public boolean IsHurt () {
+        return this.isHurt;
+    } // IsHurt ()
+
+    public void SetIsHurt (boolean value) {
+        this.isHurt = value;
+    } // SetIsHurt ()
+
     // -- Constructor --
     protected InternalEntity(EntityType<? extends TameableEntity> entityType, World world) {
         super(entityType, world);
@@ -198,6 +206,7 @@ public abstract class InternalEntity extends TameableEntity {
         if (this.isInvulnerableTo(source)) return false;
         handleNegativeEffect(this, source.getSource());
         handleActivateCombatMode();
+        isHurt = true;
         return super.damage(source, amount);
     } // damage ()
 

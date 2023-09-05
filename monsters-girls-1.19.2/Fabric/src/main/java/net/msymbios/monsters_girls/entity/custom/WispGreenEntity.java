@@ -7,6 +7,9 @@ import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemConvertible;
+import net.minecraft.item.Items;
+import net.minecraft.recipe.Ingredient;
 import net.minecraft.world.World;
 import net.msymbios.monsters_girls.entity.enums.EntityAttribute;
 import net.msymbios.monsters_girls.entity.enums.EntityCategory;
@@ -33,7 +36,10 @@ public class WispGreenEntity extends InternalEntity implements IAnimatable {
                 .add(EntityAttributes.GENERIC_ATTACK_SPEED, InternalMetric.getAttribute(EntityVariant.WispGreen, EntityAttribute.ATTACK_SPEED))
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, InternalMetric.getAttribute(EntityVariant.WispGreen, EntityAttribute.MOVEMENT_SPEED))
                 .add(EntityAttributes.GENERIC_ARMOR, InternalMetric.getAttribute(EntityVariant.WispGreen, EntityAttribute.ARMOR))
-                .add(EntityAttributes.GENERIC_ARMOR_TOUGHNESS, InternalMetric.getAttribute(EntityVariant.WispGreen, EntityAttribute.ARMOR_TOUGHNESS));
+                .add(EntityAttributes.GENERIC_ARMOR_TOUGHNESS, InternalMetric.getAttribute(EntityVariant.WispGreen, EntityAttribute.ARMOR_TOUGHNESS))
+                .add(EntityAttributes.GENERIC_ATTACK_KNOCKBACK, InternalMetric.getAttribute(EntityVariant.WispGreen, EntityAttribute.KNOCKBACK_ATTACK))
+                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, InternalMetric.getAttribute(EntityVariant.WispGreen, EntityAttribute.FOLLOW_RANGE))
+                .add(EntityAttributes.GENERIC_FLYING_SPEED, InternalMetric.getAttribute(EntityVariant.WispGreen, EntityAttribute.FLYING_SPEED));
     } // setAttributes ()
 
     // -- Constructor --
@@ -58,8 +64,10 @@ public class WispGreenEntity extends InternalEntity implements IAnimatable {
     protected void initGoals() {
         this.goalSelector.add(1, new SwimGoal(this));
         this.goalSelector.add(2, new SitGoal(this));
+        this.goalSelector.add(2, new FlyGoal(this, 2));
         this.goalSelector.add(3, new MeleeAttackGoal(this, InternalMetric.MeleeAttackMovement, false));
-        this.goalSelector.add(4, new FollowOwnerGoal(this, InternalMetric.FollowOwnerMovement, InternalMetric.FollowBehindDistance, InternalMetric.FollowCloseDistance, false));
+        this.goalSelector.add(4, new FollowOwnerGoal(this, InternalMetric.getAttribute(EntityVariant.WispGreen, EntityAttribute.MOVEMENT_SPEED), InternalMetric.getAttribute(EntityVariant.WispGreen, EntityAttribute.FOLLOW_RANGE), InternalMetric.FollowCloseDistance, false));
+        this.goalSelector.add(4, new TemptGoal(this, InternalMetric.getAttribute(EntityVariant.WispGreen, EntityAttribute.MOVEMENT_SPEED), Ingredient.ofItems(new ItemConvertible[]{Items.GOLD_NUGGET, Items.GOLD_INGOT, Items.GOLD_BLOCK}), false));
         this.goalSelector.add(5, new WanderAroundFarGoal(this, InternalMetric.WanderAroundMovement));
         this.goalSelector.add(6, new LookAtEntityGoal(this, PlayerEntity.class, InternalMetric.LookAtRange));
         this.goalSelector.add(6, new LookAtEntityGoal(this, InternalEntity.class, InternalMetric.LookAtRange));

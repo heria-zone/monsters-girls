@@ -15,8 +15,11 @@ public enum EntityAttribute {
     ARMOR(6, "armor"),
     ARMOR_TOUGHNESS(7, "armor_toughness"),
     BASE_DEFENSE_RANGE(8, "base_defense_range"),
-    BASE_DEFENSE_WARP_RANGE(9, "base_defense_warp_range");
-
+    BASE_DEFENSE_WARP_RANGE(9, "base_defense_warp_range"),
+    KNOCKBACK_RESISTANCE(10, "knockback_resistance"),
+    KNOCKBACK_ATTACK(11, "knockback_attack"),
+    FOLLOW_RANGE(12, "follow_range"),
+    FLYING_SPEED(13, "fly_speed");
 
     // -- Variables --
     private static final EntityAttribute[] CODEC = Arrays.stream(values()).sorted(Comparator.comparingInt(EntityAttribute::getId)).toArray(EntityAttribute[]::new);
