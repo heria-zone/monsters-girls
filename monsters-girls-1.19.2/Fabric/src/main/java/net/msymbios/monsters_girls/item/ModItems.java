@@ -3,11 +3,16 @@ package net.msymbios.monsters_girls.item;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 import net.msymbios.monsters_girls.MonstersGirlsMod;
 import net.msymbios.monsters_girls.entity.ModEntities;
 import net.msymbios.monsters_girls.item.custom.EnchantedItem;
 import net.msymbios.monsters_girls.item.custom.SpawnItem;
+import net.msymbios.monsters_girls.item.custom.TooltipItem;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ModItems {
 
@@ -29,7 +34,7 @@ public class ModItems {
     public static final Item WARPED_FUNGUS_HAT = registerItem("warped_fungus_hat", new Item(new FabricItemSettings().group(ModItemsGroup.MONSTERS_GIRLS)));
     public static final Item WARPED_RARE_FUNGUS_HAT = registerItem("warped_rare_fungus_hat", new Item(new FabricItemSettings().group(ModItemsGroup.MONSTERS_GIRLS)));
 
-    public static final Item SPECTRAL_CAKE = registerItem("spectral_cake", new Item(new FabricItemSettings().group(ModItemsGroup.MONSTERS_GIRLS)));
+    public static final Item SPECTRAL_CAKE = registerItem("spectral_cake", new TooltipItem(new ArrayList<>(List.of("tooltip.monsters_girls.spectral_cake")), new FabricItemSettings().food(ModFoodComponent.SPECTRAL_CAKE).fireproof().rarity(Rarity.UNCOMMON).group(ModItemsGroup.MONSTERS_GIRLS)));
 
     public static final Item MANDRAKE_GIRL_BROWN_SPAWN_EGG = registerItem("spawn_egg_mandrake_brown", new SpawnItem(ModEntities.MANDRAKE_GIRL_BROWN, new FabricItemSettings().group(ModItemsGroup.MONSTERS_GIRLS)));
     public static final Item MANDRAKE_GIRL_CHORUS_SPAWN_EGG = registerItem("spawn_egg_mandrake_girl_chorus", new SpawnItem(ModEntities.MANDRAKE_GIRL_CHORUS, new FabricItemSettings().group(ModItemsGroup.MONSTERS_GIRLS)));
