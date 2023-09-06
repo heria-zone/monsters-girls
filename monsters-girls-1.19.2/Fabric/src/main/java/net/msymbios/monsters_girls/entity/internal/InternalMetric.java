@@ -306,6 +306,17 @@ public class InternalMetric {
     }};
 
     public static HashMap<EntityVariant, HashMap<EntityAttribute, InternalAttribute>> ATTRIBUTES = new HashMap<>(){{
+        var mushroomAttribute = new HashMap<EntityAttribute, InternalAttribute>(){{
+            put(EntityAttribute.MAX_HEALTH, new InternalAttribute(EntityAttribute.MAX_HEALTH, 15F));                // Max Health
+            put(EntityAttribute.ATTACK_DAMAGE, new InternalAttribute(EntityAttribute.ATTACK_DAMAGE, 2F));           // Attack Damage
+            put(EntityAttribute.ATTACK_SPEED, new InternalAttribute(EntityAttribute.ATTACK_SPEED, 1.2F));           // Attack Speed
+            put(EntityAttribute.MOVEMENT_SPEED, new InternalAttribute(EntityAttribute.MOVEMENT_SPEED, 0.3F));       // Movement Speed
+            put(EntityAttribute.DEFENSE, new InternalAttribute(EntityAttribute.DEFENSE, 0F));                       // Defense
+            put(EntityAttribute.ARMOR, new InternalAttribute(EntityAttribute.ARMOR, 0F));
+            put(EntityAttribute.ARMOR_TOUGHNESS, new InternalAttribute(EntityAttribute.ARMOR_TOUGHNESS, 0F));
+            put(EntityAttribute.FOLLOW_RANGE, new InternalAttribute(EntityAttribute.FOLLOW_RANGE, 7F));
+        }};
+
         var mandrakeFruityAttribute = new HashMap<EntityAttribute, InternalAttribute>(){{
             put(EntityAttribute.MAX_HEALTH, new InternalAttribute(EntityAttribute.MAX_HEALTH, 10F));                 // Max Health
             put(EntityAttribute.ATTACK_DAMAGE, new InternalAttribute(EntityAttribute.ATTACK_DAMAGE, 0F));           // Attack Damage
@@ -316,7 +327,18 @@ public class InternalMetric {
             put(EntityAttribute.ARMOR_TOUGHNESS, new InternalAttribute(EntityAttribute.ARMOR_TOUGHNESS, 0F));
             put(EntityAttribute.KNOCKBACK_RESISTANCE, new InternalAttribute(EntityAttribute.KNOCKBACK_RESISTANCE, 0.2F));
         }};
-
+        var spookAttribute = new HashMap<EntityAttribute, InternalAttribute>(){{
+            put(EntityAttribute.MAX_HEALTH, new InternalAttribute(EntityAttribute.MAX_HEALTH, 20F));                // Max Health
+            put(EntityAttribute.ATTACK_DAMAGE, new InternalAttribute(EntityAttribute.ATTACK_DAMAGE, 3F));           // Attack Damage
+            put(EntityAttribute.ATTACK_SPEED, new InternalAttribute(EntityAttribute.ATTACK_SPEED, 1.2F));           // Attack Speed
+            put(EntityAttribute.MOVEMENT_SPEED, new InternalAttribute(EntityAttribute.MOVEMENT_SPEED, 0.3F));       // Movement Speed
+            put(EntityAttribute.DEFENSE, new InternalAttribute(EntityAttribute.DEFENSE, 0F));                       // Defense
+            put(EntityAttribute.ARMOR, new InternalAttribute(EntityAttribute.ARMOR, 0F));
+            put(EntityAttribute.ARMOR_TOUGHNESS, new InternalAttribute(EntityAttribute.ARMOR_TOUGHNESS, 0F));
+            put(EntityAttribute.KNOCKBACK_RESISTANCE, new InternalAttribute(EntityAttribute.KNOCKBACK_RESISTANCE, 1F));
+            put(EntityAttribute.FLYING_SPEED, new InternalAttribute(EntityAttribute.FLYING_SPEED, 0.8F));
+            put(EntityAttribute.FOLLOW_RANGE, new InternalAttribute(EntityAttribute.FOLLOW_RANGE, 7F));
+        }};
         var wispAttribute = new HashMap<EntityAttribute, InternalAttribute>(){{
             put(EntityAttribute.MAX_HEALTH, new InternalAttribute(EntityAttribute.MAX_HEALTH, 18F));                 // Max Health
             put(EntityAttribute.ATTACK_DAMAGE, new InternalAttribute(EntityAttribute.ATTACK_DAMAGE, 3F));           // Attack Damage
@@ -326,8 +348,8 @@ public class InternalMetric {
             put(EntityAttribute.ARMOR, new InternalAttribute(EntityAttribute.ARMOR, 0F));
             put(EntityAttribute.ARMOR_TOUGHNESS, new InternalAttribute(EntityAttribute.ARMOR_TOUGHNESS, 0F));
             put(EntityAttribute.KNOCKBACK_ATTACK, new InternalAttribute(EntityAttribute.KNOCKBACK_ATTACK, 0.3F));
-            put(EntityAttribute.FLYING_SPEED, new InternalAttribute(EntityAttribute.FLYING_SPEED, 0.3F));
-            put(EntityAttribute.FOLLOW_RANGE, new InternalAttribute(EntityAttribute.FOLLOW_RANGE, 16F));
+            put(EntityAttribute.FLYING_SPEED, new InternalAttribute(EntityAttribute.FLYING_SPEED, 0.8F));
+            put(EntityAttribute.FOLLOW_RANGE, new InternalAttribute(EntityAttribute.FOLLOW_RANGE, 7F));
         }};
         
         put(EntityVariant.MandrakeGreen, setAttribute(15F, 2F, 1.2F, 0.3F, 0.2F));
@@ -335,21 +357,21 @@ public class InternalMetric {
         put(EntityVariant.MandrakeChorus, mandrakeFruityAttribute);
         put(EntityVariant.MandrakeGlowBerry, mandrakeFruityAttribute);
 
-        put(EntityVariant.MushroomAmanitaYellow, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
-        put(EntityVariant.MushroomBrown, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
-        put(EntityVariant.MushroomCrimson, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
-        put(EntityVariant.MushroomCrimsonRare, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
-        put(EntityVariant.MushroomEnderPuffball, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
-        put(EntityVariant.MushroomInfernal, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
-        put(EntityVariant.FungusInkCap, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
-        put(EntityVariant.MushroomMolten, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
-        put(EntityVariant.MushroomFlyAgaric, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
-        put(EntityVariant.MushroomSoulWanderer, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
-        put(EntityVariant.MushroomWarped, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
-        put(EntityVariant.MushroomWarpedRare, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
+        put(EntityVariant.MushroomAmanitaYellow, mushroomAttribute);
+        put(EntityVariant.MushroomBrown, mushroomAttribute);
+        put(EntityVariant.MushroomCrimson, mushroomAttribute);
+        put(EntityVariant.MushroomCrimsonRare, mushroomAttribute);
+        put(EntityVariant.MushroomEnderPuffball, mushroomAttribute);
+        put(EntityVariant.MushroomInfernal, mushroomAttribute);
+        put(EntityVariant.FungusInkCap, mushroomAttribute);
+        put(EntityVariant.MushroomMolten, mushroomAttribute);
+        put(EntityVariant.MushroomFlyAgaric, mushroomAttribute);
+        put(EntityVariant.MushroomSoulWanderer, mushroomAttribute);
+        put(EntityVariant.MushroomWarped, mushroomAttribute);
+        put(EntityVariant.MushroomWarpedRare, mushroomAttribute);
 
-        put(EntityVariant.SpookPeach, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
-        put(EntityVariant.SpookTeal, setAttribute(30F, 5F, 1.2F, 0.4F, 5F));
+        put(EntityVariant.SpookPeach, spookAttribute);
+        put(EntityVariant.SpookTeal, spookAttribute);
 
         put(EntityVariant.WispBlue, wispAttribute);
         put(EntityVariant.WispGreen, wispAttribute);

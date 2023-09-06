@@ -1,5 +1,7 @@
 package net.msymbios.monsters_girls.entity.custom;
 
+import net.minecraft.block.Blocks;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
@@ -7,7 +9,11 @@ import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Box;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldAccess;
+import net.msymbios.monsters_girls.block.ModBlocks;
 import net.msymbios.monsters_girls.entity.enums.*;
 import net.msymbios.monsters_girls.entity.internal.InternalAnimation;
 import net.msymbios.monsters_girls.entity.internal.InternalEntity;
@@ -49,6 +55,21 @@ public class MushroomWarpedRareEntity extends InternalEntity implements IAnimata
 
     @Override
     public AnimationFactory getFactory() { return cache; } // getFactory ()
+
+    @Override
+    protected void handlePlanting (WorldAccess world, double x, double y, double z, Entity entity) {
+        if (entity == null) return;
+
+        if (entity.isOnGround()) {
+            BlockPos blockPos = new BlockPos(x, y, z);
+            if (world.isSpaceEmpty(new Box(blockPos))) {
+                if ((world.getBlockState(new BlockPos(x, y - 1, z))).getBlock() == Blocks.WARPED_NYLIUM) {
+                    if (Math.random() < 5e-7) world.setBlockState(blockPos, ModBlocks.HUGE_WARPED_RARE_FUNGUS.getDefaultState(), 3);
+                    if (Math.random() < 0.0005) world.setBlockState(blockPos, Blocks.WARPED_FUNGUS.getDefaultState(), 3);
+                }
+            }
+        }
+    } // handlePlanting ()
 
     // -- Built-In Methods --
     @Override

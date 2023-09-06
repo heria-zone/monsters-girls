@@ -47,6 +47,7 @@ public class WispYellowEntity extends InternalEntity implements IAnimatable {
         super(entityType, world);
         this.category = EntityCategory.Wisp;
         this.variant = EntityVariant.WispYellow;
+        this.canPlant = false;
     } // Constructor WispYellowEntity ()
 
     // -- Inherited Methods --
@@ -64,7 +65,7 @@ public class WispYellowEntity extends InternalEntity implements IAnimatable {
     protected void initGoals() {
         this.goalSelector.add(1, new SwimGoal(this));
         this.goalSelector.add(2, new SitGoal(this));
-        this.goalSelector.add(2, new FlyGoal(this, 2));
+        this.goalSelector.add(2, new FlyGoal(this, InternalMetric.getAttribute(EntityVariant.WispYellow, EntityAttribute.FLYING_SPEED)));
         this.goalSelector.add(3, new MeleeAttackGoal(this, InternalMetric.MeleeAttackMovement, false));
         this.goalSelector.add(4, new FollowOwnerGoal(this, InternalMetric.getAttribute(EntityVariant.WispYellow, EntityAttribute.MOVEMENT_SPEED), InternalMetric.getAttribute(EntityVariant.WispYellow, EntityAttribute.FOLLOW_RANGE), InternalMetric.FollowCloseDistance, false));
         this.goalSelector.add(4, new TemptGoal(this, InternalMetric.getAttribute(EntityVariant.WispYellow, EntityAttribute.MOVEMENT_SPEED), Ingredient.ofItems(new ItemConvertible[]{Items.GOLD_NUGGET, Items.GOLD_INGOT, Items.GOLD_BLOCK}), false));

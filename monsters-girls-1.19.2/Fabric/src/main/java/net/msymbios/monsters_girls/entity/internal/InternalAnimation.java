@@ -37,15 +37,9 @@ public final class InternalAnimation {
 
     public static <T extends InternalEntity & IAnimatable> AnimationController<T> locomotionAnimation(T entity) {
         return new AnimationController<T>(entity, "Locomotion", 0, event -> {
-            if((entity instanceof MandrakeGreenEntity || entity instanceof MandrakeBrownEntity) && entity.IsHurt()) {
-                event.getController().setAnimation(HURT);
-                entity.SetIsHurt(false);
-            } else {
-                if (event.isMoving()) event.getController().setAnimation(WALK);
-                else if(entity.getCurrentState() == EntityState.Sit) event.getController().setAnimation(REST);
-                else event.getController().setAnimation(IDLE);
-            }
-
+            if (event.isMoving()) event.getController().setAnimation(WALK);
+            else if(entity.getCurrentState() == EntityState.Sit) event.getController().setAnimation(REST);
+            else event.getController().setAnimation(IDLE);
             return PlayState.CONTINUE;
         });
     } // locomotionAnimation ()

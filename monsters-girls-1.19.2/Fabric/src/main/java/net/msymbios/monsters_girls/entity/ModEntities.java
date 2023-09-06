@@ -79,7 +79,7 @@ public class ModEntities {
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, WispYellowEntity::new).dimensions(EntityDimensions.fixed(0.4F, 0.8F)).build());
 
     // -- Methods --
-    public static void registerEntityAttribute () {
+    public static void registerAttribute() {
         FabricDefaultAttributeRegistry.register(MANDRAKE_GIRL_BROWN, MandrakeBrownEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(MANDRAKE_GIRL_CHORUS, MandrakeBrownEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(MANDRAKE_GIRL_GLOW_BERRY, MandrakeBrownEntity.setAttributes());

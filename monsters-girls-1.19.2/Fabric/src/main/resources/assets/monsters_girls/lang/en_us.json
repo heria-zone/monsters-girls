@@ -14,7 +14,8 @@
   "item.monsters_girls.warped_fungus_hat": "Warped Fungus Hat",
   "item.monsters_girls.warped_rare_fungus_hat": "Warped Rare Fungus Hat",
 
-  "item.monsters_girls.spectral_cake": "Spectral Cake (WIP)",
+  "item.monsters_girls.spectral_cake": "Spectral Cake",
+  "tooltip.monsters_girls.spectral_cake":"Is that a... cake's soul?",
 
   "item.monsters_girls.spawn_egg_mandrake_brown": "Spawn Egg Mandrake Brown",
   "item.monsters_girls.spawn_egg_mandrake_girl_chorus": "Spawn Egg Mandrake Chorus",
@@ -133,6 +134,12 @@
   "entity.monsters_girls.wisp_girl_green": "Wisp Girl Green",
   "entity.monsters_girls.wisp_girl_blue": "Wisp Girl Blue",
   "entity.monsters_girls.wisp_girl_yellow": "Wisp Girl Yellow",
+
+  "effect.monsters_girls.spooked": "Spooked",
+
+  "item.minecraft.potion.effect.spooked_potion": "Spooked Potion",
+  "item.minecraft.splash_potion.effect.spooked_potion": "Splash Spooked Potion",
+  "item.minecraft.lingering_potion.effect.spooked_potion": "Lingering Spooked Potion",
 
   "subtitles.vexiskill": "Vex Banished To The Shadow Realm",
   "subtitles.endermushroomgalsound": "Ender Mushroom Girl Squeaks",

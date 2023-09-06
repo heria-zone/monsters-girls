@@ -36,9 +36,12 @@ public abstract class InternalEntity extends TameableEntity {
     protected static final TrackedData<Integer> STATE = DataTracker.registerData(InternalEntity.class, TrackedDataHandlerRegistry.INTEGER);
     protected static final TrackedData<Boolean> LOG = DataTracker.registerData(InternalEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
     protected static final TrackedData<Boolean> BELLY = DataTracker.registerData(InternalEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
+    protected static final TrackedData<Boolean> PLANT = DataTracker.registerData(InternalEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
+    protected static final TrackedData<Boolean> SOUND = DataTracker.registerData(InternalEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
+
 
     protected int waryTimer = 0, autoHealTimer = 0;
-    protected boolean combatMode = false, autoHeal = false, isHurt = false;
+    protected boolean combatMode = false, autoHeal = false, canPlant = true;
     protected EntityCategory category;
     protected EntityVariant variant;
 
@@ -165,13 +168,25 @@ public abstract class InternalEntity extends TameableEntity {
 
     public void setBelly(boolean value) { this.dataTracker.set(BELLY, value); } // setBelly ()
 
-    public boolean IsHurt () {
-        return this.isHurt;
-    } // IsHurt ()
+    // PLANT
+    public boolean getPlant() {
+        boolean value = true;
+        try {value = this.dataTracker.get(PLANT);}
+        catch (Exception ignored) {}
+        return value;
+    } // getPlant ()
 
-    public void SetIsHurt (boolean value) {
-        this.isHurt = value;
-    } // SetIsHurt ()
+    public void setPlant(boolean value) { this.dataTracker.set(PLANT, value); } // setPlant ()
+
+    // SOUND
+    public boolean getSound() {
+        boolean value = true;
+        try {value = this.dataTracker.get(SOUND);}
+        catch (Exception ignored) {}
+        return value;
+    } // getSound ()
+
+    public void setSound(boolean value) { this.dataTracker.set(SOUND, value); } // setSound ()
 
     // -- Constructor --
     protected InternalEntity(EntityType<? extends TameableEntity> entityType, World world) {
@@ -188,7 +203,7 @@ public abstract class InternalEntity extends TameableEntity {
     @Override
     public void tick() {
         super.tick();
-        handlePlanting(world, this.getX(), this.getY(), this.getZ(), this);
+        if(canPlant && getPlant()) handlePlanting(world, this.getX(), this.getY(), this.getZ(), this);
         handleCombatMode();
         handleAutoHeal();
         commandDebugExtra();
@@ -206,7 +221,6 @@ public abstract class InternalEntity extends TameableEntity {
         if (this.isInvulnerableTo(source)) return false;
         handleNegativeEffect(this, source.getSource());
         handleActivateCombatMode();
-        isHurt = true;
         return super.damage(source, amount);
     } // damage ()
 
@@ -229,13 +243,27 @@ public abstract class InternalEntity extends TameableEntity {
 
                     if(itemStack.isOf(Items.OAK_BUTTON)) {
                         this.setLog(invertBoolean(getLog()));
-                        if(getLog()) commandDebug("Log ON", true);
-                        else commandDebug("Log OFF", true);
+                        if(getLog()) commandDebug("Log: ON", true);
+                        else commandDebug("Log: OFF", true);
                     }
+
+                    if(itemStack.isOf(Items.NOTE_BLOCK)) {
+                        this.setSound(invertBoolean(getSound()));
+                        if(getSound()) commandDebug("Sound: ON", true);
+                        else commandDebug("Sound: OFF", true);
+                    }
+
+                    if(this.canPlant && itemStack.isOf(Items.WOODEN_HOE)) {
+                        this.setPlant(invertBoolean(getPlant()));
+                        if(getPlant()) commandDebug("Plant: ON", true);
+                        else commandDebug("Plant: OFF", true);
+                    }
+
                     return ActionResult.SUCCESS;
                 }
             }
         }
+
         return super.interactMob(player, hand);
     } // interactMob ()
 
@@ -252,7 +280,8 @@ public abstract class InternalEntity extends TameableEntity {
 
     @Override
     protected SoundEvent getAmbientSound() {
-        return InternalMetric.getSound(this.variant, EntitySound.DEFAULT);
+        if(getSound()) return InternalMetric.getSound(this.variant, EntitySound.DEFAULT);
+        else return null;
     } // getAmbientSound ()
 
     // -- Save
@@ -262,6 +291,8 @@ public abstract class InternalEntity extends TameableEntity {
         this.dataTracker.startTracking(TEXTURE_ID, EntityTexture.DEFAULT.getId());
         this.dataTracker.startTracking(STATE, EntityState.Move.getId());
         this.dataTracker.startTracking(LOG, false);
+        this.dataTracker.startTracking(PLANT, true);
+        this.dataTracker.startTracking(SOUND, true);
     } // initDataTracker ()
 
     public void writeCustomDataToNbt(NbtCompound dataNBT) {
@@ -272,6 +303,8 @@ public abstract class InternalEntity extends TameableEntity {
         dataNBT.putInt("State", this.getCurrentStateID());
         dataNBT.putBoolean("Log", getLog());
         dataNBT.putBoolean("Belly", getBelly());
+        dataNBT.putBoolean("Plant", getPlant());
+        dataNBT.putBoolean("Sound", getSound());
     } // writeCustomDataToNbt ()
 
     public void readCustomDataFromNbt(NbtCompound dataNBT) {
@@ -282,11 +315,13 @@ public abstract class InternalEntity extends TameableEntity {
         this.setCurrentState(dataNBT.getInt("State"));
         this.setLog(dataNBT.getBoolean("Log"));
         this.setBelly(dataNBT.getBoolean("Belly"));
+        this.setPlant(dataNBT.getBoolean("Plant"));
+        this.setSound(dataNBT.getBoolean("Sound"));
     } // readCustomDataFromNbt ()
 
     // -- Custom Method --
     public boolean canInteract(ItemStack itemStack){
-        if(itemStack.isOf(Items.FEATHER) || itemStack.isOf(Items.APPLE) || itemStack.isOf(Items.COOKIE)) return false;
+        if(itemStack.isOf(Items.FEATHER) || itemStack.isOf(Items.APPLE) || itemStack.isOf(Items.COOKIE) || itemStack.isOf(Items.NOTE_BLOCK)) return false;
         if(itemStack.isOf(Items.BOOK) || itemStack.isOf(Items.WRITABLE_BOOK) || itemStack.isOf(Items.OAK_BUTTON)) return false;
         return true;
     } // canInteract ()
@@ -333,7 +368,7 @@ public abstract class InternalEntity extends TameableEntity {
 
     public void handleTame(ItemStack item, PlayerEntity player) {
         if(item.isOf(Items.COOKIE)) {
-            if (this.random.nextInt(10) == 0) {
+            if (this.random.nextInt(5) == 0) {
                 this.setOwner(player);
                 this.navigation.stop();
                 this.setTarget(null);
