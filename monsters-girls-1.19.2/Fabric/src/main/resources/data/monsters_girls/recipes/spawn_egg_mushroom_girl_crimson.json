@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [{
+      "item": "monsters_girls:powder_genesis"
+      }, {
+      "item": "minecraft:crimson_fungus"
+    }
+  ],
+  "result": {
+    "item": "monsters_girls:spawn_egg_mushroom_girl_crimson",
+    "count": 1
+  }
+}
