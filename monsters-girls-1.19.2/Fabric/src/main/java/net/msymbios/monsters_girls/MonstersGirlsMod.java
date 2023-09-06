@@ -2,9 +2,10 @@ package net.msymbios.monsters_girls;
 
 import net.fabricmc.api.ModInitializer;
 import net.msymbios.monsters_girls.block.ModBlocks;
+import net.msymbios.monsters_girls.effect.ModEffects;
 import net.msymbios.monsters_girls.entity.ModEntities;
 import net.msymbios.monsters_girls.item.ModItems;
-import net.msymbios.monsters_girls.sounds.ModSounds;
+import net.msymbios.monsters_girls.potion.ModPotions;
 import net.msymbios.monsters_girls.world.feature.ModConfiguredFeatures;
 import net.msymbios.monsters_girls.world.gen.ModWorldGen;
 import org.slf4j.Logger;
@@ -29,7 +30,10 @@ public class MonstersGirlsMod implements ModInitializer {
 
 		GeckoLib.initialize();
 
-		ModEntities.registerEntityAttribute();
+		ModEntities.registerAttribute();
+
+		ModEffects.register();
+		ModPotions.register();
 	} // onInitialize ()
 
 } // Class MonstersGirls

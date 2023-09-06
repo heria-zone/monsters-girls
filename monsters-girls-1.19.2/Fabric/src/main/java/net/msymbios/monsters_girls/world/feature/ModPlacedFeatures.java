@@ -16,8 +16,11 @@ public class ModPlacedFeatures {
     public static final RegistryEntry<PlacedFeature> ENDER_PUFFBALL = register("mushroom_ender_puffball_placed", ModConfiguredFeatures.ENDER_PUFFBALL, 1, UNIVERSAL_MODIFIER);
     public static final RegistryEntry<PlacedFeature> INK_CAP_MUSHROOM = register("mushroom_ink_cap_placed", ModConfiguredFeatures.INK_CAP_MUSHROOM, 1, UNIVERSAL_MODIFIER);
     public static final RegistryEntry<PlacedFeature> MOLTEN_FUNGUS = register("mushroom_molten_fungus_placed", ModConfiguredFeatures.MOLTEN_FUNGUS, 1, UNIVERSAL_MODIFIER);
-    public static final RegistryEntry<PlacedFeature> MANDRAKE = register("flower_mandrake_placed", ModConfiguredFeatures.MANDRAKE, 1, UNIVERSAL_MODIFIER);
+    public static final RegistryEntry<PlacedFeature> MANDRAKE_FLOWER = register("flower_mandrake_placed", ModConfiguredFeatures.MANDRAKE_FLOWER, 1, UNIVERSAL_MODIFIER);
     public static final RegistryEntry<PlacedFeature> SOUL_WANDERER_FUNGUS = register("mushroom_soul_wanderer_fungus_placed", ModConfiguredFeatures.SOUL_WANDERER_FUNGUS, 1, UNIVERSAL_MODIFIER);
+
+    public static final RegistryEntry<PlacedFeature> GLOW_BERRY_BUSH = register("glow_berry_bush_placed", ModConfiguredFeatures.GLOW_BERRY_BUSH, 2, UNIVERSAL_MODIFIER);
+
 
     // -- Methods --
     public static RegistryEntry<PlacedFeature> register (String name, RegistryEntry<ConfiguredFeature<RandomPatchFeatureConfig, ?>> feature, int chance, PlacementModifier modifier) {

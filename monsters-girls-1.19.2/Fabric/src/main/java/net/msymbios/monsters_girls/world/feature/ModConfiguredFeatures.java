@@ -20,11 +20,14 @@ public class ModConfiguredFeatures {
     public static final RegistryEntry<ConfiguredFeature<RandomPatchFeatureConfig, ?>> MOLTEN_FUNGUS =
             register("mushroom_molten_fungus", Feature.FLOWER, 1, Feature.SIMPLE_BLOCK, ModBlocks.MOLTEN_FUNGUS);
 
-    public static final RegistryEntry<ConfiguredFeature<RandomPatchFeatureConfig, ?>> MANDRAKE =
+    public static final RegistryEntry<ConfiguredFeature<RandomPatchFeatureConfig, ?>> MANDRAKE_FLOWER =
             register("flower_mandrake", Feature.FLOWER, 2, Feature.SIMPLE_BLOCK, ModBlocks.MANDRAKE_FLOWER);
 
     public static final RegistryEntry<ConfiguredFeature<RandomPatchFeatureConfig, ?>> SOUL_WANDERER_FUNGUS =
             register("mushroom_soul_wanderer_fungus", Feature.FLOWER, 1, Feature.SIMPLE_BLOCK, ModBlocks.SOUL_WANDERER_FUNGUS);
+
+    public static final RegistryEntry<ConfiguredFeature<RandomPatchFeatureConfig, ?>> GLOW_BERRY_BUSH =
+            register("glow_berry_bush", Feature.FLOWER, 2, Feature.SIMPLE_BLOCK, ModBlocks.GLOW_BERRY_BUSH);
 
     public static final RegistryEntry<ConfiguredFeature<HugeFungusFeatureConfig, ?>> HUGE_ENDER_PUFFBALL =
             ConfiguredFeatures.register("huge_ender_puffball_planted",
