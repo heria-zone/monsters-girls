@@ -8,12 +8,15 @@ public enum EntityAnimator {
     // -- Enum --
     Endercaris(0, "endercaris"),
     Mandrake(1, "mandrake"),
-    Mushroom(2, "mushroom"),
-    MushroomFat(3, "mushroom_fat"),
-    MushroomInflated(4, "mushroom_inflated"),
-    Slime(5, "slime"),
-    Spook(6, "spook"),
-    Wisp(7, "wisp");
+    MandrakeFruity(2, "mandrake_fruity"),
+    MandrakeFruityChorus(3, "mandrake_fruity_chorus"),
+    Mushroom(4, "mushroom"),
+    MushroomFat(5, "mushroom_fat"),
+    MushroomInflated(6, "mushroom_inflated"),
+    MushroomInkCap(7, "mushroom_ink_cap"),
+    Slime(8, "slime"),
+    Spook(9, "spook"),
+    Wisp(10, "wisp");
 
     // -- Variables --
     private static final EntityAnimator[] CODEC = Arrays.stream(values()).sorted(Comparator.comparingInt(EntityAnimator::getId)).toArray(EntityAnimator[]::new);

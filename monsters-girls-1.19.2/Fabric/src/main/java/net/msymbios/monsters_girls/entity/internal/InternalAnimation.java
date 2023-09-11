@@ -1,7 +1,5 @@
 package net.msymbios.monsters_girls.entity.internal;
 
-import net.msymbios.monsters_girls.entity.custom.MandrakeBrownEntity;
-import net.msymbios.monsters_girls.entity.custom.MandrakeGreenEntity;
 import net.msymbios.monsters_girls.entity.enums.EntityState;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.PlayState;

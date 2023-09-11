@@ -97,8 +97,8 @@ public class InternalMetric {
         put(EntityCategory.Mandrake, new HashMap<>() {{
             put(EntityVariant.MandrakeBrown,        EntityAnimator.Mandrake);
             put(EntityVariant.MandrakeGreen,        EntityAnimator.Mandrake);
-            put(EntityVariant.MandrakeGlowBerry,    EntityAnimator.Mandrake);
-            put(EntityVariant.MandrakeChorus,       EntityAnimator.Mandrake);
+            put(EntityVariant.MandrakeGlowBerry,    EntityAnimator.MandrakeFruity);
+            put(EntityVariant.MandrakeChorus,       EntityAnimator.MandrakeFruityChorus);
         }});
 
         put(EntityCategory.Mushroom, new HashMap<>() {{
@@ -108,7 +108,7 @@ public class InternalMetric {
             put(EntityVariant.MushroomCrimsonRare,          EntityAnimator.Mushroom);
             put(EntityVariant.MushroomEnderPuffball,        EntityAnimator.MushroomInflated);
             put(EntityVariant.MushroomInfernal,             EntityAnimator.MushroomFat);
-            put(EntityVariant.FungusInkCap,                 EntityAnimator.Mushroom);
+            put(EntityVariant.FungusInkCap,                 EntityAnimator.MushroomInkCap);
             put(EntityVariant.MushroomMolten,               EntityAnimator.MushroomFat);
             put(EntityVariant.MushroomFlyAgaric,            EntityAnimator.Mushroom);
             put(EntityVariant.MushroomSoulWanderer,         EntityAnimator.Mushroom);
@@ -260,16 +260,19 @@ public class InternalMetric {
 
     public static HashMap<EntityAnimator, Identifier> ANIMATOR = new HashMap<>() {{
         put(EntityAnimator.Mandrake,    new Identifier(MonstersGirlsMod.MODID, "animations/mandrake_girl.animation.json"));
+        put(EntityAnimator.MandrakeFruity,    new Identifier(MonstersGirlsMod.MODID, "animations/mandrake_girl_fruity.animation.json"));
+        put(EntityAnimator.MandrakeFruityChorus,    new Identifier(MonstersGirlsMod.MODID, "animations/mandrake_girl_fruity_chorus.animation.json"));
         put(EntityAnimator.Mushroom,    new Identifier(MonstersGirlsMod.MODID, "animations/mushroom_girl.animation.json"));
         put(EntityAnimator.MushroomFat,    new Identifier(MonstersGirlsMod.MODID, "animations/mushroom_girl_fat.animation.json"));
         put(EntityAnimator.MushroomInflated,    new Identifier(MonstersGirlsMod.MODID, "animations/mushroom_girl_inflated.animation.json"));
+        put(EntityAnimator.MushroomInkCap,    new Identifier(MonstersGirlsMod.MODID, "animations/mushroom_girl_ink_cap.animation.json"));
         put(EntityAnimator.Spook,    new Identifier(MonstersGirlsMod.MODID, "animations/spook_girl.animation.json"));
         put(EntityAnimator.Wisp,    new Identifier(MonstersGirlsMod.MODID, "animations/wisp_girl.animation.json"));
     }};
 
     public static HashMap<EntityModel, Identifier> MODEL = new HashMap<>() {{
         put(EntityModel.Mandrake,           new Identifier(MonstersGirlsMod.MODID, "geo/mandrake_girl.geo.json"));
-        put(EntityModel.MandrakeFruit,      new Identifier(MonstersGirlsMod.MODID, "geo/mandrake_girl_fruit.geo.json"));
+        put(EntityModel.MandrakeFruit,      new Identifier(MonstersGirlsMod.MODID, "geo/mandrake_girl_fruity.geo.json"));
         put(EntityModel.Mushroom,           new Identifier(MonstersGirlsMod.MODID, "geo/mushroom_girl.geo.json"));
         put(EntityModel.MushroomFat,        new Identifier(MonstersGirlsMod.MODID, "geo/mushroom_girl_fat.geo.json"));
         put(EntityModel.MushroomInflated,   new Identifier(MonstersGirlsMod.MODID, "geo/mushroom_girl_inflated.geo.json"));
