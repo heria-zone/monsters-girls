@@ -133,7 +133,7 @@ public class InternalMetric {
             put(EntityVariant.MandrakeBrown,        EntityModel.Mandrake);
             put(EntityVariant.MandrakeGreen,        EntityModel.Mandrake);
             put(EntityVariant.MandrakeGlowBerry,    EntityModel.MandrakeFruit);
-            put(EntityVariant.MandrakeChorus,       EntityModel.MandrakeFruit);
+            put(EntityVariant.MandrakeChorus,       EntityModel.MandrakeFruitChorus);
         }});
 
         put(EntityCategory.Mushroom, new HashMap<>() {{
@@ -273,6 +273,7 @@ public class InternalMetric {
     public static HashMap<EntityModel, Identifier> MODEL = new HashMap<>() {{
         put(EntityModel.Mandrake,           new Identifier(MonstersGirlsMod.MODID, "geo/mandrake_girl.geo.json"));
         put(EntityModel.MandrakeFruit,      new Identifier(MonstersGirlsMod.MODID, "geo/mandrake_girl_fruity.geo.json"));
+        put(EntityModel.MandrakeFruitChorus,      new Identifier(MonstersGirlsMod.MODID, "geo/mandrake_girl_fruity_chorus.geo.json"));
         put(EntityModel.Mushroom,           new Identifier(MonstersGirlsMod.MODID, "geo/mushroom_girl.geo.json"));
         put(EntityModel.MushroomFat,        new Identifier(MonstersGirlsMod.MODID, "geo/mushroom_girl_fat.geo.json"));
         put(EntityModel.MushroomInflated,   new Identifier(MonstersGirlsMod.MODID, "geo/mushroom_girl_inflated.geo.json"));

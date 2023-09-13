@@ -8,12 +8,13 @@ public enum EntityModel {
     // -- Enum --
     Mandrake(0, "mandrake"),
     MandrakeFruit(1, "mandrake_fruit"),
-    Mushroom(2, "mushroom"),
-    MushroomFat(3, "mushroom_fat"),
-    MushroomFungus(4, "mushroom_fungus"),
-    MushroomInflated(5, "mushroom_fungus_inflated"),
-    Spook(6, "spook"),
-    Wisp(7, "wisp");
+    MandrakeFruitChorus(2, "mandrake_fruit_chorus"),
+    Mushroom(3, "mushroom"),
+    MushroomFat(4, "mushroom_fat"),
+    MushroomFungus(5, "mushroom_fungus"),
+    MushroomInflated(6, "mushroom_fungus_inflated"),
+    Spook(7, "spook"),
+    Wisp(8, "wisp");
 
     // -- Variables --
     private static final EntityModel[] CODEC = Arrays.stream(values()).sorted(Comparator.comparingInt(EntityModel::getId)).toArray(EntityModel[]::new);
