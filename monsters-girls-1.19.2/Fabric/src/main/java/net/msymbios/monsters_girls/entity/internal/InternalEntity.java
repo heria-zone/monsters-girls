@@ -5,25 +5,24 @@ import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
-import net.minecraft.entity.effect.StatusEffect;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
-import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.LocalDifficulty;
+import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.msymbios.monsters_girls.entity.enums.*;
+import org.jetbrains.annotations.Nullable;
 
 import static net.msymbios.monsters_girls.entity.internal.Utility.invertBoolean;
 
@@ -92,18 +91,25 @@ public abstract class InternalEntity extends TameableEntity {
 
     public Identifier getTexture() { return InternalMetric.getTexture(variant, EntityTexture.byId(getTextureID())); } // getTexture ()
 
+    public Identifier getCurrentTexture() {
+        Identifier defaultTexture = InternalMetric.TEXTURE.get(this.variant).get(EntityTexture.DEFAULT);
+        if(InternalMetric.checkTextureID(this.variant, EntityTexture.byId(getTextureID())))
+            defaultTexture = InternalMetric.TEXTURE.get(this.variant).get(EntityTexture.byId(getTextureID()));
+        return defaultTexture;
+    } // getCurrentTexture ()
+
     public int getTextureID() {
-        int value = 0;
+        int value = EntityTexture.DEFAULT.getId();
         try {value = this.dataTracker.get(TEXTURE_ID);}
         catch (Exception ignored) {}
         return value;
     } // getTextureID ()
 
+    public void setTexture(int value) { if(InternalMetric.checkTextureID(this.variant, EntityTexture.byId(value))) this.dataTracker.set(TEXTURE_ID, value); } // setTexture ()
+
     public void setTexture(EntityTexture value) {
         setTexture(value.getId());
     } // setTexture ()
-
-    public void setTexture(int value) { this.dataTracker.set(TEXTURE_ID, value); } // setTexture ()
 
     // STATE
     public int getCurrentStateID() {
@@ -200,6 +206,12 @@ public abstract class InternalEntity extends TameableEntity {
     } // createChild ()
 
     // -- Built-In Method --
+    @Nullable
+    public EntityData initialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, @Nullable EntityData entityData, @Nullable NbtCompound entityNbt) {
+        this.setTexture(InternalMetric.getRandomTextureID(this.variant));
+        return super.initialize(world, difficulty, spawnReason, entityData, entityNbt);
+    } // initialize
+
     @Override
     public void tick() {
         super.tick();
@@ -321,7 +333,7 @@ public abstract class InternalEntity extends TameableEntity {
 
     // -- Custom Method --
     public boolean canInteract(ItemStack itemStack){
-        if(itemStack.isOf(Items.FEATHER) || itemStack.isOf(Items.APPLE) || itemStack.isOf(Items.COOKIE) || itemStack.isOf(Items.NOTE_BLOCK)) return false;
+        if(itemStack.isOf(Items.FEATHER) || itemStack.isOf(Items.APPLE) || itemStack.isOf(Items.COOKIE) || itemStack.isOf(Items.NOTE_BLOCK) || itemStack.isOf(Items.WOODEN_HOE)) return false;
         if(itemStack.isOf(Items.BOOK) || itemStack.isOf(Items.WRITABLE_BOOK) || itemStack.isOf(Items.OAK_BUTTON)) return false;
         return true;
     } // canInteract ()
@@ -390,8 +402,21 @@ public abstract class InternalEntity extends TameableEntity {
 
     public void handleTexture(ItemStack items, PlayerEntity player) {
         var oldTexture = getTextureID();
-        if(items.isOf(Items.FEATHER)) setTexture(EntityTexture.DEFAULT);
-        if(items.isOf(Items.APPLE)) setTexture(EntityTexture.BELLY);
+        if(items.isOf(Items.FEATHER)) {
+            int bellyLevel = this.getTextureID();
+            if(bellyLevel > 0 && bellyLevel <= 3){
+                bellyLevel = bellyLevel - 1;
+                setTexture(EntityTexture.byId(bellyLevel));
+            }
+        }
+
+        if(items.isOf(Items.APPLE)) {
+            int bellyLevel = this.getTextureID();
+            if(bellyLevel >= 0 && bellyLevel < 3){
+                bellyLevel = bellyLevel + 1;
+                setTexture(EntityTexture.byId(bellyLevel));
+            }
+        }
 
         if(oldTexture != getTextureID()) {
             if (!player.getAbilities().creativeMode)

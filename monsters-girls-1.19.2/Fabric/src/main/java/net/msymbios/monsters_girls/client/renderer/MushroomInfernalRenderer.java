@@ -16,6 +16,6 @@ public class MushroomInfernalRenderer extends GeoEntityRenderer<MushroomInfernal
 
     // -- Method --
     @Override
-    public Identifier getTextureResource(MushroomInfernalEntity instance) { return instance.getTexture(); } // getTextureResource ()
+    public Identifier getTextureResource(MushroomInfernalEntity instance) { return instance.getCurrentTexture(); } // getTextureResource ()
 
 } // Class MushroomInfernalRenderer

@@ -16,7 +16,7 @@ public class MushroomEnderPuffballModel extends AnimatedGeoModel<MushroomEnderPu
 
     @Override
     public Identifier getTextureResource(MushroomEnderPuffballEntity animatable) {
-        return animatable.getTexture();
+        return animatable.getCurrentTexture();
     } // getTextureResource ()
 
     @Override

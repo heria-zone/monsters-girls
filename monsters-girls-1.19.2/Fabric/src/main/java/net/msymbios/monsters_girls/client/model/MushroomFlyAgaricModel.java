@@ -16,7 +16,7 @@ public class MushroomFlyAgaricModel extends AnimatedGeoModel<MushroomFlyAgaricEn
 
     @Override
     public Identifier getTextureResource(MushroomFlyAgaricEntity animatable) {
-        return animatable.getTexture();
+        return animatable.getCurrentTexture();
     } // getTextureResource ()
 
     @Override

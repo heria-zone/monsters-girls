@@ -16,7 +16,7 @@ public class MushroomCrimsonModel extends AnimatedGeoModel<MushroomCrimsonEntity
 
     @Override
     public Identifier getTextureResource(MushroomCrimsonEntity animatable) {
-        return animatable.getTexture();
+        return animatable.getCurrentTexture();
     } // getTextureResource ()
 
     @Override

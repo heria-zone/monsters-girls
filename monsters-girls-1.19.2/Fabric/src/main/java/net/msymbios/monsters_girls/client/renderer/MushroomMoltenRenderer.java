@@ -16,6 +16,6 @@ public class MushroomMoltenRenderer extends GeoEntityRenderer<MushroomMoltenEnti
 
     // -- Method --
     @Override
-    public Identifier getTextureResource(MushroomMoltenEntity instance) { return instance.getTexture(); } // getTextureResource ()
+    public Identifier getTextureResource(MushroomMoltenEntity instance) { return instance.getCurrentTexture(); } // getTextureResource ()
 
 } // Class MushroomMoltenRenderer

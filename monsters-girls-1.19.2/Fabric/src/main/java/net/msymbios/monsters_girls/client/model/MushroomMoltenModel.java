@@ -16,7 +16,7 @@ public class MushroomMoltenModel extends AnimatedGeoModel<MushroomMoltenEntity> 
 
     @Override
     public Identifier getTextureResource(MushroomMoltenEntity animatable) {
-        return animatable.getTexture();
+        return animatable.getCurrentTexture();
     } // getTextureResource ()
 
     @Override

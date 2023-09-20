@@ -72,7 +72,7 @@ public class MandrakeChorusEntity extends InternalEntity implements IAnimatable 
             if (world.isSpaceEmpty(new Box(blockPos))) {
                 var block = (world.getBlockState(new BlockPos(x, y - 1, z))).getBlock();
                 if (block == Blocks.END_STONE || block == ModBlocks.ENDER_MOSS) {
-                    if (Math.random() < 1e-7) world.setBlockState(blockPos, Blocks.CHORUS_PLANT.getDefaultState(), 3);
+                    if (Math.random() <0.0005) world.setBlockState(blockPos, Blocks.CHORUS_PLANT.getDefaultState(), 3);
                 }
             }
         }

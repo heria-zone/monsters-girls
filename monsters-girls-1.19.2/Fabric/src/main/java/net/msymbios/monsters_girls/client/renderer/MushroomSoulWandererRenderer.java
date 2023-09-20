@@ -16,6 +16,6 @@ public class MushroomSoulWandererRenderer extends GeoEntityRenderer<MushroomSoul
 
     // -- Method --
     @Override
-    public Identifier getTextureResource(MushroomSoulWandererEntity instance) { return instance.getTexture(); } // getTextureResource ()
+    public Identifier getTextureResource(MushroomSoulWandererEntity instance) { return instance.getCurrentTexture(); } // getTextureResource ()
 
 } // Class MushroomSoulWandererRenderer

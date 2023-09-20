@@ -16,7 +16,7 @@ public class MandrakeGreenModel extends AnimatedGeoModel<MandrakeGreenEntity> {
 
     @Override
     public Identifier getTextureResource(MandrakeGreenEntity animatable) {
-        return animatable.getTexture();
+        return animatable.getCurrentTexture();
     } // getTextureResource ()
 
     @Override

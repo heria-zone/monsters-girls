@@ -16,6 +16,6 @@ public class MushroomInkCapRenderer extends GeoEntityRenderer<MushroomInkCapEnti
 
     // -- Method --
     @Override
-    public Identifier getTextureResource(MushroomInkCapEntity instance) { return instance.getTexture(); } // getTextureResource ()
+    public Identifier getTextureResource(MushroomInkCapEntity instance) { return instance.getCurrentTexture(); } // getTextureResource ()
 
 } // Class MushroomInkCapRenderer

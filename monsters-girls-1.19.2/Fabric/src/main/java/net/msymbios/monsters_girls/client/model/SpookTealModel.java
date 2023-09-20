@@ -16,7 +16,7 @@ public class SpookTealModel extends AnimatedGeoModel<SpookTealEntity> {
 
     @Override
     public Identifier getTextureResource(SpookTealEntity animatable) {
-        return animatable.getTexture();
+        return animatable.getCurrentTexture();
     } // getTextureResource ()
 
     @Override

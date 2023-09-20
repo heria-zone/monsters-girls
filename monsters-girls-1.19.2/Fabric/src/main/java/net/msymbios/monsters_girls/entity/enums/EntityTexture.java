@@ -6,8 +6,10 @@ import java.util.Comparator;
 public enum EntityTexture {
 
     // -- Enum --
-    DEFAULT(0, "default"),
-    BELLY(1, "belly");
+    SLIM(0, "slim"),
+    DEFAULT(1, "default"),
+    TUMMY(2, "tummy"),
+    INFLATED(3, "inflated");
 
     // -- Variables --
     private static final EntityTexture[] CODEC = Arrays.stream(values()).sorted(Comparator.comparingInt(EntityTexture::getId)).toArray(EntityTexture[]::new);

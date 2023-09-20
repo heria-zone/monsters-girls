@@ -16,6 +16,6 @@ public class SpookTealRenderer extends GeoEntityRenderer<SpookTealEntity> {
 
     // -- Method --
     @Override
-    public Identifier getTextureResource(SpookTealEntity instance) { return instance.getTexture(); } // getTextureResource ()
+    public Identifier getTextureResource(SpookTealEntity instance) { return instance.getCurrentTexture(); } // getTextureResource ()
 
 } // Class SpookTealRenderer

@@ -1,9 +1,7 @@
 package net.msymbios.monsters_girls.entity.custom;
 
 import net.minecraft.block.Blocks;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
@@ -15,9 +13,12 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
+import net.minecraft.world.LocalDifficulty;
+import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.msymbios.monsters_girls.block.ModBlocks;
@@ -25,6 +26,7 @@ import net.msymbios.monsters_girls.entity.enums.*;
 import net.msymbios.monsters_girls.entity.internal.InternalAnimation;
 import net.msymbios.monsters_girls.entity.internal.InternalEntity;
 import net.msymbios.monsters_girls.entity.internal.InternalMetric;
+import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
@@ -71,7 +73,7 @@ public class MandrakeBrownEntity extends InternalEntity implements IAnimatable {
             BlockPos blockPos = new BlockPos(x, y, z);
             if (world.isSpaceEmpty(new Box(blockPos))) {
                 if ((world.getBlockState(new BlockPos(x, y - 1, z))).getBlock() == Blocks.GRASS_BLOCK) {
-                    if (Math.random() < 1e-7) world.setBlockState(blockPos, ModBlocks.MANDRAKE_FLOWER.getDefaultState(), 3);
+                    if (Math.random() < 0.0005) world.setBlockState(blockPos, ModBlocks.MANDRAKE_FLOWER.getDefaultState(), 3);
                 }
             }
         }

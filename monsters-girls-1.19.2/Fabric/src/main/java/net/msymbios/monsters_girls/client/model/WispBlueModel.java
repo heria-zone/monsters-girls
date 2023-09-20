@@ -16,7 +16,7 @@ public class WispBlueModel extends AnimatedGeoModel<WispBlueEntity> {
 
     @Override
     public Identifier getTextureResource(WispBlueEntity animatable) {
-        return animatable.getTexture();
+        return animatable.getCurrentTexture();
     } // getTextureResource ()
 
     @Override

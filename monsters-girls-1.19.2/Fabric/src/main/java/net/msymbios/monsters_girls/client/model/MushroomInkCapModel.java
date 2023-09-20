@@ -16,7 +16,7 @@ public class MushroomInkCapModel extends AnimatedGeoModel<MushroomInkCapEntity> 
 
     @Override
     public Identifier getTextureResource(MushroomInkCapEntity animatable) {
-        return animatable.getTexture();
+        return animatable.getCurrentTexture();
     } // getTextureResource ()
 
     @Override

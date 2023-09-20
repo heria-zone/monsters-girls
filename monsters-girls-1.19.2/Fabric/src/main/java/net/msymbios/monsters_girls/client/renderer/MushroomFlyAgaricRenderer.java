@@ -16,6 +16,6 @@ public class MushroomFlyAgaricRenderer extends GeoEntityRenderer<MushroomFlyAgar
 
     // -- Method --
     @Override
-    public Identifier getTextureResource(MushroomFlyAgaricEntity instance) { return instance.getTexture(); } // getTextureResource ()
+    public Identifier getTextureResource(MushroomFlyAgaricEntity instance) { return instance.getCurrentTexture(); } // getTextureResource ()
 
 } // Class MushroomFlyAgaricRenderer

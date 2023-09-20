@@ -16,7 +16,7 @@ public class MandrakeGlowBerryModel extends AnimatedGeoModel<MandrakeGlowBerryEn
 
     @Override
     public Identifier getTextureResource(MandrakeGlowBerryEntity animatable) {
-        return animatable.getTexture();
+        return animatable.getCurrentTexture();
     } // getTextureResource ()
 
     @Override

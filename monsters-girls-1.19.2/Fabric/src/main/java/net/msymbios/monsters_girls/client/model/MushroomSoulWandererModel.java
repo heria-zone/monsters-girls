@@ -16,7 +16,7 @@ public class MushroomSoulWandererModel extends AnimatedGeoModel<MushroomSoulWand
 
     @Override
     public Identifier getTextureResource(MushroomSoulWandererEntity animatable) {
-        return animatable.getTexture();
+        return animatable.getCurrentTexture();
     } // getTextureResource ()
 
     @Override

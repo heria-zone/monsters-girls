@@ -16,6 +16,6 @@ public class MushroomBrownRenderer extends GeoEntityRenderer<MushroomBrownEntity
 
     // -- Method --
     @Override
-    public Identifier getTextureResource(MushroomBrownEntity instance) { return instance.getTexture(); } // getTextureResource ()
+    public Identifier getTextureResource(MushroomBrownEntity instance) { return instance.getCurrentTexture(); } // getTextureResource ()
 
 } // Class MushroomBrownRenderer

@@ -16,6 +16,6 @@ public class MandrakeGreenRenderer extends GeoEntityRenderer<MandrakeGreenEntity
 
     // -- Method --
     @Override
-    public Identifier getTextureResource(MandrakeGreenEntity instance) { return instance.getTexture(); } // getTextureResource ()
+    public Identifier getTextureResource(MandrakeGreenEntity instance) { return instance.getCurrentTexture(); } // getTextureResource ()
 
 } // Class MandrakeGreenRenderer

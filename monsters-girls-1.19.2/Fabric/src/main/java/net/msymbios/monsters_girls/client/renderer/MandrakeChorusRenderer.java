@@ -16,6 +16,6 @@ public class MandrakeChorusRenderer extends GeoEntityRenderer<MandrakeChorusEnti
 
     // -- Method --
     @Override
-    public Identifier getTextureResource(MandrakeChorusEntity instance) { return instance.getTexture(); } // getTextureResource ()
+    public Identifier getTextureResource(MandrakeChorusEntity instance) { return instance.getCurrentTexture(); } // getTextureResource ()
 
 } // Class MandrakeChorusRenderer

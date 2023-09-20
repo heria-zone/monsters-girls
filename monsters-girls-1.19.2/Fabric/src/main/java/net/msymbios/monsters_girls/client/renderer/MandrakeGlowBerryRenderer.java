@@ -16,6 +16,6 @@ public class MandrakeGlowBerryRenderer extends GeoEntityRenderer<MandrakeGlowBer
 
     // -- Method --
     @Override
-    public Identifier getTextureResource(MandrakeGlowBerryEntity instance) { return instance.getTexture(); } // getTextureResource ()
+    public Identifier getTextureResource(MandrakeGlowBerryEntity instance) { return instance.getCurrentTexture(); } // getTextureResource ()
 
 } // Class MandrakeGlowBerryRenderer

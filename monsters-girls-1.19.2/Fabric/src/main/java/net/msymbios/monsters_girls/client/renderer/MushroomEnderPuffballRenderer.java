@@ -16,6 +16,6 @@ public class MushroomEnderPuffballRenderer extends GeoEntityRenderer<MushroomEnd
 
     // -- Method --
     @Override
-    public Identifier getTextureResource(MushroomEnderPuffballEntity instance) { return instance.getTexture(); } // getTextureResource ()
+    public Identifier getTextureResource(MushroomEnderPuffballEntity instance) { return instance.getCurrentTexture(); } // getTextureResource ()
 
 } // Class MushroomEnderPuffballRenderer

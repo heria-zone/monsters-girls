@@ -20,14 +20,15 @@ public enum EntityVariant {
     MandrakeGreen(11, "mandrake_green"),
     MandrakeChorus(10, "mandrake_chorus"),
     MushroomMolten(12, "mushroom_molten"),
-    SpookTeal(13, "spook_teal"),
-    SpookPeach(14, "spook_peach"),
-    MushroomWarped(15, "mushroom_warped"),
-    MushroomWarpedRare(16, "mushroom_warped_rare"),
-    WispBlue(17, "wisp_blue"),
-    WispGreen(18, "wisp_green"),
-    WispYellow(19, "wisp_yellow"),
-    MushroomSoulWanderer(20, "mushroom_soul_wanderer");
+    MushroomSnowball(13, "mushroom_snowball"),
+    SpookTeal(14, "spook_teal"),
+    SpookPeach(15, "spook_peach"),
+    MushroomWarped(16, "mushroom_warped"),
+    MushroomWarpedRare(76, "mushroom_warped_rare"),
+    WispBlue(18, "wisp_blue"),
+    WispGreen(19, "wisp_green"),
+    WispYellow(20, "wisp_yellow"),
+    MushroomSoulWanderer(21, "mushroom_soul_wanderer");
 
     // -- Variables --
     private static final EntityVariant[] CODEC = Arrays.stream(values()).sorted(Comparator.comparingInt(EntityVariant::getId)).toArray(EntityVariant[]::new);

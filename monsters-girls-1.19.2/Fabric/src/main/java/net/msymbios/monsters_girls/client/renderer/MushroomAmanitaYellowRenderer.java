@@ -16,6 +16,6 @@ public class MushroomAmanitaYellowRenderer extends GeoEntityRenderer<MushroomAma
 
     // -- Method --
     @Override
-    public Identifier getTextureResource(MushroomAmanitaYellowEntity instance) { return instance.getTexture(); } // getTextureResource ()
+    public Identifier getTextureResource(MushroomAmanitaYellowEntity instance) { return instance.getCurrentTexture(); } // getTextureResource ()
 
 } // Class MushroomAmanitaYellowRenderer

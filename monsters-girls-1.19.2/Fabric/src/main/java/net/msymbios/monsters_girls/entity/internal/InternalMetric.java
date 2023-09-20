@@ -12,6 +12,7 @@ import net.msymbios.monsters_girls.sounds.ModSounds;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Random;
 import java.util.function.Predicate;
 
 public class InternalMetric {
@@ -53,6 +54,7 @@ public class InternalMetric {
                 EntityVariant.MushroomSoulWanderer,
                 EntityVariant.MushroomWarped,
                 EntityVariant.MushroomWarpedRare,
+                EntityVariant.MushroomSnowball,
 
                 EntityVariant.SpookPeach,
                 EntityVariant.SpookTeal,
@@ -114,6 +116,7 @@ public class InternalMetric {
             put(EntityVariant.MushroomSoulWanderer,         EntityAnimator.Mushroom);
             put(EntityVariant.MushroomWarped,               EntityAnimator.Mushroom);
             put(EntityVariant.MushroomWarpedRare,           EntityAnimator.Mushroom);
+            put(EntityVariant.MushroomSnowball,             EntityAnimator.MushroomInflated);
         }});
 
         put(EntityCategory.Spook, new HashMap<>() {{
@@ -149,6 +152,7 @@ public class InternalMetric {
             put(EntityVariant.MushroomSoulWanderer,     EntityModel.Mushroom);
             put(EntityVariant.MushroomWarped,           EntityModel.Mushroom);
             put(EntityVariant.MushroomWarpedRare,       EntityModel.Mushroom);
+            put(EntityVariant.MushroomSnowball,         EntityModel.MushroomInflated);
         }});
 
         put(EntityCategory.Spook, new HashMap<>() {{
@@ -164,6 +168,22 @@ public class InternalMetric {
     }};
 
     public static HashMap<EntityTexture, List<EntityVariant>> ENTITY_TEXTURE = new HashMap<>(){{
+        put(EntityTexture.SLIM, new ArrayList<>(List.of(
+                EntityVariant.MushroomAmanitaYellow,
+                EntityVariant.MushroomBrown,
+                EntityVariant.MushroomCrimson,
+                EntityVariant.MushroomCrimsonRare,
+                EntityVariant.MushroomEnderPuffball,
+                EntityVariant.MushroomInfernal,
+                EntityVariant.FungusInkCap,
+                EntityVariant.MushroomMolten,
+                EntityVariant.MushroomFlyAgaric,
+                EntityVariant.MushroomSoulWanderer,
+                EntityVariant.MushroomWarped,
+                EntityVariant.MushroomWarpedRare,
+                EntityVariant.MushroomSnowball
+        )));
+
         put(EntityTexture.DEFAULT, new ArrayList<>(List.of(
                 EntityVariant.MandrakeBrown,
                 EntityVariant.MandrakeChorus,
@@ -182,6 +202,7 @@ public class InternalMetric {
                 EntityVariant.MushroomSoulWanderer,
                 EntityVariant.MushroomWarped,
                 EntityVariant.MushroomWarpedRare,
+                EntityVariant.MushroomSnowball,
 
                 EntityVariant.SpookPeach,
                 EntityVariant.SpookTeal,
@@ -191,7 +212,7 @@ public class InternalMetric {
                 EntityVariant.WispYellow
         )));
 
-        put(EntityTexture.BELLY, new ArrayList<>(List.of(
+        put(EntityTexture.TUMMY, new ArrayList<>(List.of(
                 EntityVariant.MushroomAmanitaYellow,
                 EntityVariant.MushroomBrown,
                 EntityVariant.MushroomCrimson,
@@ -204,12 +225,19 @@ public class InternalMetric {
                 EntityVariant.MushroomSoulWanderer,
                 EntityVariant.MushroomWarped,
                 EntityVariant.MushroomWarpedRare,
+                EntityVariant.MushroomSnowball,
 
                 EntityVariant.SpookPeach,
                 EntityVariant.SpookTeal,
 
                 EntityVariant.WispYellow
         )));
+
+        put(EntityTexture.INFLATED, new ArrayList<>(List.of(
+                EntityVariant.MushroomEnderPuffball,
+                EntityVariant.MushroomSnowball
+        )));
+
     }};
 
     public static HashMap<EntityVariant, HashMap<EntitySound, SoundEvent>> SOUND = new HashMap<>(){{
@@ -249,6 +277,8 @@ public class InternalMetric {
         put(EntityVariant.MushroomSoulWanderer,     mushroomMap);
         put(EntityVariant.MushroomWarped,           mushroomMap);
         put(EntityVariant.MushroomWarpedRare,       mushroomMap);
+        put(EntityVariant.MushroomSnowball,    new HashMap<>() {{put(EntitySound.DEFAULT, ModSounds.MUSHROOM_GIRL_ENDER);}});
+
 
         put(EntityVariant.SpookPeach,               spookMap);
         put(EntityVariant.SpookTeal,                spookMap);
@@ -262,8 +292,8 @@ public class InternalMetric {
         put(EntityAnimator.Mandrake,    new Identifier(MonstersGirlsMod.MODID, "animations/mandrake_girl.animation.json"));
         put(EntityAnimator.MandrakeFruity,    new Identifier(MonstersGirlsMod.MODID, "animations/mandrake_girl_fruity.animation.json"));
         put(EntityAnimator.MandrakeFruityChorus,    new Identifier(MonstersGirlsMod.MODID, "animations/mandrake_girl_fruity_chorus.animation.json"));
-        put(EntityAnimator.Mushroom,    new Identifier(MonstersGirlsMod.MODID, "animations/mushroom_girl.animation.json"));
-        put(EntityAnimator.MushroomFat,    new Identifier(MonstersGirlsMod.MODID, "animations/mushroom_girl_fat.animation.json"));
+        put(EntityAnimator.Mushroom,    new Identifier(MonstersGirlsMod.MODID, "animations/mushroom_girl_default.animation.json"));
+        put(EntityAnimator.MushroomFat,    new Identifier(MonstersGirlsMod.MODID, "animations/mushroom_girl_tummy.animation.json"));
         put(EntityAnimator.MushroomInflated,    new Identifier(MonstersGirlsMod.MODID, "animations/mushroom_girl_inflated.animation.json"));
         put(EntityAnimator.MushroomInkCap,    new Identifier(MonstersGirlsMod.MODID, "animations/mushroom_girl_ink_cap.animation.json"));
         put(EntityAnimator.Spook,    new Identifier(MonstersGirlsMod.MODID, "animations/spook_girl.animation.json"));
@@ -271,11 +301,11 @@ public class InternalMetric {
     }};
 
     public static HashMap<EntityModel, Identifier> MODEL = new HashMap<>() {{
-        put(EntityModel.Mandrake,           new Identifier(MonstersGirlsMod.MODID, "geo/mandrake_girl.geo.json"));
-        put(EntityModel.MandrakeFruit,      new Identifier(MonstersGirlsMod.MODID, "geo/mandrake_girl_fruity.geo.json"));
-        put(EntityModel.MandrakeFruitChorus,      new Identifier(MonstersGirlsMod.MODID, "geo/mandrake_girl_fruity_chorus.geo.json"));
-        put(EntityModel.Mushroom,           new Identifier(MonstersGirlsMod.MODID, "geo/mushroom_girl.geo.json"));
-        put(EntityModel.MushroomFat,        new Identifier(MonstersGirlsMod.MODID, "geo/mushroom_girl_fat.geo.json"));
+        put(EntityModel.Mandrake,           new Identifier(MonstersGirlsMod.MODID, "geo/mandrake_girl_default.geo.json"));
+        put(EntityModel.MandrakeFruit,      new Identifier(MonstersGirlsMod.MODID, "geo/mandrake_girl_fruit.geo.json"));
+        put(EntityModel.MandrakeFruitChorus,      new Identifier(MonstersGirlsMod.MODID, "geo/mandrake_girl_fruit_chorus.geo.json"));
+        put(EntityModel.Mushroom,           new Identifier(MonstersGirlsMod.MODID, "geo/mushroom_girl_default.geo.json"));
+        put(EntityModel.MushroomFat,        new Identifier(MonstersGirlsMod.MODID, "geo/mushroom_girl_tummy.geo.json"));
         put(EntityModel.MushroomInflated,   new Identifier(MonstersGirlsMod.MODID, "geo/mushroom_girl_inflated.geo.json"));
         put(EntityModel.MushroomFungus,     new Identifier(MonstersGirlsMod.MODID, "geo/mushroom_girl_ink_cap.geo.json"));
         put(EntityModel.Spook,              new Identifier(MonstersGirlsMod.MODID, "geo/spook_girl.geo.json"));
@@ -283,30 +313,31 @@ public class InternalMetric {
     }};
 
     public static HashMap<EntityVariant, HashMap<EntityTexture, Identifier>> TEXTURE = new HashMap<>(){{
-        put(EntityVariant.MandrakeBrown,    setTexture("mandrake/mandrake_girl_brown", false));
-        put(EntityVariant.MandrakeChorus,    setTexture("mandrake/mandrake_girl_chorus", false));
-        put(EntityVariant.MandrakeGlowBerry,    setTexture("mandrake/mandrake_girl_glow_berry", false));
-        put(EntityVariant.MandrakeGreen,    setTexture("mandrake/mandrake_girl_green", false));
+        put(EntityVariant.MandrakeBrown,        setTexture("mandrake/mandrake_girl_brown", false,false,false,false));
+        put(EntityVariant.MandrakeChorus,       setTexture("mandrake/mandrake_girl_chorus", false,false,false,false));
+        put(EntityVariant.MandrakeGlowBerry,    setTexture("mandrake/mandrake_girl_glow_berry", false,false,false,false));
+        put(EntityVariant.MandrakeGreen,        setTexture("mandrake/mandrake_girl_green", false,false,false,false));
 
-        put(EntityVariant.MushroomAmanitaYellow,    setTexture("mushroom/mushroom_girl_yellow", true));
-        put(EntityVariant.MushroomBrown,          setTexture("mushroom/mushroom_girl_brown", true));
-        put(EntityVariant.MushroomCrimson,          setTexture("mushroom/mushroom_girl_crimson", true));
-        put(EntityVariant.MushroomCrimsonRare,      setTexture("mushroom/mushroom_girl_crimson_rare", true));
-        put(EntityVariant.MushroomEnderPuffball,    setTexture("mushroom/mushroom_girl_ender_puffball", true));
-        put(EntityVariant.MushroomInfernal,         setTexture("mushroom/mushroom_girl_infernal", true));
-        put(EntityVariant.FungusInkCap,           setTexture("mushroom/mushroom_girl_ink_cap", true));
-        put(EntityVariant.MushroomMolten,           setTexture("mushroom/mushroom_girl_molten", true));
-        put(EntityVariant.MushroomFlyAgaric,        setTexture("mushroom/mushroom_girl_red", true));
-        put(EntityVariant.MushroomSoulWanderer,     setTexture("mushroom/mushroom_girl_soul_wanderer", true));
-        put(EntityVariant.MushroomWarped,           setTexture("mushroom/mushroom_girl_warped", true));
-        put(EntityVariant.MushroomWarpedRare,       setTexture("mushroom/mushroom_girl_warped_rare", true));
+        put(EntityVariant.MushroomAmanitaYellow,    setTexture("mushroom/mushroom_girl_yellow", true,true,true,false));
+        put(EntityVariant.MushroomBrown,            setTexture("mushroom/mushroom_girl_brown", true,true,true,false));
+        put(EntityVariant.MushroomCrimson,          setTexture("mushroom/mushroom_girl_crimson", true,true,true,false));
+        put(EntityVariant.MushroomCrimsonRare,      setTexture("mushroom/mushroom_girl_crimson_rare", true,true,true,false));
+        put(EntityVariant.MushroomEnderPuffball,    setTexture("mushroom/mushroom_girl_ender_puffball", true,true,true,true));
+        put(EntityVariant.MushroomInfernal,         setTexture("mushroom/mushroom_girl_infernal", true,true,true,false));
+        put(EntityVariant.FungusInkCap,             setTexture("mushroom/mushroom_girl_ink_cap", true,true,true,false));
+        put(EntityVariant.MushroomMolten,           setTexture("mushroom/mushroom_girl_molten", true,true,true,false));
+        put(EntityVariant.MushroomFlyAgaric,        setTexture("mushroom/mushroom_girl_red", true,true,true,false));
+        put(EntityVariant.MushroomSoulWanderer,     setTexture("mushroom/mushroom_girl_soul_wanderer", true,true,true,false));
+        put(EntityVariant.MushroomWarped,           setTexture("mushroom/mushroom_girl_warped", true,true,true,false));
+        put(EntityVariant.MushroomWarpedRare,       setTexture("mushroom/mushroom_girl_warped_rare", true,true,true,false));
+        put(EntityVariant.MushroomSnowball,         setTexture("mushroom/mushroom_girl_snowball", true,true,true,true));
 
-        put(EntityVariant.SpookPeach,           setTexture("spook/spook_girl_peach", true));
-        put(EntityVariant.SpookTeal,            setTexture("spook/spook_girl_teal", true));
+        put(EntityVariant.SpookPeach,           setTexture("spook/spook_girl_peach", false,false,true,false));
+        put(EntityVariant.SpookTeal,            setTexture("spook/spook_girl_teal", false,false,true,false));
 
-        put(EntityVariant.WispBlue,             setTexture("wisp/wisp_girl_blue", false));
-        put(EntityVariant.WispGreen,            setTexture("wisp/wisp_girl_green", false));
-        put(EntityVariant.WispYellow,           setTexture("wisp/wisp_girl_yellow", true));
+        put(EntityVariant.WispBlue,             setTexture("wisp/wisp_girl_blue", false,false,false,false));
+        put(EntityVariant.WispGreen,            setTexture("wisp/wisp_girl_green", false,false,false,false));
+        put(EntityVariant.WispYellow,           setTexture("wisp/wisp_girl_yellow", false,false,true,false));
     }};
 
     public static HashMap<EntityVariant, HashMap<EntityAttribute, InternalAttribute>> ATTRIBUTES = new HashMap<>(){{
@@ -373,6 +404,7 @@ public class InternalMetric {
         put(EntityVariant.MushroomSoulWanderer, mushroomAttribute);
         put(EntityVariant.MushroomWarped, mushroomAttribute);
         put(EntityVariant.MushroomWarpedRare, mushroomAttribute);
+        put(EntityVariant.MushroomSnowball, mushroomAttribute);
 
         put(EntityVariant.SpookPeach, spookAttribute);
         put(EntityVariant.SpookTeal, spookAttribute);
@@ -436,7 +468,7 @@ public class InternalMetric {
             if (MODEL.containsKey(model)) return MODEL.get(model);
         }
         // Return a default or error identifier if the combination is not found
-        return new Identifier(MonstersGirlsMod.MODID, "geo/mandrake_girl.geo.json");
+        return new Identifier(MonstersGirlsMod.MODID, "geo/mandrake_girl_default.geo.json");
     } // getModel ()
 
     public static Identifier getModel(EntityCategory entity, EntityVariant variant, EntityModel model) {
@@ -445,56 +477,63 @@ public class InternalMetric {
             if (actualModel == model && MODEL.containsKey(model)) return MODEL.get(model);
         }
         // Return a default or error identifier if the combination is not found
-        return new Identifier(MonstersGirlsMod.MODID, "geo/mandrake_girl.geo.json");
+        return new Identifier(MonstersGirlsMod.MODID, "geo/mandrake_girl_default.geo.json");
     } // getModel ()
 
     // TEXTURE
     public static Identifier getTexture(EntityVariant variant) {
-        EntityTexture defaultTexture = EntityTexture.DEFAULT;
-        if (ENTITY_TEXTURE.containsKey(defaultTexture) && ENTITY_TEXTURE.get(defaultTexture).contains(variant)) {
-            if (TEXTURE.containsKey(variant) && TEXTURE.get(variant).containsKey(defaultTexture))
-                return TEXTURE.get(variant).get(defaultTexture);
+        Identifier defaultTexture = null;
+        EntityTexture randomTexture = EntityTexture.byId(getRandomTextureID(variant));
+        
+        if (ENTITY_TEXTURE.containsKey(randomTexture) && ENTITY_TEXTURE.get(randomTexture).contains(variant)) {
+            if (TEXTURE.containsKey(variant) && TEXTURE.get(variant).containsKey(randomTexture))
+                defaultTexture = TEXTURE.get(variant).get(randomTexture);
         }
 
         // Return a default or error identifier if the combination is not found
-        return new Identifier(MonstersGirlsMod.MODID, "textures/entity/mandrake/mandrake_girl_brown.png");
+        return defaultTexture;
     } // getTexture ()
 
     public static Identifier getTexture(EntityVariant variant, EntityTexture texture) {
+        Identifier defaultTexture = null;
         if (ENTITY_TEXTURE.containsKey(texture) && ENTITY_TEXTURE.get(texture).contains(variant)) {
             if (TEXTURE.containsKey(variant) && TEXTURE.get(variant).containsKey(texture))
-                return TEXTURE.get(variant).get(texture);
+                defaultTexture = TEXTURE.get(variant).get(texture);
         }
 
         // If the texture doesn't exist for the specified variant, return the default texture
         if (TEXTURE.containsKey(variant) && TEXTURE.get(variant).containsKey(EntityTexture.DEFAULT))
-            return TEXTURE.get(variant).get(EntityTexture.DEFAULT);
+            defaultTexture = TEXTURE.get(variant).get(EntityTexture.byId(getRandomTextureID(variant)));
 
         // Return a default or error identifier if the combination is not found
-        return new Identifier(MonstersGirlsMod.MODID, "textures/entity/mandrake/mandrake_girl_brown.png");
+        return defaultTexture;
     } // getTexture ()
 
-    public static int getTextureNumber(EntityVariant variant, EntityTexture targetTexture) {
-        if (TEXTURE.containsKey(variant)) {
-            HashMap<EntityTexture, Identifier> textureMap = TEXTURE.get(variant);
+    public static boolean checkTextureID(EntityVariant variant, EntityTexture texture) {
+        if (ENTITY_TEXTURE.containsKey(texture) && ENTITY_TEXTURE.get(texture).contains(variant))
+            return TEXTURE.containsKey(variant) && TEXTURE.get(variant).containsKey(texture);
+        return false;
+    } // checkTextureID ()
 
-            int textureNumber = 0;
-            for (EntityTexture texture : textureMap.keySet()) {
-                textureNumber++;
-                if (texture == targetTexture) break;
-            }
-
-            return textureNumber;
+    public static int getRandomTextureID(EntityVariant variant) {
+        List<EntityTexture> textures = ENTITY_TEXTURE.keySet().stream().filter(entityTexture -> ENTITY_TEXTURE.get(entityTexture).contains(variant)).toList();
+        if (!textures.isEmpty()) {
+            EntityTexture randomTexture = textures.get(new Random().nextInt(textures.size()));
+            return randomTexture.getId(); // Replace with the appropriate method to get the ID
         }
 
-        return 0; // Variant not found
-    } // getTextureNumber ()
+        // Return a default or error ID if no valid variant is found
+        return -1;
+    } // getRandomTextureID ()
 
-    private static HashMap<EntityTexture, Identifier> setTexture(String suffix, boolean belly){
+    private static HashMap<EntityTexture, Identifier> setTexture(String suffix, boolean overrideDefault, boolean slim, boolean tummy, boolean inflated){
         var path = "textures/entity/";
         return new HashMap<>() {{
-            put(EntityTexture.DEFAULT,  new Identifier(MonstersGirlsMod.MODID, path + suffix + ".png"));                    // Default
-            if(belly) put(EntityTexture.BELLY,    new Identifier(MonstersGirlsMod.MODID, path + suffix + "_belly.png"));    // Belly
+            if(slim) put(EntityTexture.SLIM,  new Identifier(MonstersGirlsMod.MODID, path + suffix + "_slim.png"));                     // Slim
+            if(overrideDefault) put(EntityTexture.DEFAULT,  new Identifier(MonstersGirlsMod.MODID, path + suffix + "_default.png"));    // Default
+            else put(EntityTexture.DEFAULT,  new Identifier(MonstersGirlsMod.MODID, path + suffix + ".png"));                   // Default
+            if(tummy) put(EntityTexture.TUMMY,    new Identifier(MonstersGirlsMod.MODID, path + suffix + "_tummy.png"));                // Tummy
+            if(inflated) put(EntityTexture.INFLATED,    new Identifier(MonstersGirlsMod.MODID, path + suffix + "_inflated.png"));       // Inflated
         }};
     } // setTexture ()
 

@@ -43,14 +43,14 @@ public class MushroomEnderPuffballEntity extends InternalEntity implements IAnim
     // ANIMATOR
     @Override
     public Identifier getAnimator() {
-        if(EntityTexture.byId(getTextureID()) == EntityTexture.BELLY) return InternalMetric.ANIMATOR.get(EntityAnimator.MushroomInflated);
+        if(EntityTexture.byId(getTextureID()) == EntityTexture.INFLATED) return InternalMetric.ANIMATOR.get(EntityAnimator.MushroomInflated);
         return InternalMetric.ANIMATOR.get(EntityAnimator.MushroomFat);
     } // getAnimator ()
 
     // MODEL
     @Override
     public Identifier getCurrentModel() {
-        if(EntityTexture.byId(getTextureID()) == EntityTexture.BELLY) return InternalMetric.MODEL.get(EntityModel.MushroomInflated);
+        if(EntityTexture.byId(getTextureID()) == EntityTexture.INFLATED) return InternalMetric.MODEL.get(EntityModel.MushroomInflated);
         return InternalMetric.MODEL.get(EntityModel.MushroomFat);
     } // getCurrentModel ()
 

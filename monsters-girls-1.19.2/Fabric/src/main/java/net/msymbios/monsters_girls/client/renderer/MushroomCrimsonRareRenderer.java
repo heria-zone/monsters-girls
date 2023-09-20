@@ -16,6 +16,6 @@ public class MushroomCrimsonRareRenderer extends GeoEntityRenderer<MushroomCrims
 
     // -- Method --
     @Override
-    public Identifier getTextureResource(MushroomCrimsonRareEntity instance) { return instance.getTexture(); } // getTextureResource ()
+    public Identifier getTextureResource(MushroomCrimsonRareEntity instance) { return instance.getCurrentTexture(); } // getTextureResource ()
 
 } // Class MushroomCrimsonRareRenderer

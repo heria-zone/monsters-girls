@@ -16,6 +16,6 @@ public class WispGreenRenderer extends GeoEntityRenderer<WispGreenEntity> {
 
     // -- Method --
     @Override
-    public Identifier getTextureResource(WispGreenEntity instance) { return instance.getTexture(); } // getTextureResource ()
+    public Identifier getTextureResource(WispGreenEntity instance) { return instance.getCurrentTexture(); } // getTextureResource ()
 
 } // Class WispGreenRenderer

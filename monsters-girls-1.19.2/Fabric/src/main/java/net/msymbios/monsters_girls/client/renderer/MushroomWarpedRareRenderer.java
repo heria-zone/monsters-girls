@@ -16,6 +16,6 @@ public class MushroomWarpedRareRenderer extends GeoEntityRenderer<MushroomWarped
 
     // -- Method --
     @Override
-    public Identifier getTextureResource(MushroomWarpedRareEntity instance) { return instance.getTexture(); } // getTextureResource ()
+    public Identifier getTextureResource(MushroomWarpedRareEntity instance) { return instance.getCurrentTexture(); } // getTextureResource ()
 
 } // Class MushroomWarpedRareRenderer

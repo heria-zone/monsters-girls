@@ -16,6 +16,6 @@ public class SpookPeachRenderer extends GeoEntityRenderer<SpookPeachEntity> {
 
     // -- Method --
     @Override
-    public Identifier getTextureResource(SpookPeachEntity instance) { return instance.getTexture(); } // getTextureResource ()
+    public Identifier getTextureResource(SpookPeachEntity instance) { return instance.getCurrentTexture(); } // getTextureResource ()
 
 } // Class SpookPeachRenderer

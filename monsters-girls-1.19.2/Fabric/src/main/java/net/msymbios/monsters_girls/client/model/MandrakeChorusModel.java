@@ -16,7 +16,7 @@ public class MandrakeChorusModel extends AnimatedGeoModel<MandrakeChorusEntity> 
 
     @Override
     public Identifier getTextureResource(MandrakeChorusEntity animatable) {
-        return animatable.getTexture();
+        return animatable.getCurrentTexture();
     } // getTextureResource ()
 
     @Override
