@@ -42,7 +42,7 @@ public enum EntityVariant {
     EntityVariant(int id, String name) {
         this.m_id = id;
         this.m_name = name;
-    } // Constructor VanillaVariant
+    } // Constructor EntityVariant
 
 
     // -- Methods --
