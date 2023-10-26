@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_ink_cap_mushroom": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "monsters_girls:ink_cap_mushroom"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:huge_ink_cap_mushroom"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_ink_cap_mushroom",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:huge_ink_cap_mushroom"
+    ]
+  },
+  "sends_telemetry_event": false
+}

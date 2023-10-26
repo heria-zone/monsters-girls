@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "monsters_girls:block/molten_fungus_stem",
+    "side": "monsters_girls:block/molten_fungus_stem"
+  }
+}

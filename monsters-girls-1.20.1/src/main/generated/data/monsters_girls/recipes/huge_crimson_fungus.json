@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "mushrooms",
+  "ingredients": [
+    {
+      "item": "minecraft:crimson_fungus"
+    },
+    {
+      "item": "minecraft:crimson_fungus"
+    }
+  ],
+  "result": {
+    "item": "monsters_girls:huge_crimson_fungus"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "monsters_girls:block/molten_fungus_slab"
+    },
+    "type=double": {
+      "model": "monsters_girls:block/molten_fungus_planks"
+    },
+    "type=top": {
+      "model": "monsters_girls:block/molten_fungus_slab_top"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_ender_puffball_mushroom": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "monsters_girls:ender_puffball_mushroom"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:huge_ender_puffball_mushroom"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_ender_puffball_mushroom",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:huge_ender_puffball_mushroom"
+    ]
+  },
+  "sends_telemetry_event": false
+}

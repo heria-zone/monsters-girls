@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "monsters_girls:block/ender_puffball_stripped_stem_top",
+    "side": "monsters_girls:block/ender_puffball_stripped_stem"
+  }
+}

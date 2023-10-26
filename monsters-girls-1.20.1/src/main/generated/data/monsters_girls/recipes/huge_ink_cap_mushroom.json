@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "mushrooms",
+  "ingredients": [
+    {
+      "item": "monsters_girls:ink_cap_mushroom"
+    },
+    {
+      "item": "monsters_girls:ink_cap_mushroom"
+    }
+  ],
+  "result": {
+    "item": "monsters_girls:huge_ink_cap_mushroom"
+  }
+}

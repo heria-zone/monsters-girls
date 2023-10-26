@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "monsters_girls:block/glow_berry_bush_mature"
+  }
+}

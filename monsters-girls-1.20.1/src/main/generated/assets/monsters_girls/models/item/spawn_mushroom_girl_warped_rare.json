@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "monsters_girls:item/spawn_mushroom_girl_warped_rare"
+  }
+}

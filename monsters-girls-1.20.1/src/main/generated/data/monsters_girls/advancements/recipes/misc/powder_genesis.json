@@ -1,0 +1,59 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bone_meal": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:bone_meal"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_golden_apple": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:golden_apple"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_mushrooms": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "monsters_girls:mushrooms"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:powder_genesis"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_golden_apple",
+      "has_bone_meal",
+      "has_mushrooms",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:powder_genesis"
+    ]
+  },
+  "sends_telemetry_event": false
+}
