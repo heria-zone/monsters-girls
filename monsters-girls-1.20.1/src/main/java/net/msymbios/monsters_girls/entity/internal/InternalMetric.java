@@ -1,8 +1,11 @@
 package net.msymbios.monsters_girls.entity.internal;
 
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.CreeperEntity;
 import net.minecraft.entity.mob.Monster;
+import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
@@ -10,6 +13,7 @@ import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeKeys;
 import net.msymbios.monsters_girls.MonstersGirls;
 import net.msymbios.monsters_girls.entity.enums.*;
+import net.msymbios.monsters_girls.item.MonstersGirlsItems;
 import net.msymbios.monsters_girls.sounds.MonstersGirlsSounds;
 
 import java.util.ArrayList;
@@ -40,6 +44,39 @@ public class InternalMetric {
     public static Predicate<LivingEntity> AvoidAttackingEntities = entity -> entity instanceof Monster && !(entity instanceof CreeperEntity);
 
     // -- Variables --
+    public static HashMap<EntityVariant, List<Item>> ENTITY_TAMABLE_ITEM = new HashMap<>() {{
+        var mushroomTamable = new ArrayList<>(List.of(Items.ROTTEN_FLESH));
+        var wispTamable = new ArrayList<>(List.of(Items.GOLD_NUGGET, Items.GOLD_INGOT, Items.GOLD_BLOCK));
+
+        put(EntityVariant.MandrakeBrown, new ArrayList<>(List.of(Items.COOKIE, Items.BONE_MEAL)));
+        put(EntityVariant.MandrakeGlowBerry, new ArrayList<>(List.of(Items.GLOW_BERRIES)));
+        put(EntityVariant.MandrakeGreen, new ArrayList<>(List.of(Items.COOKIE, Items.BONE_MEAL)));
+        put(EntityVariant.MandrakeChorus, new ArrayList<>(List.of(Items.CHORUS_FRUIT)));
+
+        put(EntityVariant.MushroomBrown, mushroomTamable);
+        put(EntityVariant.MushroomEnderPuffball, mushroomTamable);
+        put(EntityVariant.MushroomCrimson, mushroomTamable);
+        put(EntityVariant.MushroomCrimsonRare, mushroomTamable);
+        put(EntityVariant.MushroomAmanitaYellow, mushroomTamable);
+        put(EntityVariant.MushroomFlyAgaric, mushroomTamable);
+        put(EntityVariant.MushroomInfernal, mushroomTamable);
+        put(EntityVariant.FungusInkCap, mushroomTamable);
+        put(EntityVariant.MushroomMolten, mushroomTamable);
+        put(EntityVariant.MushroomWarped, mushroomTamable);
+        put(EntityVariant.MushroomWarpedRare, mushroomTamable);
+        put(EntityVariant.MushroomSoulWanderer, mushroomTamable);
+        put(EntityVariant.MushroomSnowball, new ArrayList<>(List.of(Items.SNOWBALL)));
+
+        put(EntityVariant.Slime, new ArrayList<>(List.of(Items.SLIME_BALL)));
+
+        put(EntityVariant.SpookTeal, new ArrayList<>(List.of(MonstersGirlsItems.SPECTRAL_CAKE)));
+        put(EntityVariant.SpookPeach, new ArrayList<>(List.of(MonstersGirlsItems.SPECTRAL_CAKE)));
+
+        put(EntityVariant.WispBlue, wispTamable);
+        put(EntityVariant.WispGreen, wispTamable);
+        put(EntityVariant.WispYellow, wispTamable);
+    }};
+
     public static HashMap<EntitySound, List<EntityVariant>> ENTITY_SOUND = new HashMap<>(){{
 
         put(EntitySound.DEFAULT, new ArrayList<>(List.of(
@@ -125,6 +162,10 @@ public class InternalMetric {
             put(EntityVariant.MushroomSnowball,             EntityAnimator.MushroomInflated);
         }});
 
+        put(EntityCategory.Slime, new HashMap<>() {{
+            put(EntityVariant.Slime,           EntityAnimator.Slime);
+        }});
+
         put(EntityCategory.Spook, new HashMap<>() {{
             put(EntityVariant.SpookPeach,           EntityAnimator.Spook);
             put(EntityVariant.SpookTeal,            EntityAnimator.Spook);
@@ -159,6 +200,10 @@ public class InternalMetric {
             put(EntityVariant.MushroomWarped,           EntityModel.Mushroom);
             put(EntityVariant.MushroomWarpedRare,       EntityModel.Mushroom);
             put(EntityVariant.MushroomSnowball,         EntityModel.MushroomInflated);
+        }});
+
+        put(EntityCategory.Slime, new HashMap<>() {{
+            put(EntityVariant.Slime,           EntityModel.Slime);
         }});
 
         put(EntityCategory.Spook, new HashMap<>() {{
@@ -209,6 +254,8 @@ public class InternalMetric {
                 EntityVariant.MushroomWarped,
                 EntityVariant.MushroomWarpedRare,
                 EntityVariant.MushroomSnowball,
+
+                EntityVariant.Slime,
 
                 EntityVariant.SpookPeach,
                 EntityVariant.SpookTeal,
@@ -285,7 +332,6 @@ public class InternalMetric {
         put(EntityVariant.MushroomWarpedRare,       mushroomMap);
         put(EntityVariant.MushroomSnowball,    new HashMap<>() {{put(EntitySound.DEFAULT, MonstersGirlsSounds.MUSHROOM_GIRL_ENDER);}});
 
-
         put(EntityVariant.SpookPeach,               spookMap);
         put(EntityVariant.SpookTeal,                spookMap);
 
@@ -302,6 +348,7 @@ public class InternalMetric {
         put(EntityAnimator.MushroomFat,    new Identifier(MonstersGirls.MODID, "animations/mushroom_girl_tummy.animation.json"));
         put(EntityAnimator.MushroomInflated,    new Identifier(MonstersGirls.MODID, "animations/mushroom_girl_inflated.animation.json"));
         put(EntityAnimator.MushroomInkCap,    new Identifier(MonstersGirls.MODID, "animations/mushroom_girl_ink_cap.animation.json"));
+        put(EntityAnimator.Slime,    new Identifier(MonstersGirls.MODID, "animations/slime_girl.animation.json"));
         put(EntityAnimator.Spook,    new Identifier(MonstersGirls.MODID, "animations/spook_girl.animation.json"));
         put(EntityAnimator.Wisp,    new Identifier(MonstersGirls.MODID, "animations/wisp_girl.animation.json"));
     }};
@@ -314,6 +361,7 @@ public class InternalMetric {
         put(EntityModel.MushroomFat,        new Identifier(MonstersGirls.MODID, "geo/mushroom_girl_tummy.geo.json"));
         put(EntityModel.MushroomInflated,   new Identifier(MonstersGirls.MODID, "geo/mushroom_girl_inflated.geo.json"));
         put(EntityModel.MushroomFungus,     new Identifier(MonstersGirls.MODID, "geo/mushroom_girl_ink_cap.geo.json"));
+        put(EntityModel.Slime,              new Identifier(MonstersGirls.MODID, "geo/slime_girl.geo.json"));
         put(EntityModel.Spook,              new Identifier(MonstersGirls.MODID, "geo/spook_girl.geo.json"));
         put(EntityModel.Wisp,               new Identifier(MonstersGirls.MODID, "geo/wisp_girl.geo.json"));
     }};
@@ -337,6 +385,8 @@ public class InternalMetric {
         put(EntityVariant.MushroomWarped,           setTexture("mushroom/mushroom_girl_warped", true,true,true,false));
         put(EntityVariant.MushroomWarpedRare,       setTexture("mushroom/mushroom_girl_warped_rare", true,true,true,false));
         put(EntityVariant.MushroomSnowball,         setTexture("mushroom/mushroom_girl_snowball", true,true,true,true));
+
+        put(EntityVariant.Slime,           setTexture("slime/slime_girl", false,false,false,false));
 
         put(EntityVariant.SpookPeach,           setTexture("spook/spook_girl_peach", false,false,true,false));
         put(EntityVariant.SpookTeal,            setTexture("spook/spook_girl_teal", false,false,true,false));
@@ -412,6 +462,17 @@ public class InternalMetric {
         put(EntityVariant.MushroomWarpedRare, mushroomAttribute);
         put(EntityVariant.MushroomSnowball, mushroomAttribute);
 
+        put(EntityVariant.Slime, new HashMap<EntityAttribute, Float>(){{
+            put(EntityAttribute.MAX_HEALTH, 15F);               // Max Health
+            put(EntityAttribute.ATTACK_DAMAGE, 5F);             // Attack Damage
+            put(EntityAttribute.ATTACK_SPEED, 1.2F);            // Attack Speed
+            put(EntityAttribute.MOVEMENT_SPEED, 0.6F);           // Movement Speed
+            put(EntityAttribute.DEFENSE, 0F);                   // Defense
+            put(EntityAttribute.ARMOR, 0F);
+            put(EntityAttribute.ARMOR_TOUGHNESS, 0F);
+            put(EntityAttribute.FOLLOW_RANGE, 7F);
+        }});
+
         put(EntityVariant.SpookPeach, spookAttribute);
         put(EntityVariant.SpookTeal, spookAttribute);
 
@@ -442,12 +503,42 @@ public class InternalMetric {
         put(EntityVariant.MushroomWarpedRare,       setSetting(20, 1, 2, List.of(BiomeKeys.WARPED_FOREST), generalAvoidEntities));
         put(EntityVariant.MushroomSnowball,         setSetting(20, 1, 2, List.of(BiomeKeys.SNOWY_BEACH, BiomeKeys.SNOWY_PLAINS, BiomeKeys.SNOWY_SLOPES, BiomeKeys.SNOWY_TAIGA, BiomeKeys.ICE_SPIKES, BiomeKeys.FROZEN_OCEAN, BiomeKeys.FROZEN_RIVER, BiomeKeys.FROZEN_PEAKS), generalAvoidEntities));
 
+        put(EntityVariant.Slime,   setSetting(25, 1, 2, List.of(BiomeKeys.DARK_FOREST), generalAvoidEntities));
+
         put(EntityVariant.SpookPeach,   setSetting(20, 1, 2, List.of(BiomeKeys.DARK_FOREST, BiomeKeys.FOREST), generalAvoidEntities));
         put(EntityVariant.SpookTeal,    setSetting(20, 1, 2, List.of(BiomeKeys.DARK_FOREST, BiomeKeys.FOREST), generalAvoidEntities));
 
         put(EntityVariant.WispBlue,     setSetting(20, 1, 2, List.of(BiomeKeys.DARK_FOREST, BiomeKeys.SWAMP), generalAvoidEntities));
         put(EntityVariant.WispGreen,    setSetting(20, 1, 2, List.of(BiomeKeys.DARK_FOREST, BiomeKeys.SWAMP), generalAvoidEntities));
         put(EntityVariant.WispYellow,   setSetting(20, 1, 2, List.of(BiomeKeys.DARK_FOREST, BiomeKeys.SWAMP), generalAvoidEntities));
+    }};
+
+    public static HashMap<EntityVariant, List<List<InternalData>>> HELPFUL_EFFECTS = new HashMap<>() {{
+        var regeneration    = new ArrayList<>(List.of(new InternalData(Items.COOKIE),       new InternalData(StatusEffects.REGENERATION),   new InternalData(5000), new InternalData(1)));
+        var strength        = new ArrayList<>(List.of(new InternalData(Items.BONE_MEAL),    new InternalData(StatusEffects.STRENGTH),       new InternalData(5000), new InternalData(1)));
+        var luck            = new ArrayList<>(List.of(new InternalData(Items.CLAY_BALL),    new InternalData(StatusEffects.LUCK),           new InternalData(5000), new InternalData(1)));
+        var healthBoost     = new ArrayList<>(List.of(new InternalData(Items.WATER_BUCKET), new InternalData(StatusEffects.HEALTH_BOOST),   new InternalData(5000), new InternalData(2)));
+        var nightVision     = new ArrayList<>(List.of(new InternalData(Items.GLOW_BERRIES), new InternalData(StatusEffects.NIGHT_VISION),   new InternalData(5000), new InternalData(1)));
+        var haste           = new ArrayList<>(List.of(new InternalData(Items.WATER_BUCKET), new InternalData(StatusEffects.HASTE),          new InternalData(5000), new InternalData(2)));
+
+        put(EntityVariant.MandrakeGreen, new ArrayList<>(List.of(regeneration, strength, luck, healthBoost)));
+        put(EntityVariant.MandrakeBrown, new ArrayList<>(List.of(regeneration, strength, luck, healthBoost)));
+        put(EntityVariant.MandrakeGlowBerry, new ArrayList<>(List.of(nightVision, strength, luck, haste)));
+    }};
+
+    public static HashMap<EntityVariant, List<List<InternalData>>> HARMFUL_EFFECTS = new HashMap<>() {{
+        var poison      = new ArrayList<>(List.of(new InternalData(StatusEffects.POISON),         new InternalData(1000), new InternalData(2)));
+        var weakness    = new ArrayList<>(List.of(new InternalData(StatusEffects.WEAKNESS),       new InternalData(1000), new InternalData(2)));
+        var unlucky     = new ArrayList<>(List.of(new InternalData(StatusEffects.UNLUCK),         new InternalData(1000), new InternalData(2)));
+        var nausea      = new ArrayList<>(List.of(new InternalData(StatusEffects.NAUSEA),         new InternalData(1000), new InternalData(1)));
+        var hunger      = new ArrayList<>(List.of(new InternalData(StatusEffects.HUNGER),         new InternalData(1000), new InternalData(2)));
+        var blindness   = new ArrayList<>(List.of(new InternalData(StatusEffects.BLINDNESS),      new InternalData(1000), new InternalData(1)));
+        var slowness    = new ArrayList<>(List.of(new InternalData(StatusEffects.SLOWNESS),       new InternalData(1000), new InternalData(1)));
+        var mining      = new ArrayList<>(List.of(new InternalData(StatusEffects.MINING_FATIGUE), new InternalData(1000), new InternalData(2)));
+
+        put(EntityVariant.MandrakeGreen, new ArrayList<>(List.of(poison, weakness, unlucky, nausea, hunger, slowness)));
+        put(EntityVariant.MandrakeBrown, new ArrayList<>(List.of(poison, weakness, unlucky, nausea, hunger, slowness)));
+        put(EntityVariant.MandrakeGlowBerry, new ArrayList<>(List.of(blindness, weakness, unlucky, mining, hunger, slowness)));
     }};
 
     // -- Methods --

@@ -49,6 +49,7 @@ public class MandrakeBrownEntity extends InternalEntity implements GeoEntity {
         super(entityType, world);
         this.category = EntityCategory.Mandrake;
         this.variant = EntityVariant.MandrakeBrown;
+        this.hasEffects = true;
     } // Constructor MandrakeBrownEntity ()
 
     // -- Inherited Methods --
@@ -81,55 +82,6 @@ public class MandrakeBrownEntity extends InternalEntity implements GeoEntity {
             }
         }
     } // handlePlanting ()
-
-    @Override
-    protected void handleNegativeEffect(Entity entity, Entity sourceentity) {
-        if (entity == null || sourceentity == null) return;
-        if (sourceentity instanceof LivingEntity _entity && !_entity.getWorld().isClient())
-            _entity.addStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 1000, 1));
-        if (sourceentity instanceof LivingEntity _entity && !_entity.getWorld().isClient())
-            _entity.addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 1000, 2));
-        if (sourceentity instanceof LivingEntity _entity && !_entity.getWorld().isClient())
-            _entity.addStatusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 1000, 2));
-        if (sourceentity instanceof LivingEntity _entity && !_entity.getWorld().isClient())
-            _entity.addStatusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 1000, 2));
-        if (sourceentity instanceof LivingEntity _entity && !_entity.getWorld().isClient())
-            _entity.addStatusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 1000, 1));
-        if (sourceentity instanceof LivingEntity _entity && !_entity.getWorld().isClient())
-            _entity.addStatusEffect(new StatusEffectInstance(StatusEffects.UNLUCK, 1000, 1));
-        if (sourceentity instanceof LivingEntity _entity && !_entity.getWorld().isClient())
-            _entity.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 1000, 1));
-    } // handleNegativeEffect ()
-
-    @Override
-    protected void handleEffect(Entity entity, Entity sourceentity, ItemStack itemstack) {
-        if (entity == null || sourceentity == null) return;
-        if (entity instanceof TameableEntity _tamEnt && _tamEnt.isTamed()) {
-            if (itemstack.isOf(Items.COOKIE)) {
-                if (sourceentity instanceof LivingEntity _entity && !_entity.getWorld().isClient())
-                    _entity.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 10000, 1));
-                if (!(sourceentity instanceof PlayerEntity player && player.getAbilities().creativeMode)) itemstack.decrement(1);
-            }
-
-            if (itemstack.isOf(Items.BONE_MEAL)) {
-                if (sourceentity instanceof LivingEntity _entity && !_entity.getWorld().isClient())
-                    _entity.addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 10000, 1));
-                if (!(sourceentity instanceof PlayerEntity player && player.getAbilities().creativeMode)) itemstack.decrement(1);
-            }
-
-            if (itemstack.isOf(Items.CLAY_BALL)) {
-                if (sourceentity instanceof LivingEntity _entity && !_entity.getWorld().isClient())
-                    _entity.addStatusEffect(new StatusEffectInstance(StatusEffects.LUCK, 10000, 1));
-                if (!(sourceentity instanceof PlayerEntity player && player.getAbilities().creativeMode)) itemstack.decrement(1);
-            }
-
-            if (itemstack.isOf(Items.WATER_BUCKET)) {
-                if (sourceentity instanceof LivingEntity _entity && !_entity.getWorld().isClient())
-                    _entity.addStatusEffect(new StatusEffectInstance(StatusEffects.HEALTH_BOOST, 10000, 2));
-                if (!(sourceentity instanceof PlayerEntity player && player.getAbilities().creativeMode)) itemstack.decrement(1);
-            }
-        }
-    } // handleEffect ()
 
     // -- Built-In Methods --
     @Override

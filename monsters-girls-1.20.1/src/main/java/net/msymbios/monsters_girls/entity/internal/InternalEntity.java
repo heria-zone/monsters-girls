@@ -1,16 +1,17 @@
 package net.msymbios.monsters_girls.entity.internal;
 
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityData;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.SpawnReason;
+import net.minecraft.entity.*;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
+import net.minecraft.entity.effect.StatusEffect;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
@@ -41,9 +42,8 @@ public abstract class InternalEntity extends TameableEntity {
     protected static final TrackedData<Boolean> PLANT = DataTracker.registerData(InternalEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
     protected static final TrackedData<Boolean> SOUND = DataTracker.registerData(InternalEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
 
-
     protected int waryTimer = 0, autoHealTimer = 0;
-    protected boolean combatMode = false, autoHeal = false, canPlant = true;
+    protected boolean combatMode = false, autoHeal = false, canPlant = true, hasEffects = false;
     protected EntityCategory category;
     protected EntityVariant variant;
 
@@ -233,7 +233,7 @@ public abstract class InternalEntity extends TameableEntity {
     @Override
     public boolean damage(DamageSource source, float amount) {
         if (this.isInvulnerableTo(source)) return false;
-        handleNegativeEffect(this, source.getSource());
+        if (hasEffects) handleNegativeEffect(this, source.getSource());
         handleActivateCombatMode();
         return super.damage(source, amount);
     } // damage ()
@@ -251,7 +251,7 @@ public abstract class InternalEntity extends TameableEntity {
                 if(getOwner() == null) handleTame(itemStack, player);
 
                 if(getOwner() != null) {
-                    handleEffect(this, player, itemStack);
+                    if (hasEffects) handleEffect(this, player, itemStack);
                     handleState(itemStack, player);
                     handleTexture(itemStack, player);
 
@@ -342,9 +342,27 @@ public abstract class InternalEntity extends TameableEntity {
 
     protected void handlePlanting (WorldAccess world, double x, double y, double z, Entity entity) {} // handlePlanting ()
 
-    protected void handleNegativeEffect(Entity entity, Entity sourceentity) {} // handleNegativeEffect ()
+    protected void handleNegativeEffect(Entity entity, Entity sourceentity) {
+        if (entity == null || sourceentity == null) return;
+        if (sourceentity instanceof LivingEntity _entity && !_entity.getWorld().isClient()) {
+            var listOfEffects = InternalMetric.HARMFUL_EFFECTS.get(variant);
+            for (var effect : listOfEffects) _entity.addStatusEffect(new StatusEffectInstance((StatusEffect) effect.get(0).getValue(), (int)effect.get(1).getValue(), (int)effect.get(2).getValue()));
+        }
+    } // handleNegativeEffect ()
 
-    protected void handleEffect(Entity entity, Entity sourceentity, ItemStack itemstack) {} // handleEffect ()
+    protected void handleEffect(Entity entity, Entity sourceentity, ItemStack itemstack) {
+        if (entity == null || sourceentity == null) return;
+        if (entity instanceof TameableEntity _tamEnt && _tamEnt.isTamed()) {
+            if (sourceentity instanceof LivingEntity _entity && !_entity.getWorld().isClient()) {
+                var listOfEffects = InternalMetric.HELPFUL_EFFECTS.get(variant);
+                for (var effect : listOfEffects) {
+                    if (itemstack.isOf((Item)effect.get(0).getValue()))
+                        _entity.addStatusEffect(new StatusEffectInstance((StatusEffect) effect.get(1).getValue(), (int) effect.get(2).getValue(), (int) effect.get(3).getValue()));
+                }
+                if (!(sourceentity instanceof PlayerEntity player && player.getAbilities().creativeMode)) itemstack.decrement(1);
+            }
+        }
+    } // handleEffect ()
 
     protected void handleAutoHeal () {
         if(this.getHealth() < this.getHpValue()) autoHeal = true;
@@ -380,8 +398,12 @@ public abstract class InternalEntity extends TameableEntity {
         }
     } // handleCombatMode ()
 
-    public void handleTame(ItemStack item, PlayerEntity player) {
-        if(item.isOf(Items.COOKIE)) {
+    public void handleTame(ItemStack stack, PlayerEntity player) {
+        boolean canAttemptTame = false;
+        var listOfItems = InternalMetric.ENTITY_TAMABLE_ITEM.get(variant);
+        for (Item item : listOfItems) canAttemptTame = stack.isOf(item);
+
+        if(canAttemptTame) {
             if (this.random.nextInt(5) == 0) {
                 this.setOwner(player);
                 this.navigation.stop();
@@ -393,7 +415,7 @@ public abstract class InternalEntity extends TameableEntity {
                 InternalParticles.Ash(this);
                 this.getWorld().sendEntityStatus(this, (byte) 6);
             }
-            if (!player.getAbilities().creativeMode) item.decrement(1);
+            if (!player.getAbilities().creativeMode) stack.decrement(1);
         }
     } // handleTame ()
 

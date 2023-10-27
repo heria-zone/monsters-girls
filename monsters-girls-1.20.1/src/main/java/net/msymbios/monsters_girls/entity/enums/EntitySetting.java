@@ -13,7 +13,6 @@ public enum EntitySetting {
     SpawnMinGroup(4),
     SpawnMaxGroup(5);
 
-
     // -- Variables --
     private static final EntitySetting[] CODEC = Arrays.stream(values()).sorted(Comparator.comparingInt(EntitySetting::getId)).toArray(EntitySetting[]::new);
 

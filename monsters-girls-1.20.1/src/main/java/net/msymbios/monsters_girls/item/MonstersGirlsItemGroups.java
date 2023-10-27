@@ -133,6 +133,7 @@ public class MonstersGirlsItemGroups {
             entries.add(MonstersGirlsItems.SPAWN_MUSHROOM_GIRL_MOLTEN);
             entries.add(MonstersGirlsItems.SPAWN_MUSHROOM_GIRL_SOUL_WANDERER);
             entries.add(MonstersGirlsItems.SPAWN_MUSHROOM_GIRL_SNOWBALL);
+            entries.add(MonstersGirlsItems.SPAWN_SLIME_GIRL);
             entries.add(MonstersGirlsItems.SPAWN_SPOOK_GIRL_PEACH);
             entries.add(MonstersGirlsItems.SPAWN_SPOOK_GIRL_TEAL);
             entries.add(MonstersGirlsItems.SPAWN_WISP_GIRL_BLUE);

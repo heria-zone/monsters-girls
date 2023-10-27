@@ -63,6 +63,7 @@ public class MonstersGirlsItems {
     public static final Item SPAWN_MUSHROOM_GIRL_MOLTEN = register(MonstersGirlsID.SPAWN_MUSHROOM_GIRL_MOLTEN, new SpawnItem(MonstersGirlsEntities.MUSHROOM_GIRL_MOLTEN, new FabricItemSettings()));
     public static final Item SPAWN_MUSHROOM_GIRL_SOUL_WANDERER = register(MonstersGirlsID.SPAWN_MUSHROOM_GIRL_SOUL_WANDERER, new SpawnItem(MonstersGirlsEntities.MUSHROOM_GIRL_SOUL_WANDERER, new FabricItemSettings()));
     public static final Item SPAWN_MUSHROOM_GIRL_SNOWBALL = register(MonstersGirlsID.SPAWN_MUSHROOM_GIRL_SNOWBALL, new SpawnItem(MonstersGirlsEntities.MUSHROOM_GIRL_SNOWBALL, new FabricItemSettings()));
+    public static final Item SPAWN_SLIME_GIRL = register(MonstersGirlsID.SPAWN_SLIME_GIRL, new SpawnItem(MonstersGirlsEntities.SLIME_GIRL, new FabricItemSettings()));
     public static final Item SPAWN_SPOOK_GIRL_PEACH = register(MonstersGirlsID.SPAWN_SPOOK_GIRL_PEACH, new SpawnItem(MonstersGirlsEntities.SPOOK_GIRL_PEACH, new FabricItemSettings()));
     public static final Item SPAWN_SPOOK_GIRL_TEAL = register(MonstersGirlsID.SPAWN_SPOOK_GIRL_TEAL, new SpawnItem(MonstersGirlsEntities.SPOOK_GIRL_TEAL, new FabricItemSettings()));
     public static final Item SPAWN_WISP_GIRL_BLUE = register(MonstersGirlsID.SPAWN_WISP_GIRL_BLUE, new SpawnItem(MonstersGirlsEntities.WISP_GIRL_BLUE, new FabricItemSettings()));

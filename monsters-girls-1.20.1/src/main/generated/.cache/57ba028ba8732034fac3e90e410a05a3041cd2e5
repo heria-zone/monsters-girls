@@ -1,4 +1,4 @@
-// 1.20.1	2023-10-26T16:12:07.0567392	Monsters & Girls/Recipes
+// 1.20.1	2023-10-27T10:35:53.4251243	Monsters & Girls/Recipes
 a58e8547079afec251d74b1749b250bc0227bfa6 data\monsters_girls\recipes\huge_molten_fungus.json
 f12b11eb24c2a09760b0f08c4df88d949b23938b data\monsters_girls\advancements\recipes\redstone\soul_wanderer_pressure_plate.json
 752752db8d32358ff17a7756c86a0cdeaaf8626b data\monsters_girls\advancements\recipes\redstone\molten_fungus_pressure_plate.json
@@ -50,8 +50,8 @@ b9b6420609dc04e32d1c6c8ed5588547b60b33bd data\monsters_girls\recipes\huge_warped
 7592ab423ff211934a42b75d7eb4f206d290c57f data\monsters_girls\recipes\huge_soul_wanderer_mushroom.json
 504bb63d30b2c615ac7923471dddb581e1b84090 data\monsters_girls\advancements\recipes\decorations\huge_molten_fungus.json
 f820d95daf17e4410d362d6cb950ff3a9af9073c data\monsters_girls\recipes\spectral_cake.json
-d7e2bb557d0c3065950e3803b5c73e125bd3955d data\monsters_girls\recipes\ender_puffball_planks.json
 c7ee6b32453630b588a75b98a2479cc81b9d0036 data\monsters_girls\advancements\recipes\building_blocks\ender_puffball_slab.json
+d7e2bb557d0c3065950e3803b5c73e125bd3955d data\monsters_girls\recipes\ender_puffball_planks.json
 f7033cb31f630b32d5cb9b12af34ac6466216b58 data\monsters_girls\recipes\soul_wanderer_door.json
 b1f803e97fc814662a5f4638c3d8ef32bf9c48b4 data\monsters_girls\advancements\recipes\decorations\molten_fungus_fence.json
 4fed4b0c0a72ac74a69368eae980f272c790d160 data\monsters_girls\recipes\molten_fungus_trapdoor.json

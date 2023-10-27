@@ -143,6 +143,7 @@ public class MonstersGirlsID {
     public static final String SPAWN_MUSHROOM_GIRL_MOLTEN = "spawn_mushroom_girl_molten_fungus";
     public static final String SPAWN_MUSHROOM_GIRL_SOUL_WANDERER = "spawn_mushroom_girl_soul_wanderer";
     public static final String SPAWN_MUSHROOM_GIRL_SNOWBALL = "spawn_mushroom_girl_snowball";
+    public static final String SPAWN_SLIME_GIRL = "spawn_slime_girl";
     public static final String SPAWN_SPOOK_GIRL_PEACH = "spawn_spook_girl_peach";
     public static final String SPAWN_SPOOK_GIRL_TEAL = "spawn_spook_girl_teal";
     public static final String SPAWN_WISP_GIRL_BLUE = "spawn_wisp_girl_blue";

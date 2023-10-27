@@ -113,6 +113,12 @@ public class MonstersGirlsLootTableProvider  extends FabricBlockLootTableProvide
         addDrop(MonstersGirlsBlocks.GLOW_BERRY_BUSH);
         addDrop(MonstersGirlsBlocks.JAR);
 
+
+        //addDrop(MonstersGirlsBlocks.POTTED_ENDER_PUFFBALL_MUSHROOM);
+        //addDrop(MonstersGirlsBlocks.POTTED_INK_CAP_MUSHROOM);
+        //addDrop(MonstersGirlsBlocks.POTTED_MOLTEN_FUNGUS);
+        //addDrop(MonstersGirlsBlocks.POTTED_SOUL_WANDERER_FUNGUS);
+
         //addDrop(MonstersGirlsBlocks.URN_MOLTEN, copperLikeOreDrops(MonstersGirlsBlocks.URN_MOLTEN, MonstersGirlsItems.SALT));
         //addDrop(MonstersGirlsBlocks.URN_CRIMSON, copperLikeOreDrops(MonstersGirlsBlocks.URN_CRIMSON, MonstersGirlsItems.SALT));
     } // generate ()

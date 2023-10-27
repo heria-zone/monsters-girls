@@ -45,6 +45,7 @@ public class MandrakeGlowBerryEntity extends InternalEntity implements GeoEntity
         super(entityType, world);
         this.category = EntityCategory.Mandrake;
         this.variant = EntityVariant.MandrakeGlowBerry;
+        this.hasEffects = true;
     } // Constructor MandrakeGlowBerryEntity ()
 
     // -- Inherited Methods --

@@ -1,10 +1,10 @@
-// 1.20.1	2023-10-26T16:12:07.0618774	Monsters & Girls/Tags for minecraft:block
+// 1.20.1	2023-10-27T10:35:53.4301236	Monsters & Girls/Tags for minecraft:block
 81aed77858f57c25e7e1e890c84ef093030fbe86 data\minecraft\tags\blocks\fences.json
-37d806d40a348bde216f6e1a9fbbdd6ed9835c92 data\minecraft\tags\blocks\needs_stone_tool.json
 511669aa22144b78d629df492562d204c2abb33a data\minecraft\tags\blocks\trapdoors.json
+37d806d40a348bde216f6e1a9fbbdd6ed9835c92 data\minecraft\tags\blocks\needs_stone_tool.json
 0737b11fcf25ac150ee402e85cd61f7c61802db3 data\minecraft\tags\blocks\fence_gates.json
 4e1d0de608f60130c76728916e3bdf05b7f2bdd0 data\minecraft\tags\blocks\buttons.json
-017e0c96c34492a9e07899704fc2d5346c497ca2 data\minecraft\tags\blocks\mineable\pickaxe.json
+d3f9a96d509bb232df0af2570e17f41b9948277f data\minecraft\tags\blocks\mineable\pickaxe.json
 f4435ba90a356552e4d38ab4c2c9e7af47f04805 data\minecraft\tags\blocks\pressure_plates.json
 dc2c6e5c63c4df1c1ee644a311e267c599337826 data\minecraft\tags\blocks\stairs.json
 24a77827f8c10bf9c3041d25fed2a4a838837919 data\minecraft\tags\blocks\mineable\hoe.json

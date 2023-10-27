@@ -11,8 +11,9 @@ public enum InternalDataType {
     Biomes(2),
     BiomesList(3),
     EntityType(4),
-    PredicateLivingEntity(5);
-
+    PredicateLivingEntity(5),
+    Item(6),
+    StatusEffect(7);
 
     // -- Variables --
     private static final InternalDataType[] CODEC = Arrays.stream(values()).sorted(Comparator.comparingInt(InternalDataType::getId)).toArray(InternalDataType[]::new);

@@ -36,12 +36,12 @@
   "item.monsters_girls.spawn_mushroom_girl_soul_wanderer": "Spawn Egg Mushroom Girl Soul Wanderer",
   "item.monsters_girls.spawn_mushroom_girl_warped": "Spawn Egg Mushroom Girl Warped",
   "item.monsters_girls.spawn_mushroom_girl_warped_rare": "Spawn Mushroom Girl Egg Warped Rare",
+  "item.monsters_girls.spawn_slime_girl": "Spawn Egg Slime Girl",
   "item.monsters_girls.spawn_spook_girl_peach": "Spawn Egg Spook Girl Peach",
   "item.monsters_girls.spawn_spook_girl_teal": "Spawn Egg Spook Girl Teal",
   "item.monsters_girls.spawn_wisp_girl_green": "Spawn Egg Wisp Girl Green",
   "item.monsters_girls.spawn_wisp_girl_blue": "Spawn Egg Wisp Girl Blue",
   "item.monsters_girls.spawn_wisp_girl_yellow": "Spawn Egg Wisp Girl Yellow",
-
 
   "block.monsters_girls.shroomlight_ender": "Ender Shroomlight",
   "block.monsters_girls.shroomlight_molten": "Molten Shroomlight",
@@ -144,6 +144,7 @@
   "entity.monsters_girls.mushroom_girl_warped": "Mushroom Girl Warped",
   "entity.monsters_girls.mushroom_girl_warped_rare": "Mushroom Girl Warped Rare",
   "entity.monsters_girls.mushroom_girl_yellow": "Mushroom Girl Yellow",
+  "entity.monsters_girls.slime_girl": "Slime Girl",
   "entity.monsters_girls.spook_girl_peach": "Spook Girl Peach",
   "entity.monsters_girls.spook_girl_teal": "Spook Girl  Teal",
   "entity.monsters_girls.wisp_girl_green": "Wisp Girl Green",

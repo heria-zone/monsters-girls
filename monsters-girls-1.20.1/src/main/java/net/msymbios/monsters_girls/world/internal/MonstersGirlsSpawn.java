@@ -5,12 +5,16 @@ import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.entity.SpawnRestriction;
+import net.minecraft.registry.RegistryKey;
 import net.minecraft.world.Heightmap;
+import net.minecraft.world.biome.Biome;
 import net.msymbios.monsters_girls.entity.MonstersGirlsEntities;
 import net.msymbios.monsters_girls.entity.custom.*;
 import net.msymbios.monsters_girls.entity.enums.EntitySetting;
 import net.msymbios.monsters_girls.entity.enums.EntityVariant;
 import net.msymbios.monsters_girls.entity.internal.InternalMetric;
+
+import java.util.List;
 
 public class MonstersGirlsSpawn {
 
@@ -35,6 +39,8 @@ public class MonstersGirlsSpawn {
         registerSpawnBiomes(EntityVariant.MushroomWarped, MonstersGirlsEntities.MUSHROOM_GIRL_WARPED);
         registerSpawnBiomes(EntityVariant.MushroomWarpedRare, MonstersGirlsEntities.MUSHROOM_GIRL_WARPED_RARE);
         registerSpawnBiomes(EntityVariant.MushroomSnowball, MonstersGirlsEntities.MUSHROOM_GIRL_SNOWBALL);
+
+        registerSpawnBiomes(EntityVariant.Slime, MonstersGirlsEntities.SLIME_GIRL);
 
         registerSpawnBiomes(EntityVariant.SpookTeal, MonstersGirlsEntities.SPOOK_GIRL_TEAL);
         registerSpawnBiomes(EntityVariant.SpookPeach, MonstersGirlsEntities.SPOOK_GIRL_PEACH);
@@ -63,6 +69,8 @@ public class MonstersGirlsSpawn {
         SpawnRestriction.register(MonstersGirlsEntities.MUSHROOM_GIRL_WARPED_RARE, SpawnRestriction.Location.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, MushroomWarpedRareEntity::isValidNaturalSpawn);
         SpawnRestriction.register(MonstersGirlsEntities.MUSHROOM_GIRL_SNOWBALL, SpawnRestriction.Location.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, MushroomSnowballEntity::isValidNaturalSpawn);
 
+        SpawnRestriction.register(MonstersGirlsEntities.SLIME_GIRL, SpawnRestriction.Location.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, SlimeGirlEntity::isValidNaturalSpawn);
+
         SpawnRestriction.register(MonstersGirlsEntities.SPOOK_GIRL_TEAL, SpawnRestriction.Location.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, SpookTealEntity::isValidNaturalSpawn);
         SpawnRestriction.register(MonstersGirlsEntities.SPOOK_GIRL_PEACH, SpawnRestriction.Location.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, SpookPeachEntity::isValidNaturalSpawn);
 
@@ -72,12 +80,12 @@ public class MonstersGirlsSpawn {
     } // generate ()
 
     private static void registerSpawnBiomes(EntityVariant variant, EntityType<?> entityType) {
-        BiomeModifications.addSpawn(BiomeSelectors.includeByKey(InternalMetric.SETTINGS.get(variant).get(EntitySetting.BiomesSelector).getBiomesListValue()),
+        BiomeModifications.addSpawn(BiomeSelectors.includeByKey((List<RegistryKey<Biome>>)InternalMetric.SETTINGS.get(variant).get(EntitySetting.BiomesSelector).getValue()),
                 SpawnGroup.CREATURE,
                 entityType,
-                InternalMetric.SETTINGS.get(variant).get(EntitySetting.SpawnWeight).getIntValue(),
-                InternalMetric.SETTINGS.get(variant).get(EntitySetting.SpawnMinGroup).getIntValue(),
-                InternalMetric.SETTINGS.get(variant).get(EntitySetting.SpawnMaxGroup).getIntValue());
+                (int)InternalMetric.SETTINGS.get(variant).get(EntitySetting.SpawnWeight).getValue(),
+                (int)InternalMetric.SETTINGS.get(variant).get(EntitySetting.SpawnMinGroup).getValue(),
+                (int)InternalMetric.SETTINGS.get(variant).get(EntitySetting.SpawnMaxGroup).getValue());
     } // registry ()
 
 } // Class MonstersGirlsSpawn

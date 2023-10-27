@@ -82,6 +82,9 @@ public class MonstersGirlsEntities {
     public static final EntityType<MushroomSnowballEntity> MUSHROOM_GIRL_SNOWBALL = Registry.register(Registries.ENTITY_TYPE, new Identifier(MonstersGirls.MODID, "mushroom_girl_snowball"),
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, MushroomSnowballEntity::new).dimensions(EntityDimensions.fixed(0.4F, 1F)).build());
 
+    public static final EntityType<SlimeGirlEntity> SLIME_GIRL = Registry.register(Registries.ENTITY_TYPE, new Identifier(MonstersGirls.MODID, "slime_girl"),
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, SlimeGirlEntity::new).dimensions(EntityDimensions.fixed(0.5F, 1.5F)).build());
+
     // -- Methods --
     public static void registerAttribute() {
         FabricDefaultAttributeRegistry.register(MANDRAKE_GIRL_BROWN, MandrakeBrownEntity.setAttributes());
@@ -102,6 +105,8 @@ public class MonstersGirlsEntities {
         FabricDefaultAttributeRegistry.register(MUSHROOM_GIRL_WARPED_RARE, MushroomWarpedRareEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(MUSHROOM_GIRL_SOUL_WANDERER, MushroomSoulWandererEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(MUSHROOM_GIRL_SNOWBALL, MushroomSnowballEntity.setAttributes());
+
+        FabricDefaultAttributeRegistry.register(SLIME_GIRL, SlimeGirlEntity.setAttributes());
 
         FabricDefaultAttributeRegistry.register(SPOOK_GIRL_PEACH, SpookPeachEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(SPOOK_GIRL_TEAL, SpookTealEntity.setAttributes());
@@ -130,6 +135,8 @@ public class MonstersGirlsEntities {
         EntityRendererRegistry.register(MUSHROOM_GIRL_WARPED_RARE, MushroomWarpedRareRenderer::new);
         EntityRendererRegistry.register(MUSHROOM_GIRL_SOUL_WANDERER, MushroomSoulWandererRenderer::new);
         EntityRendererRegistry.register(MUSHROOM_GIRL_SNOWBALL, MushroomSnowballRenderer::new);
+
+        EntityRendererRegistry.register(SLIME_GIRL, SlimeGirlRenderer::new);
 
         EntityRendererRegistry.register(SPOOK_GIRL_PEACH, SpookPeachRenderer::new);
         EntityRendererRegistry.register(SPOOK_GIRL_TEAL, SpookTealRenderer::new);

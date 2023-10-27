@@ -144,6 +144,7 @@ public class MonstersGirlsModelProvider extends FabricModelProvider {
         itemModelGenerator.register(MonstersGirlsItems.SPAWN_MUSHROOM_GIRL_MOLTEN, Models.GENERATED);
         itemModelGenerator.register(MonstersGirlsItems.SPAWN_MUSHROOM_GIRL_SOUL_WANDERER, Models.GENERATED);
         itemModelGenerator.register(MonstersGirlsItems.SPAWN_MUSHROOM_GIRL_SNOWBALL, Models.GENERATED);
+        itemModelGenerator.register(MonstersGirlsItems.SPAWN_SLIME_GIRL, Models.GENERATED);
         itemModelGenerator.register(MonstersGirlsItems.SPAWN_SPOOK_GIRL_PEACH, Models.GENERATED);
         itemModelGenerator.register(MonstersGirlsItems.SPAWN_SPOOK_GIRL_TEAL, Models.GENERATED);
         itemModelGenerator.register(MonstersGirlsItems.SPAWN_WISP_GIRL_BLUE, Models.GENERATED);

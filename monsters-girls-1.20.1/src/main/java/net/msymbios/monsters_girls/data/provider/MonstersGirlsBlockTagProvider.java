@@ -107,7 +107,12 @@ public class MonstersGirlsBlockTagProvider extends FabricTagProvider.BlockTagPro
                 .add(MonstersGirlsBlocks.URN_MOLTEN)
                 .add(MonstersGirlsBlocks.URN_CRIMSON)
 
-                .add(MonstersGirlsBlocks.ENDER_MOSS);
+                .add(MonstersGirlsBlocks.ENDER_MOSS)
+
+                .add(MonstersGirlsBlocks.POTTED_ENDER_PUFFBALL_MUSHROOM)
+                .add(MonstersGirlsBlocks.POTTED_INK_CAP_MUSHROOM)
+                .add(MonstersGirlsBlocks.POTTED_MOLTEN_FUNGUS)
+                .add(MonstersGirlsBlocks.POTTED_SOUL_WANDERER_FUNGUS);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
                 .add(MonstersGirlsBlocks.ENDER_PUFFBALL_BLOCK)
