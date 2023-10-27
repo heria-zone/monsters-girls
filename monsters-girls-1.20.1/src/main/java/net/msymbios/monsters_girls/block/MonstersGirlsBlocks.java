@@ -84,11 +84,11 @@ public class MonstersGirlsBlocks {
 
     public static final Block ENDER_PUFFBALL_DOOR = register(MonstersGirlsID.ENDER_PUFFBALL_DOOR, new DoorBlock(FabricBlockSettings.copy(Blocks.OAK_DOOR).mapColor(ENDER_COLOR), BlockSetType.OAK));
     public static final Block MOLTEN_FUNGUS_DOOR = register(MonstersGirlsID.MOLTEN_FUNGUS_DOOR, new DoorBlock(FabricBlockSettings.copy(Blocks.OAK_DOOR).mapColor(MOLTEN_COLOR), BlockSetType.OAK));
-    public static final Block SOUL_WANDERER_DOOR = register(MonstersGirlsID.SOUL_WANDERER_DOOR, new DoorBlock(FabricBlockSettings.copy(Blocks.OAK_DOOR).mapColor(SOUL_COLOR), BlockSetType.OAK));
+    public static final Block SOUL_WANDERER_DOOR = register(MonstersGirlsID.SOUL_WANDERER_DOOR, new DoorBlock(FabricBlockSettings.copy(Blocks.OAK_DOOR).mapColor(SOUL_COLOR).luminance(state -> LUMINANCE), BlockSetType.OAK));
 
     public static final Block ENDER_PUFFBALL_TRAPDOOR = register(MonstersGirlsID.ENDER_PUFFBALL_TRAPDOOR, new TrapdoorBlock(FabricBlockSettings.copy(Blocks.OAK_TRAPDOOR).mapColor(ENDER_COLOR), BlockSetType.OAK));
     public static final Block MOLTEN_FUNGUS_TRAPDOOR = register(MonstersGirlsID.MOLTEN_FUNGUS_TRAPDOOR, new TrapdoorBlock(FabricBlockSettings.copy(Blocks.OAK_TRAPDOOR).mapColor(MOLTEN_COLOR), BlockSetType.OAK));
-    public static final Block SOUL_WANDERER_TRAPDOOR = register(MonstersGirlsID.SOUL_WANDERER_TRAPDOOR, new TrapdoorBlock(FabricBlockSettings.copy(Blocks.OAK_TRAPDOOR).mapColor(SOUL_COLOR), BlockSetType.OAK));
+    public static final Block SOUL_WANDERER_TRAPDOOR = register(MonstersGirlsID.SOUL_WANDERER_TRAPDOOR, new TrapdoorBlock(FabricBlockSettings.copy(Blocks.OAK_TRAPDOOR).mapColor(SOUL_COLOR).luminance(state -> LUMINANCE), BlockSetType.OAK));
 
     public static final Block ENDER_MOSS = register(MonstersGirlsID.ENDER_MOSS, new GrassBlock(FabricBlockSettings.create().mapColor(MapColor.PALE_PURPLE).strength(3.0F, 9.0F).ticksRandomly().sounds(BlockSoundGroup.STONE).requiresTool()));
 
@@ -101,7 +101,7 @@ public class MonstersGirlsBlocks {
     public static final Block HUGE_INFERNAL_MUSHROOM = register(MonstersGirlsID.HUGE_INFERNAL_MUSHROOM, new DirectionalBlock(FabricBlockSettings.copy(HUGE_BROWN_MUSHROOM).mapColor(MapColor.ORANGE), VoxelCollision.HUGE_MUSHROOM));
     public static final Block HUGE_INK_CAP_MUSHROOM = register(MonstersGirlsID.HUGE_INK_CAP_MUSHROOM, new DirectionalBlock(FabricBlockSettings.copy(HUGE_BROWN_MUSHROOM).mapColor(MapColor.BLACK), VoxelCollision.HUGE_FUNGUS_VARIANT));
     public static final Block HUGE_MOLTEN_FUNGUS = register(MonstersGirlsID.HUGE_MOLTEN_FUNGUS, new DirectionalBlock(FabricBlockSettings.copy(HUGE_BROWN_MUSHROOM).mapColor(MapColor.GOLD), VoxelCollision.HUGE_MUSHROOM));
-    public static final Block HUGE_SOUL_WANDERER = register(MonstersGirlsID.HUGE_SOUL_WANDERER, new DirectionalBlock(FabricBlockSettings.copy(HUGE_BROWN_MUSHROOM).mapColor(MapColor.DIAMOND_BLUE), VoxelCollision.HUGE_FUNGUS));
+    public static final Block HUGE_SOUL_WANDERER = register(MonstersGirlsID.HUGE_SOUL_WANDERER, new DirectionalBlock(FabricBlockSettings.copy(HUGE_BROWN_MUSHROOM).mapColor(MapColor.DIAMOND_BLUE).luminance(state -> LUMINANCE), VoxelCollision.HUGE_FUNGUS));
     public static final Block HUGE_WARPED_FUNGUS = register(MonstersGirlsID.HUGE_WARPED_FUNGUS, new DirectionalBlock(FabricBlockSettings.copy(HUGE_BROWN_MUSHROOM).mapColor(MapColor.LIGHT_BLUE), VoxelCollision.SMALL_MUSHROOM));
     public static final Block HUGE_WARPED_RARE_FUNGUS = register(MonstersGirlsID.HUGE_WARPED_RARE_FUNGUS, new DirectionalBlock(FabricBlockSettings.copy(HUGE_BROWN_MUSHROOM).mapColor(MapColor.WATER_BLUE), VoxelCollision.SMALL_MUSHROOM));
 
@@ -111,10 +111,10 @@ public class MonstersGirlsBlocks {
     public static final Block MOLTEN_FUNGUS = register(MonstersGirlsID.MOLTEN_FUNGUS, new FlowerBlock(StatusEffects.REGENERATION, 5, FabricBlockSettings.copy(Blocks.DANDELION).mapColor(MapColor.GOLD)));
     public static final Block SOUL_WANDERER_FUNGUS = register(MonstersGirlsID.SOUL_WANDERER_FUNGUS, new FlowerBlock(StatusEffects.REGENERATION, 5, FabricBlockSettings.copy(Blocks.DANDELION).mapColor(MapColor.DIAMOND_BLUE)));
 
-    public static final Block POTTED_ENDER_PUFFBALL_MUSHROOM = register(MonstersGirlsID.POTTED_ENDER_PUFFBALL_MUSHROOM, new FlowerPotBlock(ENDER_PUFFBALL_MUSHROOM, FabricBlockSettings.create().breakInstantly().nonOpaque().luminance(2)));
-    public static final Block POTTED_INK_CAP_MUSHROOM = register(MonstersGirlsID.POTTED_INK_CAP_MUSHROOM, new FlowerPotBlock(INK_CAP_MUSHROOM, FabricBlockSettings.create().breakInstantly().nonOpaque().luminance(2)));
-    public static final Block POTTED_MOLTEN_FUNGUS = register(MonstersGirlsID.POTTED_MOLTEN_FUNGUS, new FlowerPotBlock(MOLTEN_FUNGUS, FabricBlockSettings.create().breakInstantly().nonOpaque().luminance(2)));
-    public static final Block POTTED_SOUL_WANDERER_FUNGUS = register(MonstersGirlsID.POTTED_SOUL_WANDERER_FUNGUS, new FlowerPotBlock(SOUL_WANDERER_FUNGUS, FabricBlockSettings.create().breakInstantly().nonOpaque().luminance(2)));
+    public static final Block POTTED_ENDER_PUFFBALL_MUSHROOM = register(MonstersGirlsID.POTTED_ENDER_PUFFBALL_MUSHROOM, new FlowerPotBlock(ENDER_PUFFBALL_MUSHROOM, FabricBlockSettings.create().breakInstantly().nonOpaque()));
+    public static final Block POTTED_INK_CAP_MUSHROOM = register(MonstersGirlsID.POTTED_INK_CAP_MUSHROOM, new FlowerPotBlock(INK_CAP_MUSHROOM, FabricBlockSettings.create().breakInstantly().nonOpaque()));
+    public static final Block POTTED_MOLTEN_FUNGUS = register(MonstersGirlsID.POTTED_MOLTEN_FUNGUS, new FlowerPotBlock(MOLTEN_FUNGUS, FabricBlockSettings.create().breakInstantly().nonOpaque().luminance(LUMINANCE)));
+    public static final Block POTTED_SOUL_WANDERER_FUNGUS = register(MonstersGirlsID.POTTED_SOUL_WANDERER_FUNGUS, new FlowerPotBlock(SOUL_WANDERER_FUNGUS, FabricBlockSettings.create().breakInstantly().nonOpaque().luminance(LUMINANCE)));
 
     public static final Block GLOW_BERRY_BUSH = register(MonstersGirlsID.GLOW_BERRY_BUSH, new GlowBerryBush(FabricBlockSettings.create().ticksRandomly().sounds(BlockSoundGroup.SWEET_BERRY_BUSH).nonOpaque().noCollision()));
 

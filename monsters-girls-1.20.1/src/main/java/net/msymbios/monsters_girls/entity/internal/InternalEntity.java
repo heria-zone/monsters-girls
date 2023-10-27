@@ -216,6 +216,9 @@ public abstract class InternalEntity extends TameableEntity {
     @Nullable
     public EntityData initialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, @Nullable EntityData entityData, @Nullable NbtCompound entityNbt) {
         this.setTexture(InternalMetric.getRandomTextureID(this.variant));
+
+        this.calculateDimensions();
+
         return super.initialize(world, difficulty, spawnReason, entityData, entityNbt);
     } // initialize
 

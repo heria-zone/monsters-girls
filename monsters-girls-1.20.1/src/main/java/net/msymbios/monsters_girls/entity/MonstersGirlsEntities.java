@@ -83,7 +83,7 @@ public class MonstersGirlsEntities {
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, MushroomSnowballEntity::new).dimensions(EntityDimensions.fixed(0.4F, 1F)).build());
 
     public static final EntityType<SlimeGirlEntity> SLIME_GIRL = Registry.register(Registries.ENTITY_TYPE, new Identifier(MonstersGirls.MODID, "slime_girl"),
-            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, SlimeGirlEntity::new).dimensions(EntityDimensions.fixed(0.5F, 1.5F)).build());
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, SlimeGirlEntity::new).dimensions(EntityDimensions.fixed(0.8F, 1.9F)).build());
 
     // -- Methods --
     public static void registerAttribute() {
