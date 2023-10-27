@@ -14,6 +14,7 @@ import net.msymbios.monsters_girls.entity.enums.EntitySetting;
 import net.msymbios.monsters_girls.entity.enums.EntityVariant;
 import net.msymbios.monsters_girls.entity.internal.InternalMetric;
 
+import java.util.Calendar;
 import java.util.List;
 
 public class MonstersGirlsSpawn {
@@ -21,6 +22,20 @@ public class MonstersGirlsSpawn {
     // -- Methods --
     public static void generate () {
         // BIOMES MODIFICATION
+        if(Calendar.getInstance().get(Calendar.MONTH) == Calendar.OCTOBER) {
+            registerSpawnBiomes(EntityVariant.JackOLantern, MonstersGirlsEntities.GOURDRAGORA_GIRL_JACK_LANTERN);
+            registerSpawnBiomes(EntityVariant.JackOLanternBig, MonstersGirlsEntities.GOURDRAGORA_GIRL_JACK_LANTERN_BIG);
+            registerSpawnBiomes(EntityVariant.JackOLanternMini, MonstersGirlsEntities.GOURDRAGORA_GIRL_JACK_LANTERN_MINI);
+
+            SpawnRestriction.register(MonstersGirlsEntities.GOURDRAGORA_GIRL_JACK_LANTERN, SpawnRestriction.Location.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, GourdragoraJackOLanternEntity::isValidNaturalSpawn);
+            SpawnRestriction.register(MonstersGirlsEntities.GOURDRAGORA_GIRL_JACK_LANTERN_BIG, SpawnRestriction.Location.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, GourdragoraJackOLanternBigEntity::isValidNaturalSpawn);
+            SpawnRestriction.register(MonstersGirlsEntities.GOURDRAGORA_GIRL_JACK_LANTERN_MINI, SpawnRestriction.Location.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, GourdragoraJackOLanternMiniEntity::isValidNaturalSpawn);
+        }
+
+        registerSpawnBiomes(EntityVariant.Pumpkin, MonstersGirlsEntities.GOURDRAGORA_GIRL_PUMPKIN);
+        registerSpawnBiomes(EntityVariant.PumpkinBig, MonstersGirlsEntities.GOURDRAGORA_GIRL_PUMPKIN_BIG);
+        registerSpawnBiomes(EntityVariant.PumpkinMini, MonstersGirlsEntities.GOURDRAGORA_GIRL_PUMPKIN_MINI);
+
         registerSpawnBiomes(EntityVariant.MandrakeGreen, MonstersGirlsEntities.MANDRAKE_GIRL_GREEN);
         registerSpawnBiomes(EntityVariant.MandrakeBrown, MonstersGirlsEntities.MANDRAKE_GIRL_BROWN);
         registerSpawnBiomes(EntityVariant.MandrakeGlowBerry, MonstersGirlsEntities.MANDRAKE_GIRL_GLOW_BERRY);
@@ -50,6 +65,10 @@ public class MonstersGirlsSpawn {
         registerSpawnBiomes(EntityVariant.WispYellow, MonstersGirlsEntities.WISP_GIRL_YELLOW);
 
         // SPAWN RESTRICTION
+        SpawnRestriction.register(MonstersGirlsEntities.GOURDRAGORA_GIRL_PUMPKIN, SpawnRestriction.Location.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, GourdragoraPumpkinEntity::isValidNaturalSpawn);
+        SpawnRestriction.register(MonstersGirlsEntities.GOURDRAGORA_GIRL_PUMPKIN_BIG, SpawnRestriction.Location.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, GourdragoraPumpkinBigEntity::isValidNaturalSpawn);
+        SpawnRestriction.register(MonstersGirlsEntities.GOURDRAGORA_GIRL_PUMPKIN_MINI, SpawnRestriction.Location.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, GourdragoraPumpkinMiniEntity::isValidNaturalSpawn);
+
         SpawnRestriction.register(MonstersGirlsEntities.MANDRAKE_GIRL_GREEN, SpawnRestriction.Location.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, MandrakeGreenEntity::isValidNaturalSpawn);
         SpawnRestriction.register(MonstersGirlsEntities.MANDRAKE_GIRL_BROWN, SpawnRestriction.Location.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, MandrakeBrownEntity::isValidNaturalSpawn);
         SpawnRestriction.register(MonstersGirlsEntities.MANDRAKE_GIRL_GLOW_BERRY, SpawnRestriction.Location.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, MandrakeGlowBerryEntity::isValidNaturalSpawn);

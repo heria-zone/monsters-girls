@@ -49,6 +49,15 @@ public class InternalMetric {
     public static HashMap<EntityVariant, List<Item>> ENTITY_TAMABLE_ITEM = new HashMap<>() {{
         var mushroomTamable = new ArrayList<>(List.of(Items.ROTTEN_FLESH));
         var wispTamable = new ArrayList<>(List.of(Items.GOLD_NUGGET, Items.GOLD_INGOT, Items.GOLD_BLOCK));
+        var pumpkin = new ArrayList<>(List.of(Items.CAKE, Items.BONE_MEAL));
+        var jackOLantern = new ArrayList<>(List.of(Items.CAKE, MonstersGirlsItems.CANDIES));
+
+        put(EntityVariant.JackOLantern, jackOLantern);
+        put(EntityVariant.JackOLanternBig, jackOLantern);
+        put(EntityVariant.JackOLanternMini, jackOLantern);
+        put(EntityVariant.Pumpkin, pumpkin);
+        put(EntityVariant.PumpkinBig, pumpkin);
+        put(EntityVariant.PumpkinMini, pumpkin);
 
         put(EntityVariant.MandrakeBrown, new ArrayList<>(List.of(Items.COOKIE, Items.BONE_MEAL)));
         put(EntityVariant.MandrakeGlowBerry, new ArrayList<>(List.of(Items.GLOW_BERRIES)));
@@ -141,6 +150,15 @@ public class InternalMetric {
     }};
 
     public static HashMap<EntityCategory, HashMap<EntityVariant, EntityAnimator>> ENTITY_ANIMATOR = new HashMap<>(){{
+        put(EntityCategory.Gourdragora, new HashMap<>() {{
+            put(EntityVariant.JackOLantern,        EntityAnimator.Gourdragora);
+            put(EntityVariant.JackOLanternBig,        EntityAnimator.Gourdragora);
+            put(EntityVariant.JackOLanternMini,    EntityAnimator.GourdragoraMini);
+            put(EntityVariant.Pumpkin,       EntityAnimator.Gourdragora);
+            put(EntityVariant.PumpkinBig,       EntityAnimator.Gourdragora);
+            put(EntityVariant.PumpkinMini,       EntityAnimator.GourdragoraMini);
+        }});
+
         put(EntityCategory.Mandrake, new HashMap<>() {{
             put(EntityVariant.MandrakeBrown,        EntityAnimator.Mandrake);
             put(EntityVariant.MandrakeGreen,        EntityAnimator.Mandrake);
@@ -181,6 +199,15 @@ public class InternalMetric {
     }};
 
     public static HashMap<EntityCategory, HashMap<EntityVariant, EntityModel>> ENTITY_MODEL = new HashMap<>(){{
+        put(EntityCategory.Gourdragora, new HashMap<>() {{
+            put(EntityVariant.JackOLantern,        EntityModel.Gourdragora);
+            put(EntityVariant.JackOLanternBig,        EntityModel.Gourdragora);
+            put(EntityVariant.JackOLanternMini,    EntityModel.GourdragoraMini);
+            put(EntityVariant.Pumpkin,          EntityModel.Gourdragora);
+            put(EntityVariant.PumpkinBig,       EntityModel.Gourdragora);
+            put(EntityVariant.PumpkinMini,       EntityModel.GourdragoraMini);
+        }});
+
         put(EntityCategory.Mandrake, new HashMap<>() {{
             put(EntityVariant.MandrakeBrown,        EntityModel.Mandrake);
             put(EntityVariant.MandrakeGreen,        EntityModel.Mandrake);
@@ -238,6 +265,13 @@ public class InternalMetric {
         )));
 
         put(EntityTexture.DEFAULT, new ArrayList<>(List.of(
+                EntityVariant.JackOLantern,
+                EntityVariant.JackOLanternBig,
+                EntityVariant.JackOLanternMini,
+                EntityVariant.Pumpkin,
+                EntityVariant.PumpkinBig,
+                EntityVariant.PumpkinMini,
+
                 EntityVariant.MandrakeBrown,
                 EntityVariant.MandrakeChorus,
                 EntityVariant.MandrakeGreen,
@@ -343,32 +377,43 @@ public class InternalMetric {
     }};
 
     public static HashMap<EntityAnimator, Identifier> ANIMATOR = new HashMap<>() {{
-        put(EntityAnimator.Mandrake,    new Identifier(MonstersGirls.MODID, "animations/mandrake_girl.animation.json"));
-        put(EntityAnimator.MandrakeFruity,    new Identifier(MonstersGirls.MODID, "animations/mandrake_girl_fruity.animation.json"));
+        put(EntityAnimator.Gourdragora,             new Identifier(MonstersGirls.MODID, "animations/gourdragora_girl.animation.json"));
+        put(EntityAnimator.GourdragoraMini,         new Identifier(MonstersGirls.MODID, "animations/gourdragora_girl_mini.animation.json"));
+        put(EntityAnimator.Mandrake,                new Identifier(MonstersGirls.MODID, "animations/mandrake_girl.animation.json"));
+        put(EntityAnimator.MandrakeFruity,          new Identifier(MonstersGirls.MODID, "animations/mandrake_girl_fruity.animation.json"));
         put(EntityAnimator.MandrakeFruityChorus,    new Identifier(MonstersGirls.MODID, "animations/mandrake_girl_fruity_chorus.animation.json"));
-        put(EntityAnimator.Mushroom,    new Identifier(MonstersGirls.MODID, "animations/mushroom_girl_default.animation.json"));
-        put(EntityAnimator.MushroomFat,    new Identifier(MonstersGirls.MODID, "animations/mushroom_girl_tummy.animation.json"));
-        put(EntityAnimator.MushroomInflated,    new Identifier(MonstersGirls.MODID, "animations/mushroom_girl_inflated.animation.json"));
-        put(EntityAnimator.MushroomInkCap,    new Identifier(MonstersGirls.MODID, "animations/mushroom_girl_ink_cap.animation.json"));
-        put(EntityAnimator.Slime,    new Identifier(MonstersGirls.MODID, "animations/slime_girl.animation.json"));
-        put(EntityAnimator.Spook,    new Identifier(MonstersGirls.MODID, "animations/spook_girl.animation.json"));
-        put(EntityAnimator.Wisp,    new Identifier(MonstersGirls.MODID, "animations/wisp_girl.animation.json"));
+        put(EntityAnimator.Mushroom,                new Identifier(MonstersGirls.MODID, "animations/mushroom_girl_default.animation.json"));
+        put(EntityAnimator.MushroomFat,             new Identifier(MonstersGirls.MODID, "animations/mushroom_girl_tummy.animation.json"));
+        put(EntityAnimator.MushroomInflated,        new Identifier(MonstersGirls.MODID, "animations/mushroom_girl_inflated.animation.json"));
+        put(EntityAnimator.MushroomInkCap,          new Identifier(MonstersGirls.MODID, "animations/mushroom_girl_ink_cap.animation.json"));
+        put(EntityAnimator.Slime,                   new Identifier(MonstersGirls.MODID, "animations/slime_girl.animation.json"));
+        put(EntityAnimator.Spook,                   new Identifier(MonstersGirls.MODID, "animations/spook_girl.animation.json"));
+        put(EntityAnimator.Wisp,                    new Identifier(MonstersGirls.MODID, "animations/wisp_girl.animation.json"));
     }};
 
     public static HashMap<EntityModel, Identifier> MODEL = new HashMap<>() {{
-        put(EntityModel.Mandrake,           new Identifier(MonstersGirls.MODID, "geo/mandrake_girl_default.geo.json"));
-        put(EntityModel.MandrakeFruit,      new Identifier(MonstersGirls.MODID, "geo/mandrake_girl_fruit.geo.json"));
-        put(EntityModel.MandrakeFruitChorus,      new Identifier(MonstersGirls.MODID, "geo/mandrake_girl_fruit_chorus.geo.json"));
-        put(EntityModel.Mushroom,           new Identifier(MonstersGirls.MODID, "geo/mushroom_girl_default.geo.json"));
-        put(EntityModel.MushroomFat,        new Identifier(MonstersGirls.MODID, "geo/mushroom_girl_tummy.geo.json"));
-        put(EntityModel.MushroomInflated,   new Identifier(MonstersGirls.MODID, "geo/mushroom_girl_inflated.geo.json"));
-        put(EntityModel.MushroomFungus,     new Identifier(MonstersGirls.MODID, "geo/mushroom_girl_ink_cap.geo.json"));
-        put(EntityModel.Slime,              new Identifier(MonstersGirls.MODID, "geo/slime_girl.geo.json"));
-        put(EntityModel.Spook,              new Identifier(MonstersGirls.MODID, "geo/spook_girl.geo.json"));
-        put(EntityModel.Wisp,               new Identifier(MonstersGirls.MODID, "geo/wisp_girl.geo.json"));
+        put(EntityModel.Gourdragora,            new Identifier(MonstersGirls.MODID, "geo/gourdragora_girl.geo.json"));
+        put(EntityModel.GourdragoraMini,        new Identifier(MonstersGirls.MODID, "geo/gourdragora_girl_mini.geo.json"));
+        put(EntityModel.Mandrake,               new Identifier(MonstersGirls.MODID, "geo/mandrake_girl_default.geo.json"));
+        put(EntityModel.MandrakeFruit,          new Identifier(MonstersGirls.MODID, "geo/mandrake_girl_fruit.geo.json"));
+        put(EntityModel.MandrakeFruitChorus,    new Identifier(MonstersGirls.MODID, "geo/mandrake_girl_fruit_chorus.geo.json"));
+        put(EntityModel.Mushroom,               new Identifier(MonstersGirls.MODID, "geo/mushroom_girl_default.geo.json"));
+        put(EntityModel.MushroomFat,            new Identifier(MonstersGirls.MODID, "geo/mushroom_girl_tummy.geo.json"));
+        put(EntityModel.MushroomInflated,       new Identifier(MonstersGirls.MODID, "geo/mushroom_girl_inflated.geo.json"));
+        put(EntityModel.MushroomFungus,         new Identifier(MonstersGirls.MODID, "geo/mushroom_girl_ink_cap.geo.json"));
+        put(EntityModel.Slime,                  new Identifier(MonstersGirls.MODID, "geo/slime_girl.geo.json"));
+        put(EntityModel.Spook,                  new Identifier(MonstersGirls.MODID, "geo/spook_girl.geo.json"));
+        put(EntityModel.Wisp,                   new Identifier(MonstersGirls.MODID, "geo/wisp_girl.geo.json"));
     }};
 
     public static HashMap<EntityVariant, HashMap<EntityTexture, Identifier>> TEXTURE = new HashMap<>(){{
+        put(EntityVariant.JackOLantern,         setTexture("gourdragora/jacko_girl", false,false,false,false));
+        put(EntityVariant.JackOLanternBig,      setTexture("gourdragora/jacko_girl_big", false,false,false,false));
+        put(EntityVariant.JackOLanternMini,     setTexture("gourdragora/jacko_girl_mini", false,false,false,false));
+        put(EntityVariant.Pumpkin,              setTexture("gourdragora/pumpkin_girl", false,false,false,false));
+        put(EntityVariant.PumpkinBig,           setTexture("gourdragora/pumpkin_girl_big", false,false,false,false));
+        put(EntityVariant.PumpkinMini,          setTexture("gourdragora/pumpkin_girl_mini", false,false,false,false));
+
         put(EntityVariant.MandrakeBrown,        setTexture("mandrake/mandrake_girl_brown", false,false,false,false));
         put(EntityVariant.MandrakeChorus,       setTexture("mandrake/mandrake_girl_chorus", false,false,false,false));
         put(EntityVariant.MandrakeGlowBerry,    setTexture("mandrake/mandrake_girl_glow_berry", false,false,false,false));
@@ -409,7 +454,6 @@ public class InternalMetric {
             put(EntityAttribute.ARMOR_TOUGHNESS, 0F);
             put(EntityAttribute.FOLLOW_RANGE, 7F);
         }};
-
         var mandrakeFruityAttribute = new HashMap<EntityAttribute, Float>(){{
             put(EntityAttribute.MAX_HEALTH, 10F);               // Max Health
             put(EntityAttribute.ATTACK_DAMAGE, 0F);             // Attack Damage
@@ -444,7 +488,47 @@ public class InternalMetric {
             put(EntityAttribute.FLYING_SPEED, 0.8F);
             put(EntityAttribute.FOLLOW_RANGE, 7F);
         }};
-        
+
+        var gourdragora = new HashMap<EntityAttribute, Float>(){{
+            put(EntityAttribute.MAX_HEALTH, 20F);               // Max Health
+            put(EntityAttribute.ATTACK_DAMAGE, 7F);             // Attack Damage
+            put(EntityAttribute.ATTACK_SPEED, 1F);            // Attack Speed
+            put(EntityAttribute.MOVEMENT_SPEED, 0.6F);           // Movement Speed
+            put(EntityAttribute.DEFENSE, 0F);                   // Defense
+            put(EntityAttribute.ARMOR, 0F);
+            put(EntityAttribute.ARMOR_TOUGHNESS, 0F);
+            put(EntityAttribute.FOLLOW_RANGE, 7F);
+        }};
+
+        var gourdragoraMini = new HashMap<EntityAttribute, Float>(){{
+            put(EntityAttribute.MAX_HEALTH, 15F);               // Max Health
+            put(EntityAttribute.ATTACK_DAMAGE, 5F);             // Attack Damage
+            put(EntityAttribute.ATTACK_SPEED, 1F);            // Attack Speed
+            put(EntityAttribute.MOVEMENT_SPEED, 0.6F);           // Movement Speed
+            put(EntityAttribute.DEFENSE, 0F);                   // Defense
+            put(EntityAttribute.ARMOR, 0F);
+            put(EntityAttribute.ARMOR_TOUGHNESS, 0F);
+            put(EntityAttribute.FOLLOW_RANGE, 7F);
+        }};
+
+        var gourdragoraBig = new HashMap<EntityAttribute, Float>(){{
+            put(EntityAttribute.MAX_HEALTH, 30F);               // Max Health
+            put(EntityAttribute.ATTACK_DAMAGE, 12F);             // Attack Damage
+            put(EntityAttribute.ATTACK_SPEED, 1F);            // Attack Speed
+            put(EntityAttribute.MOVEMENT_SPEED, 0.6F);           // Movement Speed
+            put(EntityAttribute.DEFENSE, 0F);                   // Defense
+            put(EntityAttribute.ARMOR, 0F);
+            put(EntityAttribute.ARMOR_TOUGHNESS, 0F);
+            put(EntityAttribute.FOLLOW_RANGE, 12F);
+        }};
+
+        put(EntityVariant.JackOLantern, gourdragora);
+        put(EntityVariant.JackOLanternBig, gourdragoraBig);
+        put(EntityVariant.JackOLanternMini, gourdragoraMini);
+        put(EntityVariant.Pumpkin, gourdragora);
+        put(EntityVariant.PumpkinBig, gourdragoraBig);
+        put(EntityVariant.PumpkinMini, gourdragoraMini);
+
         put(EntityVariant.MandrakeGreen, setAttribute(15F, 2F, 1.2F, 0.3F, 0.2F));
         put(EntityVariant.MandrakeBrown, setAttribute(15F, 2F, 1.2F, 0.3F, 0.2F));
         put(EntityVariant.MandrakeChorus, mandrakeFruityAttribute);
@@ -485,6 +569,13 @@ public class InternalMetric {
 
     public static HashMap<EntityVariant, HashMap<EntitySetting, InternalData>> SETTINGS = new HashMap<>(){{
         Predicate<LivingEntity> generalAvoidEntities = entity -> entity instanceof Monster && !(entity instanceof CreeperEntity);
+
+        put(EntityVariant.JackOLantern,         setSetting(20, 1, 2, List.of(BiomeKeys.DARK_FOREST), generalAvoidEntities));
+        put(EntityVariant.JackOLanternBig,      setSetting(10, 1, 2, List.of(BiomeKeys.DARK_FOREST), generalAvoidEntities));
+        put(EntityVariant.JackOLanternMini,     setSetting(20, 1, 2, List.of(BiomeKeys.DARK_FOREST), generalAvoidEntities));
+        put(EntityVariant.Pumpkin,              setSetting(20, 1, 2, List.of(BiomeKeys.PLAINS, BiomeKeys.SUNFLOWER_PLAINS), generalAvoidEntities));
+        put(EntityVariant.PumpkinBig,           setSetting(10, 1, 2, List.of(BiomeKeys.PLAINS, BiomeKeys.SUNFLOWER_PLAINS), generalAvoidEntities));
+        put(EntityVariant.PumpkinMini,          setSetting(20, 1, 2, List.of(BiomeKeys.PLAINS, BiomeKeys.SUNFLOWER_PLAINS), generalAvoidEntities));
 
         put(EntityVariant.MandrakeGreen,        setSetting(20, 1, 2, List.of(BiomeKeys.FOREST, BiomeKeys.MEADOW, BiomeKeys.BIRCH_FOREST, BiomeKeys.FLOWER_FOREST), generalAvoidEntities));
         put(EntityVariant.MandrakeBrown,        setSetting(20, 1, 2, List.of(BiomeKeys.FOREST, BiomeKeys.MEADOW, BiomeKeys.BIRCH_FOREST, BiomeKeys.FLOWER_FOREST), generalAvoidEntities));

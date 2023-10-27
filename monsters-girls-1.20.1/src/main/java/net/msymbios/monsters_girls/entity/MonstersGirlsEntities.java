@@ -16,6 +16,24 @@ import net.msymbios.monsters_girls.entity.custom.*;
 public class MonstersGirlsEntities {
 
     // -- Variables --
+    public static final EntityType<GourdragoraJackOLanternEntity> GOURDRAGORA_GIRL_JACK_LANTERN = Registry.register(Registries.ENTITY_TYPE, new Identifier(MonstersGirls.MODID, "gourdragora_girl_jack_lantern"),
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, GourdragoraJackOLanternEntity::new).dimensions(EntityDimensions.fixed(0.8F, 1.5F)).build());
+
+    public static final EntityType<GourdragoraJackOLanternBigEntity> GOURDRAGORA_GIRL_JACK_LANTERN_BIG = Registry.register(Registries.ENTITY_TYPE, new Identifier(MonstersGirls.MODID, "gourdragora_girl_jack_lantern_big"),
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, GourdragoraJackOLanternBigEntity::new).dimensions(EntityDimensions.fixed(1.7F, 2.5F)).build());
+
+    public static final EntityType<GourdragoraJackOLanternMiniEntity> GOURDRAGORA_GIRL_JACK_LANTERN_MINI = Registry.register(Registries.ENTITY_TYPE, new Identifier(MonstersGirls.MODID, "gourdragora_girl_jack_lantern_mini"),
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, GourdragoraJackOLanternMiniEntity::new).dimensions(EntityDimensions.fixed(0.5F, 0.8F)).build());
+
+    public static final EntityType<GourdragoraPumpkinEntity> GOURDRAGORA_GIRL_PUMPKIN = Registry.register(Registries.ENTITY_TYPE, new Identifier(MonstersGirls.MODID, "gourdragora_girl_pumpkin"),
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, GourdragoraPumpkinEntity::new).dimensions(EntityDimensions.fixed(0.8F, 1.5F)).build());
+
+    public static final EntityType<GourdragoraPumpkinBigEntity> GOURDRAGORA_GIRL_PUMPKIN_BIG = Registry.register(Registries.ENTITY_TYPE, new Identifier(MonstersGirls.MODID, "gourdragora_girl_pumpkin_big"),
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, GourdragoraPumpkinBigEntity::new).dimensions(EntityDimensions.fixed(1.7F, 2.5F)).build());
+
+    public static final EntityType<GourdragoraPumpkinMiniEntity> GOURDRAGORA_GIRL_PUMPKIN_MINI = Registry.register(Registries.ENTITY_TYPE, new Identifier(MonstersGirls.MODID, "gourdragora_girl_pumpkin_mini"),
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, GourdragoraPumpkinMiniEntity::new).dimensions(EntityDimensions.fixed(0.5F, 0.8F)).build());
+
     public static final EntityType<MandrakeBrownEntity> MANDRAKE_GIRL_BROWN = Registry.register(Registries.ENTITY_TYPE, new Identifier(MonstersGirls.MODID, "mandrake_girl_brown"),
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, MandrakeBrownEntity::new).dimensions(EntityDimensions.fixed(0.4F, 1F)).build());
 
@@ -87,6 +105,13 @@ public class MonstersGirlsEntities {
 
     // -- Methods --
     public static void registerAttribute() {
+        FabricDefaultAttributeRegistry.register(GOURDRAGORA_GIRL_JACK_LANTERN, GourdragoraJackOLanternEntity.setAttributes());
+        FabricDefaultAttributeRegistry.register(GOURDRAGORA_GIRL_JACK_LANTERN_BIG, GourdragoraJackOLanternBigEntity.setAttributes());
+        FabricDefaultAttributeRegistry.register(GOURDRAGORA_GIRL_JACK_LANTERN_MINI, GourdragoraJackOLanternMiniEntity.setAttributes());
+        FabricDefaultAttributeRegistry.register(GOURDRAGORA_GIRL_PUMPKIN, GourdragoraPumpkinEntity.setAttributes());
+        FabricDefaultAttributeRegistry.register(GOURDRAGORA_GIRL_PUMPKIN_BIG, GourdragoraPumpkinBigEntity.setAttributes());
+        FabricDefaultAttributeRegistry.register(GOURDRAGORA_GIRL_PUMPKIN_MINI, GourdragoraPumpkinMiniEntity.setAttributes());
+
         FabricDefaultAttributeRegistry.register(MANDRAKE_GIRL_BROWN, MandrakeBrownEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(MANDRAKE_GIRL_CHORUS, MandrakeBrownEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(MANDRAKE_GIRL_GLOW_BERRY, MandrakeBrownEntity.setAttributes());
@@ -117,6 +142,13 @@ public class MonstersGirlsEntities {
     } // registerEntityAttribute ()
 
     public static void registerRender() {
+        EntityRendererRegistry.register(GOURDRAGORA_GIRL_JACK_LANTERN, GourdragoraJackOLanternRenderer::new);
+        EntityRendererRegistry.register(GOURDRAGORA_GIRL_JACK_LANTERN_BIG, GourdragoraJackOLanternBigRenderer::new);
+        EntityRendererRegistry.register(GOURDRAGORA_GIRL_JACK_LANTERN_MINI, GourdragoraJackOLanternMiniRenderer::new);
+        EntityRendererRegistry.register(GOURDRAGORA_GIRL_PUMPKIN, GourdragoraPumpkinRenderer::new);
+        EntityRendererRegistry.register(GOURDRAGORA_GIRL_PUMPKIN_BIG, GourdragoraPumpkinBigRenderer::new);
+        EntityRendererRegistry.register(GOURDRAGORA_GIRL_PUMPKIN_MINI, GourdragoraPumpkinMiniRenderer::new);
+
         EntityRendererRegistry.register(MANDRAKE_GIRL_BROWN, MandrakeBrownRenderer::new);
         EntityRendererRegistry.register(MANDRAKE_GIRL_CHORUS, MandrakeChorusRenderer::new);
         EntityRendererRegistry.register(MANDRAKE_GIRL_GLOW_BERRY, MandrakeGlowBerryRenderer::new);

@@ -16,7 +16,9 @@ public enum EntityAnimator {
     MushroomInkCap(7, "mushroom_ink_cap"),
     Slime(8, "slime"),
     Spook(9, "spook"),
-    Wisp(10, "wisp");
+    Wisp(10, "wisp"),
+    Gourdragora(11,"gourdragora"),
+    GourdragoraMini(12, "gourdragora_mini");
 
     // -- Variables --
     private static final EntityAnimator[] CODEC = Arrays.stream(values()).sorted(Comparator.comparingInt(EntityAnimator::getId)).toArray(EntityAnimator[]::new);

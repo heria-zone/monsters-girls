@@ -13,6 +13,7 @@ public class MonstersGirlsTags {
     public static final TagKey<Item> MOLTEN_LOGS = MonstersGirlsTags.of("molten_logs");
     public static final TagKey<Item> SOUL_LOGS = MonstersGirlsTags.of("soul_logs");
     public static final TagKey<Item> MUSHROOMS = MonstersGirlsTags.of("mushrooms");
+    public static final TagKey<Item> DYES = MonstersGirlsTags.of("dyes");
 
     // -- Methods --
     private static TagKey<Item> of(String id) {

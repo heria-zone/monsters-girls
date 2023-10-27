@@ -1,5 +1,8 @@
 package net.msymbios.monsters_girls.entity.custom;
 
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityDimensions;
+import net.minecraft.entity.EntityPose;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
@@ -10,6 +13,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
+import net.minecraft.util.math.Box;
 import net.minecraft.world.EntityView;
 import net.minecraft.world.World;
 import net.msymbios.monsters_girls.entity.enums.EntityAttribute;
@@ -46,6 +50,7 @@ public class SlimeGirlEntity extends InternalEntity implements GeoEntity  {
         this.category = EntityCategory.Slime;
         this.variant = EntityVariant.Slime;
         this.canPlant = false;
+        this.calculateDimensions();
     } // Constructor SlimeEntity ()
 
     // -- Inherited Methods --
@@ -72,7 +77,6 @@ public class SlimeGirlEntity extends InternalEntity implements GeoEntity  {
         this.goalSelector.add(2, new SitGoal(this));
         this.goalSelector.add(3, new MeleeAttackGoal(this, InternalMetric.MeleeAttackMovement, false));
         this.goalSelector.add(4, new FollowOwnerGoal(this, InternalMetric.getAttribute(EntityVariant.Slime, EntityAttribute.MOVEMENT_SPEED), InternalMetric.getAttribute(EntityVariant.Slime, EntityAttribute.FOLLOW_RANGE), InternalMetric.FollowCloseDistance, false));
-        this.goalSelector.add(4, new TemptGoal(this, InternalMetric.getAttribute(EntityVariant.Slime, EntityAttribute.MOVEMENT_SPEED), Ingredient.ofItems(new ItemConvertible[]{Items.GOLD_NUGGET, Items.GOLD_INGOT, Items.GOLD_BLOCK}), false));
         this.goalSelector.add(5, new WanderAroundFarGoal(this, InternalMetric.WanderAroundMovement));
         this.goalSelector.add(6, new LookAtEntityGoal(this, PlayerEntity.class, InternalMetric.LookAtRange));
         this.goalSelector.add(6, new LookAtEntityGoal(this, InternalEntity.class, InternalMetric.LookAtRange));

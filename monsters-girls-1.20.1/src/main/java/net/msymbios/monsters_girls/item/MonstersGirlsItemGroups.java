@@ -90,6 +90,7 @@ public class MonstersGirlsItemGroups {
             entries.add(MonstersGirlsItems.SOUL_WANDERER_TRAPDOOR);
 
             entries.add(MonstersGirlsItems.SPECTRAL_CAKE);
+            entries.add(MonstersGirlsItems.CANDIES);
 
             entries.add(MonstersGirlsItems.HUGE_BROWN_MUSHROOM);
             entries.add(MonstersGirlsItems.HUGE_CRIMSON_FUNGUS);
@@ -116,6 +117,12 @@ public class MonstersGirlsItemGroups {
             entries.add(MonstersGirlsItems.URN_MOLTEN);
             entries.add(MonstersGirlsItems.URN_CRIMSON);
 
+            entries.add(MonstersGirlsItems.SPAWN_GOURDRAGORA_GIRL_JACK_LANTERN);
+            entries.add(MonstersGirlsItems.SPAWN_GOURDRAGORA_GIRL_JACK_LANTERN_BIG);
+            entries.add(MonstersGirlsItems.SPAWN_GOURDRAGORA_GIRL_JACK_LANTERN_MINI);
+            entries.add(MonstersGirlsItems.SPAWN_GOURDRAGORA_GIRL_PUMPKIN);
+            entries.add(MonstersGirlsItems.SPAWN_GOURDRAGORA_GIRL_PUMPKIN_BIG);
+            entries.add(MonstersGirlsItems.SPAWN_GOURDRAGORA_GIRL_PUMPKIN_MINI);
             entries.add(MonstersGirlsItems.SPAWN_MANDRAKE_GIRL_BROWN);
             entries.add(MonstersGirlsItems.SPAWN_MANDRAKE_GIRL_CHORUS);
             entries.add(MonstersGirlsItems.SPAWN_MANDRAKE_GIRL_GLOW_BERRY);

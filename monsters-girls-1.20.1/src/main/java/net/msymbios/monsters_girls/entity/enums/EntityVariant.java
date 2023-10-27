@@ -29,7 +29,13 @@ public enum EntityVariant {
     WispGreen(19, "wisp_green"),
     WispYellow(20, "wisp_yellow"),
     MushroomSoulWanderer(21, "mushroom_soul_wanderer"),
-    Slime(22, "slime");
+    Slime(22, "slime"),
+    JackOLanternMini(22, "jack_lantern_mini"),
+    JackOLantern(22, "jack_lantern"),
+    JackOLanternBig(22, "jack_lantern_big"),
+    PumpkinMini(22, "pumpkin_mini"),
+    Pumpkin(22, "pumpkin"),
+    PumpkinBig(22, "pumpkin_big");
 
     // -- Variables --
     private static final EntityVariant[] CODEC = Arrays.stream(values()).sorted(Comparator.comparingInt(EntityVariant::getId)).toArray(EntityVariant[]::new);

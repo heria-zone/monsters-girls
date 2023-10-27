@@ -1,6 +1,5 @@
 package net.msymbios.monsters_girls.entity.internal;
 
-import net.minecraft.block.Blocks;
 import net.minecraft.entity.*;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.data.DataTracker;
@@ -8,7 +7,6 @@ import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -28,7 +26,6 @@ import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
-import net.msymbios.monsters_girls.block.MonstersGirlsBlocks;
 import net.msymbios.monsters_girls.entity.enums.*;
 import org.jetbrains.annotations.Nullable;
 
@@ -216,9 +213,6 @@ public abstract class InternalEntity extends TameableEntity {
     @Nullable
     public EntityData initialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, @Nullable EntityData entityData, @Nullable NbtCompound entityNbt) {
         this.setTexture(InternalMetric.getRandomTextureID(this.variant));
-
-        this.calculateDimensions();
-
         return super.initialize(world, difficulty, spawnReason, entityData, entityNbt);
     } // initialize
 

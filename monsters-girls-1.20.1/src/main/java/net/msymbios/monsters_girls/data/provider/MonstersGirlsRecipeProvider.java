@@ -8,6 +8,7 @@ import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
+import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 import net.msymbios.monsters_girls.item.MonstersGirlsItems;
@@ -71,6 +72,7 @@ public class MonstersGirlsRecipeProvider extends FabricRecipeProvider {
         offerTrapdoorRecipe(exporter, MonstersGirlsItems.SOUL_WANDERER_TRAPDOOR, MonstersGirlsItems.SOUL_WANDERER_PLANKS);
 
         offer2ShapelessRecipe(exporter, RecipeCategory.FOOD, MonstersGirlsItems.SPECTRAL_CAKE, Items.CAKE, MonstersGirlsItems.SOUL_WANDERER_FUNGUS, "food", 1);
+        offer2ShapelessRecipe(exporter, RecipeCategory.FOOD, MonstersGirlsItems.CANDIES, Items.SUGAR, MonstersGirlsTags.DYES, "has_dye", "food", 2);
         offer3ShapelessRecipe(exporter, RecipeCategory.MISC, MonstersGirlsItems.POWDER_GENESIS, Items.GOLDEN_APPLE, Items.BONE_MEAL, MonstersGirlsTags.MUSHROOMS, "misc", 1);
 
         offerShapelessRecipe(exporter, MonstersGirlsItems.HAT_MUSHROOM_BROWN, MonstersGirlsItems.HUGE_BROWN_MUSHROOM, "hat", 1);
@@ -142,6 +144,15 @@ public class MonstersGirlsRecipeProvider extends FabricRecipeProvider {
                 input(input2).group(group).
                 criterion(RecipeProvider.hasItem(input1), RecipeProvider.conditionsFromItem(input1)).
                 criterion(RecipeProvider.hasItem(input2), RecipeProvider.conditionsFromItem(input2)).
+                offerTo(exporter, new Identifier(getRecipeName(output)));
+    } // offer2ShapelessRecipe ()
+
+    public static void offer2ShapelessRecipe(Consumer<RecipeJsonProvider> exporter, RecipeCategory category, ItemConvertible output, ItemConvertible input1, TagKey<Item> input2, String criteria, @Nullable String group, int outputCount) {
+        ShapelessRecipeJsonBuilder.create(category, output, outputCount).
+                input(input1).
+                input(input2).group(group).
+                criterion(RecipeProvider.hasItem(input1), RecipeProvider.conditionsFromItem(input1)).
+                criterion(criteria, RecipeProvider.conditionsFromTag(input2)).
                 offerTo(exporter, new Identifier(getRecipeName(output)));
     } // offer2ShapelessRecipe ()
 

@@ -18,7 +18,15 @@
 
   "item.monsters_girls.spectral_cake": "Spectral Cake",
   "tooltip.monsters_girls.spectral_cake":"Is that a... cake's soul?",
+  "item.monsters_girls.candies": "Candies",
+  "tooltip.monsters_girls.candies":"Mmmm... so sweet!",
 
+  "item.monsters_girls.spawn_gourdragora_girl_jacko": "Spawn Egg Gourdragora Girl Jack'O Lantern",
+  "item.monsters_girls.spawn_gourdragora_girl_jacko_big": "Spawn Egg Gourdragora Girl Jack'O Lantern Big",
+  "item.monsters_girls.spawn_gourdragora_girl_jacko_mini": "Spawn Egg Gourdragora Girl Jack'O Lantern Mini",
+  "item.monsters_girls.spawn_gourdragora_girl_pumpkin": "Spawn Egg Gourdragora Girl Pumkin",
+  "item.monsters_girls.spawn_gourdragora_girl_pumpkin_big": "Spawn Egg Gourdragora Girl Pumkin Big",
+  "item.monsters_girls.spawn_gourdragora_girl_pumpkin_mini": "Spawn Egg Gourdragora Girl Pumkin Mini",
   "item.monsters_girls.spawn_mandrake_girl_brown": "Spawn Egg Mandrake Girl Brown",
   "item.monsters_girls.spawn_mandrake_girl_chorus": "Spawn Egg Mandrake Girl Chorus",
   "item.monsters_girls.spawn_mandrake_girl_glow_berry": "Spawn Egg Mandrake Girl Glow Berry",
@@ -127,6 +135,12 @@
   "block.monsters_girls.urn_molten": "Molten Urn",
   "block.monsters_girls.urn_crimson": "Crimson Urn",
 
+  "entity.monsters_girls.gourdragora_girl_jack_lantern": "Gourdragora Girl Jack'O Lantern",
+  "entity.monsters_girls.gourdragora_girl_jack_lantern_big": "Gourdragora Girl Jack'O Lantern Big",
+  "entity.monsters_girls.gourdragora_girl_jack_lantern_mini": "Gourdragora Girl Jack'O Lantern Mini",
+  "entity.monsters_girls.gourdragora_girl_pumpkin": "Gourdragora Girl Pumpkin",
+  "entity.monsters_girls.gourdragora_girl_pumpkin_big": "Gourdragora Girl Pumpkin Big",
+  "entity.monsters_girls.gourdragora_girl_pumpkin_mini": "Gourdragora Girl Pumpkin Mini",
   "entity.monsters_girls.mandrake_girl_brown": "Mandrake Girl Brown",
   "entity.monsters_girls.mandrake_girl_chorus": "Mandrake Girl Chorus",
   "entity.monsters_girls.mandrake_girl_glow_berry": "Mandrake Girl Glow Berry",

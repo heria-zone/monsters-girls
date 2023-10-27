@@ -101,6 +101,7 @@ public class MonstersGirlsModelProvider extends FabricModelProvider {
         itemModelGenerator.register(MonstersGirlsItems.HAT_MUSHROOM_WARPED_RARE, Models.GENERATED);
 
         itemModelGenerator.register(MonstersGirlsItems.SPECTRAL_CAKE, Models.GENERATED);
+        itemModelGenerator.register(MonstersGirlsItems.CANDIES, Models.GENERATED);
 
         itemModelGenerator.register(MonstersGirlsItems.HUGE_BROWN_MUSHROOM, Models.GENERATED);
         itemModelGenerator.register(MonstersGirlsItems.HUGE_CRIMSON_FUNGUS, Models.GENERATED);
@@ -127,6 +128,12 @@ public class MonstersGirlsModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(MonstersGirlsItems.GLOW_BERRY_BUSH, Models.GENERATED);
 
+        itemModelGenerator.register(MonstersGirlsItems.SPAWN_GOURDRAGORA_GIRL_JACK_LANTERN, Models.GENERATED);
+        itemModelGenerator.register(MonstersGirlsItems.SPAWN_GOURDRAGORA_GIRL_JACK_LANTERN_BIG, Models.GENERATED);
+        itemModelGenerator.register(MonstersGirlsItems.SPAWN_GOURDRAGORA_GIRL_JACK_LANTERN_MINI, Models.GENERATED);
+        itemModelGenerator.register(MonstersGirlsItems.SPAWN_GOURDRAGORA_GIRL_PUMPKIN, Models.GENERATED);
+        itemModelGenerator.register(MonstersGirlsItems.SPAWN_GOURDRAGORA_GIRL_PUMPKIN_BIG, Models.GENERATED);
+        itemModelGenerator.register(MonstersGirlsItems.SPAWN_GOURDRAGORA_GIRL_PUMPKIN_MINI, Models.GENERATED);
         itemModelGenerator.register(MonstersGirlsItems.SPAWN_MANDRAKE_GIRL_BROWN, Models.GENERATED);
         itemModelGenerator.register(MonstersGirlsItems.SPAWN_MANDRAKE_GIRL_CHORUS, Models.GENERATED);
         itemModelGenerator.register(MonstersGirlsItems.SPAWN_MANDRAKE_GIRL_GLOW_BERRY, Models.GENERATED);

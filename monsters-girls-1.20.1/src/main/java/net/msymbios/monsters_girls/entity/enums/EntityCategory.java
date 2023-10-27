@@ -11,7 +11,8 @@ public enum EntityCategory {
     Mushroom(2, "mushroom"),
     Slime(3, "slime"),
     Spook(4, "spook"),
-    Wisp(5, "wisp");
+    Wisp(5, "wisp"),
+    Gourdragora(6, "gourdragora");
 
     // -- Variables --
     private static final EntityCategory[] CODEC = Arrays.stream(values()).sorted(Comparator.comparingInt(EntityCategory::getId)).toArray(EntityCategory[]::new);

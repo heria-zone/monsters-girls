@@ -110,6 +110,7 @@ public class MonstersGirlsID {
 
     // FOOD
     public static final String SPECTRAL_CAKE = "spectral_cake";
+    public static final String CANDIES = "candies";
 
     // HAT
     public static final String HAT_MUSHROOM_BROWN = "hat_mushroom_brown";
@@ -126,6 +127,12 @@ public class MonstersGirlsID {
     public static final String HAT_MUSHROOM_WARPED_RARE = "hat_mushroom_warped_rare";
 
     // SPAWN EGG
+    public static final String SPAWN_GOURDRAGORA_GIRL_JACK_LANTERN = "spawn_gourdragora_girl_jacko";
+    public static final String SPAWN_GOURDRAGORA_GIRL_JACK_LANTERN_BIG = "spawn_gourdragora_girl_jacko_big";
+    public static final String SPAWN_GOURDRAGORA_GIRL_JACK_LANTERN_MINI = "spawn_gourdragora_girl_jacko_mini";
+    public static final String SPAWN_GOURDRAGORA_GIRL_PUMPKIN = "spawn_gourdragora_girl_pumpkin";
+    public static final String SPAWN_GOURDRAGORA_GIRL_PUMPKIN_BIG = "spawn_gourdragora_girl_pumpkin_big";
+    public static final String SPAWN_GOURDRAGORA_GIRL_PUMPKIN_MINI = "spawn_gourdragora_girl_pumpkin_mini";
     public static final String SPAWN_MANDRAKE_GIRL_BROWN = "spawn_mandrake_girl_brown";
     public static final String SPAWN_MANDRAKE_GIRL_CHORUS = "spawn_mandrake_girl_chorus";
     public static final String SPAWN_MANDRAKE_GIRL_GLOW_BERRY = "spawn_mandrake_girl_glow_berry";

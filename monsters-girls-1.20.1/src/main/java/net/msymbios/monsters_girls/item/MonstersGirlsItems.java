@@ -44,8 +44,15 @@ public class MonstersGirlsItems {
 
     // FOOD
     public static final Item SPECTRAL_CAKE = register(MonstersGirlsID.SPECTRAL_CAKE, new TooltipItem(new ArrayList<>(List.of("tooltip.monsters_girls.spectral_cake")), new FabricItemSettings().food(MonstersGirlsFoodComponent.SPECTRAL_CAKE).fireproof().rarity(Rarity.UNCOMMON)));
+    public static final Item CANDIES = register(MonstersGirlsID.CANDIES, new TooltipItem(new ArrayList<>(List.of("tooltip.monsters_girls.candies")), new FabricItemSettings().food(MonstersGirlsFoodComponent.CANDIES).fireproof().rarity(Rarity.COMMON)));
 
     // SPAWN EGG
+    public static final Item SPAWN_GOURDRAGORA_GIRL_JACK_LANTERN = register(MonstersGirlsID.SPAWN_GOURDRAGORA_GIRL_JACK_LANTERN, new SpawnItem(MonstersGirlsEntities.GOURDRAGORA_GIRL_JACK_LANTERN, new FabricItemSettings()));
+    public static final Item SPAWN_GOURDRAGORA_GIRL_JACK_LANTERN_BIG = register(MonstersGirlsID.SPAWN_GOURDRAGORA_GIRL_JACK_LANTERN_BIG, new SpawnItem(MonstersGirlsEntities.GOURDRAGORA_GIRL_JACK_LANTERN_BIG, new FabricItemSettings()));
+    public static final Item SPAWN_GOURDRAGORA_GIRL_JACK_LANTERN_MINI = register(MonstersGirlsID.SPAWN_GOURDRAGORA_GIRL_JACK_LANTERN_MINI, new SpawnItem(MonstersGirlsEntities.GOURDRAGORA_GIRL_JACK_LANTERN_MINI, new FabricItemSettings()));
+    public static final Item SPAWN_GOURDRAGORA_GIRL_PUMPKIN = register(MonstersGirlsID.SPAWN_GOURDRAGORA_GIRL_PUMPKIN, new SpawnItem(MonstersGirlsEntities.GOURDRAGORA_GIRL_PUMPKIN, new FabricItemSettings()));
+    public static final Item SPAWN_GOURDRAGORA_GIRL_PUMPKIN_BIG = register(MonstersGirlsID.SPAWN_GOURDRAGORA_GIRL_PUMPKIN_BIG, new SpawnItem(MonstersGirlsEntities.GOURDRAGORA_GIRL_PUMPKIN_BIG, new FabricItemSettings()));
+    public static final Item SPAWN_GOURDRAGORA_GIRL_PUMPKIN_MINI = register(MonstersGirlsID.SPAWN_GOURDRAGORA_GIRL_PUMPKIN_MINI, new SpawnItem(MonstersGirlsEntities.GOURDRAGORA_GIRL_PUMPKIN_MINI, new FabricItemSettings()));
     public static final Item SPAWN_MANDRAKE_GIRL_BROWN = register(MonstersGirlsID.SPAWN_MANDRAKE_GIRL_BROWN, new SpawnItem(MonstersGirlsEntities.MANDRAKE_GIRL_BROWN, new FabricItemSettings()));
     public static final Item SPAWN_MANDRAKE_GIRL_CHORUS = register(MonstersGirlsID.SPAWN_MANDRAKE_GIRL_CHORUS, new SpawnItem(MonstersGirlsEntities.MANDRAKE_GIRL_CHORUS, new FabricItemSettings()));
     public static final Item SPAWN_MANDRAKE_GIRL_GLOW_BERRY = register(MonstersGirlsID.SPAWN_MANDRAKE_GIRL_GLOW_BERRY, new SpawnItem(MonstersGirlsEntities.MANDRAKE_GIRL_GLOW_BERRY, new FabricItemSettings()));
