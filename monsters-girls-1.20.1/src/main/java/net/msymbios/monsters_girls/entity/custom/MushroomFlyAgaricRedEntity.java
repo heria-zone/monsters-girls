@@ -1,7 +1,5 @@
 package net.msymbios.monsters_girls.entity.custom;
 
-import net.minecraft.block.Blocks;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
@@ -9,19 +7,15 @@ import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Box;
 import net.minecraft.world.EntityView;
 import net.minecraft.world.World;
-import net.minecraft.world.WorldAccess;
-import net.msymbios.monsters_girls.block.MonstersGirlsBlocks;
 import net.msymbios.monsters_girls.entity.enums.*;
 import net.msymbios.monsters_girls.entity.internal.*;
 import software.bernie.geckolib.animatable.GeoEntity;
 import software.bernie.geckolib.core.animatable.instance.*;
 import software.bernie.geckolib.core.animation.AnimatableManager;
 
-public class MushroomFlyAgaricEntity extends InternalEntity implements GeoEntity  {
+public class MushroomFlyAgaricRedEntity extends InternalEntity implements GeoEntity  {
 
     // -- Variables --
     private final AnimatableInstanceCache  cache = new SingletonAnimatableInstanceCache(this);
@@ -29,20 +23,20 @@ public class MushroomFlyAgaricEntity extends InternalEntity implements GeoEntity
     // -- Properties --
     public static DefaultAttributeContainer.Builder setAttributes() {
         return MobEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_MAX_HEALTH, InternalMetric.getAttribute(EntityVariant.MushroomFlyAgaric, EntityAttribute.MAX_HEALTH))
-                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, InternalMetric.getAttribute(EntityVariant.MushroomFlyAgaric, EntityAttribute.ATTACK_DAMAGE))
-                .add(EntityAttributes.GENERIC_ATTACK_SPEED, InternalMetric.getAttribute(EntityVariant.MushroomFlyAgaric, EntityAttribute.ATTACK_SPEED))
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, InternalMetric.getAttribute(EntityVariant.MushroomFlyAgaric, EntityAttribute.MOVEMENT_SPEED))
-                .add(EntityAttributes.GENERIC_ARMOR, InternalMetric.getAttribute(EntityVariant.MushroomFlyAgaric, EntityAttribute.ARMOR))
-                .add(EntityAttributes.GENERIC_ARMOR_TOUGHNESS, InternalMetric.getAttribute(EntityVariant.MushroomFlyAgaric, EntityAttribute.ARMOR_TOUGHNESS));
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, InternalMetric.getAttribute(EntityVariant.MushroomFlyAgaricRed, EntityAttribute.MAX_HEALTH))
+                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, InternalMetric.getAttribute(EntityVariant.MushroomFlyAgaricRed, EntityAttribute.ATTACK_DAMAGE))
+                .add(EntityAttributes.GENERIC_ATTACK_SPEED, InternalMetric.getAttribute(EntityVariant.MushroomFlyAgaricRed, EntityAttribute.ATTACK_SPEED))
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, InternalMetric.getAttribute(EntityVariant.MushroomFlyAgaricRed, EntityAttribute.MOVEMENT_SPEED))
+                .add(EntityAttributes.GENERIC_ARMOR, InternalMetric.getAttribute(EntityVariant.MushroomFlyAgaricRed, EntityAttribute.ARMOR))
+                .add(EntityAttributes.GENERIC_ARMOR_TOUGHNESS, InternalMetric.getAttribute(EntityVariant.MushroomFlyAgaricRed, EntityAttribute.ARMOR_TOUGHNESS));
     } // setAttributes ()
 
     // -- Constructor --
-    public MushroomFlyAgaricEntity(EntityType<? extends TameableEntity> entityType, World world) {
+    public MushroomFlyAgaricRedEntity(EntityType<? extends TameableEntity> entityType, World world) {
         super(entityType, world);
         this.category = EntityCategory.Mushroom;
-        this.variant = EntityVariant.MushroomFlyAgaric;
-    } // Constructor MushroomFlyAgaricEntity ()
+        this.variant = EntityVariant.MushroomFlyAgaricRed;
+    } // Constructor MushroomFlyAgaricRedEntity ()
 
     // -- Inherited Methods --
     @Override
@@ -60,21 +54,6 @@ public class MushroomFlyAgaricEntity extends InternalEntity implements GeoEntity
     public AnimatableInstanceCache  getAnimatableInstanceCache() {
         return cache;
     } // getFactory ()
-
-    @Override
-    protected void handlePlanting (WorldAccess world, double x, double y, double z, Entity entity) {
-        if (entity == null) return;
-
-        if (entity.isOnGround()) {
-            BlockPos blockPos = new BlockPos((int)x, (int)y, (int)z);
-            if (world.isSpaceEmpty(new Box(blockPos))) {
-                if ((world.getBlockState(new BlockPos((int)x, (int)y - 1, (int)z))).getBlock() == Blocks.GRASS_BLOCK) {
-                    if (Math.random() < 5e-7) world.setBlockState(blockPos, MonstersGirlsBlocks.HUGE_FLY_RED_AGARIC.getDefaultState(), 3);
-                    if (Math.random() < 0.0005) world.setBlockState(blockPos, Blocks.RED_MUSHROOM.getDefaultState(), 3);
-                }
-            }
-        }
-    } // handlePlanting ()
 
     // -- Built-In Methods --
     @Override
@@ -98,9 +77,9 @@ public class MushroomFlyAgaricEntity extends InternalEntity implements GeoEntity
     @Override
     protected void initDataTracker() {
         super.initDataTracker();
-        this.dataTracker.startTracking(VARIANT, EntityVariant.MushroomFlyAgaric.getName());
+        this.dataTracker.startTracking(VARIANT, EntityVariant.MushroomFlyAgaricRed.getName());
         this.dataTracker.startTracking(MODEL_ID, EntityModel.MushroomFat.getId());
         this.dataTracker.startTracking(BELLY, true);
     } // initDataTracker ()
 
-} // Class MushroomFlyAgaricEntity
+} // Class MushroomFlyAgaricRedEntity

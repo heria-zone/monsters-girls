@@ -1,6 +1,5 @@
 package net.msymbios.monsters_girls.entity.custom;
 
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
@@ -11,12 +10,8 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Box;
 import net.minecraft.world.EntityView;
 import net.minecraft.world.World;
-import net.minecraft.world.WorldAccess;
-import net.msymbios.monsters_girls.block.MonstersGirlsBlocks;
 import net.msymbios.monsters_girls.entity.enums.*;
 import net.msymbios.monsters_girls.entity.internal.*;
 import software.bernie.geckolib.animatable.GeoEntity;
@@ -64,20 +59,6 @@ public class MandrakeGlowBerryEntity extends InternalEntity implements GeoEntity
     public AnimatableInstanceCache  getAnimatableInstanceCache() {
         return cache;
     } // getFactory ()
-
-    @Override
-    protected void handlePlanting (WorldAccess world, double x, double y, double z, Entity entity) {
-        if (entity == null) return;
-
-        if (entity.isOnGround()) {
-            BlockPos blockPos = new BlockPos((int)x, (int)y, (int)z);
-            if (world.isSpaceEmpty(new Box(blockPos))) {
-                if (world.getBrightness(new BlockPos((int)x, (int)y, (int)z)) <= 2) {
-                    if (Math.random() < 0.002) world.setBlockState(new BlockPos((int)x, (int)y, (int)z), MonstersGirlsBlocks.GLOW_BERRY_BUSH.getDefaultState(), 3);
-                }
-            }
-        }
-    } // handlePlanting ()
 
     // -- Built-In Methods --
     @Override

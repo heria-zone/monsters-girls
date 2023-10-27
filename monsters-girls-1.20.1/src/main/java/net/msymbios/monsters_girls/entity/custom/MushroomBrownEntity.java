@@ -1,7 +1,5 @@
 package net.msymbios.monsters_girls.entity.custom;
 
-import net.minecraft.block.Blocks;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
@@ -9,12 +7,8 @@ import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Box;
 import net.minecraft.world.EntityView;
 import net.minecraft.world.World;
-import net.minecraft.world.WorldAccess;
-import net.msymbios.monsters_girls.block.MonstersGirlsBlocks;
 import net.msymbios.monsters_girls.entity.enums.*;
 import net.msymbios.monsters_girls.entity.internal.*;
 import software.bernie.geckolib.animatable.GeoEntity;
@@ -60,21 +54,6 @@ public class MushroomBrownEntity extends InternalEntity implements GeoEntity {
     public AnimatableInstanceCache  getAnimatableInstanceCache() {
         return cache;
     } // getFactory ()
-
-    @Override
-    protected void handlePlanting (WorldAccess world, double x, double y, double z, Entity entity) {
-        if (entity == null) return;
-
-        if (entity.isOnGround()) {
-            BlockPos blockPos = new BlockPos((int)x, (int)y, (int)z);
-            if (world.isSpaceEmpty(new Box(blockPos))) {
-                if ((world.getBlockState(new BlockPos((int)x, (int)y - 1, (int)z))).getBlock() == Blocks.GRASS_BLOCK) {
-                    if (Math.random() < 5e-7) world.setBlockState(blockPos, MonstersGirlsBlocks.HUGE_BROWN_MUSHROOM.getDefaultState(), 3);
-                    if (Math.random() < 0.0005) world.setBlockState(blockPos, Blocks.BROWN_MUSHROOM.getDefaultState(), 3);
-                }
-            }
-        }
-    } // handlePlanting ()
 
     // -- Built-In Methods --
     @Override

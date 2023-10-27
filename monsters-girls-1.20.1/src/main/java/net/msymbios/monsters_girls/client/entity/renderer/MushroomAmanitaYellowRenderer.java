@@ -3,10 +3,10 @@ package net.msymbios.monsters_girls.client.entity.renderer;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.util.Identifier;
 import net.msymbios.monsters_girls.client.entity.model.MushroomAmanitaYellowModel;
-import net.msymbios.monsters_girls.entity.custom.MushroomAmanitaYellowEntity;
+import net.msymbios.monsters_girls.entity.custom.MushroomFlyAgaricYellowEntity;
 import software.bernie.geckolib.renderer.GeoEntityRenderer;
 
-public class MushroomAmanitaYellowRenderer extends GeoEntityRenderer<MushroomAmanitaYellowEntity> {
+public class MushroomAmanitaYellowRenderer extends GeoEntityRenderer<MushroomFlyAgaricYellowEntity> {
 
     // -- Constructor --
     public MushroomAmanitaYellowRenderer(EntityRendererFactory.Context renderManager) {
@@ -16,6 +16,6 @@ public class MushroomAmanitaYellowRenderer extends GeoEntityRenderer<MushroomAma
 
     // -- Method --
     @Override
-    public Identifier getTextureLocation(MushroomAmanitaYellowEntity instance) { return instance.getCurrentTexture(); } // getTextureResource ()
+    public Identifier getTextureLocation(MushroomFlyAgaricYellowEntity instance) { return instance.getCurrentTexture(); } // getTextureResource ()
 
 } // Class MushroomAmanitaYellowRenderer

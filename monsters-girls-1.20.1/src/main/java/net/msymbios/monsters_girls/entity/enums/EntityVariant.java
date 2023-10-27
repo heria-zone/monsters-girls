@@ -6,13 +6,13 @@ import java.util.Comparator;
 public enum EntityVariant {
 
     // -- Enum --
-    MushroomAmanitaYellow(0, "mushroom_amanita_yellow"),
+    MushroomFlyAgaricYellow(0, "mushroom_amanita_yellow"),
     MushroomEnderPuffball(1, "mushroom_ender_puffball"),
     EnderCaris(2, "ender_caris"),
     MushroomBrown(3, "mushroom_brown"),
     MushroomCrimson(4, "mushroom_crimson"),
     MushroomCrimsonRare(5, "mushroom_crimson_rare"),
-    MushroomFlyAgaric(6, "mushroom_fly_agaric"),
+    MushroomFlyAgaricRed(6, "mushroom_fly_agaric"),
     MushroomInfernal(7, "mushroom_infernal"),
     FungusInkCap(8, "fungus_ink_cap"),
     MandrakeBrown(9, "mandrake_brown"),

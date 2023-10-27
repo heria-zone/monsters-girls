@@ -1,5 +1,6 @@
 package net.msymbios.monsters_girls.entity.internal;
 
+import net.minecraft.block.Block;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
@@ -24,6 +25,7 @@ public class InternalData {
     private Predicate<LivingEntity> predicateEntityValue;
     private EntityType<?> entityTypeValue;
     private Item itemValue;
+    private Block blockValue;
     private StatusEffect effectValue;
 
     // -- Properties --
@@ -36,6 +38,7 @@ public class InternalData {
             case PredicateLivingEntity -> predicateEntityValue;
             case EntityType -> entityTypeValue;
             case Item -> itemValue;
+            case Block -> blockValue;
             case StatusEffect -> effectValue;
             default -> null;
         };
@@ -75,6 +78,11 @@ public class InternalData {
     public InternalData(Item value) {
         this.dataType = InternalDataType.Item;
         this.itemValue = value;
+    } // Construct InternalData ()
+
+    public InternalData(Block value) {
+        this.dataType = InternalDataType.Block;
+        this.blockValue = value;
     } // Construct InternalData ()
 
     public InternalData(StatusEffect value) {

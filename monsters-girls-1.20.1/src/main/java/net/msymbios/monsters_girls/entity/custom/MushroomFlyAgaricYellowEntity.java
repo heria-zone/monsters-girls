@@ -1,7 +1,5 @@
 package net.msymbios.monsters_girls.entity.custom;
 
-import net.minecraft.block.Blocks;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
@@ -9,19 +7,15 @@ import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Box;
 import net.minecraft.world.EntityView;
 import net.minecraft.world.World;
-import net.minecraft.world.WorldAccess;
-import net.msymbios.monsters_girls.block.MonstersGirlsBlocks;
 import net.msymbios.monsters_girls.entity.enums.*;
 import net.msymbios.monsters_girls.entity.internal.*;
 import software.bernie.geckolib.animatable.GeoEntity;
 import software.bernie.geckolib.core.animatable.instance.*;
 import software.bernie.geckolib.core.animation.AnimatableManager;
 
-public class MushroomAmanitaYellowEntity extends InternalEntity implements GeoEntity  {
+public class MushroomFlyAgaricYellowEntity extends InternalEntity implements GeoEntity  {
 
     // -- Variables --
     private final AnimatableInstanceCache  cache = new SingletonAnimatableInstanceCache(this);
@@ -29,20 +23,20 @@ public class MushroomAmanitaYellowEntity extends InternalEntity implements GeoEn
     // -- Properties --
     public static DefaultAttributeContainer.Builder setAttributes() {
         return MobEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_MAX_HEALTH, InternalMetric.getAttribute(EntityVariant.MushroomAmanitaYellow, EntityAttribute.MAX_HEALTH))
-                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, InternalMetric.getAttribute(EntityVariant.MushroomAmanitaYellow, EntityAttribute.ATTACK_DAMAGE))
-                .add(EntityAttributes.GENERIC_ATTACK_SPEED, InternalMetric.getAttribute(EntityVariant.MushroomAmanitaYellow, EntityAttribute.ATTACK_SPEED))
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, InternalMetric.getAttribute(EntityVariant.MushroomAmanitaYellow, EntityAttribute.MOVEMENT_SPEED))
-                .add(EntityAttributes.GENERIC_ARMOR, InternalMetric.getAttribute(EntityVariant.MushroomAmanitaYellow, EntityAttribute.ARMOR))
-                .add(EntityAttributes.GENERIC_ARMOR_TOUGHNESS, InternalMetric.getAttribute(EntityVariant.MushroomAmanitaYellow, EntityAttribute.ARMOR_TOUGHNESS));
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, InternalMetric.getAttribute(EntityVariant.MushroomFlyAgaricYellow, EntityAttribute.MAX_HEALTH))
+                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, InternalMetric.getAttribute(EntityVariant.MushroomFlyAgaricYellow, EntityAttribute.ATTACK_DAMAGE))
+                .add(EntityAttributes.GENERIC_ATTACK_SPEED, InternalMetric.getAttribute(EntityVariant.MushroomFlyAgaricYellow, EntityAttribute.ATTACK_SPEED))
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, InternalMetric.getAttribute(EntityVariant.MushroomFlyAgaricYellow, EntityAttribute.MOVEMENT_SPEED))
+                .add(EntityAttributes.GENERIC_ARMOR, InternalMetric.getAttribute(EntityVariant.MushroomFlyAgaricYellow, EntityAttribute.ARMOR))
+                .add(EntityAttributes.GENERIC_ARMOR_TOUGHNESS, InternalMetric.getAttribute(EntityVariant.MushroomFlyAgaricYellow, EntityAttribute.ARMOR_TOUGHNESS));
     } // setAttributes ()
 
     // -- Constructor --
-    public MushroomAmanitaYellowEntity(EntityType<? extends TameableEntity> entityType, World world) {
+    public MushroomFlyAgaricYellowEntity(EntityType<? extends TameableEntity> entityType, World world) {
         super(entityType, world);
         this.category = EntityCategory.Mushroom;
-        this.variant = EntityVariant.MushroomAmanitaYellow;
-    } // Constructor MushroomAmanitaYellowEntity ()
+        this.variant = EntityVariant.MushroomFlyAgaricYellow;
+    } // Constructor MushroomFlyAgaricYellowEntity ()
 
     // -- Inherited Methods --
     @Override
@@ -60,22 +54,6 @@ public class MushroomAmanitaYellowEntity extends InternalEntity implements GeoEn
     public AnimatableInstanceCache  getAnimatableInstanceCache() {
         return cache;
     } // getFactory ()
-
-    @Override
-    protected void handlePlanting (WorldAccess world, double x, double y, double z, Entity entity) {
-        if (entity == null) return;
-
-        if (entity.isOnGround()) {
-            BlockPos blockPos = new BlockPos((int)x, (int)y, (int)z);
-            if (world.isSpaceEmpty(new Box(blockPos))) {
-                if ((world.getBlockState(new BlockPos((int)x, (int)y - 1, (int)z))).getBlock() == Blocks.GRASS_BLOCK) {
-                    if (Math.random() < 5e-7) world.setBlockState(blockPos, MonstersGirlsBlocks.HUGE_BROWN_MUSHROOM.getDefaultState(), 3);
-                    if (Math.random() < 0.0005) world.setBlockState(blockPos, Blocks.BROWN_MUSHROOM.getDefaultState(), 3);
-                }
-            }
-        }
-    } // handlePlanting ()
-
 
     // -- Built-In Methods --
     @Override
@@ -99,9 +77,9 @@ public class MushroomAmanitaYellowEntity extends InternalEntity implements GeoEn
     @Override
     protected void initDataTracker() {
         super.initDataTracker();
-        this.dataTracker.startTracking(VARIANT, EntityVariant.MushroomAmanitaYellow.getName());
+        this.dataTracker.startTracking(VARIANT, EntityVariant.MushroomFlyAgaricYellow.getName());
         this.dataTracker.startTracking(MODEL_ID, EntityModel.Mushroom.getId());
         this.dataTracker.startTracking(BELLY, true);
     } // initDataTracker ()
 
-} // Class MushroomAmanitaYellowEntity
+} // Class MushroomFlyAgaricYellowEntity

@@ -26,7 +26,7 @@ public class MonstersGirlsSpawn {
         registerSpawnBiomes(EntityVariant.MandrakeGlowBerry, MonstersGirlsEntities.MANDRAKE_GIRL_GLOW_BERRY);
         registerSpawnBiomes(EntityVariant.MandrakeChorus, MonstersGirlsEntities.MANDRAKE_GIRL_CHORUS);
 
-        registerSpawnBiomes(EntityVariant.MushroomAmanitaYellow, MonstersGirlsEntities.MUSHROOM_GIRL_AMANITA_YELLOW);
+        registerSpawnBiomes(EntityVariant.MushroomFlyAgaricYellow, MonstersGirlsEntities.MUSHROOM_GIRL_AMANITA_YELLOW);
         registerSpawnBiomes(EntityVariant.MushroomBrown, MonstersGirlsEntities.MUSHROOM_GIRL_BROWN);
         registerSpawnBiomes(EntityVariant.MushroomCrimson, MonstersGirlsEntities.MUSHROOM_GIRL_CRIMSON);
         registerSpawnBiomes(EntityVariant.MushroomCrimsonRare, MonstersGirlsEntities.MUSHROOM_GIRL_CRIMSON_RARE);
@@ -34,7 +34,7 @@ public class MonstersGirlsSpawn {
         registerSpawnBiomes(EntityVariant.MushroomInfernal, MonstersGirlsEntities.MUSHROOM_GIRL_INFERNAL);
         registerSpawnBiomes(EntityVariant.FungusInkCap, MonstersGirlsEntities.MUSHROOM_GIRL_INK_CAP);
         registerSpawnBiomes(EntityVariant.MushroomMolten, MonstersGirlsEntities.MUSHROOM_GIRL_MOLTEN);
-        registerSpawnBiomes(EntityVariant.MushroomFlyAgaric, MonstersGirlsEntities.MUSHROOM_GIRL_FLY_AGARIC);
+        registerSpawnBiomes(EntityVariant.MushroomFlyAgaricRed, MonstersGirlsEntities.MUSHROOM_GIRL_FLY_AGARIC);
         registerSpawnBiomes(EntityVariant.MushroomSoulWanderer, MonstersGirlsEntities.MUSHROOM_GIRL_SOUL_WANDERER);
         registerSpawnBiomes(EntityVariant.MushroomWarped, MonstersGirlsEntities.MUSHROOM_GIRL_WARPED);
         registerSpawnBiomes(EntityVariant.MushroomWarpedRare, MonstersGirlsEntities.MUSHROOM_GIRL_WARPED_RARE);
@@ -55,7 +55,7 @@ public class MonstersGirlsSpawn {
         SpawnRestriction.register(MonstersGirlsEntities.MANDRAKE_GIRL_GLOW_BERRY, SpawnRestriction.Location.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, MandrakeGlowBerryEntity::isValidNaturalSpawn);
         SpawnRestriction.register(MonstersGirlsEntities.MANDRAKE_GIRL_CHORUS, SpawnRestriction.Location.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, MandrakeChorusEntity::isValidNaturalSpawn);
 
-        SpawnRestriction.register(MonstersGirlsEntities.MUSHROOM_GIRL_AMANITA_YELLOW, SpawnRestriction.Location.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, MushroomAmanitaYellowEntity::isValidNaturalSpawn);
+        SpawnRestriction.register(MonstersGirlsEntities.MUSHROOM_GIRL_AMANITA_YELLOW, SpawnRestriction.Location.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, MushroomFlyAgaricYellowEntity::isValidNaturalSpawn);
         SpawnRestriction.register(MonstersGirlsEntities.MUSHROOM_GIRL_BROWN, SpawnRestriction.Location.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, MushroomBrownEntity::isValidNaturalSpawn);
         SpawnRestriction.register(MonstersGirlsEntities.MUSHROOM_GIRL_CRIMSON, SpawnRestriction.Location.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, MushroomCrimsonEntity::isValidNaturalSpawn);
         SpawnRestriction.register(MonstersGirlsEntities.MUSHROOM_GIRL_CRIMSON_RARE, SpawnRestriction.Location.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, MushroomCrimsonRareEntity::isValidNaturalSpawn);
@@ -63,7 +63,7 @@ public class MonstersGirlsSpawn {
         SpawnRestriction.register(MonstersGirlsEntities.MUSHROOM_GIRL_INFERNAL, SpawnRestriction.Location.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, MushroomInfernalEntity::isValidNaturalSpawn);
         SpawnRestriction.register(MonstersGirlsEntities.MUSHROOM_GIRL_INK_CAP, SpawnRestriction.Location.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, MushroomInkCapEntity::isValidNaturalSpawn);
         SpawnRestriction.register(MonstersGirlsEntities.MUSHROOM_GIRL_MOLTEN, SpawnRestriction.Location.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, MushroomMoltenEntity::isValidNaturalSpawn);
-        SpawnRestriction.register(MonstersGirlsEntities.MUSHROOM_GIRL_FLY_AGARIC, SpawnRestriction.Location.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, MushroomFlyAgaricEntity::isValidNaturalSpawn);
+        SpawnRestriction.register(MonstersGirlsEntities.MUSHROOM_GIRL_FLY_AGARIC, SpawnRestriction.Location.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, MushroomFlyAgaricRedEntity::isValidNaturalSpawn);
         SpawnRestriction.register(MonstersGirlsEntities.MUSHROOM_GIRL_SOUL_WANDERER, SpawnRestriction.Location.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, MushroomSoulWandererEntity::isValidNaturalSpawn);
         SpawnRestriction.register(MonstersGirlsEntities.MUSHROOM_GIRL_WARPED, SpawnRestriction.Location.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, MushroomWarpedEntity::isValidNaturalSpawn);
         SpawnRestriction.register(MonstersGirlsEntities.MUSHROOM_GIRL_WARPED_RARE, SpawnRestriction.Location.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, MushroomWarpedRareEntity::isValidNaturalSpawn);

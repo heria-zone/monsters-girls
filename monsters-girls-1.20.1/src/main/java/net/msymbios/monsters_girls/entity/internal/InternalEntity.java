@@ -1,5 +1,6 @@
 package net.msymbios.monsters_girls.entity.internal;
 
+import net.minecraft.block.Blocks;
 import net.minecraft.entity.*;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.data.DataTracker;
@@ -21,10 +22,13 @@ import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Box;
 import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
+import net.msymbios.monsters_girls.block.MonstersGirlsBlocks;
 import net.msymbios.monsters_girls.entity.enums.*;
 import org.jetbrains.annotations.Nullable;
 
@@ -340,7 +344,34 @@ public abstract class InternalEntity extends TameableEntity {
         return true;
     } // canInteract ()
 
-    protected void handlePlanting (WorldAccess world, double x, double y, double z, Entity entity) {} // handlePlanting ()
+    protected void handlePlanting (WorldAccess world, double x, double y, double z, Entity entity) {
+        if (entity == null) return;
+
+        if (entity.isOnGround()) {
+            BlockPos blockPos = new BlockPos((int)x, (int)y, (int)z);
+            if (world.isSpaceEmpty(new Box(blockPos))) {
+                var standingBlock = (world.getBlockState(new BlockPos((int)x, (int)y - 1, (int)z))).getBlock();
+                var blockToPlant = InternalMetric.PLANTING.get(variant);
+                var canPlantBlock = false;
+
+                if(!blockToPlant.canPlantOn.isEmpty()) {
+                    for (var item : blockToPlant.canPlantOn) {
+                        if (standingBlock == item) {
+                            canPlantBlock = true;
+                            break;
+                        }
+                    }
+                } else canPlantBlock = true;
+
+                if (canPlantBlock) {
+                    for (var item : blockToPlant.toBePlant) {
+                        if (Math.random() < item.condition)
+                            world.setBlockState(blockPos, item.block.getDefaultState(), 3);
+                    }
+                }
+            }
+        }
+    } // handlePlanting ()
 
     protected void handleNegativeEffect(Entity entity, Entity sourceentity) {
         if (entity == null || sourceentity == null) return;

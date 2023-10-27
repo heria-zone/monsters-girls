@@ -43,11 +43,11 @@ public class MonstersGirlsEntities {
     public static final EntityType<MushroomWarpedRareEntity> MUSHROOM_GIRL_WARPED_RARE = Registry.register(Registries.ENTITY_TYPE, new Identifier(MonstersGirls.MODID, "mushroom_girl_warped_rare"),
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, MushroomWarpedRareEntity::new).dimensions(EntityDimensions.fixed(0.4F, 1F)).build());
 
-    public static final EntityType<MushroomFlyAgaricEntity> MUSHROOM_GIRL_FLY_AGARIC = Registry.register(Registries.ENTITY_TYPE, new Identifier(MonstersGirls.MODID, "mushroom_girl_red"),
-            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, MushroomFlyAgaricEntity::new).dimensions(EntityDimensions.fixed(0.4F, 1F)).build());
+    public static final EntityType<MushroomFlyAgaricRedEntity> MUSHROOM_GIRL_FLY_AGARIC = Registry.register(Registries.ENTITY_TYPE, new Identifier(MonstersGirls.MODID, "mushroom_girl_red"),
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, MushroomFlyAgaricRedEntity::new).dimensions(EntityDimensions.fixed(0.4F, 1F)).build());
 
-    public static final EntityType<MushroomAmanitaYellowEntity> MUSHROOM_GIRL_AMANITA_YELLOW = Registry.register(Registries.ENTITY_TYPE, new Identifier(MonstersGirls.MODID, "mushroom_girl_yellow"),
-            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, MushroomAmanitaYellowEntity::new).dimensions(EntityDimensions.fixed(0.4F, 1F)).build());
+    public static final EntityType<MushroomFlyAgaricYellowEntity> MUSHROOM_GIRL_AMANITA_YELLOW = Registry.register(Registries.ENTITY_TYPE, new Identifier(MonstersGirls.MODID, "mushroom_girl_yellow"),
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, MushroomFlyAgaricYellowEntity::new).dimensions(EntityDimensions.fixed(0.4F, 1F)).build());
 
     public static final EntityType<MushroomBrownEntity> MUSHROOM_GIRL_BROWN = Registry.register(Registries.ENTITY_TYPE, new Identifier(MonstersGirls.MODID, "mushroom_girl_brown"),
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, MushroomBrownEntity::new).dimensions(EntityDimensions.fixed(0.4F, 1F)).build());
@@ -92,12 +92,12 @@ public class MonstersGirlsEntities {
         FabricDefaultAttributeRegistry.register(MANDRAKE_GIRL_GLOW_BERRY, MandrakeBrownEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(MANDRAKE_GIRL_GREEN, MandrakeGreenEntity.setAttributes());
 
-        FabricDefaultAttributeRegistry.register(MUSHROOM_GIRL_AMANITA_YELLOW, MushroomAmanitaYellowEntity.setAttributes());
+        FabricDefaultAttributeRegistry.register(MUSHROOM_GIRL_AMANITA_YELLOW, MushroomFlyAgaricYellowEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(MUSHROOM_GIRL_BROWN, MushroomBrownEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(MUSHROOM_GIRL_CRIMSON, MushroomCrimsonEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(MUSHROOM_GIRL_CRIMSON_RARE, MushroomCrimsonRareEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(MUSHROOM_GIRL_ENDER_PUFFBALL, MushroomEnderPuffballEntity.setAttributes());
-        FabricDefaultAttributeRegistry.register(MUSHROOM_GIRL_FLY_AGARIC, MushroomFlyAgaricEntity.setAttributes());
+        FabricDefaultAttributeRegistry.register(MUSHROOM_GIRL_FLY_AGARIC, MushroomFlyAgaricRedEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(MUSHROOM_GIRL_INFERNAL, MushroomInfernalEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(MUSHROOM_GIRL_INK_CAP, MushroomInkCapEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(MUSHROOM_GIRL_MOLTEN, MushroomMoltenEntity.setAttributes());

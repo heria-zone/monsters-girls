@@ -1,5 +1,6 @@
 package net.msymbios.monsters_girls.entity.internal;
 
+import net.minecraft.block.Blocks;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.CreeperEntity;
@@ -12,6 +13,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeKeys;
 import net.msymbios.monsters_girls.MonstersGirls;
+import net.msymbios.monsters_girls.block.MonstersGirlsBlocks;
 import net.msymbios.monsters_girls.entity.enums.*;
 import net.msymbios.monsters_girls.item.MonstersGirlsItems;
 import net.msymbios.monsters_girls.sounds.MonstersGirlsSounds;
@@ -57,8 +59,8 @@ public class InternalMetric {
         put(EntityVariant.MushroomEnderPuffball, mushroomTamable);
         put(EntityVariant.MushroomCrimson, mushroomTamable);
         put(EntityVariant.MushroomCrimsonRare, mushroomTamable);
-        put(EntityVariant.MushroomAmanitaYellow, mushroomTamable);
-        put(EntityVariant.MushroomFlyAgaric, mushroomTamable);
+        put(EntityVariant.MushroomFlyAgaricYellow, mushroomTamable);
+        put(EntityVariant.MushroomFlyAgaricRed, mushroomTamable);
         put(EntityVariant.MushroomInfernal, mushroomTamable);
         put(EntityVariant.FungusInkCap, mushroomTamable);
         put(EntityVariant.MushroomMolten, mushroomTamable);
@@ -85,7 +87,7 @@ public class InternalMetric {
                 EntityVariant.MandrakeGreen,
                 EntityVariant.MandrakeGlowBerry,
 
-                EntityVariant.MushroomAmanitaYellow,
+                EntityVariant.MushroomFlyAgaricYellow,
                 EntityVariant.MushroomBrown,
                 EntityVariant.MushroomCrimson,
                 EntityVariant.MushroomCrimsonRare,
@@ -93,7 +95,7 @@ public class InternalMetric {
                 EntityVariant.MushroomInfernal,
                 EntityVariant.FungusInkCap,
                 EntityVariant.MushroomMolten,
-                EntityVariant.MushroomFlyAgaric,
+                EntityVariant.MushroomFlyAgaricRed,
                 EntityVariant.MushroomSoulWanderer,
                 EntityVariant.MushroomWarped,
                 EntityVariant.MushroomWarpedRare,
@@ -147,7 +149,7 @@ public class InternalMetric {
         }});
 
         put(EntityCategory.Mushroom, new HashMap<>() {{
-            put(EntityVariant.MushroomAmanitaYellow,        EntityAnimator.Mushroom);
+            put(EntityVariant.MushroomFlyAgaricYellow,        EntityAnimator.Mushroom);
             put(EntityVariant.MushroomBrown,                EntityAnimator.MushroomFat);
             put(EntityVariant.MushroomCrimson,              EntityAnimator.Mushroom);
             put(EntityVariant.MushroomCrimsonRare,          EntityAnimator.Mushroom);
@@ -155,7 +157,7 @@ public class InternalMetric {
             put(EntityVariant.MushroomInfernal,             EntityAnimator.MushroomFat);
             put(EntityVariant.FungusInkCap,                 EntityAnimator.MushroomInkCap);
             put(EntityVariant.MushroomMolten,               EntityAnimator.MushroomFat);
-            put(EntityVariant.MushroomFlyAgaric,            EntityAnimator.Mushroom);
+            put(EntityVariant.MushroomFlyAgaricRed,            EntityAnimator.Mushroom);
             put(EntityVariant.MushroomSoulWanderer,         EntityAnimator.Mushroom);
             put(EntityVariant.MushroomWarped,               EntityAnimator.Mushroom);
             put(EntityVariant.MushroomWarpedRare,           EntityAnimator.Mushroom);
@@ -187,7 +189,7 @@ public class InternalMetric {
         }});
 
         put(EntityCategory.Mushroom, new HashMap<>() {{
-            put(EntityVariant.MushroomAmanitaYellow,    EntityModel.Mushroom);
+            put(EntityVariant.MushroomFlyAgaricYellow,    EntityModel.Mushroom);
             put(EntityVariant.MushroomBrown,            EntityModel.MushroomFat);
             put(EntityVariant.MushroomCrimson,          EntityModel.Mushroom);
             put(EntityVariant.MushroomCrimsonRare,      EntityModel.Mushroom);
@@ -195,7 +197,7 @@ public class InternalMetric {
             put(EntityVariant.MushroomInfernal,         EntityModel.MushroomFat);
             put(EntityVariant.FungusInkCap,             EntityModel.MushroomFungus);
             put(EntityVariant.MushroomMolten,           EntityModel.MushroomFat);
-            put(EntityVariant.MushroomFlyAgaric,        EntityModel.Mushroom);
+            put(EntityVariant.MushroomFlyAgaricRed,        EntityModel.Mushroom);
             put(EntityVariant.MushroomSoulWanderer,     EntityModel.Mushroom);
             put(EntityVariant.MushroomWarped,           EntityModel.Mushroom);
             put(EntityVariant.MushroomWarpedRare,       EntityModel.Mushroom);
@@ -220,7 +222,7 @@ public class InternalMetric {
 
     public static HashMap<EntityTexture, List<EntityVariant>> ENTITY_TEXTURE = new HashMap<>(){{
         put(EntityTexture.SLIM, new ArrayList<>(List.of(
-                EntityVariant.MushroomAmanitaYellow,
+                EntityVariant.MushroomFlyAgaricYellow,
                 EntityVariant.MushroomBrown,
                 EntityVariant.MushroomCrimson,
                 EntityVariant.MushroomCrimsonRare,
@@ -228,7 +230,7 @@ public class InternalMetric {
                 EntityVariant.MushroomInfernal,
                 EntityVariant.FungusInkCap,
                 EntityVariant.MushroomMolten,
-                EntityVariant.MushroomFlyAgaric,
+                EntityVariant.MushroomFlyAgaricRed,
                 EntityVariant.MushroomSoulWanderer,
                 EntityVariant.MushroomWarped,
                 EntityVariant.MushroomWarpedRare,
@@ -241,7 +243,7 @@ public class InternalMetric {
                 EntityVariant.MandrakeGreen,
                 EntityVariant.MandrakeGlowBerry,
 
-                EntityVariant.MushroomAmanitaYellow,
+                EntityVariant.MushroomFlyAgaricYellow,
                 EntityVariant.MushroomBrown,
                 EntityVariant.MushroomCrimson,
                 EntityVariant.MushroomCrimsonRare,
@@ -249,7 +251,7 @@ public class InternalMetric {
                 EntityVariant.MushroomInfernal,
                 EntityVariant.FungusInkCap,
                 EntityVariant.MushroomMolten,
-                EntityVariant.MushroomFlyAgaric,
+                EntityVariant.MushroomFlyAgaricRed,
                 EntityVariant.MushroomSoulWanderer,
                 EntityVariant.MushroomWarped,
                 EntityVariant.MushroomWarpedRare,
@@ -266,7 +268,7 @@ public class InternalMetric {
         )));
 
         put(EntityTexture.TUMMY, new ArrayList<>(List.of(
-                EntityVariant.MushroomAmanitaYellow,
+                EntityVariant.MushroomFlyAgaricYellow,
                 EntityVariant.MushroomBrown,
                 EntityVariant.MushroomCrimson,
                 EntityVariant.MushroomCrimsonRare,
@@ -274,7 +276,7 @@ public class InternalMetric {
                 EntityVariant.MushroomInfernal,
                 EntityVariant.FungusInkCap,
                 EntityVariant.MushroomMolten,
-                EntityVariant.MushroomFlyAgaric,
+                EntityVariant.MushroomFlyAgaricRed,
                 EntityVariant.MushroomSoulWanderer,
                 EntityVariant.MushroomWarped,
                 EntityVariant.MushroomWarpedRare,
@@ -318,7 +320,7 @@ public class InternalMetric {
         put(EntityVariant.MandrakeGlowBerry,        mandrakeMap);
         put(EntityVariant.MandrakeGreen,            mandrakeMap);
 
-        put(EntityVariant.MushroomAmanitaYellow,    mushroomMap);
+        put(EntityVariant.MushroomFlyAgaricYellow,    mushroomMap);
         put(EntityVariant.MushroomBrown,            mushroomMap);
         put(EntityVariant.MushroomCrimson,          mushroomMap);
         put(EntityVariant.MushroomCrimsonRare,      mushroomMap);
@@ -326,7 +328,7 @@ public class InternalMetric {
         put(EntityVariant.MushroomInfernal,         mushroomMap);
         put(EntityVariant.FungusInkCap,             mushroomMap);
         put(EntityVariant.MushroomMolten,           mushroomMap);
-        put(EntityVariant.MushroomFlyAgaric,        mushroomMap);
+        put(EntityVariant.MushroomFlyAgaricRed,        mushroomMap);
         put(EntityVariant.MushroomSoulWanderer,     mushroomMap);
         put(EntityVariant.MushroomWarped,           mushroomMap);
         put(EntityVariant.MushroomWarpedRare,       mushroomMap);
@@ -372,7 +374,7 @@ public class InternalMetric {
         put(EntityVariant.MandrakeGlowBerry,    setTexture("mandrake/mandrake_girl_glow_berry", false,false,false,false));
         put(EntityVariant.MandrakeGreen,        setTexture("mandrake/mandrake_girl_green", false,false,false,false));
 
-        put(EntityVariant.MushroomAmanitaYellow,    setTexture("mushroom/mushroom_girl_yellow", true,true,true,false));
+        put(EntityVariant.MushroomFlyAgaricYellow,    setTexture("mushroom/mushroom_girl_yellow", true,true,true,false));
         put(EntityVariant.MushroomBrown,            setTexture("mushroom/mushroom_girl_brown", true,true,true,false));
         put(EntityVariant.MushroomCrimson,          setTexture("mushroom/mushroom_girl_crimson", true,true,true,false));
         put(EntityVariant.MushroomCrimsonRare,      setTexture("mushroom/mushroom_girl_crimson_rare", true,true,true,false));
@@ -380,7 +382,7 @@ public class InternalMetric {
         put(EntityVariant.MushroomInfernal,         setTexture("mushroom/mushroom_girl_infernal", true,true,true,false));
         put(EntityVariant.FungusInkCap,             setTexture("mushroom/mushroom_girl_ink_cap", true,true,true,false));
         put(EntityVariant.MushroomMolten,           setTexture("mushroom/mushroom_girl_molten", true,true,true,false));
-        put(EntityVariant.MushroomFlyAgaric,        setTexture("mushroom/mushroom_girl_red", true,true,true,false));
+        put(EntityVariant.MushroomFlyAgaricRed,        setTexture("mushroom/mushroom_girl_red", true,true,true,false));
         put(EntityVariant.MushroomSoulWanderer,     setTexture("mushroom/mushroom_girl_soul_wanderer", true,true,true,false));
         put(EntityVariant.MushroomWarped,           setTexture("mushroom/mushroom_girl_warped", true,true,true,false));
         put(EntityVariant.MushroomWarpedRare,       setTexture("mushroom/mushroom_girl_warped_rare", true,true,true,false));
@@ -448,7 +450,7 @@ public class InternalMetric {
         put(EntityVariant.MandrakeChorus, mandrakeFruityAttribute);
         put(EntityVariant.MandrakeGlowBerry, mandrakeFruityAttribute);
 
-        put(EntityVariant.MushroomAmanitaYellow, mushroomAttribute);
+        put(EntityVariant.MushroomFlyAgaricYellow, mushroomAttribute);
         put(EntityVariant.MushroomBrown, mushroomAttribute);
         put(EntityVariant.MushroomCrimson, mushroomAttribute);
         put(EntityVariant.MushroomCrimsonRare, mushroomAttribute);
@@ -456,7 +458,7 @@ public class InternalMetric {
         put(EntityVariant.MushroomInfernal, mushroomAttribute);
         put(EntityVariant.FungusInkCap, mushroomAttribute);
         put(EntityVariant.MushroomMolten, mushroomAttribute);
-        put(EntityVariant.MushroomFlyAgaric, mushroomAttribute);
+        put(EntityVariant.MushroomFlyAgaricRed, mushroomAttribute);
         put(EntityVariant.MushroomSoulWanderer, mushroomAttribute);
         put(EntityVariant.MushroomWarped, mushroomAttribute);
         put(EntityVariant.MushroomWarpedRare, mushroomAttribute);
@@ -489,7 +491,7 @@ public class InternalMetric {
         put(EntityVariant.MandrakeChorus,       setSetting(20, 1, 2, List.of(BiomeKeys.SMALL_END_ISLANDS, BiomeKeys.END_MIDLANDS, BiomeKeys.END_HIGHLANDS), generalAvoidEntities));
         put(EntityVariant.MandrakeGlowBerry,    setSetting(20, 1, 2, List.of(BiomeKeys.LUSH_CAVES), generalAvoidEntities));
 
-        put(EntityVariant.MushroomAmanitaYellow,    setSetting(20, 1, 2, List.of(BiomeKeys.TAIGA, BiomeKeys.OLD_GROWTH_PINE_TAIGA, BiomeKeys.OLD_GROWTH_SPRUCE_TAIGA), generalAvoidEntities));
+        put(EntityVariant.MushroomFlyAgaricYellow,    setSetting(20, 1, 2, List.of(BiomeKeys.TAIGA, BiomeKeys.OLD_GROWTH_PINE_TAIGA, BiomeKeys.OLD_GROWTH_SPRUCE_TAIGA), generalAvoidEntities));
         put(EntityVariant.MushroomBrown,            setSetting(20, 1, 2, List.of(BiomeKeys.FOREST, BiomeKeys.MEADOW, BiomeKeys.BIRCH_FOREST, BiomeKeys.FLOWER_FOREST, BiomeKeys.TAIGA), generalAvoidEntities));
         put(EntityVariant.MushroomCrimson,          setSetting(20, 1, 2, List.of(BiomeKeys.CRIMSON_FOREST), generalAvoidEntities));
         put(EntityVariant.MushroomCrimsonRare,      setSetting(20, 1, 2, List.of(BiomeKeys.CRIMSON_FOREST), generalAvoidEntities));
@@ -497,7 +499,7 @@ public class InternalMetric {
         put(EntityVariant.MushroomInfernal,         setSetting(20, 1, 2, List.of(BiomeKeys.NETHER_WASTES), generalAvoidEntities));
         put(EntityVariant.FungusInkCap,             setSetting(20, 1, 2, List.of(BiomeKeys.FOREST, BiomeKeys.PLAINS, BiomeKeys.BIRCH_FOREST), generalAvoidEntities));
         put(EntityVariant.MushroomMolten,           setSetting(40, 1, 2, List.of(BiomeKeys.BASALT_DELTAS), generalAvoidEntities));
-        put(EntityVariant.MushroomFlyAgaric,        setSetting(20, 1, 2, List.of(BiomeKeys.FOREST, BiomeKeys.DARK_FOREST, BiomeKeys.MUSHROOM_FIELDS, BiomeKeys.TAIGA), generalAvoidEntities));
+        put(EntityVariant.MushroomFlyAgaricRed,        setSetting(20, 1, 2, List.of(BiomeKeys.FOREST, BiomeKeys.DARK_FOREST, BiomeKeys.MUSHROOM_FIELDS, BiomeKeys.TAIGA), generalAvoidEntities));
         put(EntityVariant.MushroomSoulWanderer,     setSetting(20, 1, 2, List.of(BiomeKeys.SOUL_SAND_VALLEY), generalAvoidEntities));
         put(EntityVariant.MushroomWarped,           setSetting(20, 1, 2, List.of(BiomeKeys.WARPED_FOREST), generalAvoidEntities));
         put(EntityVariant.MushroomWarpedRare,       setSetting(20, 1, 2, List.of(BiomeKeys.WARPED_FOREST), generalAvoidEntities));
@@ -539,6 +541,56 @@ public class InternalMetric {
         put(EntityVariant.MandrakeGreen, new ArrayList<>(List.of(poison, weakness, unlucky, nausea, hunger, slowness)));
         put(EntityVariant.MandrakeBrown, new ArrayList<>(List.of(poison, weakness, unlucky, nausea, hunger, slowness)));
         put(EntityVariant.MandrakeGlowBerry, new ArrayList<>(List.of(blindness, weakness, unlucky, mining, hunger, slowness)));
+    }};
+
+    public static HashMap<EntityVariant, InternalPlanting> PLANTING = new HashMap<>() {{
+        put(EntityVariant.MandrakeBrown, new InternalPlanting(List.of(Blocks.GRASS_BLOCK),
+                List.of(new BlockPlanting(0.0005F, MonstersGirlsBlocks.MANDRAKE_FLOWER))));
+
+        put(EntityVariant.MandrakeChorus, new InternalPlanting(List.of(Blocks.END_STONE, MonstersGirlsBlocks.ENDER_MOSS),
+                List.of(new BlockPlanting(0.0005F, Blocks.CHORUS_PLANT))));
+
+        put(EntityVariant.MandrakeGlowBerry, new InternalPlanting(List.of(),
+                List.of(new BlockPlanting(0.0005F, MonstersGirlsBlocks.GLOW_BERRY_BUSH))));
+
+        put(EntityVariant.MandrakeGreen, new InternalPlanting(List.of(Blocks.GRASS_BLOCK),
+                List.of(new BlockPlanting(0.0005F, MonstersGirlsBlocks.MANDRAKE_FLOWER))));
+
+        put(EntityVariant.MushroomBrown, new InternalPlanting(List.of(Blocks.GRASS_BLOCK),
+                List.of(new BlockPlanting(5e-7F, MonstersGirlsBlocks.HUGE_BROWN_MUSHROOM), new BlockPlanting(0.0005F, Blocks.BROWN_MUSHROOM))));
+
+        put(EntityVariant.MushroomFlyAgaricYellow, new InternalPlanting(List.of(Blocks.GRASS_BLOCK),
+                List.of(new BlockPlanting(5e-7F, MonstersGirlsBlocks.HUGE_BROWN_MUSHROOM), new BlockPlanting(0.0005F, Blocks.BROWN_MUSHROOM))));
+
+        put(EntityVariant.MushroomCrimson, new InternalPlanting(List.of(Blocks.CRIMSON_NYLIUM),
+                List.of(new BlockPlanting(5e-7F, MonstersGirlsBlocks.HUGE_CRIMSON_FUNGUS), new BlockPlanting(0.0005F, Blocks.CRIMSON_FUNGUS))));
+
+        put(EntityVariant.MushroomCrimsonRare, new InternalPlanting(List.of(Blocks.CRIMSON_NYLIUM),
+                List.of(new BlockPlanting(5e-7F, MonstersGirlsBlocks.HUGE_CRIMSON_FUNGUS), new BlockPlanting(0.0005F, Blocks.CRIMSON_FUNGUS))));
+
+        put(EntityVariant.MushroomEnderPuffball, new InternalPlanting(List.of(Blocks.END_STONE, MonstersGirlsBlocks.ENDER_MOSS),
+                List.of(new BlockPlanting(5e-7F, MonstersGirlsBlocks.HUGE_ENDER_PUFFBALL), new BlockPlanting(0.0005F, MonstersGirlsBlocks.ENDER_PUFFBALL_MUSHROOM))));
+
+        put(EntityVariant.MushroomFlyAgaricRed, new InternalPlanting(List.of(Blocks.GRASS_BLOCK),
+                List.of(new BlockPlanting(5e-7F, MonstersGirlsBlocks.HUGE_FLY_RED_AGARIC), new BlockPlanting(0.0005F, Blocks.RED_MUSHROOM))));
+
+        put(EntityVariant.MushroomInfernal, new InternalPlanting(List.of(Blocks.GRASS_BLOCK),
+                List.of(new BlockPlanting(5e-7F, MonstersGirlsBlocks.HUGE_INFERNAL_MUSHROOM), new BlockPlanting(0.0005F, Blocks.RED_MUSHROOM), new BlockPlanting(0.0005F, Blocks.BROWN_MUSHROOM))));
+
+        put(EntityVariant.FungusInkCap, new InternalPlanting(List.of(Blocks.GRASS_BLOCK),
+                List.of(new BlockPlanting(5e-7F, MonstersGirlsBlocks.HUGE_INK_CAP_MUSHROOM), new BlockPlanting(0.0005F, MonstersGirlsBlocks.INK_CAP_MUSHROOM))));
+
+        put(EntityVariant.MushroomMolten, new InternalPlanting(List.of(Blocks.BASALT, Blocks.BLACKSTONE, Blocks.MAGMA_BLOCK),
+                List.of(new BlockPlanting(5e-7F, MonstersGirlsBlocks.HUGE_MOLTEN_FUNGUS), new BlockPlanting(0.0005F, MonstersGirlsBlocks.MOLTEN_FUNGUS))));
+
+        put(EntityVariant.MushroomSoulWanderer, new InternalPlanting(List.of(Blocks.SOUL_SAND, Blocks.SOUL_SOIL),
+                List.of(new BlockPlanting(5e-7F, MonstersGirlsBlocks.HUGE_SOUL_WANDERER), new BlockPlanting(0.0005F, MonstersGirlsBlocks.SOUL_WANDERER_FUNGUS))));
+
+        put(EntityVariant.MushroomWarped, new InternalPlanting(List.of(Blocks.WARPED_NYLIUM),
+                List.of(new BlockPlanting(5e-7F, MonstersGirlsBlocks.HUGE_WARPED_FUNGUS), new BlockPlanting(0.0005F, Blocks.WARPED_FUNGUS))));
+
+        put(EntityVariant.MushroomWarpedRare, new InternalPlanting(List.of(Blocks.WARPED_NYLIUM),
+                List.of(new BlockPlanting(5e-7F, MonstersGirlsBlocks.HUGE_WARPED_FUNGUS), new BlockPlanting(0.0005F, Blocks.WARPED_FUNGUS))));
     }};
 
     // -- Methods --

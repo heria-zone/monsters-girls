@@ -3,10 +3,10 @@ package net.msymbios.monsters_girls.client.entity.renderer;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.util.Identifier;
 import net.msymbios.monsters_girls.client.entity.model.MushroomFlyAgaricModel;
-import net.msymbios.monsters_girls.entity.custom.MushroomFlyAgaricEntity;
+import net.msymbios.monsters_girls.entity.custom.MushroomFlyAgaricRedEntity;
 import software.bernie.geckolib.renderer.GeoEntityRenderer;
 
-public class MushroomFlyAgaricRenderer extends GeoEntityRenderer<MushroomFlyAgaricEntity> {
+public class MushroomFlyAgaricRenderer extends GeoEntityRenderer<MushroomFlyAgaricRedEntity> {
 
     // -- Constructor --
     public MushroomFlyAgaricRenderer(EntityRendererFactory.Context renderManager) {
@@ -16,6 +16,6 @@ public class MushroomFlyAgaricRenderer extends GeoEntityRenderer<MushroomFlyAgar
 
     // -- Method --
     @Override
-    public Identifier getTextureLocation(MushroomFlyAgaricEntity instance) { return instance.getCurrentTexture(); } // getTextureResource ()
+    public Identifier getTextureLocation(MushroomFlyAgaricRedEntity instance) { return instance.getCurrentTexture(); } // getTextureResource ()
 
 } // Class MushroomFlyAgaricRenderer
