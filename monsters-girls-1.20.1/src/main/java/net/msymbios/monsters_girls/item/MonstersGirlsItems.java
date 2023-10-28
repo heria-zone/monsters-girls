@@ -47,6 +47,7 @@ public class MonstersGirlsItems {
     public static final Item CANDIES = register(MonstersGirlsID.CANDIES, new TooltipItem(new ArrayList<>(List.of("tooltip.monsters_girls.candies")), new FabricItemSettings().food(MonstersGirlsFoodComponent.CANDIES).fireproof().rarity(Rarity.COMMON)));
 
     // SPAWN EGG
+    public static final Item SPAWN_BEE_GIRL = register(MonstersGirlsID.SPAWN_BEE_GIRL, new SpawnItem(MonstersGirlsEntities.BEE_GIRL, new FabricItemSettings()));
     public static final Item SPAWN_GOURDRAGORA_GIRL_JACK_LANTERN = register(MonstersGirlsID.SPAWN_GOURDRAGORA_GIRL_JACK_LANTERN, new SpawnItem(MonstersGirlsEntities.GOURDRAGORA_GIRL_JACK_LANTERN, new FabricItemSettings()));
     public static final Item SPAWN_GOURDRAGORA_GIRL_JACK_LANTERN_BIG = register(MonstersGirlsID.SPAWN_GOURDRAGORA_GIRL_JACK_LANTERN_BIG, new SpawnItem(MonstersGirlsEntities.GOURDRAGORA_GIRL_JACK_LANTERN_BIG, new FabricItemSettings()));
     public static final Item SPAWN_GOURDRAGORA_GIRL_JACK_LANTERN_MINI = register(MonstersGirlsID.SPAWN_GOURDRAGORA_GIRL_JACK_LANTERN_MINI, new SpawnItem(MonstersGirlsEntities.GOURDRAGORA_GIRL_JACK_LANTERN_MINI, new FabricItemSettings()));

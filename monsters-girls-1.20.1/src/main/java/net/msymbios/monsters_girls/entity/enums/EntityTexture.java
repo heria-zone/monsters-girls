@@ -9,7 +9,8 @@ public enum EntityTexture {
     SLIM(0, "slim"),
     DEFAULT(1, "default"),
     TUMMY(2, "tummy"),
-    INFLATED(3, "inflated");
+    INFLATED(3, "inflated"),
+    CHUNKY(4, "chunky");
 
     // -- Variables --
     private static final EntityTexture[] CODEC = Arrays.stream(values()).sorted(Comparator.comparingInt(EntityTexture::getId)).toArray(EntityTexture[]::new);

@@ -35,7 +35,8 @@ public enum EntityVariant {
     JackOLanternBig(22, "jack_lantern_big"),
     PumpkinMini(22, "pumpkin_mini"),
     Pumpkin(22, "pumpkin"),
-    PumpkinBig(22, "pumpkin_big");
+    PumpkinBig(22, "pumpkin_big"),
+    Bee(23, "bee");
 
     // -- Variables --
     private static final EntityVariant[] CODEC = Arrays.stream(values()).sorted(Comparator.comparingInt(EntityVariant::getId)).toArray(EntityVariant[]::new);

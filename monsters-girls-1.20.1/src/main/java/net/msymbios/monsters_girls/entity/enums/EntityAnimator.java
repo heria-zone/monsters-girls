@@ -18,7 +18,8 @@ public enum EntityAnimator {
     Spook(9, "spook"),
     Wisp(10, "wisp"),
     Gourdragora(11,"gourdragora"),
-    GourdragoraMini(12, "gourdragora_mini");
+    GourdragoraMini(12, "gourdragora_mini"),
+    Bee(13, "bee");
 
     // -- Variables --
     private static final EntityAnimator[] CODEC = Arrays.stream(values()).sorted(Comparator.comparingInt(EntityAnimator::getId)).toArray(EntityAnimator[]::new);

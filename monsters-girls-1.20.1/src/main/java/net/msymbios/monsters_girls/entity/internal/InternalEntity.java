@@ -336,7 +336,8 @@ public abstract class InternalEntity extends TameableEntity {
 
     // -- Custom Method --
     public boolean canInteract(ItemStack itemStack){
-        if(itemStack.isOf(Items.FEATHER) || itemStack.isOf(Items.APPLE) || itemStack.isOf(Items.COOKIE) || itemStack.isOf(Items.NOTE_BLOCK) || itemStack.isOf(Items.WOODEN_HOE)) return false;
+        if(itemStack.isOf(Items.FEATHER) || itemStack.isOf(Items.APPLE) || itemStack.isOf(Items.COOKIE) || itemStack.isOf(Items.NOTE_BLOCK) || itemStack.isOf(Items.WOODEN_HOE)
+                || itemStack.isOf(Items.HONEYCOMB) || itemStack.isOf(Items.HONEY_BOTTLE)) return false;
         if(itemStack.isOf(Items.BOOK) || itemStack.isOf(Items.WRITABLE_BOOK) || itemStack.isOf(Items.OAK_BUTTON)) return false;
         return true;
     } // canInteract ()
@@ -429,7 +430,12 @@ public abstract class InternalEntity extends TameableEntity {
     public void handleTame(ItemStack stack, PlayerEntity player) {
         boolean canAttemptTame = false;
         var listOfItems = InternalMetric.ENTITY_TAMABLE_ITEM.get(variant);
-        for (Item item : listOfItems) canAttemptTame = stack.isOf(item);
+        for (Item item : listOfItems) {
+            if(stack.isOf(item)) {
+                canAttemptTame = true;
+                break;
+            }
+        }
 
         if(canAttemptTame) {
             if (this.random.nextInt(5) == 0) {

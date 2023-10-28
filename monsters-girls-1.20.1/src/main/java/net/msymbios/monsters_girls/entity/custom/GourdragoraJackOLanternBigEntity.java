@@ -33,6 +33,7 @@ public class GourdragoraJackOLanternBigEntity extends InternalEntity implements 
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, InternalMetric.getAttribute(EntityVariant.JackOLanternBig, EntityAttribute.ATTACK_DAMAGE))
                 .add(EntityAttributes.GENERIC_ATTACK_SPEED, InternalMetric.getAttribute(EntityVariant.JackOLanternBig, EntityAttribute.ATTACK_SPEED))
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, InternalMetric.getAttribute(EntityVariant.JackOLanternBig, EntityAttribute.MOVEMENT_SPEED))
+                .add(EntityAttributes.GENERIC_ATTACK_KNOCKBACK, InternalMetric.getAttribute(EntityVariant.JackOLanternBig, EntityAttribute.KNOCKBACK_ATTACK))
                 .add(EntityAttributes.GENERIC_ARMOR, InternalMetric.getAttribute(EntityVariant.JackOLanternBig, EntityAttribute.ARMOR))
                 .add(EntityAttributes.GENERIC_ARMOR_TOUGHNESS, InternalMetric.getAttribute(EntityVariant.JackOLanternBig, EntityAttribute.ARMOR_TOUGHNESS));
     } // setAttributes ()

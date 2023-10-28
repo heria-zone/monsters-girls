@@ -11,7 +11,8 @@ public enum EntityAnimation {
     Attack(2, "attack"),
     Interact(3, "interact"),
     Rest(4,"rest"),
-    Wave(5,"wave");
+    Wave(5,"wave"),
+    Hurt(5,"hurt");
 
     // -- Variables --
     private static final EntityAnimation[] CODEC = Arrays.stream(values()).sorted(Comparator.comparingInt(EntityAnimation::getId)).toArray(EntityAnimation[]::new);

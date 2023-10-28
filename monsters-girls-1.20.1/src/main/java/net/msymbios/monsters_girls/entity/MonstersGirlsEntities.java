@@ -16,6 +16,9 @@ import net.msymbios.monsters_girls.entity.custom.*;
 public class MonstersGirlsEntities {
 
     // -- Variables --
+    public static final EntityType<BeeGirlEntity> BEE_GIRL = Registry.register(Registries.ENTITY_TYPE, new Identifier(MonstersGirls.MODID, "bee_girl"),
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, BeeGirlEntity::new).dimensions(EntityDimensions.fixed(0.5F, 1F)).build());
+
     public static final EntityType<GourdragoraJackOLanternEntity> GOURDRAGORA_GIRL_JACK_LANTERN = Registry.register(Registries.ENTITY_TYPE, new Identifier(MonstersGirls.MODID, "gourdragora_girl_jack_lantern"),
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, GourdragoraJackOLanternEntity::new).dimensions(EntityDimensions.fixed(0.8F, 1.5F)).build());
 
@@ -105,6 +108,8 @@ public class MonstersGirlsEntities {
 
     // -- Methods --
     public static void registerAttribute() {
+        FabricDefaultAttributeRegistry.register(BEE_GIRL, BeeGirlEntity.setAttributes());
+
         FabricDefaultAttributeRegistry.register(GOURDRAGORA_GIRL_JACK_LANTERN, GourdragoraJackOLanternEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(GOURDRAGORA_GIRL_JACK_LANTERN_BIG, GourdragoraJackOLanternBigEntity.setAttributes());
         FabricDefaultAttributeRegistry.register(GOURDRAGORA_GIRL_JACK_LANTERN_MINI, GourdragoraJackOLanternMiniEntity.setAttributes());
@@ -142,6 +147,8 @@ public class MonstersGirlsEntities {
     } // registerEntityAttribute ()
 
     public static void registerRender() {
+        EntityRendererRegistry.register(BEE_GIRL, BeeGirlRenderer::new);
+
         EntityRendererRegistry.register(GOURDRAGORA_GIRL_JACK_LANTERN, GourdragoraJackOLanternRenderer::new);
         EntityRendererRegistry.register(GOURDRAGORA_GIRL_JACK_LANTERN_BIG, GourdragoraJackOLanternBigRenderer::new);
         EntityRendererRegistry.register(GOURDRAGORA_GIRL_JACK_LANTERN_MINI, GourdragoraJackOLanternMiniRenderer::new);

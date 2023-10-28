@@ -127,6 +127,7 @@ public class MonstersGirlsID {
     public static final String HAT_MUSHROOM_WARPED_RARE = "hat_mushroom_warped_rare";
 
     // SPAWN EGG
+    public static final String SPAWN_BEE_GIRL = "spawn_bee_girl";
     public static final String SPAWN_GOURDRAGORA_GIRL_JACK_LANTERN = "spawn_gourdragora_girl_jacko";
     public static final String SPAWN_GOURDRAGORA_GIRL_JACK_LANTERN_BIG = "spawn_gourdragora_girl_jacko_big";
     public static final String SPAWN_GOURDRAGORA_GIRL_JACK_LANTERN_MINI = "spawn_gourdragora_girl_jacko_mini";

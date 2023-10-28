@@ -22,6 +22,8 @@ public class MonstersGirlsSpawn {
     // -- Methods --
     public static void generate () {
         // BIOMES MODIFICATION
+        registerSpawnBiomes(EntityVariant.Bee, MonstersGirlsEntities.BEE_GIRL);
+
         if(Calendar.getInstance().get(Calendar.MONTH) == Calendar.OCTOBER) {
             registerSpawnBiomes(EntityVariant.JackOLantern, MonstersGirlsEntities.GOURDRAGORA_GIRL_JACK_LANTERN);
             registerSpawnBiomes(EntityVariant.JackOLanternBig, MonstersGirlsEntities.GOURDRAGORA_GIRL_JACK_LANTERN_BIG);
@@ -65,6 +67,8 @@ public class MonstersGirlsSpawn {
         registerSpawnBiomes(EntityVariant.WispYellow, MonstersGirlsEntities.WISP_GIRL_YELLOW);
 
         // SPAWN RESTRICTION
+        SpawnRestriction.register(MonstersGirlsEntities.BEE_GIRL, SpawnRestriction.Location.NO_RESTRICTIONS, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, BeeGirlEntity::isValidNaturalSpawn);
+
         SpawnRestriction.register(MonstersGirlsEntities.GOURDRAGORA_GIRL_PUMPKIN, SpawnRestriction.Location.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, GourdragoraPumpkinEntity::isValidNaturalSpawn);
         SpawnRestriction.register(MonstersGirlsEntities.GOURDRAGORA_GIRL_PUMPKIN_BIG, SpawnRestriction.Location.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, GourdragoraPumpkinBigEntity::isValidNaturalSpawn);
         SpawnRestriction.register(MonstersGirlsEntities.GOURDRAGORA_GIRL_PUMPKIN_MINI, SpawnRestriction.Location.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, GourdragoraPumpkinMiniEntity::isValidNaturalSpawn);
@@ -90,12 +94,12 @@ public class MonstersGirlsSpawn {
 
         SpawnRestriction.register(MonstersGirlsEntities.SLIME_GIRL, SpawnRestriction.Location.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, SlimeGirlEntity::isValidNaturalSpawn);
 
-        SpawnRestriction.register(MonstersGirlsEntities.SPOOK_GIRL_TEAL, SpawnRestriction.Location.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, SpookTealEntity::isValidNaturalSpawn);
-        SpawnRestriction.register(MonstersGirlsEntities.SPOOK_GIRL_PEACH, SpawnRestriction.Location.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, SpookPeachEntity::isValidNaturalSpawn);
+        SpawnRestriction.register(MonstersGirlsEntities.SPOOK_GIRL_TEAL, SpawnRestriction.Location.NO_RESTRICTIONS, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, SpookTealEntity::isValidNaturalSpawn);
+        SpawnRestriction.register(MonstersGirlsEntities.SPOOK_GIRL_PEACH, SpawnRestriction.Location.NO_RESTRICTIONS, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, SpookPeachEntity::isValidNaturalSpawn);
 
-        SpawnRestriction.register(MonstersGirlsEntities.WISP_GIRL_BLUE, SpawnRestriction.Location.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, WispBlueEntity::isValidNaturalSpawn);
-        SpawnRestriction.register(MonstersGirlsEntities.WISP_GIRL_GREEN, SpawnRestriction.Location.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, WispGreenEntity::isValidNaturalSpawn);
-        SpawnRestriction.register(MonstersGirlsEntities.WISP_GIRL_YELLOW, SpawnRestriction.Location.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, WispYellowEntity::isValidNaturalSpawn);
+        SpawnRestriction.register(MonstersGirlsEntities.WISP_GIRL_BLUE, SpawnRestriction.Location.NO_RESTRICTIONS, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, WispBlueEntity::isValidNaturalSpawn);
+        SpawnRestriction.register(MonstersGirlsEntities.WISP_GIRL_GREEN, SpawnRestriction.Location.NO_RESTRICTIONS, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, WispGreenEntity::isValidNaturalSpawn);
+        SpawnRestriction.register(MonstersGirlsEntities.WISP_GIRL_YELLOW, SpawnRestriction.Location.NO_RESTRICTIONS, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, WispYellowEntity::isValidNaturalSpawn);
     } // generate ()
 
     private static void registerSpawnBiomes(EntityVariant variant, EntityType<?> entityType) {

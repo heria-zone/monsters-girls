@@ -17,7 +17,8 @@ public enum EntityModel {
     Wisp(8, "wisp"),
     Slime(9, "slime"),
     Gourdragora(10, "gourdragora"),
-    GourdragoraMini(11, "gourdragora_mini");
+    GourdragoraMini(11, "gourdragora_mini"),
+    Bee(12, "bee");
 
     // -- Variables --
     private static final EntityModel[] CODEC = Arrays.stream(values()).sorted(Comparator.comparingInt(EntityModel::getId)).toArray(EntityModel[]::new);

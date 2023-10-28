@@ -117,6 +117,7 @@ public class MonstersGirlsItemGroups {
             entries.add(MonstersGirlsItems.URN_MOLTEN);
             entries.add(MonstersGirlsItems.URN_CRIMSON);
 
+            entries.add(MonstersGirlsItems.SPAWN_BEE_GIRL);
             entries.add(MonstersGirlsItems.SPAWN_GOURDRAGORA_GIRL_JACK_LANTERN);
             entries.add(MonstersGirlsItems.SPAWN_GOURDRAGORA_GIRL_JACK_LANTERN_BIG);
             entries.add(MonstersGirlsItems.SPAWN_GOURDRAGORA_GIRL_JACK_LANTERN_MINI);

@@ -21,6 +21,7 @@
   "item.monsters_girls.candies": "Candies",
   "tooltip.monsters_girls.candies":"Mmmm... so sweet!",
 
+  "item.monsters_girls.spawn_bee_girl": "Spawn Egg Bee Girl",
   "item.monsters_girls.spawn_gourdragora_girl_jacko": "Spawn Egg Gourdragora Girl Jack'O Lantern",
   "item.monsters_girls.spawn_gourdragora_girl_jacko_big": "Spawn Egg Gourdragora Girl Jack'O Lantern Big",
   "item.monsters_girls.spawn_gourdragora_girl_jacko_mini": "Spawn Egg Gourdragora Girl Jack'O Lantern Mini",
@@ -135,6 +136,7 @@
   "block.monsters_girls.urn_molten": "Molten Urn",
   "block.monsters_girls.urn_crimson": "Crimson Urn",
 
+  "entity.monsters_girls.bee_girl": "Bee Girl",
   "entity.monsters_girls.gourdragora_girl_jack_lantern": "Gourdragora Girl Jack'O Lantern",
   "entity.monsters_girls.gourdragora_girl_jack_lantern_big": "Gourdragora Girl Jack'O Lantern Big",
   "entity.monsters_girls.gourdragora_girl_jack_lantern_mini": "Gourdragora Girl Jack'O Lantern Mini",

@@ -33,6 +33,7 @@ public class GourdragoraPumpkinBigEntity extends InternalEntity implements GeoEn
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, InternalMetric.getAttribute(EntityVariant.PumpkinBig, EntityAttribute.ATTACK_DAMAGE))
                 .add(EntityAttributes.GENERIC_ATTACK_SPEED, InternalMetric.getAttribute(EntityVariant.PumpkinBig, EntityAttribute.ATTACK_SPEED))
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, InternalMetric.getAttribute(EntityVariant.PumpkinBig, EntityAttribute.MOVEMENT_SPEED))
+                .add(EntityAttributes.GENERIC_ATTACK_KNOCKBACK, InternalMetric.getAttribute(EntityVariant.JackOLanternBig, EntityAttribute.KNOCKBACK_ATTACK))
                 .add(EntityAttributes.GENERIC_ARMOR, InternalMetric.getAttribute(EntityVariant.PumpkinBig, EntityAttribute.ARMOR))
                 .add(EntityAttributes.GENERIC_ARMOR_TOUGHNESS, InternalMetric.getAttribute(EntityVariant.PumpkinBig, EntityAttribute.ARMOR_TOUGHNESS));
     } // setAttributes ()

@@ -128,6 +128,7 @@ public class MonstersGirlsModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(MonstersGirlsItems.GLOW_BERRY_BUSH, Models.GENERATED);
 
+        itemModelGenerator.register(MonstersGirlsItems.SPAWN_BEE_GIRL, Models.GENERATED);
         itemModelGenerator.register(MonstersGirlsItems.SPAWN_GOURDRAGORA_GIRL_JACK_LANTERN, Models.GENERATED);
         itemModelGenerator.register(MonstersGirlsItems.SPAWN_GOURDRAGORA_GIRL_JACK_LANTERN_BIG, Models.GENERATED);
         itemModelGenerator.register(MonstersGirlsItems.SPAWN_GOURDRAGORA_GIRL_JACK_LANTERN_MINI, Models.GENERATED);
