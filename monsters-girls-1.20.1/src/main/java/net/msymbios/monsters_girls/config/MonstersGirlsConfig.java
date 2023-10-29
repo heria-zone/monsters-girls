@@ -119,7 +119,7 @@ public class MonstersGirlsConfig {
         PROVIDER.addKeyValuePair(new Pair<>("entity.gourdragora.pumpkin.defence", 3F),                  "Defence");
         PROVIDER.addKeyValuePair(new Pair<>("entity.gourdragora.pumpkin.follow-distance-max", 7F),      "Maximum distance allowed while following");
         PROVIDER.addKeyValuePair(new Pair<>("entity.gourdragora.pumpkin.follow-distance-min", 2F),      "Minimum distance allowed while following");
-        PROVIDER.addKeyValuePair(new Pair<>("entity.gourdragora.pumpkin.spawn-weight", 20),             "How frequent should this mob spawn");
+        PROVIDER.addKeyValuePair(new Pair<>("entity.gourdragora.pumpkin.spawn-weight", 10),             "How frequent should this mob spawn");
         PROVIDER.addKeyValuePair(new Pair<>("entity.gourdragora.pumpkin.spawn-min-group", 1),           "Minimum mobs allowed to spawn in a group");
         PROVIDER.addKeyValuePair(new Pair<>("entity.gourdragora.pumpkin.spawn-max-group", 2),           "Maximum mobs allowed to spawn in a group", additional);
 
@@ -137,7 +137,7 @@ public class MonstersGirlsConfig {
         PROVIDER.addKeyValuePair(new Pair<>("entity.gourdragora.pumpkin_big.knockback-resistance", 5F),     "Knockback Resistance");
         PROVIDER.addKeyValuePair(new Pair<>("entity.gourdragora.pumpkin_big.follow-distance-max", 12F),     "Maximum distance allowed while following");
         PROVIDER.addKeyValuePair(new Pair<>("entity.gourdragora.pumpkin_big.follow-distance-min", 2F),      "Minimum distance allowed while following");
-        PROVIDER.addKeyValuePair(new Pair<>("entity.gourdragora.pumpkin_big.spawn-weight", 10),             "How frequent should this mob spawn");
+        PROVIDER.addKeyValuePair(new Pair<>("entity.gourdragora.pumpkin_big.spawn-weight", 5),             "How frequent should this mob spawn");
         PROVIDER.addKeyValuePair(new Pair<>("entity.gourdragora.pumpkin_big.spawn-min-group", 1),           "Minimum mobs allowed to spawn in a group");
         PROVIDER.addKeyValuePair(new Pair<>("entity.gourdragora.pumpkin_big.spawn-max-group", 2),           "Maximum mobs allowed to spawn in a group", additional);
 
@@ -153,7 +153,7 @@ public class MonstersGirlsConfig {
         PROVIDER.addKeyValuePair(new Pair<>("entity.gourdragora.pumpkin_mini.defence", 1F),                  "Defence");
         PROVIDER.addKeyValuePair(new Pair<>("entity.gourdragora.pumpkin_mini.follow-distance-max", 7F),      "Maximum distance allowed while following");
         PROVIDER.addKeyValuePair(new Pair<>("entity.gourdragora.pumpkin_mini.follow-distance-min", 2F),      "Minimum distance allowed while following");
-        PROVIDER.addKeyValuePair(new Pair<>("entity.gourdragora.pumpkin_mini.spawn-weight", 20),             "How frequent should this mob spawn");
+        PROVIDER.addKeyValuePair(new Pair<>("entity.gourdragora.pumpkin_mini.spawn-weight", 10),             "How frequent should this mob spawn");
         PROVIDER.addKeyValuePair(new Pair<>("entity.gourdragora.pumpkin_mini.spawn-min-group", 1),           "Minimum mobs allowed to spawn in a group");
         PROVIDER.addKeyValuePair(new Pair<>("entity.gourdragora.pumpkin_mini.spawn-max-group", 2),           "Maximum mobs allowed to spawn in a group", additional);
 
@@ -523,7 +523,7 @@ public class MonstersGirlsConfig {
         PROVIDER.addKeyValuePair(new Pair<>("entity.wisp.yellow.follow-distance-min", 2F),      "Minimum distance allowed while following");
         PROVIDER.addKeyValuePair(new Pair<>("entity.wisp.yellow.spawn-weight", 20),             "How frequent should this mob spawn");
         PROVIDER.addKeyValuePair(new Pair<>("entity.wisp.yellow.spawn-min-group", 1),           "Minimum mobs allowed to spawn in a group");
-        PROVIDER.addKeyValuePair(new Pair<>("entity.wisp.yellow.spawn-max-group", 2),           "Maximum mobs allowed to spawn in a group", additional);
+        PROVIDER.addKeyValuePair(new Pair<>("entity.wisp.yellow.spawn-max-group", 2),           "Maximum mobs allowed to spawn in a group");
 
     } // create ()
 
@@ -637,7 +637,7 @@ public class MonstersGirlsConfig {
         }});
 
         InternalMetric.SETTINGS.put(EntityVariant.Pumpkin, InternalMetric.setSetting(
-                CONFIG.getOrDefault("entity.gourdragora.pumpkin.spawn-weight", 20),
+                CONFIG.getOrDefault("entity.gourdragora.pumpkin.spawn-weight", 10),
                 CONFIG.getOrDefault("entity.gourdragora.pumpkin.spawn-min-group", 1),
                 CONFIG.getOrDefault("entity.gourdragora.pumpkin.spawn-max-group", 2),
                 List.of(BiomeKeys.PLAINS, BiomeKeys.SUNFLOWER_PLAINS), generalAvoidEntities));
@@ -659,7 +659,7 @@ public class MonstersGirlsConfig {
         }});
 
         InternalMetric.SETTINGS.put(EntityVariant.PumpkinBig, InternalMetric.setSetting(
-                CONFIG.getOrDefault("entity.gourdragora.pumpkin_big.spawn-weight", 10),
+                CONFIG.getOrDefault("entity.gourdragora.pumpkin_big.spawn-weight", 5),
                 CONFIG.getOrDefault("entity.gourdragora.pumpkin_big.spawn-min-group", 1),
                 CONFIG.getOrDefault("entity.gourdragora.pumpkin_big.spawn-max-group", 2),
                 List.of(BiomeKeys.PLAINS, BiomeKeys.SUNFLOWER_PLAINS), generalAvoidEntities));
@@ -679,7 +679,7 @@ public class MonstersGirlsConfig {
         }});
 
         InternalMetric.SETTINGS.put(EntityVariant.PumpkinMini, InternalMetric.setSetting(
-                CONFIG.getOrDefault("entity.gourdragora.pumpkin_mini.spawn-weight", 20),
+                CONFIG.getOrDefault("entity.gourdragora.pumpkin_mini.spawn-weight", 10),
                 CONFIG.getOrDefault("entity.gourdragora.pumpkin_mini.spawn-min-group", 1),
                 CONFIG.getOrDefault("entity.gourdragora.pumpkin_mini.spawn-max-group", 2),
                 List.of(BiomeKeys.PLAINS, BiomeKeys.SUNFLOWER_PLAINS), generalAvoidEntities));
