@@ -57,7 +57,7 @@ public class MonstersGirlsSpawn {
         registerSpawnBiomes(EntityVariant.MushroomWarpedRare, MonstersGirlsEntities.MUSHROOM_GIRL_WARPED_RARE);
         registerSpawnBiomes(EntityVariant.MushroomSnowball, MonstersGirlsEntities.MUSHROOM_GIRL_SNOWBALL);
 
-        registerSpawnBiomes(EntityVariant.Slime, MonstersGirlsEntities.SLIME_GIRL);
+        registerSpawnBiomes(EntityVariant.SlimeBlue, MonstersGirlsEntities.SLIME_GIRL);
 
         registerSpawnBiomes(EntityVariant.SpookTeal, MonstersGirlsEntities.SPOOK_GIRL_TEAL);
         registerSpawnBiomes(EntityVariant.SpookPeach, MonstersGirlsEntities.SPOOK_GIRL_PEACH);

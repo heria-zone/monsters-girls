@@ -11,15 +11,19 @@ public enum EntityAttribute {
     ATTACK_DAMAGE(2, "attack_damage"),
     ATTACK_SPEED(3, "attack_speed"),
     MOVEMENT_SPEED(4, "movement_speed"),
-    DEFENSE(5, "defense"),
-    ARMOR(6, "armor"),
-    ARMOR_TOUGHNESS(7, "armor_toughness"),
-    BASE_DEFENSE_RANGE(8, "base_defense_range"),
-    BASE_DEFENSE_WARP_RANGE(9, "base_defense_warp_range"),
-    KNOCKBACK_RESISTANCE(10, "knockback_resistance"),
-    KNOCKBACK_ATTACK(11, "knockback_attack"),
-    FOLLOW_RANGE(12, "follow_range"),
-    FLYING_SPEED(13, "fly_speed");
+    MOVEMENT_MELEE_ATTACK(5, "movement_melee_attack"),
+    MOVEMENT_FOLLOW_OWNER(6, "movement_follow_owner"),
+    MOVEMENT_WANDER_AROUND(7, "movement_wander_around"),
+    DEFENSE(8, "defense"),
+    ARMOR(9, "armor"),
+    ARMOR_TOUGHNESS(10, "armor_toughness"),
+    BASE_DEFENSE_RANGE(11, "base_defense_range"),
+    BASE_DEFENSE_WARP_RANGE(12, "base_defense_warp_range"),
+    KNOCKBACK_RESISTANCE(13, "knockback_resistance"),
+    KNOCKBACK_ATTACK(14, "knockback_attack"),
+    FOLLOW_RANGE_MAX(15, "follow_range_max"),
+    FOLLOW_RANGE_MIN(16, "follow_range_min"),
+    FLYING_SPEED(17, "fly_speed");
 
     // -- Variables --
     private static final EntityAttribute[] CODEC = Arrays.stream(values()).sorted(Comparator.comparingInt(EntityAttribute::getId)).toArray(EntityAttribute[]::new);

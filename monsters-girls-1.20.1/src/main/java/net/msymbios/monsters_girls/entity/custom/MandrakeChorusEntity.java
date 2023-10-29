@@ -27,12 +27,9 @@ public class MandrakeChorusEntity extends InternalEntity implements GeoEntity  {
     public static DefaultAttributeContainer.Builder setAttributes() {
         return MobEntity.createMobAttributes()
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, InternalMetric.getAttribute(EntityVariant.MandrakeChorus, EntityAttribute.MAX_HEALTH))
-                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, InternalMetric.getAttribute(EntityVariant.MandrakeChorus, EntityAttribute.ATTACK_DAMAGE))
-                .add(EntityAttributes.GENERIC_ATTACK_SPEED, InternalMetric.getAttribute(EntityVariant.MandrakeChorus, EntityAttribute.ATTACK_SPEED))
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, InternalMetric.getAttribute(EntityVariant.MandrakeChorus, EntityAttribute.MOVEMENT_SPEED))
-                .add(EntityAttributes.GENERIC_ARMOR, InternalMetric.getAttribute(EntityVariant.MandrakeChorus, EntityAttribute.ARMOR))
-                .add(EntityAttributes.GENERIC_ARMOR_TOUGHNESS, InternalMetric.getAttribute(EntityVariant.MandrakeChorus, EntityAttribute.ARMOR_TOUGHNESS))
-                .add(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE, InternalMetric.getAttribute(EntityVariant.MandrakeChorus, EntityAttribute.KNOCKBACK_RESISTANCE));
+                .add(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE, InternalMetric.getAttribute(EntityVariant.MandrakeChorus, EntityAttribute.KNOCKBACK_RESISTANCE))
+                .add(EntityAttributes.GENERIC_FLYING_SPEED, InternalMetric.getAttribute(EntityVariant.MandrakeChorus, EntityAttribute.FLYING_SPEED));
     } // setAttributes ()
 
     // -- Constructor --
@@ -64,13 +61,12 @@ public class MandrakeChorusEntity extends InternalEntity implements GeoEntity  {
     protected void initGoals() {
         this.goalSelector.add(1, new SwimGoal(this));
         this.goalSelector.add(2, new SitGoal(this));
-        this.goalSelector.add(4, new FollowOwnerGoal(this, InternalMetric.FollowOwnerMovement, InternalMetric.FollowBehindDistance, InternalMetric.FollowCloseDistance, false));
-        this.goalSelector.add(4, new TemptGoal(this, InternalMetric.MovementSpeed, Ingredient.ofItems(new ItemConvertible[]{Items.GLOW_BERRIES}), false));
-        this.goalSelector.add(5, new WanderAroundFarGoal(this, InternalMetric.WanderAroundMovement));
-        this.goalSelector.add(6, new LookAtEntityGoal(this, PlayerEntity.class, InternalMetric.LookAtRange));
-        this.goalSelector.add(6, new LookAtEntityGoal(this, InternalEntity.class, InternalMetric.LookAtRange));
+        this.goalSelector.add(3, new FollowOwnerGoal(this, InternalMetric.getAttribute(EntityVariant.MandrakeGreen, EntityAttribute.MOVEMENT_FOLLOW_OWNER), InternalMetric.getAttribute(EntityVariant.MandrakeGreen, EntityAttribute.FOLLOW_RANGE_MAX), InternalMetric.getAttribute(EntityVariant.MandrakeGreen, EntityAttribute.FOLLOW_RANGE_MIN), false));
+        this.goalSelector.add(4, new TemptGoal(this, InternalMetric.getAttribute(EntityVariant.MandrakeGreen, EntityAttribute.MOVEMENT_SPEED), Ingredient.ofItems(new ItemConvertible[]{Items.COOKIE}), false));
+        this.goalSelector.add(5, new WanderAroundFarGoal(this, InternalMetric.getAttribute(EntityVariant.MandrakeGreen, EntityAttribute.MOVEMENT_WANDER_AROUND)));
+        this.goalSelector.add(6, new LookAtEntityGoal(this, PlayerEntity.class, InternalMetric.LOOK_RANGE));
+        this.goalSelector.add(6, new LookAtEntityGoal(this, InternalEntity.class, InternalMetric.LOOK_RANGE));
         this.goalSelector.add(7, new LookAroundGoal(this));
-        this.targetSelector.add(1, new TrackOwnerAttackerGoal(this));
     } // initGoals ()
 
     // -- Save

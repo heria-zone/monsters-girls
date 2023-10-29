@@ -395,7 +395,7 @@ public abstract class InternalEntity extends TameableEntity {
 
     protected void handleAutoHeal () {
         if(this.getHealth() < this.getHpValue()) autoHeal = true;
-        if(this.getWorld().isClient && !autoHeal && !InternalMetric.GlobalAutoHeal) return;
+        if(this.getWorld().isClient && !autoHeal && !InternalMetric.GLOBAL_AUTO_HEAL) return;
 
         if(autoHealTimer != 0) {
             autoHealTimer--;
@@ -403,13 +403,13 @@ public abstract class InternalEntity extends TameableEntity {
             final float healValue = this.getHpValue() / 16.0F;
             this.heal(healValue);
             autoHeal = false;
-            autoHealTimer = InternalMetric.AutoHealInterval;
+            autoHealTimer = InternalMetric.GLOBAL_HEAL_INTERVAL;
         }
     } // handleAutoHeal ()
 
     protected void handleActivateCombatMode () {
         if(!combatMode) combatMode = true;
-        waryTimer = InternalMetric.WaryTime;
+        waryTimer = InternalMetric.WARY_TIME;
     } // handleActivateCombatMode ()
 
     protected void handleCombatMode() {

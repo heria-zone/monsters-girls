@@ -8,35 +8,6 @@
       }
     ]
   },
-  "mushroomgalsound": {
-    "sounds": [
-      {
-        "name": "monsters_girls:shram2",
-        "stream": false
-      },
-      {
-        "name": "monsters_girls:shram1",
-        "stream": false
-      },
-      {
-        "name": "monsters_girls:shram3",
-        "stream": false
-      }
-    ]
-  },
-  "endermushroomgalsound": {
-    "subtitle": "subtitles.endermushroomgalsound",
-    "sounds": [
-      {
-        "name": "monsters_girls:endershram1",
-        "stream": false
-      },
-      {
-        "name": "monsters_girls:endershram2",
-        "stream": false
-      }
-    ]
-  },
   "enderpuffballgalhuffs": {
     "subtitle": "subtitles.enderpuffballgalhuffs",
     "sounds": [
@@ -140,6 +111,168 @@
     "sounds": [
       {
         "name": "monsters_girls:spookalive",
+        "stream": false
+      }
+    ]
+  },
+  "mushroomgirlsounds": {
+    "subtitle": "subtitles.mushroomgirlsounds",
+    "sounds": [
+      {
+        "name": "monsters_girls:mushroomgal4",
+        "stream": false
+      },
+      {
+        "name": "monsters_girls:mushroomgal1",
+        "stream": false
+      },
+      {
+        "name": "monsters_girls:mushroomgal2",
+        "stream": false
+      },
+      {
+        "name": "monsters_girls:mushroomgal3",
+        "stream": false
+      }
+    ]
+  },
+  "mushroomgirlsayshi": {
+    "subtitle": "subtitles.mushroomgirlsayshi",
+    "sounds": [
+      {
+        "name": "monsters_girls:mushroomgal5",
+        "stream": false
+      },
+      {
+        "name": "monsters_girls:mushroomgal6",
+        "stream": false
+      },
+      {
+        "name": "monsters_girls:mushroomgal7",
+        "stream": false
+      }
+    ]
+  },
+  "slimegirlsounds": {
+    "subtitle": "subtitles.slimegirlsounds",
+    "sounds": [
+      {
+        "name": "monsters_girls:slime1",
+        "stream": false
+      },
+      {
+        "name": "monsters_girls:slime2",
+        "stream": false
+      },
+      {
+        "name": "monsters_girls:slime3",
+        "stream": false
+      },
+      {
+        "name": "monsters_girls:slime4",
+        "stream": false
+      }
+    ]
+  },
+  "slimepop": {
+    "subtitle": "subtitles.slimepop",
+    "sounds": [
+      {
+        "name": "monsters_girls:slimepop1",
+        "stream": false
+      },
+      {
+        "name": "monsters_girls:slimepop2",
+        "stream": false
+      }
+    ]
+  },
+  "slimegirlhurt": {
+    "subtitle": "subtitles.slimegirlhurt",
+    "sounds": [
+      {
+        "name": "monsters_girls:slimehurt1",
+        "stream": false
+      }
+    ]
+  },
+  "weirdmushroomgalsayshi": {
+    "subtitle": "subtitles.weirdmushroomgalsayshi",
+    "sounds": [
+      {
+        "name": "monsters_girls:creepymushroomgal5",
+        "stream": false
+      },
+      {
+        "name": "monsters_girls:creepymushroomgal6",
+        "stream": false
+      },
+      {
+        "name": "monsters_girls:creepymushroomgal7",
+        "stream": false
+      }
+    ]
+  },
+  "weirdmushroomgirlsounds": {
+    "subtitle": "subtitles.weirdmushroomgirlsounds",
+    "sounds": [
+      {
+        "name": "monsters_girls:creepymushroomgal1",
+        "stream": false
+      },
+      {
+        "name": "monsters_girls:creepymushroomgal2",
+        "stream": false
+      },
+      {
+        "name": "monsters_girls:creepymushroomgal3",
+        "stream": false
+      },
+      {
+        "name": "monsters_girls:creepymushroomgal4",
+        "stream": false
+      }
+    ]
+  },
+  "gourdragora_roar": {
+    "subtitle": "subtitles.gourdragora_roar",
+    "sounds": [
+      {
+        "name": "monsters_girls:gourdragora_roar",
+        "stream": false
+      }
+    ]
+  },
+  "gourdragora_giggles": {
+    "subtitle": "subtitles.gourdragora_giggles",
+    "sounds": [
+      {
+        "name": "monsters_girls:gourdragora_giggle4",
+        "stream": false
+      },
+      {
+        "name": "monsters_girls:gourdragora_giggle3",
+        "stream": false
+      },
+      {
+        "name": "monsters_girls:gourdragora_giggle2",
+        "stream": false
+      }
+    ]
+  },
+  "mini_gourdragora_giggles": {
+    "subtitle": "subtitles.mini_gourdragora_giggles",
+    "sounds": [
+      {
+        "name": "monsters_girls:gourdragora_gigglemini1",
+        "stream": false
+      },
+      {
+        "name": "monsters_girls:gourdragora_gigglemini3",
+        "stream": false
+      },
+      {
+        "name": "monsters_girls:gourdragora_gigglemini2",
         "stream": false
       }
     ]

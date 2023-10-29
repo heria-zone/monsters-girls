@@ -33,9 +33,9 @@ public class GourdragoraPumpkinBigEntity extends InternalEntity implements GeoEn
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, InternalMetric.getAttribute(EntityVariant.PumpkinBig, EntityAttribute.ATTACK_DAMAGE))
                 .add(EntityAttributes.GENERIC_ATTACK_SPEED, InternalMetric.getAttribute(EntityVariant.PumpkinBig, EntityAttribute.ATTACK_SPEED))
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, InternalMetric.getAttribute(EntityVariant.PumpkinBig, EntityAttribute.MOVEMENT_SPEED))
-                .add(EntityAttributes.GENERIC_ATTACK_KNOCKBACK, InternalMetric.getAttribute(EntityVariant.JackOLanternBig, EntityAttribute.KNOCKBACK_ATTACK))
-                .add(EntityAttributes.GENERIC_ARMOR, InternalMetric.getAttribute(EntityVariant.PumpkinBig, EntityAttribute.ARMOR))
-                .add(EntityAttributes.GENERIC_ARMOR_TOUGHNESS, InternalMetric.getAttribute(EntityVariant.PumpkinBig, EntityAttribute.ARMOR_TOUGHNESS));
+                .add(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE, InternalMetric.getAttribute(EntityVariant.PumpkinBig, EntityAttribute.KNOCKBACK_RESISTANCE))
+                .add(EntityAttributes.GENERIC_ATTACK_KNOCKBACK, InternalMetric.getAttribute(EntityVariant.PumpkinBig, EntityAttribute.KNOCKBACK_ATTACK))
+                .add(EntityAttributes.GENERIC_FLYING_SPEED, InternalMetric.getAttribute(EntityVariant.PumpkinBig, EntityAttribute.FLYING_SPEED));
     } // setAttributes ()
 
     // -- Constructor --
@@ -69,16 +69,16 @@ public class GourdragoraPumpkinBigEntity extends InternalEntity implements GeoEn
     protected void initGoals() {
         this.goalSelector.add(1, new SwimGoal(this));
         this.goalSelector.add(2, new SitGoal(this));
-        this.goalSelector.add(3, new MeleeAttackGoal(this, InternalMetric.MeleeAttackMovement, false));
-        this.goalSelector.add(4, new FollowOwnerGoal(this, InternalMetric.getAttribute(EntityVariant.PumpkinBig, EntityAttribute.MOVEMENT_SPEED), InternalMetric.getAttribute(EntityVariant.PumpkinBig, EntityAttribute.FOLLOW_RANGE), InternalMetric.FollowCloseDistance, false));
-        this.goalSelector.add(5, new WanderAroundFarGoal(this, InternalMetric.WanderAroundMovement));
-        this.goalSelector.add(6, new LookAtEntityGoal(this, PlayerEntity.class, InternalMetric.LookAtRange));
-        this.goalSelector.add(6, new LookAtEntityGoal(this, InternalEntity.class, InternalMetric.LookAtRange));
+        this.goalSelector.add(3, new MeleeAttackGoal(this, InternalMetric.getAttribute(EntityVariant.PumpkinBig, EntityAttribute.MOVEMENT_MELEE_ATTACK), false));
+        this.goalSelector.add(4, new FollowOwnerGoal(this, InternalMetric.getAttribute(EntityVariant.PumpkinBig, EntityAttribute.MOVEMENT_SPEED), InternalMetric.getAttribute(EntityVariant.PumpkinBig, EntityAttribute.FOLLOW_RANGE_MAX), InternalMetric.getAttribute(EntityVariant.PumpkinBig, EntityAttribute.FOLLOW_RANGE_MIN), false));
+        this.goalSelector.add(5, new WanderAroundFarGoal(this, InternalMetric.getAttribute(EntityVariant.PumpkinBig, EntityAttribute.MOVEMENT_WANDER_AROUND)));
+        this.goalSelector.add(6, new LookAtEntityGoal(this, PlayerEntity.class, InternalMetric.LOOK_RANGE));
+        this.goalSelector.add(6, new LookAtEntityGoal(this, InternalEntity.class, InternalMetric.LOOK_RANGE));
         this.goalSelector.add(7, new LookAroundGoal(this));
         this.targetSelector.add(1, new TrackOwnerAttackerGoal(this));
         this.targetSelector.add(2, new AttackWithOwnerGoal(this));
         this.targetSelector.add(3, new RevengeGoal(this));
-        this.targetSelector.add(4, new ActiveTargetGoal(this, MobEntity.class, InternalMetric.AttackChance, false, false, InternalMetric.AvoidAttackingEntities));
+        this.targetSelector.add(4, new ActiveTargetGoal(this, MobEntity.class, InternalMetric.ATTACK_CHANCE, false, false, InternalMetric.AvoidAttackingEntities));
         this.targetSelector.add(5, new UniversalAngerGoal(this, true));
     } // initGoals ()
 

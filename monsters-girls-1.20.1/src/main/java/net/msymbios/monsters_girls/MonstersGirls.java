@@ -3,6 +3,7 @@ package net.msymbios.monsters_girls;
 import net.fabricmc.api.ModInitializer;
 
 import net.msymbios.monsters_girls.block.MonstersGirlsBlocks;
+import net.msymbios.monsters_girls.config.MonstersGirlsConfig;
 import net.msymbios.monsters_girls.entity.MonstersGirlsEntities;
 import net.msymbios.monsters_girls.item.MonstersGirlsItemGroups;
 import net.msymbios.monsters_girls.item.MonstersGirlsItems;
@@ -19,6 +20,7 @@ public class MonstersGirls implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		MonstersGirlsConfig.register();
 		MonstersGirlsItemGroups.register();
 
 		MonstersGirlsItems.register();

@@ -11,7 +11,6 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.biome.Biome;
-import net.minecraft.world.biome.BiomeKeys;
 import net.msymbios.monsters_girls.MonstersGirls;
 import net.msymbios.monsters_girls.block.MonstersGirlsBlocks;
 import net.msymbios.monsters_girls.entity.enums.*;
@@ -29,25 +28,19 @@ public class InternalMetric {
     // UTILITY
     private static final Random rand =  new Random();
 
-    // -- RPG --
-    public static boolean GlobalAutoHeal = true;            // Enable automatic recovery
-    public static int AutoHealInterval = 50;                // Automatic recovery interval
-    public static int WaryTime = 50;                        // Time while being in combat mode
+    // -- GENERAL --
+    public static float LOOK_RANGE;
+    public static int ATTACK_CHANCE;
+    public static boolean GLOBAL_AUTO_HEAL;                 // Enable automatic recovery
+    public static int GLOBAL_HEAL_INTERVAL;                 // Automatic recovery interval
+    public static int WARY_TIME;                            // Time while being in combat mode
 
-    // -- Attribute --
-    public static float MeleeAttackMovement = 1.0F;                     // Movement speed when it is melee attacking
-    public static float MovementSpeed = 1.0F;                           // Movement speed when it is melee attacking
-    public static float FollowOwnerMovement = 1.0F;                     // Movement speed when following player
-    public static float WanderAroundMovement = 0.6F;                    // Movement speed while it is wandering around
-    public static float FollowBehindDistance = 7.0F;
-    public static float FollowCloseDistance = 2.0F;
-    public static float LookAtRange = 6.0F;
-    public static int AttackChance = 5;
+    // -- MISC --
     public static Predicate<LivingEntity> AvoidAttackingEntities = entity -> entity instanceof Monster && !(entity instanceof CreeperEntity);
 
     // -- Variables --
     public static HashMap<EntityVariant, List<Item>> ENTITY_TAMABLE_ITEM = new HashMap<>() {{
-        var mushroomTamable = new ArrayList<>(List.of(Items.ROTTEN_FLESH));
+        var mushroomTamable = new ArrayList<>(List.of(Items.ROTTEN_FLESH, Items.COOKIE));
         var wispTamable = new ArrayList<>(List.of(Items.GOLD_NUGGET, Items.GOLD_INGOT));
         var pumpkin = new ArrayList<>(List.of(Items.CAKE, Items.BONE_MEAL));
         var jackOLantern = new ArrayList<>(List.of(Items.CAKE, MonstersGirlsItems.CANDIES));
@@ -80,7 +73,7 @@ public class InternalMetric {
         put(EntityVariant.MushroomSoulWanderer, mushroomTamable);
         put(EntityVariant.MushroomSnowball, new ArrayList<>(List.of(Items.SNOWBALL)));
 
-        put(EntityVariant.Slime, new ArrayList<>(List.of(Items.SLIME_BALL)));
+        put(EntityVariant.SlimeBlue, new ArrayList<>(List.of(Items.SLIME_BALL)));
 
         put(EntityVariant.SpookTeal, new ArrayList<>(List.of(MonstersGirlsItems.SPECTRAL_CAKE)));
         put(EntityVariant.SpookPeach, new ArrayList<>(List.of(MonstersGirlsItems.SPECTRAL_CAKE)));
@@ -133,6 +126,13 @@ public class InternalMetric {
     public static HashMap<EntitySound, List<EntityVariant>> ENTITY_SOUND = new HashMap<>(){{
 
         put(EntitySound.DEFAULT, new ArrayList<>(List.of(
+                EntityVariant.JackOLantern,
+                EntityVariant.JackOLanternBig,
+                EntityVariant.JackOLanternMini,
+                EntityVariant.Pumpkin,
+                EntityVariant.PumpkinBig,
+                EntityVariant.PumpkinMini,
+
                 EntityVariant.MandrakeBrown,
                 EntityVariant.MandrakeChorus,
                 EntityVariant.MandrakeGreen,
@@ -152,6 +152,8 @@ public class InternalMetric {
                 EntityVariant.MushroomWarpedRare,
                 EntityVariant.MushroomSnowball,
 
+                EntityVariant.SlimeBlue,
+
                 EntityVariant.SpookPeach,
                 EntityVariant.SpookTeal,
 
@@ -165,6 +167,8 @@ public class InternalMetric {
                 EntityVariant.MandrakeChorus,
                 EntityVariant.MandrakeGreen,
                 EntityVariant.MandrakeGlowBerry,
+
+                EntityVariant.SlimeBlue,
 
                 EntityVariant.SpookPeach,
                 EntityVariant.SpookTeal,
@@ -229,7 +233,7 @@ public class InternalMetric {
         }});
 
         put(EntityCategory.Slime, new HashMap<>() {{
-            put(EntityVariant.Slime,           EntityAnimator.Slime);
+            put(EntityVariant.SlimeBlue,           EntityAnimator.Slime);
         }});
 
         put(EntityCategory.Spook, new HashMap<>() {{
@@ -282,7 +286,7 @@ public class InternalMetric {
         }});
 
         put(EntityCategory.Slime, new HashMap<>() {{
-            put(EntityVariant.Slime,           EntityModel.Slime);
+            put(EntityVariant.SlimeBlue,           EntityModel.Slime);
         }});
 
         put(EntityCategory.Spook, new HashMap<>() {{
@@ -343,7 +347,7 @@ public class InternalMetric {
                 EntityVariant.MushroomWarpedRare,
                 EntityVariant.MushroomSnowball,
 
-                EntityVariant.Slime,
+                EntityVariant.SlimeBlue,
 
                 EntityVariant.SpookPeach,
                 EntityVariant.SpookTeal,
@@ -394,7 +398,7 @@ public class InternalMetric {
             put(EntitySound.DEATH, MonstersGirlsSounds.MANDRAKE_DEATH);
         }};
         HashMap<EntitySound, SoundEvent> mushroomMap = new HashMap<>() {{
-            put(EntitySound.DEFAULT, MonstersGirlsSounds.MUSHROOM_GIRL);
+            put(EntitySound.DEFAULT, MonstersGirlsSounds.MUSHROOM_GIRL_SOUNDS);
         }};
         HashMap<EntitySound, SoundEvent> spookMap = new HashMap<>() {{
             put(EntitySound.ATTACK, MonstersGirlsSounds.SPOOK_ATTACK);
@@ -406,6 +410,18 @@ public class InternalMetric {
             put(EntitySound.HURT, MonstersGirlsSounds.WISP_HURT);
             put(EntitySound.DEATH, MonstersGirlsSounds.WISP_DEATH);
         }};
+
+        HashMap<EntitySound, SoundEvent> slimeMap = new HashMap<>() {{
+            put(EntitySound.DEFAULT, MonstersGirlsSounds.SLIME_GIRL_SOUNDS);
+            put(EntitySound.HURT, MonstersGirlsSounds.SLIME_GIRL_HURT);
+        }};
+
+        put(EntityVariant.JackOLantern,             new HashMap<>() {{put(EntitySound.DEFAULT, MonstersGirlsSounds.GOURDRAGORA_GIGGLES);}});
+        put(EntityVariant.JackOLanternBig,          new HashMap<>() {{put(EntitySound.DEFAULT, MonstersGirlsSounds.GOURDRAGORA_ROAR);}});
+        put(EntityVariant.JackOLanternMini,         new HashMap<>() {{put(EntitySound.DEFAULT, MonstersGirlsSounds.GOURDRAGORA_MINI_GIGGLES);}});
+        put(EntityVariant.Pumpkin,                  new HashMap<>() {{put(EntitySound.DEFAULT, MonstersGirlsSounds.GOURDRAGORA_GIGGLES);}});
+        put(EntityVariant.PumpkinBig,               new HashMap<>() {{put(EntitySound.DEFAULT, MonstersGirlsSounds.GOURDRAGORA_ROAR);}});
+        put(EntityVariant.PumpkinMini,              new HashMap<>() {{put(EntitySound.DEFAULT, MonstersGirlsSounds.GOURDRAGORA_MINI_GIGGLES);}});
 
         put(EntityVariant.MandrakeBrown,            mandrakeMap);
         put(EntityVariant.MandrakeChorus,           mandrakeMap);
@@ -425,6 +441,8 @@ public class InternalMetric {
         put(EntityVariant.MushroomWarped,           mushroomMap);
         put(EntityVariant.MushroomWarpedRare,       mushroomMap);
         put(EntityVariant.MushroomSnowball,    new HashMap<>() {{put(EntitySound.DEFAULT, MonstersGirlsSounds.MUSHROOM_GIRL_ENDER);}});
+
+        put(EntityVariant.SlimeBlue,               slimeMap);
 
         put(EntityVariant.SpookPeach,               spookMap);
         put(EntityVariant.SpookTeal,                spookMap);
@@ -495,7 +513,7 @@ public class InternalMetric {
         put(EntityVariant.MushroomWarpedRare,       setTexture("mushroom/mushroom_girl_warped_rare", true,true,true,false,false));
         put(EntityVariant.MushroomSnowball,         setTexture("mushroom/mushroom_girl_snowball", true,true,true,true,false));
 
-        put(EntityVariant.Slime,                setTexture("slime/slime_girl", false,false,false,false,false));
+        put(EntityVariant.SlimeBlue,                setTexture("slime/slime_girl", false,false,false,false,false));
 
         put(EntityVariant.SpookPeach,           setTexture("spook/spook_girl_peach", false,false,true,false,false));
         put(EntityVariant.SpookTeal,            setTexture("spook/spook_girl_teal", false,false,true,false,false));
@@ -514,173 +532,9 @@ public class InternalMetric {
             setTexture("bee/bee_05", true,true,true,true,true)
     ));
 
-    public static HashMap<EntityVariant, HashMap<EntityAttribute, Float>> ATTRIBUTES = new HashMap<>(){{
-        var mushroomAttribute = new HashMap<EntityAttribute, Float>(){{
-            put(EntityAttribute.MAX_HEALTH, 15F);               // Max Health
-            put(EntityAttribute.ATTACK_DAMAGE, 2F);             // Attack Damage
-            put(EntityAttribute.ATTACK_SPEED, 1.2F);            // Attack Speed
-            put(EntityAttribute.MOVEMENT_SPEED,0.3F);           // Movement Speed
-            put(EntityAttribute.DEFENSE, 0F);                   // Defense
-            put(EntityAttribute.ARMOR, 0F);
-            put(EntityAttribute.ARMOR_TOUGHNESS, 0F);
-            put(EntityAttribute.FOLLOW_RANGE, 7F);
-        }};
-        var mandrakeFruityAttribute = new HashMap<EntityAttribute, Float>(){{
-            put(EntityAttribute.MAX_HEALTH, 10F);               // Max Health
-            put(EntityAttribute.ATTACK_DAMAGE, 0F);             // Attack Damage
-            put(EntityAttribute.ATTACK_SPEED, 0F);              // Attack Speed
-            put(EntityAttribute.MOVEMENT_SPEED, 0.3F);          // Movement Speed
-            put(EntityAttribute.DEFENSE, 0.1F);                 // Defense
-            put(EntityAttribute.ARMOR, 0F);
-            put(EntityAttribute.ARMOR_TOUGHNESS, 0F);
-            put(EntityAttribute.KNOCKBACK_RESISTANCE, 0.2F);
-        }};
-        var spookAttribute = new HashMap<EntityAttribute, Float>(){{
-            put(EntityAttribute.MAX_HEALTH, 20F);               // Max Health
-            put(EntityAttribute.ATTACK_DAMAGE, 3F);             // Attack Damage
-            put(EntityAttribute.ATTACK_SPEED, 1.2F);            // Attack Speed
-            put(EntityAttribute.MOVEMENT_SPEED, 0.3F);          // Movement Speed
-            put(EntityAttribute.DEFENSE, 0F);                   // Defense
-            put(EntityAttribute.ARMOR, 0F);
-            put(EntityAttribute.ARMOR_TOUGHNESS, 0F);
-            put(EntityAttribute.KNOCKBACK_RESISTANCE, 1F);
-            put(EntityAttribute.FLYING_SPEED, 0.8F);
-            put(EntityAttribute.FOLLOW_RANGE, 7F);
-        }};
-        var wispAttribute = new HashMap<EntityAttribute, Float>(){{
-            put(EntityAttribute.MAX_HEALTH, 18F);              // Max Health
-            put(EntityAttribute.ATTACK_DAMAGE, 3F);            // Attack Damage
-            put(EntityAttribute.ATTACK_SPEED, 1.2F);           // Attack Speed
-            put(EntityAttribute.MOVEMENT_SPEED, 0.3F);         // Movement Speed
-            put(EntityAttribute.DEFENSE, 0.5F);                // Defense
-            put(EntityAttribute.ARMOR, 0F);
-            put(EntityAttribute.ARMOR_TOUGHNESS, 0F);
-            put(EntityAttribute.KNOCKBACK_ATTACK, 0.3F);
-            put(EntityAttribute.FLYING_SPEED, 0.8F);
-            put(EntityAttribute.FOLLOW_RANGE, 7F);
-        }};
+    public static HashMap<EntityVariant, HashMap<EntityAttribute, Float>> ATTRIBUTES = new HashMap<>();
 
-        var gourdragora = new HashMap<EntityAttribute, Float>(){{
-            put(EntityAttribute.MAX_HEALTH, 20F);               // Max Health
-            put(EntityAttribute.ATTACK_DAMAGE, 7F);             // Attack Damage
-            put(EntityAttribute.ATTACK_SPEED, 1F);            // Attack Speed
-            put(EntityAttribute.MOVEMENT_SPEED, 0.6F);           // Movement Speed
-            put(EntityAttribute.DEFENSE, 0F);                   // Defense
-            put(EntityAttribute.ARMOR, 0F);
-            put(EntityAttribute.ARMOR_TOUGHNESS, 0F);
-            put(EntityAttribute.FOLLOW_RANGE, 7F);
-        }};
-
-        var gourdragoraMini = new HashMap<EntityAttribute, Float>(){{
-            put(EntityAttribute.MAX_HEALTH, 15F);               // Max Health
-            put(EntityAttribute.ATTACK_DAMAGE, 5F);             // Attack Damage
-            put(EntityAttribute.ATTACK_SPEED, 1F);            // Attack Speed
-            put(EntityAttribute.MOVEMENT_SPEED, 0.6F);           // Movement Speed
-            put(EntityAttribute.DEFENSE, 0F);                   // Defense
-            put(EntityAttribute.ARMOR, 0F);
-            put(EntityAttribute.ARMOR_TOUGHNESS, 0F);
-            put(EntityAttribute.FOLLOW_RANGE, 7F);
-        }};
-
-        var gourdragoraBig = new HashMap<EntityAttribute, Float>(){{
-            put(EntityAttribute.MAX_HEALTH, 30F);               // Max Health
-            put(EntityAttribute.ATTACK_DAMAGE, 12F);             // Attack Damage
-            put(EntityAttribute.ATTACK_SPEED, 1F);            // Attack Speed
-            put(EntityAttribute.MOVEMENT_SPEED, 0.6F);           // Movement Speed
-            put(EntityAttribute.DEFENSE, 0F);                   // Defense
-            put(EntityAttribute.ARMOR, 0F);
-            put(EntityAttribute.ARMOR_TOUGHNESS, 0F);
-            put(EntityAttribute.KNOCKBACK_ATTACK, 3F);
-            put(EntityAttribute.FOLLOW_RANGE, 12F);
-        }};
-
-        put(EntityVariant.Bee, wispAttribute);
-
-        put(EntityVariant.JackOLantern, gourdragora);
-        put(EntityVariant.JackOLanternBig, gourdragoraBig);
-        put(EntityVariant.JackOLanternMini, gourdragoraMini);
-        put(EntityVariant.Pumpkin, gourdragora);
-        put(EntityVariant.PumpkinBig, gourdragoraBig);
-        put(EntityVariant.PumpkinMini, gourdragoraMini);
-
-        put(EntityVariant.MandrakeGreen, setAttribute(15F, 2F, 1.2F, 0.3F, 0.2F));
-        put(EntityVariant.MandrakeBrown, setAttribute(15F, 2F, 1.2F, 0.3F, 0.2F));
-        put(EntityVariant.MandrakeChorus, mandrakeFruityAttribute);
-        put(EntityVariant.MandrakeGlowBerry, mandrakeFruityAttribute);
-
-        put(EntityVariant.MushroomFlyAgaricYellow, mushroomAttribute);
-        put(EntityVariant.MushroomBrown, mushroomAttribute);
-        put(EntityVariant.MushroomCrimson, mushroomAttribute);
-        put(EntityVariant.MushroomCrimsonRare, mushroomAttribute);
-        put(EntityVariant.MushroomEnderPuffball, mushroomAttribute);
-        put(EntityVariant.MushroomInfernal, mushroomAttribute);
-        put(EntityVariant.FungusInkCap, mushroomAttribute);
-        put(EntityVariant.MushroomMolten, mushroomAttribute);
-        put(EntityVariant.MushroomFlyAgaricRed, mushroomAttribute);
-        put(EntityVariant.MushroomSoulWanderer, mushroomAttribute);
-        put(EntityVariant.MushroomWarped, mushroomAttribute);
-        put(EntityVariant.MushroomWarpedRare, mushroomAttribute);
-        put(EntityVariant.MushroomSnowball, mushroomAttribute);
-
-        put(EntityVariant.Slime, new HashMap<EntityAttribute, Float>(){{
-            put(EntityAttribute.MAX_HEALTH, 15F);               // Max Health
-            put(EntityAttribute.ATTACK_DAMAGE, 5F);             // Attack Damage
-            put(EntityAttribute.ATTACK_SPEED, 1.2F);            // Attack Speed
-            put(EntityAttribute.MOVEMENT_SPEED, 0.6F);           // Movement Speed
-            put(EntityAttribute.DEFENSE, 0F);                   // Defense
-            put(EntityAttribute.ARMOR, 0F);
-            put(EntityAttribute.ARMOR_TOUGHNESS, 0F);
-            put(EntityAttribute.FOLLOW_RANGE, 7F);
-        }});
-
-        put(EntityVariant.SpookPeach, spookAttribute);
-        put(EntityVariant.SpookTeal, spookAttribute);
-
-        put(EntityVariant.WispBlue, wispAttribute);
-        put(EntityVariant.WispGreen, wispAttribute);
-        put(EntityVariant.WispYellow, wispAttribute);
-    }};
-
-    public static HashMap<EntityVariant, HashMap<EntitySetting, InternalData>> SETTINGS = new HashMap<>(){{
-        Predicate<LivingEntity> generalAvoidEntities = entity -> entity instanceof Monster && !(entity instanceof CreeperEntity);
-
-        put(EntityVariant.Bee,                  setSetting(20, 1, 2, List.of(BiomeKeys.FOREST, BiomeKeys.BIRCH_FOREST, BiomeKeys.FLOWER_FOREST, BiomeKeys.SUNFLOWER_PLAINS), generalAvoidEntities));
-
-        put(EntityVariant.JackOLantern,         setSetting(20, 1, 2, List.of(BiomeKeys.DARK_FOREST), generalAvoidEntities));
-        put(EntityVariant.JackOLanternBig,      setSetting(10, 1, 2, List.of(BiomeKeys.DARK_FOREST), generalAvoidEntities));
-        put(EntityVariant.JackOLanternMini,     setSetting(20, 1, 2, List.of(BiomeKeys.DARK_FOREST), generalAvoidEntities));
-        put(EntityVariant.Pumpkin,              setSetting(20, 1, 2, List.of(BiomeKeys.PLAINS, BiomeKeys.SUNFLOWER_PLAINS), generalAvoidEntities));
-        put(EntityVariant.PumpkinBig,           setSetting(10, 1, 2, List.of(BiomeKeys.PLAINS, BiomeKeys.SUNFLOWER_PLAINS), generalAvoidEntities));
-        put(EntityVariant.PumpkinMini,          setSetting(20, 1, 2, List.of(BiomeKeys.PLAINS, BiomeKeys.SUNFLOWER_PLAINS), generalAvoidEntities));
-
-        put(EntityVariant.MandrakeGreen,        setSetting(20, 1, 2, List.of(BiomeKeys.FOREST, BiomeKeys.MEADOW, BiomeKeys.BIRCH_FOREST, BiomeKeys.FLOWER_FOREST), generalAvoidEntities));
-        put(EntityVariant.MandrakeBrown,        setSetting(20, 1, 2, List.of(BiomeKeys.FOREST, BiomeKeys.MEADOW, BiomeKeys.BIRCH_FOREST, BiomeKeys.FLOWER_FOREST), generalAvoidEntities));
-        put(EntityVariant.MandrakeChorus,       setSetting(20, 1, 2, List.of(BiomeKeys.SMALL_END_ISLANDS, BiomeKeys.END_MIDLANDS, BiomeKeys.END_HIGHLANDS), generalAvoidEntities));
-        put(EntityVariant.MandrakeGlowBerry,    setSetting(20, 1, 2, List.of(BiomeKeys.LUSH_CAVES), generalAvoidEntities));
-
-        put(EntityVariant.MushroomFlyAgaricYellow,    setSetting(20, 1, 2, List.of(BiomeKeys.TAIGA, BiomeKeys.OLD_GROWTH_PINE_TAIGA, BiomeKeys.OLD_GROWTH_SPRUCE_TAIGA), generalAvoidEntities));
-        put(EntityVariant.MushroomBrown,            setSetting(20, 1, 2, List.of(BiomeKeys.FOREST, BiomeKeys.MEADOW, BiomeKeys.BIRCH_FOREST, BiomeKeys.FLOWER_FOREST, BiomeKeys.TAIGA), generalAvoidEntities));
-        put(EntityVariant.MushroomCrimson,          setSetting(20, 1, 2, List.of(BiomeKeys.CRIMSON_FOREST), generalAvoidEntities));
-        put(EntityVariant.MushroomCrimsonRare,      setSetting(20, 1, 2, List.of(BiomeKeys.CRIMSON_FOREST), generalAvoidEntities));
-        put(EntityVariant.MushroomEnderPuffball,    setSetting(20, 1, 2, List.of(BiomeKeys.SMALL_END_ISLANDS, BiomeKeys.END_MIDLANDS, BiomeKeys.END_HIGHLANDS), generalAvoidEntities));
-        put(EntityVariant.MushroomInfernal,         setSetting(20, 1, 2, List.of(BiomeKeys.NETHER_WASTES), generalAvoidEntities));
-        put(EntityVariant.FungusInkCap,             setSetting(10, 1, 2, List.of(BiomeKeys.FOREST, BiomeKeys.PLAINS, BiomeKeys.BIRCH_FOREST), generalAvoidEntities));
-        put(EntityVariant.MushroomMolten,           setSetting(40, 1, 2, List.of(BiomeKeys.BASALT_DELTAS), generalAvoidEntities));
-        put(EntityVariant.MushroomFlyAgaricRed,        setSetting(20, 1, 2, List.of(BiomeKeys.FOREST, BiomeKeys.DARK_FOREST, BiomeKeys.MUSHROOM_FIELDS, BiomeKeys.TAIGA), generalAvoidEntities));
-        put(EntityVariant.MushroomSoulWanderer,     setSetting(20, 1, 2, List.of(BiomeKeys.SOUL_SAND_VALLEY), generalAvoidEntities));
-        put(EntityVariant.MushroomWarped,           setSetting(20, 1, 2, List.of(BiomeKeys.WARPED_FOREST), generalAvoidEntities));
-        put(EntityVariant.MushroomWarpedRare,       setSetting(20, 1, 2, List.of(BiomeKeys.WARPED_FOREST), generalAvoidEntities));
-        put(EntityVariant.MushroomSnowball,         setSetting(20, 1, 2, List.of(BiomeKeys.SNOWY_BEACH, BiomeKeys.SNOWY_PLAINS, BiomeKeys.SNOWY_SLOPES, BiomeKeys.SNOWY_TAIGA, BiomeKeys.ICE_SPIKES, BiomeKeys.FROZEN_OCEAN, BiomeKeys.FROZEN_RIVER, BiomeKeys.FROZEN_PEAKS), generalAvoidEntities));
-
-        put(EntityVariant.Slime,   setSetting(25, 1, 2, List.of(BiomeKeys.DARK_FOREST), generalAvoidEntities));
-
-        put(EntityVariant.SpookPeach,   setSetting(20, 1, 2, List.of(BiomeKeys.DARK_FOREST, BiomeKeys.FOREST), generalAvoidEntities));
-        put(EntityVariant.SpookTeal,    setSetting(20, 1, 2, List.of(BiomeKeys.DARK_FOREST, BiomeKeys.FOREST), generalAvoidEntities));
-
-        put(EntityVariant.WispBlue,     setSetting(20, 1, 2, List.of(BiomeKeys.DARK_FOREST, BiomeKeys.SWAMP), generalAvoidEntities));
-        put(EntityVariant.WispGreen,    setSetting(20, 1, 2, List.of(BiomeKeys.DARK_FOREST, BiomeKeys.SWAMP), generalAvoidEntities));
-        put(EntityVariant.WispYellow,   setSetting(20, 1, 2, List.of(BiomeKeys.DARK_FOREST, BiomeKeys.SWAMP), generalAvoidEntities));
-    }};
+    public static HashMap<EntityVariant, HashMap<EntitySetting, InternalData>> SETTINGS = new HashMap<>();
 
     public static HashMap<EntityVariant, List<List<InternalData>>> HELPFUL_EFFECTS = new HashMap<>() {{
         var regeneration    = new ArrayList<>(List.of(new InternalData(Items.COOKIE),       new InternalData(StatusEffects.REGENERATION),   new InternalData(5000), new InternalData(1)));
@@ -908,20 +762,8 @@ public class InternalMetric {
         return entityAttribute == null ? 0F : entityAttribute;
     } // getAttribute ()
 
-    private static HashMap<EntityAttribute, Float> setAttribute(float health, float damage, float attackSpeed, float movementSpeed, float defence){
-        return new HashMap<>(){{
-            put(EntityAttribute.MAX_HEALTH, health);                // Max Health
-            put(EntityAttribute.ATTACK_DAMAGE, damage);             // Attack Damage
-            put(EntityAttribute.ATTACK_SPEED, attackSpeed);         // Attack Speed
-            put(EntityAttribute.MOVEMENT_SPEED, movementSpeed);     // Movement Speed
-            put(EntityAttribute.DEFENSE, defence);                  // Defense
-            put(EntityAttribute.ARMOR, 0F);
-            put(EntityAttribute.ARMOR_TOUGHNESS, 0F);
-        }};
-    } // setAttribute ()
-
     // SETTINGS
-    private static HashMap<EntitySetting, InternalData> setSetting(int weight, int minGroup, int maxGroup, List<RegistryKey<Biome>> biomes, Predicate<LivingEntity> avoidEntities){
+    public static HashMap<EntitySetting, InternalData> setSetting(int weight, int minGroup, int maxGroup, List<RegistryKey<Biome>> biomes, Predicate<LivingEntity> avoidEntities){
         return new HashMap<>(){{
             put(EntitySetting.SpawnWeight, new InternalData(weight));
             put(EntitySetting.SpawnMinGroup, new InternalData(minGroup));

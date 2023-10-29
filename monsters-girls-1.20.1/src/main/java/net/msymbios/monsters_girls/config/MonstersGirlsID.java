@@ -174,6 +174,17 @@ public class MonstersGirlsID {
     public static final String SPOOK_HURT = "spookhurt";
     public static final String SPOOK_LAUGH = "spooklaugh";
 
+    public static final String MUSHROOM_GIRL_SOUNDS = "mushroomgirlsounds";
+    public static final String MUSHROOM_GIRL_HI = "mushroomgirlsayshi";
+    public static final String SLIME_GIRL_SOUNDS = "slimegirlsounds";
+    public static final String SLIME_GIRL_HOP = "slimepop";
+    public static final String SLIME_GIRL_HURT = "slimegirlhurt";
+    public static final String MUSHROOM_GIRL_WEIRD_HI = "weirdmushroomgalsayshi";
+    public static final String MUSHROOM_GIRL_WEIRD_SOUNDS = "weirdmushroomgirlsounds";
+    public static final String GOURDRAGORA_ROAR = "gourdragora_roar";
+    public static final String GOURDRAGORA_GIGGLES = "gourdragora_giggles";
+    public static final String GOURDRAGORA_MINI_GIGGLES = "mini_gourdragora_giggles";
+
     // -- EFFECTS --
     public static final String SPOOKED = "spooked";
 

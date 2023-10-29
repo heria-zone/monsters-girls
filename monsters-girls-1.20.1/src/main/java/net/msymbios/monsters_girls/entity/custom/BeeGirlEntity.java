@@ -44,9 +44,7 @@ public class BeeGirlEntity extends InternalEntity implements GeoEntity  {
         return MobEntity.createMobAttributes()
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, InternalMetric.getAttribute(EntityVariant.Bee, EntityAttribute.MAX_HEALTH))
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, InternalMetric.getAttribute(EntityVariant.Bee, EntityAttribute.MOVEMENT_SPEED))
-                .add(EntityAttributes.GENERIC_ARMOR, InternalMetric.getAttribute(EntityVariant.Bee, EntityAttribute.ARMOR))
-                .add(EntityAttributes.GENERIC_ARMOR_TOUGHNESS, InternalMetric.getAttribute(EntityVariant.Bee, EntityAttribute.ARMOR_TOUGHNESS))
-                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, InternalMetric.getAttribute(EntityVariant.Bee, EntityAttribute.FOLLOW_RANGE))
+                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, InternalMetric.getAttribute(EntityVariant.Bee, EntityAttribute.FOLLOW_RANGE_MAX))
                 .add(EntityAttributes.GENERIC_FLYING_SPEED, InternalMetric.getAttribute(EntityVariant.Bee, EntityAttribute.FLYING_SPEED));
     } // setAttributes ()
 
@@ -138,12 +136,12 @@ public class BeeGirlEntity extends InternalEntity implements GeoEntity  {
     @Override
     protected void initGoals() {
         this.goalSelector.add(1, new SitGoal(this));
-        this.goalSelector.add(2, new FollowOwnerGoal(this, InternalMetric.getAttribute(EntityVariant.Bee, EntityAttribute.MOVEMENT_SPEED), InternalMetric.getAttribute(EntityVariant.Bee, EntityAttribute.FOLLOW_RANGE), InternalMetric.FollowCloseDistance, false));
+        this.goalSelector.add(2, new FollowOwnerGoal(this, InternalMetric.getAttribute(EntityVariant.Bee, EntityAttribute.MOVEMENT_FOLLOW_OWNER), InternalMetric.getAttribute(EntityVariant.Bee, EntityAttribute.FOLLOW_RANGE_MAX), InternalMetric.getAttribute(EntityVariant.Bee, EntityAttribute.FOLLOW_RANGE_MIN), false));
         this.goalSelector.add(3, new FlyGoal(this, InternalMetric.getAttribute(EntityVariant.Bee, EntityAttribute.FLYING_SPEED)));
         this.goalSelector.add(4, new TemptGoal(this, InternalMetric.getAttribute(EntityVariant.Bee, EntityAttribute.MOVEMENT_SPEED), Ingredient.ofItems(new ItemConvertible[]{Items.HONEYCOMB, Items.HONEY_BOTTLE}), false));
-        this.goalSelector.add(5, new WanderAroundFarGoal(this, InternalMetric.WanderAroundMovement));
-        this.goalSelector.add(6, new LookAtEntityGoal(this, PlayerEntity.class, InternalMetric.LookAtRange));
-        this.goalSelector.add(6, new LookAtEntityGoal(this, InternalEntity.class, InternalMetric.LookAtRange));
+        this.goalSelector.add(5, new WanderAroundFarGoal(this, InternalMetric.getAttribute(EntityVariant.Bee, EntityAttribute.MOVEMENT_WANDER_AROUND)));
+        this.goalSelector.add(6, new LookAtEntityGoal(this, PlayerEntity.class, InternalMetric.LOOK_RANGE));
+        this.goalSelector.add(6, new LookAtEntityGoal(this, InternalEntity.class, InternalMetric.LOOK_RANGE));
         this.goalSelector.add(7, new LookAroundGoal(this));
     } // initGoals ()
 
