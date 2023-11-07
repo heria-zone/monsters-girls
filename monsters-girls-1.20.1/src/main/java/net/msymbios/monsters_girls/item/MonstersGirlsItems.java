@@ -213,6 +213,6 @@ public class MonstersGirlsItems {
         entries.add(MonstersGirlsItems.SPAWN_WISP_GIRL_BLUE);
         entries.add(MonstersGirlsItems.SPAWN_WISP_GIRL_GREEN);
         entries.add(MonstersGirlsItems.SPAWN_WISP_GIRL_YELLOW);
-    } // addItemsToBuildingBlocksGroup ()
+    } // addItemsToSpawnEggsGroup ()
 
 } // Class MonstersGirlsItems

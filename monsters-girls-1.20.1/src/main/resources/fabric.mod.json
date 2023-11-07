@@ -29,7 +29,7 @@
 		"monsters_girls.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.14.23",
+		"fabricloader": ">=0.14.20",
 		"minecraft": "~1.20.1",
 		"java": ">=17",
 		"fabric-api": "*"
