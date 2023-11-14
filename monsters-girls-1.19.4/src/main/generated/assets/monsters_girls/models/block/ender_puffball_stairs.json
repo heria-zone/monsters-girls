@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "monsters_girls:block/ender_puffball_planks",
+    "side": "monsters_girls:block/ender_puffball_planks",
+    "top": "monsters_girls:block/ender_puffball_planks"
+  }
+}

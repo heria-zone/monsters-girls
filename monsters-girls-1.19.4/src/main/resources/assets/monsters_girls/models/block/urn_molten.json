@@ -1,0 +1,9 @@
+{
+  "parent": "monsters_girls:custom/urn_big",
+  "textures": {
+    "all": "monsters_girls:block/urn_molten",
+    "particle": "monsters_girls:block/urn_molten",
+    "0": "monsters_girls:block/urn_molten"
+  },
+  "render_type": "solid"
+}

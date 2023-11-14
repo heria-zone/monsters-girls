@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_trapdoor_open",
+  "textures": {
+    "texture": "monsters_girls:block/ender_puffball_trapdoor"
+  }
+}

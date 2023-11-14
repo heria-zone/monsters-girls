@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_post",
+  "textures": {
+    "texture": "monsters_girls:block/ender_puffball_planks"
+  }
+}

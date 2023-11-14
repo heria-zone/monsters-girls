@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_fence_gate",
+  "textures": {
+    "texture": "monsters_girls:block/ender_puffball_planks"
+  }
+}
