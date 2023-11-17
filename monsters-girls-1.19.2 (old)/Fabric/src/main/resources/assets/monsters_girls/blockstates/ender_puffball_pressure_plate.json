@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "monsters_girls:block/ender_puffball_pressure_plate"
+    },
+    "powered=true": {
+      "model": "monsters_girls:block/ender_puffball_pressure_plate_down"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "has_soul_wanderer_button",
+  "ingredients": [
+    {
+      "item": "monsters_girls:soul_wanderer_planks"
+    }
+  ],
+  "result": {
+    "item": "monsters_girls:soul_wanderer_button"
+  }
+}

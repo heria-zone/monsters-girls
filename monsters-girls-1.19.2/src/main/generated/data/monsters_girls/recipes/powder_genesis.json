@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:golden_apple"
+    },
+    {
+      "item": "minecraft:bone_meal"
+    },
+    {
+      "tag": "monsters_girls:mushrooms"
+    }
+  ],
+  "result": {
+    "item": "monsters_girls:powder_genesis"
+  }
+}

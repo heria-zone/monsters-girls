@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "monsters_girls:block/soul_wanderer_stem",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "monsters_girls:block/soul_wanderer_stem"
+    },
+    "axis=z": {
+      "model": "monsters_girls:block/soul_wanderer_stem",
+      "x": 90
+    }
+  }
+}

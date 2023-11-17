@@ -1,0 +1,114 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.hat_small_mushroom",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [8, 24, -8]
+				},
+				{
+					"name": "shape2",
+					"parent": "root",
+					"pivot": [8, 6.5, -7.5]
+				},
+				{
+					"name": "shape9",
+					"parent": "shape2",
+					"pivot": [8, 7.5, -7.5]
+				},
+				{
+					"name": "neck",
+					"parent": "shape9",
+					"pivot": [8, 8.5, -7.5]
+				},
+				{
+					"name": "head",
+					"parent": "neck",
+					"pivot": [8, 9.5, -7.5],
+					"cubes": [
+						{
+							"origin": [-2, 3, -2],
+							"size": [4, 6, 4],
+							"uv": {
+								"north": {"uv": [4, 4], "uv_size": [4, 6]},
+								"east": {"uv": [0, 4], "uv_size": [4, 6]},
+								"south": {"uv": [12, 4], "uv_size": [4, 6]},
+								"west": {"uv": [8, 4], "uv_size": [4, 6]},
+								"up": {"uv": [4, 0], "uv_size": [4, 4]},
+								"down": {"uv": [8, 4], "uv_size": [4, -4]}
+							}
+						}
+					]
+				},
+				{
+					"name": "shroom2",
+					"parent": "head",
+					"pivot": [8, 11, -7.5],
+					"cubes": [
+						{
+							"origin": [-3, 0, -3],
+							"size": [6, 3, 6],
+							"uv": {
+								"north": {"uv": [42, 28], "uv_size": [6, 3]},
+								"east": {"uv": [36, 28], "uv_size": [6, 3]},
+								"south": {"uv": [54, 28], "uv_size": [6, 3]},
+								"west": {"uv": [48, 28], "uv_size": [6, 3]},
+								"up": {"uv": [42, 22], "uv_size": [6, 6]},
+								"down": {"uv": [48, 28], "uv_size": [6, -6]}
+							}
+						}
+					]
+				},
+				{
+					"name": "shroom1",
+					"parent": "shroom2",
+					"pivot": [8, 16, -7.5]
+				},
+				{
+					"name": "hair",
+					"parent": "head",
+					"pivot": [8, 11, -7.5]
+				},
+				{
+					"name": "bone",
+					"pivot": [8, 0, -8],
+					"cubes": [
+						{
+							"origin": [-6, 13, -6],
+							"size": [12, 2, 12],
+							"uv": {
+								"north": {"uv": [12, 34], "uv_size": [12, 2]},
+								"east": {"uv": [0, 34], "uv_size": [12, 2]},
+								"south": {"uv": [36, 34], "uv_size": [12, 2]},
+								"west": {"uv": [24, 34], "uv_size": [12, 2]},
+								"up": {"uv": [12, 22], "uv_size": [12, 12]},
+								"down": {"uv": [24, 34], "uv_size": [12, -12]}
+							}
+						},
+						{
+							"origin": [-9, 9, -9],
+							"size": [18, 4, 18],
+							"uv": {
+								"north": {"uv": [18, 18], "uv_size": [18, 4]},
+								"east": {"uv": [0, 18], "uv_size": [18, 4]},
+								"south": {"uv": [54, 18], "uv_size": [18, 4]},
+								"west": {"uv": [36, 18], "uv_size": [18, 4]},
+								"up": {"uv": [18, 0], "uv_size": [18, 18]},
+								"down": {"uv": [36, 18], "uv_size": [18, -18]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

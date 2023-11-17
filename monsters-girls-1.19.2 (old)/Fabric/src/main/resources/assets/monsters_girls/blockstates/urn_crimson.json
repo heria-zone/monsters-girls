@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "monsters_girls:block/urn_crimson"
+    },
+    "facing=east": {
+      "model": "monsters_girls:block/urn_crimson",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "monsters_girls:block/urn_crimson",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "monsters_girls:block/urn_crimson",
+      "y": 270
+    }
+  }
+}
