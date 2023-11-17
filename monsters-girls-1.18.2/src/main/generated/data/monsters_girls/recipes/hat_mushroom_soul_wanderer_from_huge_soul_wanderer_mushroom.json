@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "hat",
+  "ingredients": [
+    {
+      "item": "monsters_girls:huge_soul_wanderer_mushroom"
+    }
+  ],
+  "result": {
+    "item": "monsters_girls:hat_mushroom_soul_wanderer"
+  }
+}

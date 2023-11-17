@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "monsters_girls:block/soul_wanderer_pressure_plate"
+    },
+    "powered=true": {
+      "model": "monsters_girls:block/soul_wanderer_pressure_plate_down"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:brown_mushroom",
+    "minecraft:red_mushroom",
+    "minecraft:warped_fungus",
+    "minecraft:crimson_fungus",
+    "monsters_girls:huge_brown_mushroom",
+    "monsters_girls:huge_crimson_fungus",
+    "monsters_girls:huge_crimson_rare_fungus",
+    "monsters_girls:huge_ender_puffball_mushroom",
+    "monsters_girls:huge_fly_red_agaric_mushroom",
+    "monsters_girls:huge_fly_yellow_agaric_mushroom",
+    "monsters_girls:huge_infernal_mushroom",
+    "monsters_girls:huge_ink_cap_mushroom",
+    "monsters_girls:huge_molten_fungus",
+    "monsters_girls:huge_soul_wanderer_mushroom",
+    "monsters_girls:huge_warped_fungus",
+    "monsters_girls:huge_warped_rare_fungus"
+  ]
+}

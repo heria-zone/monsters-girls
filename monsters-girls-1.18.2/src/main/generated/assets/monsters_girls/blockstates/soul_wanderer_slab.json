@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "monsters_girls:block/soul_wanderer_slab"
+    },
+    "type=double": {
+      "model": "monsters_girls:block/soul_wanderer_planks"
+    },
+    "type=top": {
+      "model": "monsters_girls:block/soul_wanderer_slab_top"
+    }
+  }
+}
