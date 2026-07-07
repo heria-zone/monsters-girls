@@ -1,9 +1,0 @@
-{
-  "parent": "monsters_girls:custom/urn_small",
-  "textures": {
-    "all": "monsters_girls:block/urn_crimson",
-    "particle": "monsters_girls:block/urn_crimson",
-    "1": "monsters_girls:block/urn_crimson"
-  },
-  "render_type": "solid"
-}

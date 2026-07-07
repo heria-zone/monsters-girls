@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "monsters_girls:block/molten_fungus_planks",
-    "side": "monsters_girls:block/molten_fungus_planks",
-    "top": "monsters_girls:block/molten_fungus_planks"
-  }
-}
