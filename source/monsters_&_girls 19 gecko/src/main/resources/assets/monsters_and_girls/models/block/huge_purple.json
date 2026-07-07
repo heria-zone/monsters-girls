@@ -1,0 +1,9 @@
+{
+  "parent": "monsters_and_girls:custom/crimsonrare",
+  "textures": {
+    "all": "monsters_and_girls:blocks/rarecrimsonbig",
+    "particle": "monsters_and_girls:blocks/rarecrimsonbig",
+    "0": "monsters_and_girls:blocks/rarecrimsonbig"
+  },
+  "render_type": "cutout_mipped"
+}

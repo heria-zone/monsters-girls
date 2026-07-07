@@ -1,0 +1,9 @@
+{
+  "parent": "monsters_and_girls:custom/inkycapbig",
+  "textures": {
+    "all": "monsters_and_girls:blocks/ink_cap_big",
+    "particle": "monsters_and_girls:blocks/ink_cap_big",
+    "0": "monsters_and_girls:blocks/ink_cap_big"
+  },
+  "render_type": "cutout_mipped"
+}

@@ -1,0 +1,8 @@
+{
+  "type": "forge:add_features",
+  "biomes": {
+    "type": "forge:any"
+  },
+  "features": "monsters_and_girls:spook_dungeon",
+  "step": "underground_structures"
+}

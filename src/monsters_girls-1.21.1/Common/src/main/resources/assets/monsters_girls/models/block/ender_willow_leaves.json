@@ -1,0 +1,1 @@
+{ "parent": "minecraft:block/leaves", "textures": { "all": "monsters_girls:block/ender_willow_leaves" } }

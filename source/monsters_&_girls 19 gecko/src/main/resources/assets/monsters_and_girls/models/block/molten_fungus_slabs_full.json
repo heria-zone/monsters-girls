@@ -1,0 +1,9 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "bottom": "monsters_and_girls:blocks/molten_planks",
+    "top": "monsters_and_girls:blocks/molten_planks",
+    "side": "monsters_and_girls:blocks/molten_planks"
+  },
+  "render_type": "solid"
+}

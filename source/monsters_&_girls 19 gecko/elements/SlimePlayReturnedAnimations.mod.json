@@ -1,0 +1,7 @@
+{
+  "_fv": 43,
+  "_type": "procedure",
+  "definition": {
+    "procedurexml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_trigger\" deletable=\"false\" x=\"55\" y=\"75\"><field name=\"trigger\">no_ext_trigger</field><next><block type=\"controls_if\"><value name=\"IF0\"><block type=\"entity_isbeingridden\"><value name=\"entity\"><block type=\"entity_from_deps\"></block></value></block></value><statement name=\"DO0\"><block type=\"return_string\"><value name=\"return\"><block type=\"text\"><field name=\"TEXT\">ride</field></block></value></block></statement><next><block type=\"return_string\"><value name=\"return\"><block type=\"no_animation\"></block></value></block></next></block></next></block><block type=\"entity_haspotioneffect\" x=\"539\" y=\"198\"><field name=\"potion\">INSTANT_HEALTH</field><value name=\"entity\"><block type=\"entity_from_deps\"></block></value></block><block type=\"controls_if\" x=\"518\" y=\"290\"><value name=\"IF0\"><block type=\"entity_isriding\"><value name=\"entity\"><block type=\"entity_from_deps\"></block></value></block></value><statement name=\"DO0\"><block type=\"return_string\"><value name=\"return\"><block type=\"text\"><field name=\"TEXT\">eat_sit</field></block></value></block></statement></block><block type=\"entity_isriding\" x=\"124\" y=\"343\"><value name=\"entity\"><block type=\"entity_from_deps\"></block></value></block></xml>"
+  }
+}

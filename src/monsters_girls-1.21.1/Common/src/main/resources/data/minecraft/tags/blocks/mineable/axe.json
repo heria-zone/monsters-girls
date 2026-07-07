@@ -1,0 +1,33 @@
+{
+  "replace": false,
+  "values": [
+    "monsters_girls:snowball_log",
+    "monsters_girls:snowball_wood",
+    "monsters_girls:snowball_stripped_log",
+    "monsters_girls:snowball_stripped_wood",
+    "monsters_girls:ender_willow_log",
+    "monsters_girls:ender_willow_wood",
+    "monsters_girls:ender_willow_stripped_log",
+    "monsters_girls:ender_willow_stripped_wood",
+    "monsters_girls:snowball_planks",
+    "monsters_girls:ender_willow_planks",
+    "monsters_girls:snowball_slab",
+    "monsters_girls:ender_willow_slab",
+    "monsters_girls:snowball_stairs",
+    "monsters_girls:ender_willow_stairs",
+    "monsters_girls:snowball_fence",
+    "monsters_girls:ender_willow_fence",
+    "monsters_girls:snowball_fence_gate",
+    "monsters_girls:ender_willow_fence_gate",
+    "monsters_girls:snowball_door",
+    "monsters_girls:ender_willow_door",
+    "monsters_girls:snowball_trapdoor",
+    "monsters_girls:ender_willow_trapdoor",
+    "monsters_girls:snowball_button",
+    "monsters_girls:ender_willow_button",
+    "monsters_girls:snowball_pressure_plate",
+    "monsters_girls:ender_willow_pressure_plate",
+    "monsters_girls:snowball_mushroom_block",
+    "monsters_girls:snowball_shroomlight"
+  ]
+}

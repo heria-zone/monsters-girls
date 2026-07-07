@@ -1,0 +1,3 @@
+{ "type": "minecraft:crafting_shaped", "group": "wooden_stairs", "category": "building",
+  "pattern": ["P  ","PP ","PPP"], "key": {"P": {"item": "monsters_girls:ender_willow_planks"}},
+  "result": {"id": "monsters_girls:ender_willow_stairs", "count": 4} }

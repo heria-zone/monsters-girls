@@ -1,0 +1,9 @@
+{
+  "parent": "monsters_and_girls:custom/soulwanderer",
+  "textures": {
+    "all": "monsters_and_girls:blocks/soul",
+    "particle": "monsters_and_girls:blocks/soul",
+    "0": "monsters_and_girls:blocks/soul"
+  },
+  "render_type": "cutout_mipped"
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "type=bottom": { "model": "monsters_girls:block/snowball_slab" },
+    "type=double":  { "model": "monsters_girls:block/snowball_planks" },
+    "type=top":     { "model": "monsters_girls:block/snowball_slab_top" }
+  }
+}

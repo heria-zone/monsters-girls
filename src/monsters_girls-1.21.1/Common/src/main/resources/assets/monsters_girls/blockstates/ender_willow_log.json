@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "axis=x": { "model": "monsters_girls:block/ender_willow_log", "x": 90, "y": 90 },
+    "axis=y": { "model": "monsters_girls:block/ender_willow_log" },
+    "axis=z": { "model": "monsters_girls:block/ender_willow_log", "x": 90 }
+  }
+}

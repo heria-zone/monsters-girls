@@ -1,0 +1,9 @@
+{
+  "parent": "monsters_and_girls:custom/urn2",
+  "textures": {
+    "all": "monsters_and_girls:blocks/urn2",
+    "particle": "monsters_and_girls:blocks/urn2",
+    "1": "monsters_and_girls:blocks/urn2"
+  },
+  "render_type": "solid"
+}

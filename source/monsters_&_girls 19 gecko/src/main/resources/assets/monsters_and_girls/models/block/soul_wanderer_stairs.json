@@ -1,0 +1,9 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "monsters_and_girls:blocks/soulplanks",
+    "top": "monsters_and_girls:blocks/soulplanks",
+    "side": "monsters_and_girls:blocks/soulplanks"
+  },
+  "render_type": "solid"
+}

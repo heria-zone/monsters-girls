@@ -1,0 +1,23 @@
+{
+  "_fv": 43,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:EnderPuffballPlanks"
+      },
+      {
+        "value": "CUSTOM:MoltenFungusPlanks"
+      },
+      {
+        "value": "CUSTOM:SoulWandererPlanks"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "name": "planks",
+    "namespace": "minecraft"
+  }
+}

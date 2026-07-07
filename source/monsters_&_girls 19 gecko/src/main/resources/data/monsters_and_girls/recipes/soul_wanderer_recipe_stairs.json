@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  2",
+    " 45",
+    "678"
+  ],
+  "key": {
+    "2": {
+      "item": "monsters_and_girls:soul_wanderer_planks"
+    },
+    "4": {
+      "item": "monsters_and_girls:soul_wanderer_planks"
+    },
+    "5": {
+      "item": "monsters_and_girls:soul_wanderer_planks"
+    },
+    "6": {
+      "item": "monsters_and_girls:soul_wanderer_planks"
+    },
+    "7": {
+      "item": "monsters_and_girls:soul_wanderer_planks"
+    },
+    "8": {
+      "item": "monsters_and_girls:soul_wanderer_planks"
+    }
+  },
+  "result": {
+    "item": "monsters_and_girls:soul_wanderer_stairs",
+    "count": 4
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "monsters_and_girls:custom/bigwarpedfungus",
+  "textures": {
+    "all": "monsters_and_girls:blocks/warped",
+    "particle": "monsters_and_girls:blocks/warped",
+    "0": "monsters_and_girls:blocks/warped"
+  },
+  "render_type": "cutout_mipped"
+}

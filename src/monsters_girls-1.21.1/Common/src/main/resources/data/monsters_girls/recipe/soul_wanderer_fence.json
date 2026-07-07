@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_fence",
+  "category": "misc",
+  "pattern": [ "PSP", "PSP" ],
+  "key": { "P": { "item": "monsters_girls:soul_wanderer_planks" }, "S": { "item": "minecraft:stick" } },
+  "result": { "id": "monsters_girls:soul_wanderer_fence", "count": 3 }
+}

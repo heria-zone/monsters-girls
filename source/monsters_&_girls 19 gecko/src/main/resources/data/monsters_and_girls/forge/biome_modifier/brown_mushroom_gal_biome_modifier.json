@@ -1,0 +1,18 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "forest",
+    "dark_forest",
+    "old_growth_pine_taiga",
+    "taiga",
+    "birch_forest",
+    "flower_forest",
+    "old_growth_spruce_taiga"
+  ],
+  "spawners": {
+    "type": "monsters_and_girls:brown_mushroom_gal",
+    "weight": 10,
+    "minCount": 1,
+    "maxCount": 2
+  }
+}

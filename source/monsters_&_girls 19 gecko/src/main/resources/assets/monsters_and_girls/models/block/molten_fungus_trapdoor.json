@@ -1,0 +1,8 @@
+{
+  "parent": "block/template_orientable_trapdoor_bottom",
+  "textures": {
+    "texture": "monsters_and_girls:blocks/molten_trapdoor",
+    "particle": "monsters_and_girls:blocks/molten_trapdoor"
+  },
+  "render_type": "cutout_mipped"
+}

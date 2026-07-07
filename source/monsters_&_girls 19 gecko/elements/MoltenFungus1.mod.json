@@ -1,0 +1,30 @@
+{
+  "_fv": 43,
+  "_type": "structure",
+  "definition": {
+    "structure": "moltenfungus1",
+    "randomlyRotateStructure": true,
+    "surfaceDetectionType": "First block",
+    "spawnProbability": 10000,
+    "minCountPerChunk": 1,
+    "maxCountPerChunk": 2,
+    "spawnLocation": "Underground",
+    "spawnHeightOffset": 0,
+    "spawnXOffset": 0,
+    "spawnZOffset": 0,
+    "spawnWorldTypes": [
+      "Nether"
+    ],
+    "restrictionBlocks": [
+      {
+        "value": "CUSTOM:MoltenFungus"
+      }
+    ],
+    "restrictionBiomes": [
+      {
+        "value": "basalt_deltas"
+      }
+    ],
+    "ignoreBlocks": "AIR_AND_STRUCTURE_BLOCK"
+  }
+}

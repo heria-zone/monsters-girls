@@ -1,0 +1,9 @@
+{
+  "parent": "monsters_and_girls:custom/crimsonfung",
+  "textures": {
+    "all": "monsters_and_girls:blocks/crimsonbig",
+    "particle": "monsters_and_girls:blocks/crimsonbig",
+    "0": "monsters_and_girls:blocks/crimsonbig"
+  },
+  "render_type": "cutout_mipped"
+}

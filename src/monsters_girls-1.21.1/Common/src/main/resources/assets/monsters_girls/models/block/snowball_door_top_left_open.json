@@ -1,0 +1,1 @@
+{ "parent": "minecraft:block/door_top_left_open", "textures": { "top": "monsters_girls:block/snowball_door_top", "bottom": "monsters_girls:block/snowball_door_bottom" } }

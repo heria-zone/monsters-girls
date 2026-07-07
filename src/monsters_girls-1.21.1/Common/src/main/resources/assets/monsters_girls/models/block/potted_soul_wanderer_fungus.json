@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/flower_pot_cross",
+  "textures": {
+    "plant": "monsters_girls:block/soul_wanderer_fungus"
+  },
+  "render_type": "cutout_mipped"
+}

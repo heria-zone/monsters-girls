@@ -1,0 +1,9 @@
+{
+  "parent": "monsters_and_girls:custom/enderpuffball",
+  "textures": {
+    "all": "monsters_and_girls:blocks/enderpuffball",
+    "particle": "monsters_and_girls:blocks/enderpuffball",
+    "0": "monsters_and_girls:blocks/enderpuffball"
+  },
+  "render_type": "cutout_mipped"
+}

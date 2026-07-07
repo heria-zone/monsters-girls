@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "monsters_and_girls:blocks/purpleplanks",
+    "top": "monsters_and_girls:blocks/purpleplanks",
+    "side": "monsters_and_girls:blocks/purpleplanks"
+  }
+}

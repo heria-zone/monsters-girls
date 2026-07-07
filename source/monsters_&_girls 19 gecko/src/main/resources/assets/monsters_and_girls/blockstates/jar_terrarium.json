@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "monsters_and_girls:block/jar_terrarium"
+    },
+    "facing=east": {
+      "model": "monsters_and_girls:block/jar_terrarium",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "monsters_and_girls:block/jar_terrarium",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "monsters_and_girls:block/jar_terrarium",
+      "y": 270
+    }
+  }
+}

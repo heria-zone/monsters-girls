@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "wooden_button",
+  "category": "redstone",
+  "ingredients": [ { "item": "monsters_girls:ender_puffball_planks" } ],
+  "result": { "id": "monsters_girls:ender_puffball_button", "count": 1 }
+}

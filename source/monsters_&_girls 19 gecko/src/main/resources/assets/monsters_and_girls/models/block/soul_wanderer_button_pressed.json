@@ -1,0 +1,7 @@
+{
+  "parent": "block/button_pressed",
+  "textures": {
+    "texture": "monsters_and_girls:blocks/soulplanks"
+  },
+  "render_type": "solid"
+}

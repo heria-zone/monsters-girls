@@ -1,0 +1,11 @@
+{
+  "parent": "monsters_and_girls:custom/flower_pot_moltenfungus",
+  "textures": {
+    "all": "monsters_and_girls:blocks/inferno_shroom1",
+    "particle": "monsters_and_girls:blocks/inferno_shroom1",
+    "flowerpot": "monsters_and_girls:blocks/flower_pot",
+    "plant": "monsters_and_girls:blocks/inferno_shroom1",
+    "dirt": "monsters_and_girls:blocks/dirt"
+  },
+  "render_type": "cutout_mipped"
+}

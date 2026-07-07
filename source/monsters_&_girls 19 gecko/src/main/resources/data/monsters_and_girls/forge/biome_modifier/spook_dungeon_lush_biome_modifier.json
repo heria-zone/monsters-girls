@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "lush_caves",
+  "features": "monsters_and_girls:spook_dungeon_lush",
+  "step": "underground_structures"
+}

@@ -1,0 +1,1 @@
+{ "type": "minecraft:crafting_shapeless", "group": "planks", "category": "building", "ingredients": [{ "item": "monsters_girls:snowball_log" }], "result": { "id": "monsters_girls:snowball_planks", "count": 4 } }

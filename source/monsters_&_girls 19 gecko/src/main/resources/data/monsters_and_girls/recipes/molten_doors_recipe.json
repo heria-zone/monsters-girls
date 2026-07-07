@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23",
+    "45"
+  ],
+  "key": {
+    "0": {
+      "item": "monsters_and_girls:molten_fungus_planks"
+    },
+    "1": {
+      "item": "monsters_and_girls:molten_fungus_planks"
+    },
+    "2": {
+      "item": "monsters_and_girls:molten_fungus_planks"
+    },
+    "3": {
+      "item": "monsters_and_girls:molten_fungus_planks"
+    },
+    "4": {
+      "item": "monsters_and_girls:molten_fungus_planks"
+    },
+    "5": {
+      "item": "monsters_and_girls:molten_fungus_planks"
+    }
+  },
+  "result": {
+    "item": "monsters_and_girls:molten_fungus_doors",
+    "count": 3
+  }
+}

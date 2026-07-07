@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "wooden_button",
+  "category": "redstone",
+  "ingredients": [ { "item": "monsters_girls:soul_wanderer_planks" } ],
+  "result": { "id": "monsters_girls:soul_wanderer_button", "count": 1 }
+}

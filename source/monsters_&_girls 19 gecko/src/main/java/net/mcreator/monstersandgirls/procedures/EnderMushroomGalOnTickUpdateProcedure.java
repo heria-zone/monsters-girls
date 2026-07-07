@@ -1,0 +1,106 @@
+package net.mcreator.monstersandgirls.procedures;
+
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.AABB;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.TamableAnimal;
+import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.core.BlockPos;
+
+import net.mcreator.monstersandgirls.init.MonstersAndGirlsModEntities;
+import net.mcreator.monstersandgirls.init.MonstersAndGirlsModBlocks;
+import net.mcreator.monstersandgirls.entity.StationCarpetEntity;
+import net.mcreator.monstersandgirls.entity.PoofedEndershroomEntity;
+import net.mcreator.monstersandgirls.entity.EnderMushroomGalEntity;
+
+import java.util.Comparator;
+
+public class EnderMushroomGalOnTickUpdateProcedure {
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+		if (entity == null)
+			return;
+		double generator_distance = 0;
+		if (entity.isOnGround()) {
+			if (world.isEmptyBlock(new BlockPos(x, y, z))) {
+				if ((world.getBlockState(new BlockPos(x, y - 1, z))).getBlock() == Blocks.END_STONE) {
+					if (Math.random() < 0.0005) {
+						world.setBlock(new BlockPos(x, y, z), MonstersAndGirlsModBlocks.END_PUFFBALL.get().defaultBlockState(), 3);
+					}
+				}
+			}
+		}
+		if (entity.isOnGround()) {
+			if (!(entity instanceof Mob _mobEnt ? _mobEnt.isLeashed() : false)) {
+				if (!entity.isPassenger()) {
+					if (!(entity instanceof TamableAnimal _tamEnt ? _tamEnt.isTame() : false)) {
+						if (Math.random() < 0.001) {
+							if (!entity.level.isClientSide())
+								entity.discard();
+							if (world instanceof ServerLevel _level) {
+								Entity entityToSpawn = new PoofedEndershroomEntity(MonstersAndGirlsModEntities.POOFED_ENDERSHROOM.get(), _level);
+								entityToSpawn.moveTo((entity.getX()), (entity.getY()), (entity.getZ()), entity.getYRot(), entity.getXRot());
+								entityToSpawn.setYBodyRot(entity.getYRot());
+								entityToSpawn.setYHeadRot(entity.getYRot());
+								if (entityToSpawn instanceof Mob _mobToSpawn)
+									_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
+								world.addFreshEntity(entityToSpawn);
+							}
+						}
+					} else if (entity instanceof TamableAnimal _tamIsTamedBy && (entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null) instanceof LivingEntity _livEnt ? _tamIsTamedBy.isOwnedBy(_livEnt) : false) {
+						if (Math.random() < 0.001) {
+							if (!entity.level.isClientSide())
+								entity.discard();
+							if (world instanceof ServerLevel _level) {
+								Entity entityToSpawn = new PoofedEndershroomEntity(MonstersAndGirlsModEntities.POOFED_ENDERSHROOM.get(), _level);
+								entityToSpawn.moveTo((entity.getX()), (entity.getY()), (entity.getZ()), entity.getYRot(), entity.getXRot());
+								entityToSpawn.setYBodyRot(entity.getYRot());
+								entityToSpawn.setYHeadRot(entity.getYRot());
+								if (entityToSpawn instanceof Mob _mobToSpawn)
+									_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
+								world.addFreshEntity(entityToSpawn);
+							}
+							if (((Entity) world.getEntitiesOfClass(PoofedEndershroomEntity.class, AABB.ofSize(new Vec3(x, y, z), 1, 1, 1), e -> true).stream().sorted(new Object() {
+								Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+									return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
+								}
+							}.compareDistOf(x, y, z)).findFirst().orElse(null)) instanceof TamableAnimal _toTame && (entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null) instanceof Player _owner)
+								_toTame.tame(_owner);
+						}
+					}
+				}
+			}
+		}
+		if (world.isEmptyBlock(new BlockPos(x, y, z - 1))) {
+			if ((world.getBlockState(new BlockPos(x, y - 1, z - 1))).getBlock() == Blocks.END_STONE) {
+				if (Math.random() < 5e-7) {
+					world.setBlock(new BlockPos(x, y, z - 1), MonstersAndGirlsModBlocks.HUGE_ENDER_PUFFBALL.get().defaultBlockState(), 3);
+				}
+			}
+		}
+		if ((entity instanceof Player _plr ? _plr.getAbilities().getWalkingSpeed() : 0) == 0) {
+			if (Math.random() < 0.0005) {
+				if (entity instanceof EnderMushroomGalEntity) {
+					((EnderMushroomGalEntity) entity).setAnimation("belly");
+				}
+			}
+			if (Math.random() < 0.0005) {
+				if (entity instanceof EnderMushroomGalEntity) {
+					((EnderMushroomGalEntity) entity).setAnimation("wave");
+				}
+			}
+		}
+		if (!world.getEntitiesOfClass(StationCarpetEntity.class, AABB.ofSize(new Vec3(x, y, z), 1, 1, 1), e -> true).isEmpty()) {
+			entity.startRiding(((Entity) world.getEntitiesOfClass(StationCarpetEntity.class, AABB.ofSize(new Vec3(x, y, z), 1, 1, 1), e -> true).stream().sorted(new Object() {
+				Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+					return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
+				}
+			}.compareDistOf(x, y, z)).findFirst().orElse(null)));
+		}
+	}
+}

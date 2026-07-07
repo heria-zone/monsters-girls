@@ -1,0 +1,209 @@
+{
+  "_fv": 43,
+  "_type": "plant",
+  "definition": {
+    "renderType": 2,
+    "texture": "mandrake_plant",
+    "textureBottom": "",
+    "customModelName": "mandragora:default",
+    "itemTexture": "mandrake_flower",
+    "particleTexture": "leafparticle",
+    "tintType": "No tint",
+    "isItemTinted": false,
+    "plantType": "normal",
+    "staticPlantGenerationType": "Flower",
+    "suspiciousStewEffect": "SPEED",
+    "suspiciousStewDuration": 100,
+    "growapableSpawnType": "Plains",
+    "growapableMaxHeight": 3,
+    "doublePlantGenerationType": "Flower",
+    "customBoundingBox": true,
+    "disableOffset": false,
+    "boundingBoxes": [
+      {
+        "mx": 6.0,
+        "my": 0.0,
+        "mz": 6.0,
+        "Mx": 10.0,
+        "My": 1.0,
+        "Mz": 10.0,
+        "subtract": false
+      },
+      {
+        "mx": 10.0,
+        "my": 0.0,
+        "mz": 6.0,
+        "Mx": 16.0,
+        "My": 0.0,
+        "Mz": 10.0,
+        "subtract": false
+      },
+      {
+        "mx": 0.0,
+        "my": 0.0,
+        "mz": 6.0,
+        "Mx": 6.0,
+        "My": 0.0,
+        "Mz": 10.0,
+        "subtract": false
+      },
+      {
+        "mx": 6.0,
+        "my": 0.0,
+        "mz": 10.0,
+        "Mx": 10.0,
+        "My": 0.0,
+        "Mz": 16.0,
+        "subtract": false
+      },
+      {
+        "mx": 6.0,
+        "my": 0.0,
+        "mz": 0.0,
+        "Mx": 10.0,
+        "My": 0.0,
+        "Mz": 6.0,
+        "subtract": false
+      },
+      {
+        "mx": 6.0,
+        "my": 1.0,
+        "mz": 6.0,
+        "Mx": 10.0,
+        "My": 4.0,
+        "Mz": 6.0,
+        "subtract": false
+      },
+      {
+        "mx": 10.0,
+        "my": 1.0,
+        "mz": 6.0,
+        "Mx": 10.0,
+        "My": 4.0,
+        "Mz": 10.0,
+        "subtract": false
+      },
+      {
+        "mx": 6.0,
+        "my": 1.0,
+        "mz": 6.0,
+        "Mx": 6.0,
+        "My": 4.0,
+        "Mz": 10.0,
+        "subtract": false
+      },
+      {
+        "mx": 6.0,
+        "my": 1.0,
+        "mz": 10.0,
+        "Mx": 10.0,
+        "My": 4.0,
+        "Mz": 10.0,
+        "subtract": false
+      },
+      {
+        "mx": 7.0,
+        "my": 1.0,
+        "mz": 9.0,
+        "Mx": 9.0,
+        "My": 2.0,
+        "Mz": 9.0,
+        "subtract": false
+      },
+      {
+        "mx": 7.0,
+        "my": 1.0,
+        "mz": 7.0,
+        "Mx": 7.0,
+        "My": 2.0,
+        "Mz": 9.0,
+        "subtract": false
+      },
+      {
+        "mx": 9.0,
+        "my": 1.0,
+        "mz": 7.0,
+        "Mx": 9.0,
+        "My": 2.0,
+        "Mz": 9.0,
+        "subtract": false
+      },
+      {
+        "mx": 7.0,
+        "my": 1.0,
+        "mz": 7.0,
+        "Mx": 9.0,
+        "My": 2.0,
+        "Mz": 7.0,
+        "subtract": false
+      }
+    ],
+    "name": "Mandrake",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:MonstersAndGirls"
+    },
+    "hardness": 0.0,
+    "resistance": 0.0,
+    "luminance": 0,
+    "unbreakable": false,
+    "isSolid": false,
+    "isCustomSoundType": false,
+    "soundOnStep": {
+      "value": "PLANT"
+    },
+    "breakSound": {
+      "value": ""
+    },
+    "stepSound": {
+      "value": ""
+    },
+    "placeSound": {
+      "value": ""
+    },
+    "hitSound": {
+      "value": ""
+    },
+    "fallSound": {
+      "value": ""
+    },
+    "useLootTableForDrops": false,
+    "customDrop": {
+      "value": ""
+    },
+    "dropAmount": 1,
+    "forceTicking": false,
+    "emissiveRendering": false,
+    "hasTileEntity": false,
+    "isReplaceable": false,
+    "colorOnMap": "DEFAULT",
+    "creativePickItem": {
+      "value": ""
+    },
+    "offsetType": "XZ",
+    "aiPathNodeType": "DEFAULT",
+    "flammability": 50,
+    "fireSpreadSpeed": 60,
+    "jumpFactor": 1.0,
+    "speedFactor": 1.0,
+    "canBePlacedOn": [],
+    "isBonemealable": false,
+    "frequencyOnChunks": 1,
+    "spawnWorldTypes": [
+      "Surface"
+    ],
+    "restrictionBiomes": [
+      {
+        "value": "forest"
+      },
+      {
+        "value": "mutated_forest"
+      }
+    ],
+    "patchSize": 3,
+    "generateAtAnyHeight": false,
+    "onRightClicked": {
+      "name": "MandrakePlantRightClicked"
+    }
+  }
+}
