@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "has_ender_puffball_button",
+  "ingredients": [
+    {
+      "item": "monsters_girls:ender_puffball_planks"
+    }
+  ],
+  "result": {
+    "item": "monsters_girls:ender_puffball_button"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/fence_side",
+  "textures": {
+    "texture": "monsters_and_girls:blocks/puffballplanks",
+    "particle": "monsters_and_girls:blocks/puffballplanks"
+  }
+}

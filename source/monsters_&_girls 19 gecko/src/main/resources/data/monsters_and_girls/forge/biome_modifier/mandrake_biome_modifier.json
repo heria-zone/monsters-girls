@@ -1,0 +1,9 @@
+{
+  "type": "forge:add_features",
+  "biomes": [
+    "forest",
+    "flower_forest"
+  ],
+  "features": "monsters_and_girls:mandrake",
+  "step": "vegetal_decoration"
+}

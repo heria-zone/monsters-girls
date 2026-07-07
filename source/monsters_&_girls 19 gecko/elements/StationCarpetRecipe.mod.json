@@ -1,0 +1,48 @@
+{
+  "_fv": 43,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": "Items.IRON_NUGGET"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Items.IRON_NUGGET"
+      },
+      {
+        "value": "Blocks.CARPET#14"
+      },
+      {
+        "value": "Items.IRON_NUGGET"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Items.IRON_NUGGET"
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:RedStationCarpet"
+    },
+    "name": "station_carpet_recipe",
+    "namespace": "mod"
+  }
+}

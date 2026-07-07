@@ -1,0 +1,11 @@
+{
+  "parent": "block/grass_block",
+  "textures": {
+    "bottom": "monsters_and_girls:blocks/end_stone",
+    "top": "monsters_and_girls:blocks/endergrass",
+    "side": "monsters_and_girls:blocks/endergrass2",
+    "overlay": "monsters_and_girls:blocks/endergrass2",
+    "particle": "monsters_and_girls:blocks/end_stone"
+  },
+  "render_type": "cutout_mipped"
+}

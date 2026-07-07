@@ -1,0 +1,14 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "forest",
+    "plains",
+    "birch_forest"
+  ],
+  "spawners": {
+    "type": "monsters_and_girls:ink_cap",
+    "weight": 10,
+    "minCount": 1,
+    "maxCount": 2
+  }
+}

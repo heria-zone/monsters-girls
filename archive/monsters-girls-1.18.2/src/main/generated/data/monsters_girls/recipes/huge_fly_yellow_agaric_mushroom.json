@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "mushrooms",
+  "ingredients": [
+    {
+      "item": "minecraft:red_mushroom"
+    },
+    {
+      "item": "minecraft:brown_mushroom"
+    }
+  ],
+  "result": {
+    "item": "monsters_girls:huge_fly_yellow_agaric_mushroom"
+  }
+}

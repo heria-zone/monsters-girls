@@ -1,0 +1,6 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [ { "item": "monsters_girls:huge_brown_mushroom" } ],
+  "result": { "id": "monsters_girls:hat_mushroom_brown", "count": 1 }
+}

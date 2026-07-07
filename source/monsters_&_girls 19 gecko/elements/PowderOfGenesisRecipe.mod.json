@@ -1,0 +1,48 @@
+{
+  "_fv": 43,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 4,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": true,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Items.GOLDEN_APPLE#0"
+      },
+      {
+        "value": "Items.DYE#15"
+      },
+      {
+        "value": "Blocks.WARPED_FUNGUS"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:GenesisPowder"
+    },
+    "name": "powder_of_genesis_recipe",
+    "namespace": "mod"
+  }
+}

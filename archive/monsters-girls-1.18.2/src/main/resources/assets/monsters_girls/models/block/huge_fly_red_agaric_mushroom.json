@@ -1,0 +1,9 @@
+{
+  "parent": "monsters_girls:custom/medium_mushroom",
+  "textures": {
+    "all": "monsters_girls:block/huge_fly_red_agaric_mushroom",
+    "particle": "monsters_girls:block/huge_fly_red_agaric_mushroom",
+    "0": "monsters_girls:block/huge_fly_red_agaric_mushroom"
+  },
+  "render_type": "cutout_mipped"
+}

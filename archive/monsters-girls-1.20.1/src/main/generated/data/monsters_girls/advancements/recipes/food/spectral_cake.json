@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cake": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:cake"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_soul_wanderer_fungus": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "monsters_girls:soul_wanderer_fungus"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:spectral_cake"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_cake",
+      "has_soul_wanderer_fungus",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:spectral_cake"
+    ]
+  },
+  "sends_telemetry_event": false
+}

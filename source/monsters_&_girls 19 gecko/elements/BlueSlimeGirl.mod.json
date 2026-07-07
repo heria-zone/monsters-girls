@@ -1,0 +1,162 @@
+{
+  "_fv": 43,
+  "_type": "animatedentity",
+  "definition": {
+    "mobName": "Blue Slime Girl",
+    "mobLabel": "",
+    "mobModelTexture": "slimegal.png",
+    "mobModelGlowTexture": "",
+    "visualScale": {
+      "fixedValue": 1.0
+    },
+    "boundingBoxScale": {
+      "fixedValue": 1.0
+    },
+    "modelWidth": 1.0,
+    "modelHeight": 2.0,
+    "modelShadowSize": 0.5,
+    "mountedYOffset": -1.2,
+    "hasSpawnEgg": true,
+    "spawnEggBaseColor": {
+      "value": -16711681,
+      "falpha": 0.0
+    },
+    "spawnEggDotColor": {
+      "value": -3342337,
+      "falpha": 0.0
+    },
+    "creativeTab": {
+      "value": "CUSTOM:MonstersAndGirls"
+    },
+    "isBoss": false,
+    "bossBarColor": "PINK",
+    "bossBarType": "PROGRESS",
+    "equipmentMainHand": {
+      "value": ""
+    },
+    "equipmentOffHand": {
+      "value": ""
+    },
+    "equipmentHelmet": {
+      "value": ""
+    },
+    "equipmentBody": {
+      "value": ""
+    },
+    "equipmentLeggings": {
+      "value": ""
+    },
+    "equipmentBoots": {
+      "value": ""
+    },
+    "mobBehaviourType": "Mob",
+    "mobCreatureType": "UNDEFINED",
+    "attackStrength": 1,
+    "attackKnockback": 0.1,
+    "knockbackResistance": 100.1,
+    "movementSpeed": 0.3,
+    "armorBaseValue": 1.0,
+    "trackingRange": 64,
+    "followRange": 16,
+    "health": 40,
+    "xpAmount": 10,
+    "waterMob": false,
+    "flyingMob": false,
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
+    "deathTime": 25,
+    "lerp": 5,
+    "disableCollisions": false,
+    "ridable": false,
+    "canControlForward": false,
+    "canControlStrafe": false,
+    "immuneToFire": false,
+    "immuneToArrows": true,
+    "immuneToFallDamage": true,
+    "immuneToCactus": true,
+    "immuneToDrowning": true,
+    "immuneToLightning": false,
+    "immuneToPotions": false,
+    "immuneToPlayer": false,
+    "immuneToExplosion": false,
+    "immuneToTrident": true,
+    "immuneToAnvil": true,
+    "immuneToWither": false,
+    "immuneToDragonBreath": false,
+    "mobDrop": {
+      "value": "Items.SLIME_BALL"
+    },
+    "livingSound": {
+      "value": ""
+    },
+    "hurtSound": {
+      "value": "entity.generic.hurt"
+    },
+    "deathSound": {
+      "value": "entity.generic.death"
+    },
+    "stepSound": {
+      "value": ""
+    },
+    "whenMobIsHurt": {
+      "name": "Creeperburst"
+    },
+    "conditionalAnimation": {
+      "name": "SlimePlayReturnedAnimations"
+    },
+    "loop": {
+      "name": "SlimeLoopExternalAnimations"
+    },
+    "hasAI": true,
+    "aiBase": "(none)",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"follow_owner\"><field name=\"speed\">1</field><field name=\"min_distance\">10</field><field name=\"max_distance\">2</field><field name=\"condition\">null,null</field><next><block type=\"protect_owner\"><field name=\"condition\">null,null</field><next><block type=\"fight_as_owner\"><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block><block type=\"wander\" x=\"624\" y=\"306\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field></block><block type=\"look_around\" x=\"666\" y=\"355\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></xml>",
+    "model": "slimeblu.geo.json",
+    "groupName": "head",
+    "animation1": "idle",
+    "animation2": "walk",
+    "animation3": "death",
+    "animation4": "attack",
+    "animation5": "",
+    "animation6": "",
+    "animation7": "",
+    "animation8": "",
+    "animation9": "ride",
+    "animation10": "",
+    "enable2": true,
+    "enable3": true,
+    "enable4": false,
+    "enable5": false,
+    "enable6": false,
+    "enable7": false,
+    "enable8": false,
+    "enable9": true,
+    "enable10": false,
+    "breedable": true,
+    "tameable": true,
+    "disableDeathRotation": true,
+    "headMovement": true,
+    "eyeHeight": false,
+    "breedTriggerItems": [
+      {
+        "value": "Items.SLIME_BALL"
+      }
+    ],
+    "ranged": false,
+    "rangedAttackItem": {
+      "value": ""
+    },
+    "rangedItemType": "Default item",
+    "rangedAttackInterval": 20,
+    "rangedAttackRadius": 10.0,
+    "height": 0.0,
+    "spawnThisMob": false,
+    "doesDespawnWhenIdle": true,
+    "spawningProbability": 20,
+    "mobSpawningType": "creature",
+    "minNumberOfMobsPerGroup": 1,
+    "maxNumberOfMobsPerGroup": 3,
+    "restrictionBiomes": [],
+    "spawnInDungeons": false
+  }
+}

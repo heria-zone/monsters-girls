@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "misc",
+  "ingredients": [
+    {
+      "item": "monsters_girls:glow_berry_bush"
+    }
+  ],
+  "result": {
+    "item": "minecraft:glow_berries"
+  }
+}

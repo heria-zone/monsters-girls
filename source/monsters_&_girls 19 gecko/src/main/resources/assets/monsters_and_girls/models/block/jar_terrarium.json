@@ -1,0 +1,9 @@
+{
+  "parent": "monsters_and_girls:custom/jar",
+  "textures": {
+    "all": "monsters_and_girls:blocks/jar55",
+    "particle": "monsters_and_girls:blocks/jar55",
+    "0": "monsters_and_girls:blocks/jar55"
+  },
+  "render_type": "cutout_mipped"
+}

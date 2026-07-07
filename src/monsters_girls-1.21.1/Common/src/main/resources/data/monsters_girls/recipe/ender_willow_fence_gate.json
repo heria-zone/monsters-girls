@@ -1,0 +1,1 @@
+{ "type": "minecraft:crafting_shaped", "group": "wooden_fence_gate", "category": "redstone", "pattern": ["SPS","SPS"], "key": {"P": {"item": "monsters_girls:ender_willow_planks"},"S": {"item": "minecraft:stick"}}, "result": {"id": "monsters_girls:ender_willow_fence_gate", "count": 1} }

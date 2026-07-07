@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "type=bottom": { "model": "monsters_girls:block/ender_willow_slab" },
+    "type=double":  { "model": "monsters_girls:block/ender_willow_planks" },
+    "type=top":     { "model": "monsters_girls:block/ender_willow_slab_top" }
+  }
+}

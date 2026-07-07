@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "monsters_girls:snowball_log",
+    "monsters_girls:snowball_wood",
+    "monsters_girls:snowball_stripped_log",
+    "monsters_girls:snowball_stripped_wood",
+    "monsters_girls:ender_willow_log",
+    "monsters_girls:ender_willow_wood",
+    "monsters_girls:ender_willow_stripped_log",
+    "monsters_girls:ender_willow_stripped_wood"
+  ]
+}

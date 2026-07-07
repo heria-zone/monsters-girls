@@ -1,0 +1,8 @@
+{
+  "parent": "block/template_orientable_trapdoor_open",
+  "textures": {
+    "texture": "monsters_and_girls:blocks/enderpuffball_trapdoor",
+    "particle": "monsters_and_girls:blocks/enderpuffball_trapdoor"
+  },
+  "render_type": "cutout_mipped"
+}

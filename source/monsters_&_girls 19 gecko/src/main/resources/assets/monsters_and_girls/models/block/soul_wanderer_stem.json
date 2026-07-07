@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "monsters_and_girls:blocks/soulstem1",
+    "up": "monsters_and_girls:blocks/soulstem1",
+    "north": "monsters_and_girls:blocks/soulstem2",
+    "east": "monsters_and_girls:blocks/soulstem2",
+    "south": "monsters_and_girls:blocks/soulstem2",
+    "west": "monsters_and_girls:blocks/soulstem2",
+    "particle": "monsters_and_girls:blocks/soulstem1"
+  },
+  "render_type": "solid"
+}

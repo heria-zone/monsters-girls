@@ -1,0 +1,8 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "monsters_and_girls:blocks/inferno_shroom1",
+    "particle": "monsters_and_girls:blocks/inferno_shroom1"
+  },
+  "render_type": "cutout"
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "monsters_girls:block/mandrake_flower_plant"
+  },
+  "render_type": "cutout"
+}

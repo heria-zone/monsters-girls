@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_soul_wanderer_fungus": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "monsters_girls:soul_wanderer_fungus"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:huge_soul_wanderer_mushroom"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_soul_wanderer_fungus",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:huge_soul_wanderer_mushroom"
+    ]
+  }
+}

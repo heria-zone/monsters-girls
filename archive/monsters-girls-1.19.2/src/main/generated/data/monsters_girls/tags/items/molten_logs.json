@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "monsters_girls:molten_fungus_stem",
+    "monsters_girls:molten_fungus_hyphae",
+    "monsters_girls:molten_fungus_stripped_stem",
+    "monsters_girls:molten_fungus_stripped_hyphae"
+  ]
+}

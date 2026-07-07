@@ -1,0 +1,98 @@
+{
+  "_fv": 43,
+  "_type": "plant",
+  "definition": {
+    "renderType": 12,
+    "texture": "cave_vines_lit",
+    "textureBottom": "",
+    "customModelName": "Cross model",
+    "itemTexture": "",
+    "particleTexture": "",
+    "tintType": "No tint",
+    "isItemTinted": false,
+    "plantType": "normal",
+    "staticPlantGenerationType": "Flower",
+    "suspiciousStewEffect": "NIGHT_VISION",
+    "suspiciousStewDuration": 100,
+    "growapableSpawnType": "Cave",
+    "growapableMaxHeight": 14,
+    "doublePlantGenerationType": "Flower",
+    "customBoundingBox": false,
+    "disableOffset": false,
+    "boundingBoxes": [
+      {
+        "mx": 0.0,
+        "my": 0.0,
+        "mz": 0.0,
+        "Mx": 16.0,
+        "My": 16.0,
+        "Mz": 16.0,
+        "subtract": false
+      }
+    ],
+    "name": "Glow Berry Bush",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "DECORATIONS"
+    },
+    "hardness": 0.0,
+    "resistance": 0.0,
+    "luminance": 14,
+    "unbreakable": false,
+    "isSolid": false,
+    "isCustomSoundType": false,
+    "soundOnStep": {
+      "value": "VINE"
+    },
+    "breakSound": {
+      "value": ""
+    },
+    "stepSound": {
+      "value": ""
+    },
+    "placeSound": {
+      "value": ""
+    },
+    "hitSound": {
+      "value": ""
+    },
+    "fallSound": {
+      "value": ""
+    },
+    "useLootTableForDrops": false,
+    "customDrop": {
+      "value": "Items.GLOW_BERRIES"
+    },
+    "dropAmount": 1,
+    "forceTicking": false,
+    "emissiveRendering": false,
+    "hasTileEntity": false,
+    "isReplaceable": false,
+    "colorOnMap": "DEFAULT",
+    "creativePickItem": {
+      "value": "Items.GLOW_BERRIES"
+    },
+    "offsetType": "XZ",
+    "aiPathNodeType": "OPEN",
+    "flammability": 40,
+    "fireSpreadSpeed": 30,
+    "jumpFactor": 1.0,
+    "speedFactor": 1.0,
+    "canBePlacedOn": [],
+    "isBonemealable": false,
+    "frequencyOnChunks": 5,
+    "spawnWorldTypes": [
+      "Surface"
+    ],
+    "restrictionBiomes": [
+      {
+        "value": "lush_caves"
+      }
+    ],
+    "patchSize": 10,
+    "generateAtAnyHeight": true,
+    "onRightClicked": {
+      "name": "GlowBerryBushPlantRightClicked"
+    }
+  }
+}

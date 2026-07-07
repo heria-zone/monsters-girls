@@ -1,0 +1,9 @@
+{
+  "parent": "monsters_and_girls:custom/yellowagaric",
+  "textures": {
+    "all": "monsters_and_girls:blocks/flyagaricyellow",
+    "particle": "monsters_and_girls:blocks/flyagaricyellow",
+    "6": "monsters_and_girls:blocks/flyagaricyellow"
+  },
+  "render_type": "cutout_mipped"
+}

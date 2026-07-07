@@ -1,0 +1,15 @@
+{
+  "type": "forge:add_features",
+  "biomes": [
+    "mushroom_fields",
+    "forest",
+    "old_growth_pine_taiga",
+    "taiga",
+    "plains",
+    "birch_forest",
+    "swamp",
+    "old_growth_spruce_taiga"
+  ],
+  "features": "monsters_and_girls:ink_cap_mushroom",
+  "step": "vegetal_decoration"
+}

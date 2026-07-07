@@ -1,0 +1,118 @@
+{
+  "_fv": 43,
+  "_type": "loottable",
+  "definition": {
+    "type": "Chest",
+    "pools": [
+      {
+        "minrolls": 5,
+        "maxrolls": 10,
+        "minbonusrolls": 1,
+        "maxbonusrolls": 5,
+        "hasbonusrolls": false,
+        "entries": [
+          {
+            "type": "item",
+            "item": {
+              "value": "CUSTOM:SpectralCake"
+            },
+            "weight": 12,
+            "minCount": 2,
+            "maxCount": 10,
+            "minEnchantmentLevel": 0,
+            "maxEnchantmentLevel": 0,
+            "affectedByFortune": false,
+            "explosionDecay": false,
+            "silkTouchMode": 0
+          },
+          {
+            "type": "item",
+            "item": {
+              "value": "Items.DIAMOND"
+            },
+            "weight": 7,
+            "minCount": 0,
+            "maxCount": 4,
+            "minEnchantmentLevel": 0,
+            "maxEnchantmentLevel": 0,
+            "affectedByFortune": false,
+            "explosionDecay": false,
+            "silkTouchMode": 0
+          },
+          {
+            "type": "item",
+            "item": {
+              "value": "Items.EMERALD"
+            },
+            "weight": 10,
+            "minCount": 1,
+            "maxCount": 6,
+            "minEnchantmentLevel": 0,
+            "maxEnchantmentLevel": 0,
+            "affectedByFortune": false,
+            "explosionDecay": false,
+            "silkTouchMode": 0
+          },
+          {
+            "type": "item",
+            "item": {
+              "value": "Blocks.CANDLE#0"
+            },
+            "weight": 10,
+            "minCount": 1,
+            "maxCount": 10,
+            "minEnchantmentLevel": 0,
+            "maxEnchantmentLevel": 0,
+            "affectedByFortune": false,
+            "explosionDecay": false,
+            "silkTouchMode": 0
+          },
+          {
+            "type": "item",
+            "item": {
+              "value": "Items.IRON_SWORD"
+            },
+            "weight": 7,
+            "minCount": 0,
+            "maxCount": 2,
+            "minEnchantmentLevel": 3,
+            "maxEnchantmentLevel": 20,
+            "affectedByFortune": false,
+            "explosionDecay": false,
+            "silkTouchMode": 0
+          },
+          {
+            "type": "item",
+            "item": {
+              "value": "Blocks.LOG2#1"
+            },
+            "weight": 10,
+            "minCount": 1,
+            "maxCount": 10,
+            "minEnchantmentLevel": 0,
+            "maxEnchantmentLevel": 0,
+            "affectedByFortune": false,
+            "explosionDecay": false,
+            "silkTouchMode": 0
+          },
+          {
+            "type": "item",
+            "item": {
+              "value": "Blocks.SOUL_LANTERN"
+            },
+            "weight": 8,
+            "minCount": 1,
+            "maxCount": 4,
+            "minEnchantmentLevel": 0,
+            "maxEnchantmentLevel": 0,
+            "affectedByFortune": false,
+            "explosionDecay": false,
+            "silkTouchMode": 0
+          }
+        ]
+      }
+    ],
+    "name": "spooky",
+    "namespace": "minecraft"
+  }
+}

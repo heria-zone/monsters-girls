@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "monsters_girls:ender_puffball_stem"
+    }
+  ],
+  "result": {
+    "item": "monsters_girls:ender_puffball_planks",
+    "count": 4
+  }
+}

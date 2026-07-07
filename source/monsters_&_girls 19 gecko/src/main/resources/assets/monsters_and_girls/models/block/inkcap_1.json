@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "monsters_and_girls:blocks/mushroom_block_inside",
+    "up": "monsters_and_girls:blocks/inkcap1a",
+    "north": "monsters_and_girls:blocks/inkcap1a",
+    "east": "monsters_and_girls:blocks/inkcap1a",
+    "south": "monsters_and_girls:blocks/inkcap1a",
+    "west": "monsters_and_girls:blocks/inkcap1a",
+    "particle": "monsters_and_girls:blocks/mushroom_block_inside"
+  },
+  "render_type": "solid"
+}

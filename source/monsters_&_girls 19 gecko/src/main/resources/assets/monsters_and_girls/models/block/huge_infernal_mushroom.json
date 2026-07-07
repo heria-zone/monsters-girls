@@ -1,0 +1,9 @@
+{
+  "parent": "monsters_and_girls:custom/infernalmushroom",
+  "textures": {
+    "all": "monsters_and_girls:blocks/infernal",
+    "particle": "monsters_and_girls:blocks/infernal",
+    "0": "monsters_and_girls:blocks/infernal"
+  },
+  "render_type": "cutout_mipped"
+}

@@ -1,0 +1,1 @@
+{ "parent": "minecraft:block/button_inventory", "textures": { "texture": "monsters_girls:block/ender_willow_planks" } }

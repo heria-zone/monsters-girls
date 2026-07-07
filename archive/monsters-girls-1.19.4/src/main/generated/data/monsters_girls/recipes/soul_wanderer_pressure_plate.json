@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "#": {
+      "item": "monsters_girls:soul_wanderer_planks"
+    }
+  },
+  "pattern": [
+    "##"
+  ],
+  "result": {
+    "item": "monsters_girls:soul_wanderer_pressure_plate"
+  },
+  "show_notification": true
+}

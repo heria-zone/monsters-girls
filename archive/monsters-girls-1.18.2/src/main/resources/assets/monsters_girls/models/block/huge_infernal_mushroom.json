@@ -1,0 +1,9 @@
+{
+  "parent": "monsters_girls:custom/huge_mushroom",
+  "textures": {
+    "all": "monsters_girls:block/huge_infernal_mushroom",
+    "particle": "monsters_girls:block/huge_infernal_mushroom",
+    "0": "monsters_girls:block/huge_infernal_mushroom"
+  },
+  "render_type": "cutout_mipped"
+}

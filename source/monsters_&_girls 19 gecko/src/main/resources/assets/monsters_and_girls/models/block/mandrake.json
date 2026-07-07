@@ -1,0 +1,9 @@
+{
+  "parent": "monsters_and_girls:custom/mandragora",
+  "textures": {
+    "all": "monsters_and_girls:blocks/mandrake_plant",
+    "particle": "monsters_and_girls:blocks/leafparticle",
+    "0": "monsters_and_girls:blocks/mandrake_plant"
+  },
+  "render_type": "cutout"
+}

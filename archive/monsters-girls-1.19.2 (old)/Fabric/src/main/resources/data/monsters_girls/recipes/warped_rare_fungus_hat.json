@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "monsters_girls:huge_warped_rare_fungus"
+    }
+  },
+  "result": {
+    "item": "monsters_girls:warped_rare_fungus_hat",
+    "count": 1
+  }
+}

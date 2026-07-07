@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+      {
+      "item": "minecraft:red_mushroom"
+      }, {
+      "item": "minecraft:red_mushroom"
+      }, {
+      "item": "minecraft:red_mushroom"
+    }
+  ],
+  "result": {
+    "item": "monsters_girls:huge_fly_red_agaric",
+    "count": 1
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "1": {
+      "tag": "minecraft:wool"
+    },
+    "3": {
+      "tag": "minecraft:wool"
+    },
+    "4": {
+      "item": "minecraft:white_carpet"
+    },
+    "5": {
+      "tag": "minecraft:wool"
+    },
+    "7": {
+      "tag": "minecraft:wool"
+    }
+  },
+  "result": {
+    "item": "monsters_and_girls:tiny_bed",
+    "count": 2
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "_fv": 43,
+  "_type": "structure",
+  "definition": {
+    "structure": "spookdungeon2",
+    "randomlyRotateStructure": true,
+    "surfaceDetectionType": "First motion blocking block",
+    "spawnProbability": 7000,
+    "minCountPerChunk": 1,
+    "maxCountPerChunk": 1,
+    "spawnLocation": "Underground",
+    "spawnHeightOffset": -3,
+    "spawnXOffset": -5,
+    "spawnZOffset": -4,
+    "spawnWorldTypes": [
+      "Surface"
+    ],
+    "restrictionBlocks": [
+      {
+        "value": "Blocks.STONE#0"
+      },
+      {
+        "value": "Blocks.STONE#5"
+      },
+      {
+        "value": "Blocks.DEEPSLATE"
+      },
+      {
+        "value": "Blocks.DRIPSTONE_BLOCK"
+      }
+    ],
+    "restrictionBiomes": [
+      {
+        "value": "dripstone_caves"
+      }
+    ],
+    "ignoreBlocks": "STRUCTURE_BLOCK"
+  }
+}

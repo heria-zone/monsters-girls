@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "monsters_and_girls:spooky_forest",
+  "features": "monsters_and_girls:pumpkin",
+  "step": "surface_structures"
+}

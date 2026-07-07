@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_door",
+  "category": "misc",
+  "pattern": [ "PP", "PP", "PP" ],
+  "key": { "P": { "item": "monsters_girls:molten_fungus_planks" } },
+  "result": { "id": "monsters_girls:molten_fungus_door", "count": 3 }
+}

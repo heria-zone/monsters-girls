@@ -1,0 +1,105 @@
+name: Bug Report
+description: Something isn't working as expected. Thanks for taking the time to report it.
+title: "[BUG] "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Hey, thanks for the report! This tracker covers the **Fabric version only**.
+        For Forge issues, contact b_art_ek directly.
+        Check [existing issues](../issues) before submitting.
+
+  - type: input
+    id: mod-version
+    attributes:
+      label: Monsters & Girls Version
+      placeholder: "e.g. 1.3.0"
+    validations:
+      required: true
+
+  - type: input
+    id: hzlib-version
+    attributes:
+      label: HZLib Version
+      placeholder: "e.g. 1.0.0"
+    validations:
+      required: true
+
+  - type: input
+    id: minecraft-version
+    attributes:
+      label: Minecraft Version
+      placeholder: "e.g. 1.21.1"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: affected-species
+    attributes:
+      label: Affected Species
+      description: Which species or family is involved?
+      multiple: true
+      options:
+        - Mandrake
+        - Mushroom Gals (Brown / Amanita / Crimson / Infernal / Inkcaps)
+        - Mushroom Gals (Molten / Puffball / Fluffball / Snowball / Soul Wanderer / Warped)
+        - Gourdragora
+        - Bee
+        - Globberie
+        - Spook
+        - Wisp
+        - Slime
+        - Maiden of the Skies
+        - All species
+        - Not species-specific (crash / block / item issue)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: spawn-type
+    attributes:
+      label: How Was the Entity Spawned?
+      options:
+        - Genesis Powder (natural genesis)
+        - Natural world spawn
+        - Spawn egg
+        - Loaded from existing save
+        - Not applicable
+    validations:
+      required: true
+
+  - type: textarea
+    id: other-mods
+    attributes:
+      label: Other Mods Installed
+      description: List all mods. Mod conflicts are common — this is the first thing we check.
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What Happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What Did You Expect?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+    validations:
+      required: true
+
+  - type: textarea
+    id: crash-log
+    attributes:
+      label: Crash Log / latest.log
+      render: text

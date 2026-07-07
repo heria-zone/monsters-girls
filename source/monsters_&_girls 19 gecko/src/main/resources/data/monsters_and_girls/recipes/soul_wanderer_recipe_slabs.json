@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012"
+  ],
+  "key": {
+    "0": {
+      "item": "monsters_and_girls:soul_wanderer_planks"
+    },
+    "1": {
+      "item": "monsters_and_girls:soul_wanderer_planks"
+    },
+    "2": {
+      "item": "monsters_and_girls:soul_wanderer_planks"
+    }
+  },
+  "result": {
+    "item": "monsters_and_girls:soul_wanderer_slabs",
+    "count": 6
+  }
+}

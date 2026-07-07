@@ -1,0 +1,24 @@
+{
+  "variants": {
+    "snowy=false": [
+      {
+        "model": "monsters_girls:block/ender_moss"
+      },
+      {
+        "model": "monsters_girls:block/ender_moss",
+        "y": 90
+      },
+      {
+        "model": "monsters_girls:block/ender_moss",
+        "y": 180
+      },
+      {
+        "model": "monsters_girls:block/ender_moss",
+        "y": 270
+      }
+    ],
+    "snowy=true": {
+      "model": "monsters_girls:block/ender_moss"
+    }
+  }
+}

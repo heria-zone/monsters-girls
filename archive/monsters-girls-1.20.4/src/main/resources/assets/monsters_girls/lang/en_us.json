@@ -1,0 +1,41 @@
+{
+  "itemGroup.default_group": "Monsters & Girls",
+
+  "monsters_girls.msg.notification": "Notification",
+  "monsters_girls.msg.sound": "Sound",
+  "monsters_girls.msg.plant": "Plant",
+  "monsters_girls.msg.on": "ON",
+  "monsters_girls.msg.off": "OFF",
+
+  "tooltip.spectral_cake":"Is that a... cake's soul?",
+  "tooltip.candies":"Mmmm... so sweet!",
+
+  "item.monsters_girls.candies": "Candies",
+  "item.monsters_girls.powder_genesis": "Powder of Genesis",
+  "item.monsters_girls.spawn_spook_girl_peach": "Spawn Peach Spook Girl",
+  "item.monsters_girls.spawn_spook_girl_teal": "Spawn Teal Spook Girl",
+  "item.monsters_girls.spawn_wisp_girl_green": "Spawn Green Wisp Girl",
+  "item.monsters_girls.spawn_wisp_girl_blue": "Spawn Blue Wisp Girl",
+  "item.monsters_girls.spawn_wisp_girl_yellow": "Spawn Yellow Wisp Girl",
+  "item.monsters_girls.spectral_cake": "Spectral Cake",
+
+  "entity.monsters_girls.spook_girl_peach": "Peach Spook Girl",
+  "entity.monsters_girls.spook_girl_teal": "Teal Spook Girl",
+  "entity.monsters_girls.wisp_girl_green": "GreenWisp Girl",
+  "entity.monsters_girls.wisp_girl_blue": "Blue Wisp Girl",
+  "entity.monsters_girls.wisp_girl_yellow": "Yellow Wisp Girl",
+
+  "subtitles.vexiskill": "Vex Banished To The Shadow Realm",
+  "subtitles.endermushroomgalsound": "Ender Mushroom Girl Squeaks",
+  "subtitles.enderpuffballgalhuffs": "Ender Puffball Girl Huffs",
+  "subtitles.enderpuffballgalpuffs": "Ender Puffball Girl Puffs",
+  "subtitles.mandrakesounds": "Mandrake Squeak",
+  "subtitles.mandrakehurt": "Mandrake Screams",
+  "subtitles.mandrakedies": "Mandrake Death",
+  "subtitles.wispdeath": "Wisp Death",
+  "subtitles.wisplaughs": "Wisp Laugh",
+  "subtitles.wisphurt": "Wisp Hurt",
+  "subtitles.spookattacking": "Spook Attack",
+  "subtitles.spookhurt": "Spook Hurt",
+  "subtitles.spooklaugh": "Spook Laugh"
+}

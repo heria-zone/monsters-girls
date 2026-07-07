@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "monsters_and_girls:blocks/molten_stemup",
+    "up": "monsters_and_girls:blocks/molten_stemup",
+    "north": "monsters_and_girls:blocks/molten_stem",
+    "east": "monsters_and_girls:blocks/molten_stem",
+    "south": "monsters_and_girls:blocks/molten_stem",
+    "west": "monsters_and_girls:blocks/molten_stem",
+    "particle": "monsters_and_girls:blocks/molten_stemup"
+  },
+  "render_type": "solid"
+}

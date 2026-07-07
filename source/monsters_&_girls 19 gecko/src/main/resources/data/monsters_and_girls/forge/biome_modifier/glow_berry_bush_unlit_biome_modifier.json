@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "lush_caves",
+  "features": "monsters_and_girls:glow_berry_bush_unlit",
+  "step": "vegetal_decoration"
+}

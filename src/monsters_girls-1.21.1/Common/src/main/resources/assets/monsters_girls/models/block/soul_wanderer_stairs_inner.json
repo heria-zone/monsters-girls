@@ -1,0 +1,1 @@
+{ "parent": "minecraft:block/inner_stairs", "textures": { "side": "monsters_girls:block/soul_wanderer_planks", "top": "monsters_girls:block/soul_wanderer_planks", "bottom": "monsters_girls:block/soul_wanderer_planks" } }

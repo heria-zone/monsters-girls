@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "monsters_girls:molten_fungus_planks"
+    }
+  },
+  "pattern": [
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "item": "monsters_girls:molten_fungus_slab"
+  },
+  "show_notification": true
+}

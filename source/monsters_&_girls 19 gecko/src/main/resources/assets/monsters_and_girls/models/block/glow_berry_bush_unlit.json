@@ -1,0 +1,8 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "monsters_and_girls:blocks/cave_vines_plant_lit",
+    "particle": "monsters_and_girls:blocks/cave_vines_plant_lit"
+  },
+  "render_type": "cutout"
+}

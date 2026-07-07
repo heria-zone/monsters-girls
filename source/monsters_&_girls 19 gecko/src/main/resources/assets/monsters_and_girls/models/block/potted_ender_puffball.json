@@ -1,0 +1,11 @@
+{
+  "parent": "monsters_and_girls:custom/flower_pot_enderpuffball",
+  "textures": {
+    "all": "monsters_and_girls:blocks/pufball",
+    "particle": "monsters_and_girls:blocks/pufball",
+    "flowerpot": "monsters_and_girls:blocks/flower_pot",
+    "plant": "monsters_and_girls:blocks/pufball",
+    "dirt": "monsters_and_girls:blocks/dirt"
+  },
+  "render_type": "cutout_mipped"
+}

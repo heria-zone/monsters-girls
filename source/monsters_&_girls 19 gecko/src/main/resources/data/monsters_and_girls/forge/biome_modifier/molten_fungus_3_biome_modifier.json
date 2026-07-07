@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "basalt_deltas",
+  "features": "monsters_and_girls:molten_fungus_3",
+  "step": "underground_structures"
+}

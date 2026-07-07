@@ -1,0 +1,9 @@
+{
+  "parent": "monsters_and_girls:custom/rarewarped",
+  "textures": {
+    "all": "monsters_and_girls:blocks/rarewarped",
+    "particle": "monsters_and_girls:blocks/rarewarped",
+    "0": "monsters_and_girls:blocks/rarewarped"
+  },
+  "render_type": "cutout_mipped"
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "monsters_girls:block/ender_puffball_slab"
+    },
+    "type=double": {
+      "model": "monsters_girls:block/ender_puffball_planks"
+    },
+    "type=top": {
+      "model": "monsters_girls:block/ender_puffball_slab_top"
+    }
+  }
+}

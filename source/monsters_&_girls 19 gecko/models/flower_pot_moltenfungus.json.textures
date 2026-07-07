@@ -1,0 +1,12 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "flowerpot": "flower_pot",
+        "plant": "inferno_shroom1",
+        "dirt": "dirt"
+      },
+      "name": "default"
+    }
+  }
+}

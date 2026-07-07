@@ -1,0 +1,1 @@
+{ "parent": "minecraft:block/slab", "textures": { "side": "monsters_girls:block/ender_puffball_planks", "top": "monsters_girls:block/ender_puffball_planks", "bottom": "monsters_girls:block/ender_puffball_planks" } }

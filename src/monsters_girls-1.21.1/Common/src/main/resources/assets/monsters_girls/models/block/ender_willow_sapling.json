@@ -1,0 +1,1 @@
+{ "parent": "minecraft:block/cross", "textures": { "cross": "monsters_girls:block/ender_willow_sapling" }, "render_type": "cutout" }

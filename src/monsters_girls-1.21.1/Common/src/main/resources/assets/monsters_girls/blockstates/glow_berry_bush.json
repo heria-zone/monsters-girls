@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "monsters_girls:block/glow_berry_bush"
+    },
+    "age=1": {
+      "model": "monsters_girls:block/glow_berry_bush"
+    },
+    "age=2": {
+      "model": "monsters_girls:block/glow_berry_bush"
+    },
+    "age=3": {
+      "model": "monsters_girls:block/glow_berry_bush_mature"
+    }
+  }
+}

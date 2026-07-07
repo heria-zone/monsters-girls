@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "monsters_and_girls:blocks/enderpuffballblockalfa",
+    "particle": "monsters_and_girls:blocks/enderpuffballblockalfa"
+  },
+  "render_type": "solid"
+}

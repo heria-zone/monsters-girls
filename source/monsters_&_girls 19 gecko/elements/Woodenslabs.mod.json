@@ -1,0 +1,23 @@
+{
+  "_fv": 43,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:SoulWandererSlabs"
+      },
+      {
+        "value": "CUSTOM:EnderPuffballSlab"
+      },
+      {
+        "value": "CUSTOM:MoltenFungusSlabs"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "name": "wooden_slabs",
+    "namespace": "minecraft"
+  }
+}

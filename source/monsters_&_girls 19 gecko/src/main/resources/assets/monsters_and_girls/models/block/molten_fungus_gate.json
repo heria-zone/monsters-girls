@@ -1,0 +1,7 @@
+{
+  "parent": "block/template_fence_gate",
+  "textures": {
+    "texture": "monsters_and_girls:blocks/molten_planks"
+  },
+  "render_type": "cutout_mipped"
+}

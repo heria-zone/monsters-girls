@@ -1,0 +1,9 @@
+{
+  "type": "forge:add_features",
+  "biomes": [
+    "end_midlands",
+    "end_highlands"
+  ],
+  "features": "monsters_and_girls:end_puffball",
+  "step": "vegetal_decoration"
+}

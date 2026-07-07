@@ -1,0 +1,1 @@
+{ "parent": "minecraft:block/cube_column_horizontal", "textures": { "side": "monsters_girls:block/snowball_log", "end": "monsters_girls:block/snowball_log" } }

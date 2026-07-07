@@ -1,0 +1,14 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "forest",
+    "flower_forest",
+    "meadow"
+  ],
+  "spawners": {
+    "type": "monsters_and_girls:green_mandrake",
+    "weight": 10,
+    "minCount": 1,
+    "maxCount": 3
+  }
+}

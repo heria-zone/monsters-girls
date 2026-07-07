@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23",
+    "45"
+  ],
+  "key": {
+    "0": {
+      "item": "monsters_and_girls:ender_puffball_planks"
+    },
+    "1": {
+      "item": "monsters_and_girls:ender_puffball_planks"
+    },
+    "2": {
+      "item": "monsters_and_girls:ender_puffball_planks"
+    },
+    "3": {
+      "item": "monsters_and_girls:ender_puffball_planks"
+    },
+    "4": {
+      "item": "monsters_and_girls:ender_puffball_planks"
+    },
+    "5": {
+      "item": "monsters_and_girls:ender_puffball_planks"
+    }
+  },
+  "result": {
+    "item": "monsters_and_girls:ender_puffball_doors",
+    "count": 3
+  }
+}

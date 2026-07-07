@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "wooden_button",
+  "category": "redstone",
+  "ingredients": [ { "item": "monsters_girls:molten_fungus_planks" } ],
+  "result": { "id": "monsters_girls:molten_fungus_button", "count": 1 }
+}

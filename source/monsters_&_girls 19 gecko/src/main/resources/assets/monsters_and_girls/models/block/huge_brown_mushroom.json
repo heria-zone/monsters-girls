@@ -1,0 +1,9 @@
+{
+  "parent": "monsters_and_girls:custom/boletus",
+  "textures": {
+    "all": "monsters_and_girls:blocks/boletusbig",
+    "particle": "monsters_and_girls:blocks/boletusbig",
+    "0": "monsters_and_girls:blocks/boletusbig"
+  },
+  "render_type": "cutout_mipped"
+}
