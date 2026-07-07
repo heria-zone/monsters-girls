@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "monsters_girls:block/soul_wanderer_stem",
+    "side": "monsters_girls:block/soul_wanderer_stem"
+  }
+}

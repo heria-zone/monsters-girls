@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "monsters_girls:block/huge_warped_rare_fungus"
+    },
+    "facing=east": {
+      "model": "monsters_girls:block/huge_warped_rare_fungus",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "monsters_girls:block/huge_warped_rare_fungus",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "monsters_girls:block/huge_warped_rare_fungus",
+      "y": 270
+    }
+  }
+}

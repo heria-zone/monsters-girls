@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#$#",
+    "###"
+  ],
+  "key": {
+    "$": {
+      "item": "monsters_girls:molten_fungus"
+    },
+    "#": {
+      "tag": "monsters_girls:mushroom_blocks"
+    }
+  },
+  "result": {
+    "item": "monsters_girls:molten_fungus_block",
+    "count": 16
+  }
+}

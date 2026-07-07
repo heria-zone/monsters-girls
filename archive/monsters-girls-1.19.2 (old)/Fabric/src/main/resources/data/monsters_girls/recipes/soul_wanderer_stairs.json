@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "monsters_girls:soul_wanderer_planks"
+    }
+  },
+  "result": {
+    "item": "monsters_girls:soul_wanderer_stairs",
+    "count": 4
+  }
+}

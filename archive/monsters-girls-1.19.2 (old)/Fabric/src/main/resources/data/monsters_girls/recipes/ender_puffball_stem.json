@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#$#",
+    "###"
+  ],
+  "key": {
+    "$": {
+      "item": "monsters_girls:ender_puffball"
+    },
+    "#": {
+      "tag": "minecraft:logs"
+    }
+  },
+  "result": {
+    "item": "monsters_girls:ender_puffball_stem",
+    "count": 16
+  }
+}

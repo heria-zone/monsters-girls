@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button_pressed",
+  "textures": {
+    "texture": "monsters_girls:block/ender_puffball_planks"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_right",
+  "textures": {
+    "bottom": "monsters_girls:block/ender_puffball_door_bottom",
+    "top": "monsters_girls:block/ender_puffball_door_top"
+  }
+}

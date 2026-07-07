@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "monsters_girls:ender_puffball_planks"
+    }
+  },
+  "result": {
+    "item": "monsters_girls:ender_puffball_pressure_plate",
+    "count": 1
+  }
+}

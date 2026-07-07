@@ -1,0 +1,6 @@
+{
+  "parent": "block/pressure_plate_up",
+  "textures": {
+    "texture": "monsters_girls:block/ender_puffball_planks"
+  }
+}

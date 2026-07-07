@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "monsters_girls:block/ink_cap_mushroom"
+  }
+}

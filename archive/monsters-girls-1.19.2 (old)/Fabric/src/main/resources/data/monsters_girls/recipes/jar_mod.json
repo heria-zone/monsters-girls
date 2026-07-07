@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "$ $",
+    "$$$"
+  ],
+  "key": {
+    "#": {
+      "tag": "monsters_girls:wooden_slabs"
+    },
+    "$": {
+      "item": "minecraft:glass"
+    }
+  },
+  "result": {
+    "item": "monsters_girls:jar",
+    "count": 2
+  }
+}

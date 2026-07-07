@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+      {
+      "item": "minecraft:warped_fungus"
+      }, {
+      "item": "minecraft:warped_fungus"
+    }
+  ],
+  "result": {
+    "item": "monsters_girls:huge_warped_fungus",
+    "count": 1
+  }
+}

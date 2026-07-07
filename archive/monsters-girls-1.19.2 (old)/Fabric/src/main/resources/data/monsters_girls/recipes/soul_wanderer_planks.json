@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "monsters_girls:soul_wanderer_stem"
+    }
+  ],
+  "result": {
+    "item": "monsters_girls:soul_wanderer_planks",
+    "count": 4
+  }
+}
