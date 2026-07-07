@@ -1,0 +1,50 @@
+name: Feature Request
+description: Have an idea for Monsters & Girls Fabric?
+title: "[FEATURE] "
+labels: ["enhancement", "needs-discussion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Feature requests are welcome. Note that **new species** require creative direction
+        alignment with the project owner (b_art_ek) before implementation begins.
+        Bug fixes, new species variants, and HZLib system improvements are lower friction.
+
+  - type: textarea
+    id: use-case
+    attributes:
+      label: What Are You Trying to Do?
+      description: Describe the gameplay goal, not the implementation.
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What's Currently Preventing It?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type of Request
+      options:
+        - New species
+        - New variant for an existing species
+        - New mechanic or behaviour
+        - New block or item
+        - Performance improvement
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed
+    attributes:
+      label: What Would You Like to See?
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives You've Considered
